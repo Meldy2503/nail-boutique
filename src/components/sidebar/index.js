@@ -1,7 +1,11 @@
 import React from "react";
 import { LeftContent } from "../../reuseableComponents/containerStyle";
-import { SidebarLink, StyledUl } from "./sidebarStyle";
+import { StyledUl } from "./sidebarStyle";
 import { NavLink } from "react-router-dom";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { IoLogOutOutline } from "react-icons/io5";
+import { BsPersonCircle } from "react-icons/bs";
+import { FaPeopleArrows } from "react-icons/fa";
 
 function Sidebar() {
   return (
@@ -13,7 +17,8 @@ function Sidebar() {
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
             to="/"
           >
-            Update profile
+            <BsPersonCircle className="icon" />
+            <span>Update profile</span>
           </NavLink>
         </li>
         <li>
@@ -21,7 +26,8 @@ function Sidebar() {
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
             to="/my-appointments"
           >
-            My Appointments
+            <FaPeopleArrows className="icon" />
+            <span>My Appointments</span>
           </NavLink>
         </li>
         <li>
@@ -29,7 +35,8 @@ function Sidebar() {
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
             to="/notifications"
           >
-            Notifications
+            <IoIosNotificationsOutline className="icon" />
+            <span>Notifications</span>
           </NavLink>
         </li>
         <li>
@@ -37,7 +44,8 @@ function Sidebar() {
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
             to="/logout"
           >
-            Logout
+            <IoLogOutOutline className="icon" />
+            <span>Logout</span>
           </NavLink>
         </li>
       </StyledUl>
