@@ -8,7 +8,13 @@ export const ContentContainer = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
+
+  /* @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 6rem;
+} */
 `;
+
 export const LeftContent = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
   width: 25%;
@@ -17,11 +23,19 @@ export const LeftContent = styled.div`
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.7rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 6rem;
+  }
 `;
 
 export const RightContent = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
-  width: 73%;
+  width: 74%;
   color: ${({ theme }) => theme.colors.secondary2};
   height: 100%;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 90%;
+  }
 `;
