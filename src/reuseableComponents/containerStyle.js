@@ -11,11 +11,12 @@ export const ContentContainer = styled.section`
   gap: 0.5rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    margin: 2rem auto 2rem auto;
     width: 95%;
+    margin: 2rem auto;
   }
 
   @media (max-width: 500px) {
+    margin: 0.5rem auto;
     width: 98%;
   }
 `;
