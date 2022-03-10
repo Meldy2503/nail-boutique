@@ -10,6 +10,9 @@ const theme = {
     primary1: "#000000",
     primary2: "#1C1C1C",
     primary3: "#212121",
+    primary4: "#141414",
+    primary5: "#3C3C3C",
+    primary6: "#585858",
 
     secondary1: "#FFFFFF",
     secondary2: "#B1B1B1",
