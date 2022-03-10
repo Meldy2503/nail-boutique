@@ -10,9 +10,14 @@ export const ContentContainer = styled.section`
   align-items: center;
   gap: 0.5rem;
 
-  /* @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 6rem;
-} */
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    margin: 2rem auto 2rem auto;
+    width: 95%;
+  }
+
+  @media (max-width: 500px) {
+    width: 98%;
+  }
 `;
 
 export const LeftContent = styled.div`

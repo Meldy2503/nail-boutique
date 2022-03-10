@@ -7,6 +7,9 @@ export const StyledUl = styled.ul`
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     padding: 3rem 0 0 0;
   }
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    padding: 1rem 0 0 0;
+  }
 
   .navLink {
     font-size: 1.6rem;
@@ -24,6 +27,7 @@ export const StyledUl = styled.ul`
       display: none;
 
       @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+        margin: 0 auto;
         font-size: 2.5rem;
         display: inline-block;
         /* margin-bottom: 2rem; */
@@ -32,7 +36,7 @@ export const StyledUl = styled.ul`
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
       padding: 2rem 0 2rem 1.5rem;
-      text-align: center;
+      /* text-align: center; */
     }
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
