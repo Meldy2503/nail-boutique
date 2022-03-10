@@ -48,9 +48,10 @@ export const StyledUl = styled.ul`
   .active {
     background: linear-gradient(90deg, #141414 5.67%, #1c1c1c 100%);
     color: ${({ theme }) => theme.colors.tertiary1};
-  }
 
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      background: transparent;
+    }
   }
 
   & > li {

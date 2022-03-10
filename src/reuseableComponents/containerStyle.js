@@ -11,7 +11,7 @@ export const ContentContainer = styled.section`
   gap: 0.5rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    margin: 2rem auto 2rem auto;
+    margin: 0.5rem auto;
     width: 95%;
   }
 
