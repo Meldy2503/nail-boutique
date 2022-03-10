@@ -14,8 +14,12 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
+<<<<<<< HEAD
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
+=======
+    "web-vitals": "^2.1.4"
+>>>>>>> eb7140b174b590aa0e325b22c53b2bb4e7888995
   },
   "scripts": {
     "start": "react-scripts start",
