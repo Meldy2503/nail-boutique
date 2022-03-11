@@ -48,7 +48,6 @@ export const ServiceType = styled.div`
       font-size: 2rem;
       font-weight: 400;
       color: ${({ theme }) => theme.colors.secondary2};
-      /* color: #555555; */
     }
 
     p {

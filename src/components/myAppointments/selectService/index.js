@@ -17,7 +17,6 @@ import {
   FormContents,
   InputContainer,
 } from "./selectServiceStyle";
-// import { Link } from "react-router-dom";
 import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./selectServiceData";
 
@@ -56,7 +55,7 @@ function Booking() {
             <h2>Select Services</h2>
             <div>
               <FaAngleLeft />
-              <a href="#">GO BACK</a>
+              <a href="/update-profile">GO BACK</a>
             </div>
           </Title>
           <ServiceContainer>
