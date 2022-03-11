@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Booking from "./components/myAppointments/booking";
-import Navbar from "./components/navbar";
 
 const theme = {
   colors: {
@@ -40,7 +39,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <Fragment>
           <GlobalStyle />
-          <Navbar />
           <Routes>
             <Route path="/*" element={<Booking />} />
           </Routes>
