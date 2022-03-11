@@ -15,7 +15,7 @@ function Sidebar() {
           <NavLink
             end
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
-            to="/"
+            to="/update-profile"
           >
             <BsPersonCircle className="icon" />
             <span>Update profile</span>
