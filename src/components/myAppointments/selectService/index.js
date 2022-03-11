@@ -4,8 +4,8 @@ import {
   RightContent,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
-import { Button } from "../../../reuseableComponents/buttonStyle";
-import { useFormik, yupToFormErrors } from "formik";
+// import { Button } from "../../../reuseableComponents/buttonStyle";
+import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
   Col1,
@@ -16,11 +16,10 @@ import {
   FormContainer,
   FormContents,
   InputContainer,
-  Btn,
-} from "./bookingStyle";
+} from "./selectServiceStyle";
 // import { Link } from "react-router-dom";
 import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
-import serviceData from "./bookingData";
+import serviceData from "./selectServiceData";
 
 function Booking() {
   const [onClick, setOnClick] = React.useState({});

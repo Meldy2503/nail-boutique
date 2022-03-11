@@ -2,8 +2,8 @@ import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
-import Booking from "./components/myAppointments/booking";
 import Navbar from "./components/navBar/index";
+import SelectServicePage from "./pages/selectServicePage";
 
 const theme = {
   colors: {
@@ -38,7 +38,7 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
-            <Route path="/*" element={<Booking />} />
+            <Route path="/dashboard" element={<SelectServicePage />} />
           </Routes>
         </Fragment>
       </ThemeProvider>
