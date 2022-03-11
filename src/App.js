@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Booking from "./components/myAppointments/booking";
-import Navbar from "./components/navbar";
 import MyAppointmentPage from "./pages/MyAppointmentPage";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
 
