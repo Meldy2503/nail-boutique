@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Booking from "./components/myAppointments/booking";
+import UpdateProfilePage from "./pages/UpdateProfilePage";
 
 const theme = {
   colors: {
@@ -41,6 +42,7 @@ function App() {
           <GlobalStyle />
           <Routes>
             <Route path="/*" element={<Booking />} />
+            <Route path="/update-profile" element={<UpdateProfilePage />} />
           </Routes>
         </Fragment>
       </ThemeProvider>
