@@ -13,6 +13,7 @@ const theme = {
     primary4: "#141414",
     primary5: "#3C3C3C",
     primary6: "#585858",
+    primary7: "#262626",
 
     secondary1: "#FFFFFF",
     secondary2: "#B1B1B1",

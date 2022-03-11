@@ -4,14 +4,15 @@ import {
   RightContent,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
-import BookingSummary from "../bookingSummary";
+import UpdateProfile from "../../updateProfile";
+// import BookingSummary from "../bookingSummary";
 
 function Booking() {
   return (
     <ContentContainer>
       <Sidebar />
       <RightContent>
-        <BookingSummary />
+        <UpdateProfile />
       </RightContent>
     </ContentContainer>
   );
