@@ -37,9 +37,28 @@ export const Content = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.secondary6};
   border-radius: 1rem;
   margin-bottom: 2.3rem;
+
+  & input[type="checkbox"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  .checkbox {
+    display: inline-block;
+    height: 4.3rem;
+    width: 4.3rem;
+    background: ${({ theme }) => theme.colors.secondary6};
+    border: 1px ${({ theme }) => theme.colors.secondary4} solid;
+    margin-right: 4rem;
+    border-radius: 0.7rem;
+  }
 `;
 export const Contents = styled.div`
-  padding: 4rem 0 4rem 5rem;
+  padding: 4rem 0 4rem 4rem;
   width: 85%;
   h4 {
     font-size: 2.6rem;
