@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const BookingSummaryStyle = styled.div`
-  max-width: 40%;
-  width: 90%;
+  width: 100%;
+  margin-right: 2rem;
 
-  /* height: 79.6rem; */
+  height: 60rem;
   background-color: ${({ theme }) => theme.colors.primary4};
 
   h2 {

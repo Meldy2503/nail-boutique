@@ -41,6 +41,10 @@ export const RightContent = styled.div`
   width: 74%;
   color: ${({ theme }) => theme.colors.secondary2};
   height: 100%;
+  display: ${({ display }) => display || "none"};
+  justify-content: ${({ jc }) => jc || "none"};
+  align-items: ${({ alit }) => alit || "none"};
+  height: 100%;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;

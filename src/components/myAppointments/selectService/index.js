@@ -9,6 +9,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
   Col1,
+  Col2,
   Title,
   ServiceContainer,
   Services,
@@ -19,6 +20,7 @@ import {
 } from "./selectServiceStyle";
 import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./selectServiceData";
+import BookingSummary from "../bookingSummary";
 
 function Booking() {
   const [onClick, setOnClick] = React.useState({});
@@ -49,7 +51,7 @@ function Booking() {
   return (
     <ContentContainer>
       <Sidebar />
-      <RightContent>
+      <RightContent display="flex" jc="space-between" alit="center">
         <Col1>
           <Title>
             <h2>Select Services</h2>
@@ -139,6 +141,9 @@ function Booking() {
             <Button />
           </Btn> */}
         </Col1>
+        <Col2>
+          <BookingSummary />
+        </Col2>
       </RightContent>
     </ContentContainer>
   );

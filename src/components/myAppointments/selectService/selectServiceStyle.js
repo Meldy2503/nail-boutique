@@ -41,9 +41,10 @@ export const ServiceType = styled.div`
   align-items: center;
   border: 0.5px solid #555555;
   border-radius: 1rem;
-  padding: 1rem 5rem;
+  padding: 1rem 3rem;
 
   div {
+    width: 60%;
     h3 {
       font-size: 2rem;
       font-weight: 400;
@@ -72,6 +73,11 @@ export const FormContents = styled.div``;
 export const InputContainer = styled.div``;
 
 export const Btn = styled.div``;
+
+export const Col2 = styled.div`
+  width: 40%;
+`;
+
 /* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
   
  }
