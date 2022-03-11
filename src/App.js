@@ -44,8 +44,8 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
-            <Route path="/dashboard" element={<SelectServicePage />} />
             <Route path="/*" element={<Booking />} />
+            <Route path="/dashboard" element={<SelectServicePage />} />
             <Route path="/update-profile" element={<UpdateProfilePage />} />
           </Routes>
         </Fragment>
