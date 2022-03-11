@@ -7,6 +7,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "formik": "^2.2.9",
+    "intl-tel-input": "^17.0.15",
     "hamburger-react": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -14,12 +15,8 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
-<<<<<<< HEAD
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
-=======
-    "web-vitals": "^2.1.4"
->>>>>>> eb7140b174b590aa0e325b22c53b2bb4e7888995
   },
   "scripts": {
     "start": "react-scripts start",
