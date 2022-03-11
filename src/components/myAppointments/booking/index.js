@@ -12,7 +12,7 @@ function Booking() {
     <ContentContainer>
       <Sidebar />
       <RightContent>
-        <UpdateProfile />
+        <h2>right</h2>
       </RightContent>
     </ContentContainer>
   );
