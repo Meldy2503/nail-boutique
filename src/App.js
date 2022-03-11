@@ -48,7 +48,7 @@ function App() {
             <Route path="/*" element={<Booking />} />
             <Route path="/dashboard" element={<SelectServicePage />} />
             <Route path="/update-profile" element={<UpdateProfilePage />} />
-            <Route path="/notification" element={<NotificationPage />} />
+            <Route path="/notifications" element={<NotificationPage />} />
           </Routes>
         </Fragment>
       </ThemeProvider>

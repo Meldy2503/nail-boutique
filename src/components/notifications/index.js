@@ -1,13 +1,23 @@
 import React from "react";
-import { RightContent } from "../../reuseableComponents/containerStyle";
+import {
+  ContentContainer,
+  RightContent,
+} from "../../reuseableComponents/containerStyle";
 import { Back } from "../../reuseableComponents/goBack/goBackStyle";
 import Sidebar from "../sidebar";
-import { Alert, NotificationContainer, Row1 } from "./notificationStyle";
+import {
+  Alert,
+  NotificationContainer,
+  Row1,
+  Row2,
+  Item,
+} from "./notificationStyle";
 import { MdChevronLeft } from "react-icons/md";
+import alertData from "../../components/notifications/notificationData";
 
 function Notification() {
   return (
-    <div>
+    <ContentContainer>
       <Sidebar />
       <RightContent>
         <NotificationContainer>
@@ -18,10 +28,21 @@ function Notification() {
               Go back
             </Back>
           </Row1>
-          <Alert></Alert>
+          <Row2>
+            <Alert>
+              {alertData.map((items) => (
+                <Item key={items.id}>
+                  <div>
+                    <h3>{items.heading}</h3>
+                    <p>{items.body}</p>
+                  </div>
+                </Item>
+              ))}
+            </Alert>
+          </Row2>
         </NotificationContainer>
       </RightContent>
-    </div>
+    </ContentContainer>
   );
 }
 
