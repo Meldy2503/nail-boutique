@@ -12,7 +12,7 @@ export const StyledUl = styled.ul`
   }
 
   & > li {
-    padding: 1.5rem 0 2.5rem 2rem;
+    padding: 1.5rem 1rem 2.5rem 1rem;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
       padding: 1.5rem 0 2.5rem 0.5rem;
@@ -24,10 +24,10 @@ export const StyledUl = styled.ul`
       font-size: 1.6rem;
       font-weight: 400;
       color: ${({ theme }) => theme.colors.secondary5};
-      padding: 2rem 3rem;
+      padding: 2rem;
 
       @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-        padding: 2rem 2.3rem 2rem 2rem;
+        padding: 2rem 1rem;
       }
 
       @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
@@ -42,7 +42,7 @@ export const StyledUl = styled.ul`
     }
 
     .active {
-      background: linear-gradient(150deg, #141414 85%, #1c1c1c 100%);
+      background: linear-gradient(150deg, #141414 75%, #1c1c1c 100%);
       color: ${({ theme }) => theme.colors.tertiary1};
 
       @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {

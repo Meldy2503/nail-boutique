@@ -12,7 +12,8 @@ export const Title = styled.div`
   margin-bottom: 3rem;
 
   h2 {
-    font-size: 3.2rem;
+    font-size: 3rem;
+    font-weight: 500;
   }
 
   div {
@@ -25,7 +26,7 @@ export const Title = styled.div`
   a {
     color: #525252;
     margin-left: 1rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 `;
 
@@ -44,7 +45,8 @@ export const ServiceType = styled.div`
 
   div {
     h3 {
-      font-size: 2.4rem;
+      font-size: 2rem;
+      font-weight: 400;
       color: ${({ theme }) => theme.colors.secondary2};
       /* color: #555555; */
     }
