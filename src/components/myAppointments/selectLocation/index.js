@@ -9,41 +9,52 @@ import {
   Contents,
   LocationHeader,
 } from "./selectLocationStyle";
+import {
+  ContentContainer,
+  RightContent,
+} from "../../../reuseableComponents/containerStyle";
+import Sidebar from "../../sidebar";
 
 function SelectLocation() {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <Column>
-      <Col1>
-        <LocationHeader>
-          <h1>Select Location</h1>
-          <h5> Go Back</h5>
-        </LocationHeader>
-        {locationData.map((data) => (
-          <Content key={data.id}>
-            <Contents>
-              <h4>{data.heading}</h4>
-              <p>{data.address}</p>
-            </Contents>
-            <input
-              size={200}
-              type="checkbox"
-              onChange={() => {
-                setIsChecked(!isChecked);
-              }}
-            />
-            <span
-              className={`checkbox ${isChecked ? "checkbox--active" : ""}`}
-              aria-hidden="true"
-            />
-          </Content>
-        ))}
-      </Col1>
-      <Col2>
-        <img src={Map} alt="location" />
-      </Col2>
-    </Column>
+    <ContentContainer>
+      <Sidebar />
+      <RightContent>
+        <Column>
+          <Col1>
+            <LocationHeader>
+              <h1>Select Location</h1>
+              <h5> Go Back</h5>
+            </LocationHeader>
+            {locationData.map((data) => (
+              <Content key={data.id}>
+                <Contents>
+                  <h4>{data.heading}</h4>
+                  <p>{data.address}</p>
+                </Contents>
+                <input
+                  size={200}
+                  type="checkbox"
+                  onChange={() => {
+                    setIsChecked(!isChecked);
+                  }}
+                />
+                <span
+                  className={`checkbox ${isChecked ? "checkbox--active" : ""}`}
+                  aria-hidden="true"
+                />
+              </Content>
+            ))}
+            ,<button></button>
+          </Col1>
+          <Col2>
+            <img src={Map} alt="location" />
+          </Col2>
+        </Column>
+      </RightContent>
+    </ContentContainer>
   );
 }
 

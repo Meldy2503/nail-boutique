@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Booking from "./components/myAppointments/booking";
 import Navbar from "./components/navbar";
+import MyAppointmentPage from "./pages/MyAppointmentPage";
 
 const theme = {
   colors: {
@@ -41,6 +42,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/*" element={<Booking />} />
+            <Route path="/select-location" element={<MyAppointmentPage />} />
           </Routes>
         </Fragment>
       </ThemeProvider>

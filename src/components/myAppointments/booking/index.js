@@ -4,15 +4,12 @@ import {
   RightContent,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
-import SelectLocation from "../selectLocation";
 
 function Booking() {
   return (
     <ContentContainer>
       <Sidebar />
-      <RightContent>
-        <SelectLocation />
-      </RightContent>
+      <RightContent></RightContent>
     </ContentContainer>
   );
 }

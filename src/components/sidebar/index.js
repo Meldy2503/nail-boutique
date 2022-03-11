@@ -24,7 +24,7 @@ function Sidebar() {
         <li>
           <NavLink
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
-            to="/my-appointments"
+            to="/select-location"
           >
             <FaPeopleArrows className="icon" />
             <span>My Appointments</span>
