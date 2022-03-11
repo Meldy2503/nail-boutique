@@ -4,12 +4,18 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Navbar from "./components/navBar/index";
 import SelectServicePage from "./pages/selectServicePage";
+import Booking from "./components/myAppointments/booking";
+import UpdateProfilePage from "./pages/UpdateProfilePage";
 
 const theme = {
   colors: {
     primary1: "#000000",
     primary2: "#1C1C1C",
     primary3: "#212121",
+    primary4: "#141414",
+    primary5: "#3C3C3C",
+    primary6: "#585858",
+    primary7: "#262626",
 
     secondary1: "#FFFFFF",
     secondary2: "#B1B1B1",
@@ -36,9 +42,10 @@ function App() {
       <ThemeProvider theme={theme}>
         <Fragment>
           <GlobalStyle />
-          <Navbar />
           <Routes>
             <Route path="/dashboard" element={<SelectServicePage />} />
+            <Route path="/*" element={<Booking />} />
+            <Route path="/update-profile" element={<UpdateProfilePage />} />
           </Routes>
         </Fragment>
       </ThemeProvider>

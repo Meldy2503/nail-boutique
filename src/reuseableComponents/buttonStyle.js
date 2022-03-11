@@ -5,7 +5,7 @@ export const Button = styled(Link)`
   color: ${({ color }) => color || "#000000"};
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
   border: none;
-  padding: ${({ padding }) => padding || "1.8rem 50%"};
+  padding: ${({ padding }) => padding || "1rem 26%"};
   display: inline-block;
   border-radius: 1rem;
   font-weight: 400;
