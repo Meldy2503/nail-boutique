@@ -42,6 +42,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Fragment>
           <GlobalStyle />
+          <Navbar />
           <Routes>
             <Route path="/dashboard" element={<SelectServicePage />} />
             <Route path="/*" element={<Booking />} />
