@@ -9,6 +9,7 @@ export const ContentContainer = styled.section`
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+  overflow: hidden;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 95%;

@@ -4,6 +4,9 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Booking from "./components/myAppointments/booking";
 import MyAppointmentPage from "./pages/MyAppointmentPage";
+import Navbar from "./components/navBar/index";
+import SelectServicePage from "./pages/selectServicePage";
+// import Booking from "./components/myAppointments/booking";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
 
 const theme = {
@@ -43,9 +46,12 @@ function App() {
       <ThemeProvider theme={theme}>
         <Fragment>
           <GlobalStyle />
+          <Navbar />
           <Routes>
             <Route path="/*" element={<Booking />} />
             <Route path="/select-location" element={<MyAppointmentPage />} />
+            {/* <Route path="/*" element={<Booking />} /> */}
+            <Route path="/dashboard" element={<SelectServicePage />} />
             <Route path="/update-profile" element={<UpdateProfilePage />} />
           </Routes>
         </Fragment>
