@@ -21,8 +21,9 @@ const theme = {
     secondary1: "#FFFFFF",
     secondary2: "#B1B1B1",
     secondary3: "#BBBBBB",
-    secondary4: "#959595",
-    secondary5: "#9C9C9C",
+    secondary4: "#636363",
+    secondary5: "#959595",
+    secondary6: "#9C9C9C",
 
     tertiary1: "#B57224",
     tertiary2: "#E48F04",
