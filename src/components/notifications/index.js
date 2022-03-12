@@ -22,7 +22,7 @@ function Notification() {
       <RightContent>
         <NotificationContainer>
           <Row1>
-            <h2>Notification</h2>
+            <h2>Notifications</h2>
             <Back to="/location">
               <MdChevronLeft />
               Go back
@@ -31,8 +31,8 @@ function Notification() {
           <Row2>
             <Alert>
               {alertData.map((items) => (
-                <Item key={items.id}>
-                  <div>
+                <Item>
+                  <div key={items.id}>
                     <h3>{items.heading}</h3>
                     <p>{items.body}</p>
                   </div>

@@ -15,16 +15,14 @@ export const Row1 = styled.div`
 `;
 export const Row2 = styled.div``;
 
-export const Item = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary7};
-`;
+export const Item = styled.div``;
 
 export const Alert = styled.div`
-  margin: 4rem 0;
-
   & > div {
     padding: 1.5% 6%;
     position: relative;
+    background-color: ${({ theme }) => theme.colors.primary7};
+    margin: 2rem 0;
 
     &::before {
       content: "";
