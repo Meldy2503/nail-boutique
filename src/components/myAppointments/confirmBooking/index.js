@@ -12,8 +12,9 @@ import {
   Terms,
 } from "./confirmBookingStyle";
 import { MdChevronLeft } from "react-icons/md";
-import location from "./confirmBookingData";
-import { IoLocationOutline } from "react-icons/io";
+import confirmLocation from "./confirmBookingData";
+import { IoLocationOutline } from "react-icons/io5";
+import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
 
 function ConfirmBooking() {
   return (
@@ -22,18 +23,20 @@ function ConfirmBooking() {
       <RightContent>
         <ConfirmBookingContainer>
           <HeadingStyle>
-            <h2>Select Technician</h2>
+            <h2>Confirm Booking</h2>
             <Back to="/location">
               <MdChevronLeft />
               Go back
             </Back>
           </HeadingStyle>
           <Location>
-            <IoLocationOutline />
+            <span>
+              <IoLocationOutline className="pin" />
+              <p>{confirmLocation.location}</p>
+            </span>
           </Location>
-          <hr />
           <Terms>
-            <h3>Terms & Condition</h3>
+            <h2>Terms & Condition</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
