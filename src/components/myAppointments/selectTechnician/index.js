@@ -1,4 +1,4 @@
-import React from "react";
+// import React, { useState } from "react";
 import {
   ContentContainer,
   RightContent,
@@ -23,8 +23,15 @@ import { MdChevronLeft, MdStar } from "react-icons/md";
 import { HiOutlineSearch, HiUserGroup, HiDotsHorizontal } from "react-icons/hi";
 import { IoGrid } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
+import { Button } from "../../../reuseableComponents/buttonStyle";
 
 function SelectTechnician() {
+  //   const [list, setList] = useState(false);
+
+  //   const togglelist = () => {
+  //     setState((prevState) => !prevState);
+  //   };
+
   return (
     <ContentContainer>
       <Sidebar />
@@ -84,6 +91,7 @@ function SelectTechnician() {
               </Card>
             ))}
           </Row3>
+          <Button to="/schedule">CONTINUE</Button>
         </TechnicianContainer>
       </RightContent>
     </ContentContainer>
