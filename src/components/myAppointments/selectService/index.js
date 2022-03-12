@@ -58,7 +58,7 @@ function Booking() {
             <h2>Select Services</h2>
             <div>
               <FaAngleLeft />
-              <a href="/update-profile">GO BACK</a>
+              <a href="/select-location">GO BACK</a>
             </div>
           </Title>
           <ServiceContainer>
