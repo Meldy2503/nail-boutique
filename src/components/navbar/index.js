@@ -53,7 +53,7 @@ function Navbar() {
             <NavLink
               className={(navLink) => (navLink.isActive ? "active" : "")}
               onClick={closeMenuLink}
-              to="/notification"
+              to="/notifications"
             >
               <IoIosNotificationsOutline className="icon" />
             </NavLink>
