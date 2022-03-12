@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Booking from "./components/myAppointments/booking";
 import MyAppointmentPage from "./pages/MyAppointmentPage";
-import Navbar from "./components/navBar/index";
+import Navbar from "./components/navbar";
 import SelectServicePage from "./pages/selectServicePage";
 // import Booking from "./components/myAppointments/booking";
 import UpdateProfilePage from "./pages/UpdateProfilePage";

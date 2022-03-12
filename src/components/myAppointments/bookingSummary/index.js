@@ -1,49 +1,94 @@
 import React from "react";
 import {
-  BookingSummaryStyle,
   SummaryContainer,
+  Intro,
   Title,
   Service,
+  Location,
+  Manicure,
+  Booking,
   SubTotal,
+  Technician,
+  Day,
   Total,
+  Btn,
 } from "./bookingSummaryStyle";
 import { Button } from "../../../reuseableComponents/buttonStyle";
+import { VscLocation } from "react-icons/vsc";
+import { IoIosCheckmarkCircle } from "react-icons/io";
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 function BookingSummary() {
   return (
-    <BookingSummaryStyle>
-      <SummaryContainer>
+    <SummaryContainer>
+      <Intro>
         <Title>
           <h2>Booking Summary</h2>
           <p>Lorem Ipsum has been the industry's iudst standard dummy.</p>
         </Title>
-        <Service>
-          <span>
-            <p>Basic Manicure:</p>
+        <Location>
+          <div>
+            <span>
+              <VscLocation />
+            </span>
+            <p>
+              The Nail Boutique - Ikoyi 7 - 12 Rumens Cls Road, Lagos, Nigeria.
+            </p>
+          </div>
+        </Location>
+      </Intro>
+
+      <Service>
+        <Manicure>
+          <div>
+            <h6>BASIC MANICURE:</h6>
             <p> N5,000.00</p>
-          </span>
-          <span>
-            <p>HAIR RELAXING:</p>
+          </div>
+          <div>
+            <h6>HAIR RELAXING:</h6>
             <p> N8,000.00</p>
-          </span>
-        </Service>
+          </div>
+        </Manicure>
         <SubTotal>
-          <span>
-            <p>SUB Total:</p>
+          <div>
+            <h6>SUB TOTAL:</h6>
             <p> N5,000.00</p>
-          </span>
-          <span>
-            <p>VAT</p>
+          </div>
+          <div>
+            <h6>VAT</h6>
             <p>N750.00</p>
-          </span>
+          </div>
         </SubTotal>
-        <Button to="/confirm">Confirm Booking</Button>
-        <Total>
-          <p>BOOKING Total:</p>
-          <p> N5,750.00</p>
-        </Total>
-      </SummaryContainer>
-    </BookingSummaryStyle>
+      </Service>
+      <Booking>
+        <Technician>
+          <p> Technician Selected</p>
+          <div>
+            <IoIosCheckmarkCircle className="icon" />
+            <img src="" alt="" />
+            <span>
+              <h6> Ademide Ruth </h6>
+              <p> Hair Stylist - 26Yrs</p>
+            </span>
+          </div>
+        </Technician>
+        <Day>
+          <AiOutlineClockCircle />
+          <div>
+            <h6>Thu, 6th Feb., 2022 - </h6>
+            <h6>09:00AM - </h6>
+            <p>In 21 days</p>
+          </div>
+        </Day>
+        <Btn>
+          <Button to="/confirm">Confirm Booking</Button>
+        </Btn>
+      </Booking>
+      <Total>
+        <h6>BOOKING Total:</h6>
+        <p> N5,750.00</p>
+      </Total>
+    </SummaryContainer>
   );
 }
 
