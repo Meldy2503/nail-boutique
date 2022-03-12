@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
+import Navbar from "./components/navbar";
 import SelectServicePage from "./pages/selectServicePage";
 // import Booking from "./components/myAppointments/booking";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
@@ -41,7 +42,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Fragment>
           <GlobalStyle />
-          {/* <NavBar /> */}
+          <Navbar />
           <Routes>
             {/* <Route path="/*" element={<Booking />} /> */}
             <Route path="/dashboard" element={<SelectServicePage />} />

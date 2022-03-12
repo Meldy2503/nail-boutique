@@ -10,7 +10,7 @@ export const ContentContainer = styled.section`
   align-items: stretch;
   gap: 0.5rem;
   overflow: hidden;
-  padding-top: 11.5rem;
+  padding-top: 13rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 95%;
