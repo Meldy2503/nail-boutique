@@ -54,6 +54,7 @@ export const Grid = styled.div`
     font-size: 3rem;
   }
 `;
+
 export const List = styled.div`
   display: flex;
   justify-content: center;
@@ -66,11 +67,15 @@ export const List = styled.div`
     font-size: 3rem;
   }
 `;
+
 export const Row3 = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  overflow-y: scroll;
+  height: 80vh;
 `;
+
 export const Card = styled.div`
   background-color: ${({ theme }) => theme.colors.primary7};
   margin: 2rem 0 0 0;
@@ -93,6 +98,7 @@ export const Card = styled.div`
     color: black;
   }
 `;
+
 export const Technician = styled.div`
   display: flex;
   flex-direction: column;
@@ -136,6 +142,7 @@ export const Technician = styled.div`
     /* width: 100%; */
   }
 `;
+
 export const Select = styled.button`
   background-color: transparent;
   /* color: ${({ theme }) => theme.colors.secondary2}; */
@@ -162,4 +169,7 @@ export const Select = styled.button`
     background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
     background-repeat: no-repeat;
   }
+`;
+export const Row4 = styled.div`
+  margin: 2rem 0;
 `;

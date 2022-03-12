@@ -9,6 +9,7 @@ import {
   Search,
   Row2,
   Row3,
+  Row4,
   Orientation,
   Grid,
   List,
@@ -91,7 +92,9 @@ function SelectTechnician() {
               </Card>
             ))}
           </Row3>
-          <Button to="/schedule">CONTINUE</Button>
+          <Row4>
+            <Button to="/schedule">CONTINUE</Button>
+          </Row4>
         </TechnicianContainer>
       </RightContent>
     </ContentContainer>
