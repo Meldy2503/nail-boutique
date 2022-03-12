@@ -7,6 +7,7 @@ import SelectServicePage from "./pages/selectServicePage";
 // import Booking from "./components/myAppointments/booking";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
 import NotificationPage from "./pages/NotificationPage";
+import MyAppointmentPage from "./pages/MyAppointmentPage";
 
 const theme = {
   colors: {
@@ -47,6 +48,7 @@ function App() {
           <Navbar />
           <Routes>
             {/* <Route path="/*" element={<Booking />} /> */}
+            <Route path="/*" element={<MyAppointmentPage />} />
             <Route path="/dashboard" element={<SelectServicePage />} />
             <Route path="/update-profile" element={<UpdateProfilePage />} />
             <Route path="/notifications" element={<NotificationPage />} />

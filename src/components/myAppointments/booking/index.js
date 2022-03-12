@@ -30,4 +30,5 @@ function Booking() {
     </ContentContainer>
   );
 }
+
 export default Booking;
