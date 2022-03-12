@@ -6,7 +6,7 @@ export const Button = styled(Link)`
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
   width: 100%;
   border: none;
-  padding: ${({ padding }) => padding || "1.2rem 26%"};
+  padding: ${({ padding }) => padding || "1rem 26%"};
   display: inline-block;
   border-radius: 1rem;
   font-weight: 400;

@@ -17,6 +17,7 @@ import { Button } from "../../../reuseableComponents/buttonStyle";
 import { VscLocation } from "react-icons/vsc";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import avatar from "../../../images/avatar1.png";
 
 function BookingSummary() {
   return (
@@ -65,29 +66,31 @@ function BookingSummary() {
           <p> Technician Selected</p>
           <div>
             <IoIosCheckmarkCircle className="icon" />
-            <img src="" alt="" />
-            <span>
+            <img src={avatar} alt="avatar" />
+
+            <span className="name">
               <h6> Ademide Ruth </h6>
               <p> Hair Stylist - 26Yrs</p>
             </span>
           </div>
         </Technician>
         <Day>
-          <AiOutlineClockCircle />
-          <div>
-            <h6>Thu, 6th Feb., 2022 - </h6>
-            <h6>09:00AM - </h6>
-            <p>In 21 days</p>
-          </div>
+          <AiOutlineClockCircle className="icon" />
+
+          <h6>
+            Thu, 6th Feb., 2022 - 09:00AM - <em>In 21 days</em>
+          </h6>
         </Day>
+        <Total>
+          <h6>BOOKING Total:</h6>
+          <p> N5,750.00</p>
+        </Total>
         <Btn>
-          <Button to="/confirm">Confirm Booking</Button>
+          <Button padding=".5rem 26%" to="/confirm">
+            Confirm
+          </Button>
         </Btn>
       </Booking>
-      <Total>
-        <h6>BOOKING Total:</h6>
-        <p> N5,750.00</p>
-      </Total>
     </SummaryContainer>
   );
 }

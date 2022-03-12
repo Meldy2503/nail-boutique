@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.section`
-  height: 80%;
+  height: 93vh;
   width: 90%;
   max-width: 140rem;
   margin: 0 auto;
@@ -25,8 +25,8 @@ export const ContentContainer = styled.section`
 
 export const LeftContent = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
-  width: 24%;
-  height: 76rem;
+  width: 25%;
+  height: 100%;
   color: ${({ theme }) => theme.colors.secondary5};
   font-size: 1.8rem;
   font-weight: 400;
@@ -40,7 +40,7 @@ export const LeftContent = styled.div`
 
 export const RightContent = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
-  width: 75%;
+  width: 77%;
   color: ${({ theme }) => theme.colors.secondary2};
   height: 100%;
   display: ${({ display }) => display || "flex"};
@@ -53,13 +53,17 @@ export const RightContent = styled.div`
 `;
 
 export const RightContentCol1 = styled.div`
-  margin: 3rem 2rem 3rem 3rem;
+  margin: 4rem 2rem 4rem 3rem;
   width: 70%;
-  height: 60rem;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 85%;
 `;
 export const RightContentCol2 = styled.div`
-  margin: 3rem 1.5rem 3rem 1rem;
+  margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
+  height: fit-content;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `;

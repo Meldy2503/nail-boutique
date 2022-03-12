@@ -120,6 +120,10 @@ export const InputContainer = styled.div`
 export const Btn = styled.div`
   width: 100%;
   margin-bottom: 3rem;
+  position: sticky;
+  background-color: #1c1c1c;
+  height: 5rem;
+  bottom: 0;
 `;
 
 /* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
