@@ -4,9 +4,10 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Navbar from "./components/navBar/index";
 import SelectServicePage from "./pages/selectServicePage";
-import Booking from "./components/myAppointments/booking";
+// import Booking from "./components/myAppointments/booking";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
 import NotificationPage from "./pages/NotificationPage";
+import MyAppointmentPage from "./pages/MyAppointmentPage";
 
 const theme = {
   colors: {
@@ -21,8 +22,9 @@ const theme = {
     secondary1: "#FFFFFF",
     secondary2: "#B1B1B1",
     secondary3: "#BBBBBB",
-    secondary4: "#959595",
-    secondary5: "#9C9C9C",
+    secondary4: "#636363",
+    secondary5: "#959595",
+    secondary6: "#9C9C9C",
 
     tertiary1: "#B57224",
     tertiary2: "#E48F04",
@@ -45,7 +47,8 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
-            <Route path="/*" element={<Booking />} />
+            {/* <Route path="/*" element={<Booking />} /> */}
+            <Route path="/*" element={<MyAppointmentPage />} />
             <Route path="/dashboard" element={<SelectServicePage />} />
             <Route path="/update-profile" element={<UpdateProfilePage />} />
             <Route path="/notifications" element={<NotificationPage />} />
