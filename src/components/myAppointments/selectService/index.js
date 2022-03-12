@@ -2,13 +2,14 @@ import React from "react";
 import {
   ContentContainer,
   RightContent,
+  RightContentCol1,
+  RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
-// import { Button } from "../../../reuseableComponents/buttonStyle";
+import { Button } from "../../../reuseableComponents/buttonStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
-  Col1,
   Title,
   ServiceContainer,
   Services,
@@ -16,10 +17,11 @@ import {
   FormContainer,
   FormContents,
   InputContainer,
+  Btn,
 } from "./selectServiceStyle";
-// import { Link } from "react-router-dom";
 import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./selectServiceData";
+import BookingSummary from "../bookingSummary";
 
 function Booking() {
   const [onClick, setOnClick] = React.useState({});
@@ -35,9 +37,9 @@ function Booking() {
       options: [],
     },
     validationSchema: Yup.object({
-      options: Yup.array()
-        .min(1, "select atleast one option")
-        .required("Required"),
+      options: Yup.array(),
+      // .min(1, "select atleast one option")
+      // .required("Required"),
       // options: Yup.boolean().oneOf([true], "select atleast one option"),
     }),
 
@@ -51,7 +53,7 @@ function Booking() {
     <ContentContainer>
       <Sidebar />
       <RightContent>
-        <Col1>
+        <RightContentCol1>
           <Title>
             <h2>Select Services</h2>
             <div>
@@ -85,13 +87,14 @@ function Booking() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                           />
+                          <span></span>
                           <label htmlFor="optionA">
                             <h5>Basic Manicure</h5>
-                            <p>30 mins · ₦5000</p>
+                            <p>30 mins - ₦5000</p>
                           </label>
-                          {formik.touched.options && formik.errors.options ? (
+                          {/* {formik.touched.options && formik.errors.options ? (
                             <p className="errors">{formik.errors.options}</p>
-                          ) : null}
+                          ) : null} */}
                         </InputContainer>
 
                         <InputContainer>
@@ -103,13 +106,14 @@ function Booking() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                           />
+                          <span></span>
                           <label htmlFor="optionB">
                             <h5>Basic Manicure</h5>
-                            <p>30 mins · ₦5000</p>
+                            <p>30 mins - ₦5000</p>
                           </label>
-                          {formik.touched.options && formik.errors.options ? (
+                          {/* {formik.touched.options && formik.errors.options ? (
                             <p className="errors">{formik.errors.options}</p>
-                          ) : null}
+                          ) : null} */}
                         </InputContainer>
 
                         <InputContainer>
@@ -121,13 +125,14 @@ function Booking() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                           />
+                          <span></span>
                           <label htmlFor="optionC">
                             <h5>Basic Manicure</h5>
-                            <p>30 mins · ₦5000</p>
+                            <p>30 mins - ₦5000</p>
                           </label>
-                          {formik.touched.options && formik.errors.options ? (
+                          {/* {formik.touched.options && formik.errors.options ? (
                             <p className="errors">{formik.errors.options}</p>
-                          ) : null}
+                          ) : null} */}
                         </InputContainer>
                       </FormContents>
                     </FormContainer>
@@ -135,11 +140,14 @@ function Booking() {
                 </Services>
               );
             })}
+            <Btn>
+              <Button to="/confirm">Continue</Button>
+            </Btn>
           </ServiceContainer>
-          {/* <Btn>
-            <Button />
-          </Btn> */}
-        </Col1>
+        </RightContentCol1>
+        <RightContentCol2>
+          <BookingSummary />
+        </RightContentCol2>
       </RightContent>
     </ContentContainer>
   );

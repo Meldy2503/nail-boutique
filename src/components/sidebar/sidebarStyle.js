@@ -12,12 +12,10 @@ export const StyledUl = styled.ul`
   }
 
   & > li {
-    padding: 1.5rem 1rem 2.5rem 1rem;
+    padding: 1rem 1rem 2rem 0;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      padding: 1.5rem 0 2.5rem 0.5rem;
-    }
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      padding: 1rem 0 2.5rem 0.5rem;
     }
 
     .navLink {
@@ -35,7 +33,7 @@ export const StyledUl = styled.ul`
       }
 
       & > span {
-        @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+        @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
           display: none;
         }
       }
@@ -53,7 +51,7 @@ export const StyledUl = styled.ul`
     .icon {
       display: none;
 
-      @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
         margin: 0 auto;
         font-size: 2.5rem;
         display: inline-block;
