@@ -7,6 +7,8 @@ export const NavContainer = styled.div`
   height: 9rem;
   width: 100%;
   z-index: 1500;
+  position: fixed;
+  top: 0;
 `;
 
 export const Logo = styled.div`
@@ -89,17 +91,21 @@ export const StyledNav = styled.nav`
 
 export const MenuIcon = styled.div`
   display: none;
+
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     display: block;
-    font-size: 3.5rem;
+
     position: absolute;
     top: 0;
     right: 0;
-    color: #959595;
-    transform: translate(-1%, 50%);
+    transform: translate(-1%, 40%);
     cursor: pointer;
+    color: ${({ theme }) => theme.colors.tertiary2};
+    border: 2px solid ${({ theme }) => theme.colors.tertiary2};
+    border-radius: 1rem;
+
     @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
     }
   }
 `;

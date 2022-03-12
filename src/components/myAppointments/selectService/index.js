@@ -2,14 +2,14 @@ import React from "react";
 import {
   ContentContainer,
   RightContent,
+  RightContentCol1,
+  RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
-// import { Button } from "../../../reuseableComponents/buttonStyle";
+import { Button } from "../../../reuseableComponents/buttonStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
-  Col1,
-  Col2,
   Title,
   ServiceContainer,
   Services,
@@ -17,6 +17,7 @@ import {
   FormContainer,
   FormContents,
   InputContainer,
+  Btn,
 } from "./selectServiceStyle";
 import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./selectServiceData";
@@ -36,9 +37,9 @@ function Booking() {
       options: [],
     },
     validationSchema: Yup.object({
-      options: Yup.array()
-        .min(1, "select atleast one option")
-        .required("Required"),
+      options: Yup.array(),
+      // .min(1, "select atleast one option")
+      // .required("Required"),
       // options: Yup.boolean().oneOf([true], "select atleast one option"),
     }),
 
@@ -51,8 +52,8 @@ function Booking() {
   return (
     <ContentContainer>
       <Sidebar />
-      <RightContent display="flex" jc="space-between" alit="center">
-        <Col1>
+      <RightContent>
+        <RightContentCol1>
           <Title>
             <h2>Select Services</h2>
             <div>
@@ -86,13 +87,14 @@ function Booking() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                           />
+                          <span></span>
                           <label htmlFor="optionA">
                             <h5>Basic Manicure</h5>
-                            <p>30 mins · ₦5000</p>
+                            <p>30 mins - ₦5000</p>
                           </label>
-                          {formik.touched.options && formik.errors.options ? (
+                          {/* {formik.touched.options && formik.errors.options ? (
                             <p className="errors">{formik.errors.options}</p>
-                          ) : null}
+                          ) : null} */}
                         </InputContainer>
 
                         <InputContainer>
@@ -104,13 +106,14 @@ function Booking() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                           />
+                          <span></span>
                           <label htmlFor="optionB">
                             <h5>Basic Manicure</h5>
-                            <p>30 mins · ₦5000</p>
+                            <p>30 mins - ₦5000</p>
                           </label>
-                          {formik.touched.options && formik.errors.options ? (
+                          {/* {formik.touched.options && formik.errors.options ? (
                             <p className="errors">{formik.errors.options}</p>
-                          ) : null}
+                          ) : null} */}
                         </InputContainer>
 
                         <InputContainer>
@@ -122,13 +125,14 @@ function Booking() {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                           />
+                          <span></span>
                           <label htmlFor="optionC">
                             <h5>Basic Manicure</h5>
-                            <p>30 mins · ₦5000</p>
+                            <p>30 mins - ₦5000</p>
                           </label>
-                          {formik.touched.options && formik.errors.options ? (
+                          {/* {formik.touched.options && formik.errors.options ? (
                             <p className="errors">{formik.errors.options}</p>
-                          ) : null}
+                          ) : null} */}
                         </InputContainer>
                       </FormContents>
                     </FormContainer>
@@ -136,14 +140,14 @@ function Booking() {
                 </Services>
               );
             })}
+            <Btn>
+              <Button to="/confirm">Continue</Button>
+            </Btn>
           </ServiceContainer>
-          {/* <Btn>
-            <Button />
-          </Btn> */}
-        </Col1>
-        <Col2>
+        </RightContentCol1>
+        <RightContentCol2>
           <BookingSummary />
-        </Col2>
+        </RightContentCol2>
       </RightContent>
     </ContentContainer>
   );
