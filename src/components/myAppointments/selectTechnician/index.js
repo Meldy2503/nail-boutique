@@ -40,7 +40,7 @@ function SelectTechnician() {
         <TechnicianContainer>
           <HeadingStyle>
             <h2>Select Technician</h2>
-            <Back to="/location">
+            <Back to="/select-servicestwo">
               <MdChevronLeft />
               Go back
             </Back>

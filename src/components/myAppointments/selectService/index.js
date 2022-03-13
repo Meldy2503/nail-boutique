@@ -19,9 +19,11 @@ import {
   InputContainer,
   Btn,
 } from "./selectServiceStyle";
-import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
+import { FaAngleDown, FaAngleRight } from "react-icons/fa";
+import { MdChevronLeft } from "react-icons/md";
 import serviceData from "./selectServiceData";
 import BookingSummary from "../bookingSummary";
+import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
 
 function SelectServices() {
   const [onClick, setOnClick] = React.useState({});
@@ -56,10 +58,10 @@ function SelectServices() {
         <RightContentCol1>
           <Title>
             <h2>Select Services</h2>
-            <div>
-              <FaAngleLeft />
-              <a href="/select-location">GO BACK</a>
-            </div>
+            <Back to="/select-location">
+              <MdChevronLeft />
+              Go back
+            </Back>
           </Title>
           <ServiceContainer>
             {serviceData.map((items, index) => {
@@ -141,7 +143,7 @@ function SelectServices() {
               );
             })}
             <Btn>
-              <Button to="/select-services2">Continue</Button>
+              <Button to="/select-servicestwo">Continue</Button>
             </Btn>
           </ServiceContainer>
         </RightContentCol1>

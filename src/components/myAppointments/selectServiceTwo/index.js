@@ -6,6 +6,7 @@ import {
   RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
+import { MdChevronLeft } from "react-icons/md";
 import { Button } from "../../../reuseableComponents/buttonStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -18,12 +19,13 @@ import {
   FormContents,
   InputContainer,
   Btn,
-} from "./selectServiceStyle";
-import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
+} from "./selectServiceTwoStyle";
+import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./data";
 import BookingSummary from "../bookingSummary";
+import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
 
-function Booking() {
+function SelectServiceTwo() {
   const [onClick, setOnClick] = React.useState({});
   const handleClick = (index) => () => {
     setOnClick((state) => ({
@@ -38,9 +40,6 @@ function Booking() {
     },
     validationSchema: Yup.object({
       options: Yup.array(),
-      // .min(1, "select atleast one option")
-      // .required("Required"),
-      // options: Yup.boolean().oneOf([true], "select atleast one option"),
     }),
 
     onSubmit: (values, { resetForm }) => {
@@ -56,10 +55,10 @@ function Booking() {
         <RightContentCol1>
           <Title>
             <h2>Select Services Two</h2>
-            <div>
-              <FaAngleLeft />
-              <a href="/select-services">GO BACK</a>
-            </div>
+            <Back to="/select-services">
+              <MdChevronLeft />
+              Go back
+            </Back>
           </Title>
           <ServiceContainer>
             {serviceData.map((items, index) => {
@@ -92,9 +91,6 @@ function Booking() {
                             <h5>Basic Manicure</h5>
                             <p>30 mins - ₦5000</p>
                           </label>
-                          {/* {formik.touched.options && formik.errors.options ? (
-                            <p className="errors">{formik.errors.options}</p>
-                          ) : null} */}
                         </InputContainer>
 
                         <InputContainer>
@@ -111,9 +107,6 @@ function Booking() {
                             <h5>Basic Manicure</h5>
                             <p>30 mins - ₦5000</p>
                           </label>
-                          {/* {formik.touched.options && formik.errors.options ? (
-                            <p className="errors">{formik.errors.options}</p>
-                          ) : null} */}
                         </InputContainer>
 
                         <InputContainer>
@@ -130,9 +123,6 @@ function Booking() {
                             <h5>Basic Manicure</h5>
                             <p>30 mins - ₦5000</p>
                           </label>
-                          {/* {formik.touched.options && formik.errors.options ? (
-                            <p className="errors">{formik.errors.options}</p>
-                          ) : null} */}
                         </InputContainer>
                       </FormContents>
                     </FormContainer>
@@ -141,7 +131,7 @@ function Booking() {
               );
             })}
             <Btn>
-              <Button to="/confirm">Continue</Button>
+              <Button to="/select-technician">Continue</Button>
             </Btn>
           </ServiceContainer>
         </RightContentCol1>
@@ -153,4 +143,4 @@ function Booking() {
   );
 }
 
-export default Booking;
+export default SelectServiceTwo;

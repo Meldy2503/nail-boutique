@@ -2,16 +2,19 @@ import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
-// import MyAppointmentPage from "./pages/MyAppointmentPage";
-import Booking from "./components/myAppointments/booking";
-import Navbar from "./components/navbar";
-import SelectServicePage from "./pages/SelectServicePage";
-import SelectServices2Page from "./pages/SelectServices2Page";
-import SelectLocationPage from "./pages/SelectLocationPage";
-import UpdateProfilePage from "./pages/UpdateProfilePage";
-import NotificationPage from "./pages/NotificationPage";
-import ConfirmBooking from "./components/myAppointments/confirmBooking";
 import { LeftContent } from "./reuseableComponents/containerStyle";
+import UpdateProfile from "./components/updateProfile/index";
+import Navbar from "./components/navbar/index";
+import Notification from "./components/notifications/index";
+import Booking from "./components/myAppointments/booking/index";
+import SelectLocation from "./components/myAppointments/selectLocation/index";
+import SelectService from "./components/myAppointments/selectService/index";
+import SelectServiceTwo from "./components/myAppointments/selectServiceTwo/index";
+import SelectTechnician from "./components/myAppointments/selectTechnician/index";
+import Schedule from "./components/myAppointments/schedule/index";
+import ConfirmBooking from "./components/myAppointments/confirmBooking/index";
+import EnterDetails from "./components/myAppointments/enterDetails/index";
+import Success from "./components/myAppointments/success/index";
 
 const theme = {
   colors: {
@@ -52,13 +55,18 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
-            <Route path="/booking" element={<Booking />} />
-            <Route path="/select-location" element={<SelectLocationPage />} />
-            <Route path="/select-services" element={<SelectServicePage />} />
-            <Route path="/select-services2" element={<SelectServices2Page />} />
+            <Route path="/*" element={<Booking />} />
             <Route path="/confirm-booking" element={<ConfirmBooking />} />
-            <Route path="/update-profile" element={<UpdateProfilePage />} />
-            <Route path="/notifications" element={<NotificationPage />} />
+            <Route path="/update-profile" element={<UpdateProfile />} />
+            <Route path="/notifications" element={<Notification />} />
+            <Route path="/select-location" element={<SelectLocation />} />
+            <Route path="/select-services" element={<SelectService />} />
+            <Route path="/select-servicestwo" element={<SelectServiceTwo />} />
+            <Route path="/select-technician" element={<SelectTechnician />} />
+            <Route path="/schedule" element={<Schedule />} />
+            <Route path="/enter-details" element={<EnterDetails />} />
+            <Route path="/confirm-booking" element={<ConfirmBooking />} />
+            <Route path="/success" element={<Success />} />
           </Routes>
           <LeftContent />
         </Fragment>
