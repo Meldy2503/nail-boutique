@@ -13,6 +13,7 @@ export const FormField = styled.form`
   flex-direction: column;
   height: 100%;
   margin-top: 1%;
+  margin-bottom: 20%;
 
   .names {
     display: flex;

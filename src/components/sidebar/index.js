@@ -13,7 +13,6 @@ function Sidebar() {
       <StyledUl>
         <li>
           <NavLink
-            end
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
             to="/update-profile"
           >
@@ -23,8 +22,9 @@ function Sidebar() {
         </li>
         <li>
           <NavLink
+            end
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
-            to="/my-appointments"
+            to="/booking"
           >
             <FaPeopleArrows className="icon" />
             <span>My Appointments</span>
@@ -35,7 +35,7 @@ function Sidebar() {
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
             to="/notifications"
           >
-            <IoIosNotificationsOutline className="icon" />
+            <IoIosNotificationsOutline className="icon" size={30} />
             <span>Notifications</span>
           </NavLink>
         </li>
@@ -44,7 +44,7 @@ function Sidebar() {
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
             to="/logout"
           >
-            <IoLogOutOutline className="icon" />
+            <IoLogOutOutline className="icon" size={28} />
             <span>Logout</span>
           </NavLink>
         </li>
