@@ -13,6 +13,7 @@ function Navbar() {
   return (
     <NavContainer>
       <StyledNav>
+        {/* <div> */}
         <Logo>
           <img src={logo} alt="nail-boutique-logo" />
         </Logo>
@@ -59,12 +60,12 @@ function Navbar() {
             </NavLink>
           </li>
         </ul>
-
         <MenuIcon onClick={handleClick}>
           <Hamburger
             onClick={handleClick}
             toggled={onIconClick}
             toggle={setOnIconClick}
+            size={28}
           />
         </MenuIcon>
       </StyledNav>
