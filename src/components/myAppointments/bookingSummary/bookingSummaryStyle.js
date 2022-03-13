@@ -169,12 +169,6 @@ export const Technician = styled.div`
       img {
         width: 4.5rem;
         height: 4.5rem;
-
-        @media screen and (max-width: ${({ theme }) =>
-            theme.mediaQuery.tablet}) {
-          width: 8rem;
-          height: 8rem;
-        }
       }
     }
 

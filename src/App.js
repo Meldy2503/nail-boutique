@@ -2,10 +2,14 @@ import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
+import Booking from "./components/myAppointments/booking";
+import MyAppointmentPage from "./pages/MyAppointmentPage";
 import Navbar from "./components/navbar";
 import SelectServicePage from "./pages/selectServicePage";
 // import Booking from "./components/myAppointments/booking";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
+import NotificationPage from "./pages/NotificationPage";
+// import MyAppointmentPage from "./pages/MyAppointmentPage";
 
 const theme = {
   colors: {
@@ -22,6 +26,8 @@ const theme = {
     secondary3: "#BBBBBB",
     secondary4: "#959595",
     secondary5: "#9C9C9C",
+    secondary6: "#555555",
+    secondary7: "#737373",
 
     tertiary1: "#B57224",
     tertiary2: "#E48F04",
@@ -44,9 +50,13 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
+            <Route path="/*" element={<Booking />} />
+            <Route path="/select-location" element={<MyAppointmentPage />} />
             {/* <Route path="/*" element={<Booking />} /> */}
+            {/* <Route path="/*" element={<MyAppointmentPage />} /> */}
             <Route path="/dashboard" element={<SelectServicePage />} />
             <Route path="/update-profile" element={<UpdateProfilePage />} />
+            <Route path="/notifications" element={<NotificationPage />} />
           </Routes>
         </Fragment>
       </ThemeProvider>
