@@ -1,5 +1,5 @@
 import React from "react";
-import Booking from "../components/myAppointments/booking";
+import Booking from "../components/myAppointmentsPersonal/booking";
 
 function MyAppointmentPage() {
   return (

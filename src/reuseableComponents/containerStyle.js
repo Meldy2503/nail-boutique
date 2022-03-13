@@ -11,7 +11,7 @@ export const ContentContainer = styled.section`
   justify-content: space-between;
   align-items: stretch;
   gap: 0.5rem;
-  overflow: hidden;
+  overflow: scroll;
   padding-top: 12rem;
   position: relative;
 

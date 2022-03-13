@@ -15,6 +15,7 @@ import { MdChevronLeft } from "react-icons/md";
 import confirmLocation from "./confirmBookingData";
 import { IoLocationOutline } from "react-icons/io5";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
+import { Button } from "../../../reuseableComponents/buttonStyle";
 
 function ConfirmBooking() {
   return (
@@ -24,7 +25,7 @@ function ConfirmBooking() {
         <ConfirmBookingContainer>
           <HeadingStyle>
             <h2>Confirm Booking</h2>
-            <Back to="/location">
+            <Back to="/enter-details">
               <MdChevronLeft />
               Go back
             </Back>
@@ -63,6 +64,7 @@ function ConfirmBooking() {
             <label htmlFor="agreement"></label> I agree to the Terms and
             Condition
           </Agreement>
+          <Button to="/success">CONTINUE</Button>
         </ConfirmBookingContainer>
       </RightContent>
     </ContentContainer>
