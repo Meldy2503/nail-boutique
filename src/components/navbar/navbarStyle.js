@@ -13,7 +13,7 @@ export const NavContainer = styled.div`
 
 export const Logo = styled.div`
   img {
-    width: 13.6rem;
+    max-width: 100%;
   }
 `;
 
@@ -28,6 +28,7 @@ export const StyledNav = styled.nav`
   position: relative;
   z-index: 2000;
   padding: 1.1rem 0 1.2rem 0;
+
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     padding: 2rem 0 1.2rem 0;
   }
