@@ -5,8 +5,9 @@ import {
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import { BookingStyle, Book } from "./bookingStyle";
-import bookingData from "./bookingData";
 import { Button } from "../../../reuseableComponents/buttonStyle";
+import personal from "../../../images/personal.svg";
+import group from "../../../images/group.svg";
 
 function Booking() {
   return (
@@ -15,15 +16,18 @@ function Booking() {
       <RightContent display="block">
         <BookingStyle>
           <Book>
-            {bookingData.map((item) => (
-              <div key={item.id}>
-                <div>
-                  <img src={item.icon} alt="icon" />
-                  <h4>{item.title}</h4>
-                  <Button to={item.link}>CREATE BOOKING</Button>
-                </div>
-              </div>
-            ))}
+            <div>
+              <img src={personal} alt="icon" />
+              <h4>Personal Booking</h4>
+              <Button to="/select-location">CREATE BOOKING</Button>
+            </div>
+          </Book>
+          <Book>
+            <div>
+              <img src={group} alt="icon" />
+              <h4>Group Booking</h4>
+              <Button to="/select-location">CREATE BOOKING</Button>
+            </div>
           </Book>
         </BookingStyle>
       </RightContent>

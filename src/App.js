@@ -2,14 +2,14 @@ import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
+// import MyAppointmentPage from "./pages/MyAppointmentPage";
 import Booking from "./components/myAppointments/booking";
-import MyAppointmentPage from "./pages/MyAppointmentPage";
 import Navbar from "./components/navbar";
-import SelectServicePage from "./pages/selectServicePage";
-// import Booking from "./components/myAppointments/booking";
+import SelectServicePage from "./pages/SelectServicePage";
+import SelectServices2Page from "./pages/SelectServices2Page";
+import SelectLocationPage from "./pages/SelectLocationPage";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
 import NotificationPage from "./pages/NotificationPage";
-// import MyAppointmentPage from "./pages/MyAppointmentPage";
 import ConfirmBooking from "./components/myAppointments/confirmBooking";
 import { LeftContent } from "./reuseableComponents/containerStyle";
 
@@ -52,15 +52,13 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
-            <Route path="/*" element={<Booking />} />
-            <Route path="/select-location" element={<MyAppointmentPage />} />
-            {/* <Route path="/*" element={<Booking />} /> */}
-            {/* <Route path="/*" element={<MyAppointmentPage />} /> */}
-            <Route path="/dashboard" element={<SelectServicePage />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/select-location" element={<SelectLocationPage />} />
+            <Route path="/select-services" element={<SelectServicePage />} />
+            <Route path="/select-services2" element={<SelectServices2Page />} />
             <Route path="/confirm-booking" element={<ConfirmBooking />} />
             <Route path="/update-profile" element={<UpdateProfilePage />} />
             <Route path="/notifications" element={<NotificationPage />} />
-            <Route path="/confirm-booking" element={<ConfirmBooking />} />
           </Routes>
           <LeftContent />
         </Fragment>

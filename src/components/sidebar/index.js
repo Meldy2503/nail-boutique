@@ -13,7 +13,6 @@ function Sidebar() {
       <StyledUl>
         <li>
           <NavLink
-            end
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
             to="/update-profile"
           >
@@ -23,8 +22,9 @@ function Sidebar() {
         </li>
         <li>
           <NavLink
+            end
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
-            to="/select-location"
+            to="/booking"
           >
             <FaPeopleArrows className="icon" />
             <span>My Appointments</span>

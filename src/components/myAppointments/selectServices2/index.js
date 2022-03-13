@@ -20,10 +20,10 @@ import {
   Btn,
 } from "./selectServiceStyle";
 import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
-import serviceData from "./selectServiceData";
+import serviceData from "./data";
 import BookingSummary from "../bookingSummary";
 
-function SelectServices() {
+function Booking() {
   const [onClick, setOnClick] = React.useState({});
   const handleClick = (index) => () => {
     setOnClick((state) => ({
@@ -55,10 +55,10 @@ function SelectServices() {
       <RightContent>
         <RightContentCol1>
           <Title>
-            <h2>Select Services</h2>
+            <h2>Select Services Two</h2>
             <div>
               <FaAngleLeft />
-              <a href="/select-location">GO BACK</a>
+              <a href="/select-services">GO BACK</a>
             </div>
           </Title>
           <ServiceContainer>
@@ -141,7 +141,7 @@ function SelectServices() {
               );
             })}
             <Btn>
-              <Button to="/select-services2">Continue</Button>
+              <Button to="/confirm">Continue</Button>
             </Btn>
           </ServiceContainer>
         </RightContentCol1>
@@ -153,4 +153,4 @@ function SelectServices() {
   );
 }
 
-export default SelectServices;
+export default Booking;
