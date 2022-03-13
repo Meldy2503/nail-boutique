@@ -59,12 +59,12 @@ function Navbar() {
             </NavLink>
           </li>
         </ul>
-
         <MenuIcon onClick={handleClick}>
           <Hamburger
             onClick={handleClick}
             toggled={onIconClick}
             toggle={setOnIconClick}
+            size={28}
           />
         </MenuIcon>
       </StyledNav>
