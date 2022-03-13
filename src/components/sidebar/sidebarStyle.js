@@ -8,7 +8,12 @@ export const StyledUl = styled.ul`
     padding: 3rem 0 0 0;
   }
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    padding: 1rem 0 0 0;
+    /* padding: 2rem 0; */
+    display: flex;
+    justify-content: space-between;
+    /* padding: 2rem 7%; */
+    align-items: center;
+    padding: 1rem 8%;
   }
 
   & > li {
@@ -16,6 +21,10 @@ export const StyledUl = styled.ul`
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
       padding: 1rem 0 2.5rem 0.5rem;
+    }
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      /* padding: 1rem 0 2.5rem 0.5rem; */
+      padding: 0;
     }
 
     .navLink {
@@ -29,7 +38,8 @@ export const StyledUl = styled.ul`
       }
 
       @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-        padding: 2rem 3rem 2rem 1rem;
+        /* padding: 2rem 3rem 2rem 1rem; */
+        padding: 0;
       }
 
       & > span {
