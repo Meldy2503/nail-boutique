@@ -12,7 +12,7 @@ function Booking() {
   return (
     <ContentContainer>
       <Sidebar />
-      <RightContent>
+      <RightContent display="block">
         <BookingStyle>
           <Book>
             {bookingData.map((item) => (

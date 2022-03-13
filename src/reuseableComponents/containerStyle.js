@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
+// We need to create a background div that would have the navbar and sidebar on mobile screen set to position absolute. It would act as the parent container with position relative
+
 export const ContentContainer = styled.section`
-  height: 80%;
+  height: 95vh;
   width: 90%;
   max-width: 140rem;
   margin: 0 auto;
@@ -11,15 +13,13 @@ export const ContentContainer = styled.section`
   gap: 0.5rem;
   overflow: hidden;
   padding-top: 13rem;
+  position: relative;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 95%;
-    /* margin: 2rem auto; */
-  }
-
-  @media (max-width: 500px) {
-    /* margin: 0.5rem auto; */
-    width: 90%;
+    width: 100%;
+    flex-direction: column-reverse;
+    height: 100vh;
+    padding-top: 6rem;
   }
 `;
 
@@ -34,7 +34,17 @@ export const LeftContent = styled.div`
   display: block;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    width: 8.5%;
+    width: 6rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
   }
 `;
 
@@ -48,7 +58,12 @@ export const RightContent = styled.div`
   align-items: ${({ alit }) => alit || "flex-start"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    width: 90.4%;
+    width: 95%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 100%;
+    height: 98%;
   }
 `;
 

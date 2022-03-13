@@ -9,11 +9,23 @@ export const NavContainer = styled.div`
   z-index: 1500;
   position: fixed;
   top: 0;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    height: 7rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    height: 6rem;
+  }
 `;
 
 export const Logo = styled.div`
   img {
-    width: 13.6rem;
+    max-width: 100%;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+      width: 80%;
+    }
   }
 `;
 
@@ -28,8 +40,13 @@ export const StyledNav = styled.nav`
   position: relative;
   z-index: 2000;
   padding: 1.1rem 0 1.2rem 0;
+
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    padding: 2rem 0 1.2rem 0;
+    padding: 1rem 0;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 95%;
   }
   .ulSmallScreen {
     display: none;
@@ -95,9 +112,7 @@ export const MenuIcon = styled.div`
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     display: block;
     font-size: 3.5rem;
-    position: absolute;
-    top: 0;
-    right: 0;
+    margin-top: -5rem;
     color: ${({ theme }) => theme.colors.tertiary2};
     transform: translate(-1%, 50%);
     cursor: pointer;

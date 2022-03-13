@@ -54,7 +54,7 @@ function UpdateProfile() {
   return (
     <ContentContainer>
       <Sidebar />
-      <RightContent>
+      <RightContent display="block">
         <UpdateProfileStyled>
           <UpdateProfileContainer>
             <Row1>
