@@ -12,45 +12,55 @@ export const ContentContainer = styled.section`
   align-items: stretch;
   gap: 0.5rem;
   overflow: hidden;
-  padding-top: 13rem;
+  padding-top: 12rem;
   position: relative;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    padding-top: 9rem;
+  }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 100%;
     flex-direction: column-reverse;
-    height: 100vh;
-    padding-top: 6rem;
+    height: 93.5vh;
+    padding-top: 4rem;
   }
 `;
 
 export const LeftContent = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
-  width: 25%;
-  height: 100%;
+  width: 25rem;
+  height: 60vh;
   color: ${({ theme }) => theme.colors.secondary5};
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.7rem;
-  display: block;
+  position: fixed;
+  /* display: block; */
+  z-index: 1500;
+  overflow: hidden;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 6rem;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 100%;
-    flex-direction: column-reverse;
+    width: 100vw;
+    /* flex-direction: column-reverse; */
     align-items: center;
     justify-content: center;
     height: fit-content;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    z-index: 1500;
+    padding: 0;
   }
 `;
 
 export const RightContent = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
   width: 77%;
+  margin-left: 26rem;
   color: ${({ theme }) => theme.colors.secondary2};
   height: 100%;
   display: ${({ display }) => display || "flex"};
@@ -59,11 +69,14 @@ export const RightContent = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 95%;
+    margin-left: 7rem;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 100%;
-    height: 98%;
+    width: 95%;
+    height: 96%;
+    margin-left: 0;
+    margin: 0 auto;
   }
 `;
 

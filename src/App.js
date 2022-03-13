@@ -5,12 +5,13 @@ import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Booking from "./components/myAppointments/booking";
 import MyAppointmentPage from "./pages/MyAppointmentPage";
 import Navbar from "./components/navbar";
-// import SelectServicePage from "./pages/selectServicePage";
+import SelectServicePage from "./pages/selectServicePage";
 // import Booking from "./components/myAppointments/booking";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
 import NotificationPage from "./pages/NotificationPage";
 // import MyAppointmentPage from "./pages/MyAppointmentPage";
 import ConfirmBooking from "./components/myAppointments/confirmBooking";
+import { LeftContent } from "./reuseableComponents/containerStyle";
 
 const theme = {
   colors: {
@@ -54,12 +55,14 @@ function App() {
             <Route path="/*" element={<Booking />} />
             <Route path="/select-location" element={<MyAppointmentPage />} />
             {/* <Route path="/*" element={<Booking />} /> */}
-            {/* <Route path="/*" element={<MyAppointmentPage />} />
-            <Route path="/dashboard" element={<SelectServicePage />} /> */}
+            {/* <Route path="/*" element={<MyAppointmentPage />} /> */}
+            <Route path="/dashboard" element={<SelectServicePage />} />
+            <Route path="/confirm-booking" element={<ConfirmBooking />} />
             <Route path="/update-profile" element={<UpdateProfilePage />} />
             <Route path="/notifications" element={<NotificationPage />} />
             <Route path="/confirm-booking" element={<ConfirmBooking />} />
           </Routes>
+          <LeftContent />
         </Fragment>
       </ThemeProvider>
     </Router>
