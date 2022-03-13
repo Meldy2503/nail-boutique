@@ -2,6 +2,8 @@
 import {
   ContentContainer,
   RightContent,
+  RightContentCol1,
+  RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import {
@@ -25,6 +27,7 @@ import { HiOutlineSearch, HiUserGroup, HiDotsHorizontal } from "react-icons/hi";
 import { IoGrid } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
 import { Button } from "../../../reuseableComponents/buttonStyle";
+import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
 
 function SelectTechnician() {
   //   const [list, setList] = useState(false);
@@ -37,65 +40,70 @@ function SelectTechnician() {
     <ContentContainer>
       <Sidebar />
       <RightContent>
-        <TechnicianContainer>
-          <HeadingStyle>
-            <h2>Select Technician</h2>
-            <Back to="/select-servicestwo">
-              <MdChevronLeft />
-              Go back
-            </Back>
-          </HeadingStyle>
-          <Row2>
-            <Search>
-              <input
-                type="text"
-                name="search"
-                id="search"
-                placeholder="Search StylIst"
-              />
-              <HiOutlineSearch className="search-icon" />
-            </Search>
-            <Orientation>
-              <Grid>
-                <IoGrid className="grid" />
-              </Grid>
-              <List>
-                <FaThList className="list" />
-              </List>
-            </Orientation>
-          </Row2>
-          <Row3>
-            {technicianData.map((item) => (
-              <Card key={item.id}>
-                <div className="top">
-                  <img src={item.tick} alt="tick" />
-                  <HiDotsHorizontal className="dots" />
-                </div>
-                <Technician>
-                  <img src={item.avatar} alt="avatar" />
-                  <h4>{item.name}</h4>
-                  <div className="row1">
-                    <p>{`${item.role} - ${item.age}Yrs`}</p>
+        <RightContentCol1>
+          <TechnicianContainer>
+            <HeadingStyle>
+              <h2>Select Technician</h2>
+              <Back to="/select-servicestwo">
+                <MdChevronLeft />
+                Go back
+              </Back>
+            </HeadingStyle>
+            <Row2>
+              <Search>
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="Search StylIst"
+                />
+                <HiOutlineSearch className="search-icon" />
+              </Search>
+              <Orientation>
+                <Grid>
+                  <IoGrid className="grid" />
+                </Grid>
+                <List>
+                  <FaThList className="list" />
+                </List>
+              </Orientation>
+            </Row2>
+            <Row3>
+              {technicianData.map((item) => (
+                <Card key={item.id}>
+                  <div className="top">
+                    <img src={item.tick} alt="tick" />
+                    <HiDotsHorizontal className="dots" />
                   </div>
-                  <div className="row2">
-                    <span>
-                      <HiUserGroup className="client-icon" />
-                      <p>{item.clients} clients</p>
-                    </span>
-                    <span>
-                      <MdStar className="rating-icon" />
-                      <p>{item.rating} ratings</p>
-                    </span>
-                  </div>
-                  <Select>SELECT</Select>
-                </Technician>
-              </Card>
-            ))}
-          </Row3>
-          <Row4>
-            <Button to="/schedule">CONTINUE</Button>
-          </Row4>
-        </TechnicianContainer>
+                  <Technician>
+                    <img src={item.avatar} alt="avatar" />
+                    <h4>{item.name}</h4>
+                    <div className="row1">
+                      <p>{`${item.role} - ${item.age}Yrs`}</p>
+                    </div>
+                    <div className="row2">
+                      <span>
+                        <HiUserGroup className="client-icon" />
+                        <p>{item.clients} clients</p>
+                      </span>
+                      <span>
+                        <MdStar className="rating-icon" />
+                        <p>{item.rating} ratings</p>
+                      </span>
+                    </div>
+                    <Select>SELECT</Select>
+                  </Technician>
+                </Card>
+              ))}
+            </Row3>
+            <Row4>
+              <Button to="/schedule">CONTINUE</Button>
+            </Row4>
+          </TechnicianContainer>
+        </RightContentCol1>
+        <RightContentCol2>
+          <BookingSummary />
+        </RightContentCol2>
       </RightContent>
     </ContentContainer>
   );
