@@ -13,7 +13,6 @@ function Navbar() {
   return (
     <NavContainer>
       <StyledNav>
-        {/* <div> */}
         <Logo>
           <img src={logo} alt="nail-boutique-logo" />
         </Logo>
