@@ -15,6 +15,7 @@ import Schedule from "./components/myAppointments/schedule/index";
 import ConfirmBooking from "./components/myAppointments/confirmBooking/index";
 import EnterDetails from "./components/myAppointments/enterDetails/index";
 import Success from "./components/myAppointments/success/index";
+import ExpectedClients from "./components/myAppointments/expectedClients/index";
 
 const theme = {
   colors: {
@@ -67,6 +68,7 @@ function App() {
             <Route path="/enter-details" element={<EnterDetails />} />
             <Route path="/confirm-booking" element={<ConfirmBooking />} />
             <Route path="/success" element={<Success />} />
+            <Route path="/expected-clients" element={<ExpectedClients />} />
           </Routes>
           <LeftContent />
         </Fragment>
