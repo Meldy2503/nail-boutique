@@ -18,7 +18,7 @@ import {
   FormContents,
   InputContainer,
   Btn,
-} from "./selectServiceStyle";
+} from "./selectServices2Style";
 import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./data";
 import BookingSummary from "../bookingSummary";
