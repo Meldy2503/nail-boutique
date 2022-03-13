@@ -17,7 +17,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
   ContentContainer,
-  LeftContent,
   RightContent,
 } from "../../reuseableComponents/containerStyle";
 import Sidebar from "../sidebar";
