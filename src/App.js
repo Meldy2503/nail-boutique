@@ -10,10 +10,7 @@ import Navbar from "./components/navbar";
 import UpdateProfilePage from "./pages/UpdateProfilePage";
 import NotificationPage from "./pages/NotificationPage";
 // import MyAppointmentPage from "./pages/MyAppointmentPage";
-<<<<<<< HEAD
-=======
 import ConfirmBooking from "./components/myAppointments/confirmBooking";
->>>>>>> b9f1ee14ee0204828ec43427c25ac219273247fb
 
 const theme = {
   colors: {
@@ -57,13 +54,8 @@ function App() {
             <Route path="/*" element={<Booking />} />
             <Route path="/select-location" element={<MyAppointmentPage />} />
             {/* <Route path="/*" element={<Booking />} /> */}
-<<<<<<< HEAD
-            {/* <Route path="/*" element={<MyAppointmentPage />} /> */}
-            <Route path="/dashboard" element={<SelectServicePage />} />
-=======
             {/* <Route path="/*" element={<MyAppointmentPage />} />
             <Route path="/dashboard" element={<SelectServicePage />} /> */}
->>>>>>> b9f1ee14ee0204828ec43427c25ac219273247fb
             <Route path="/update-profile" element={<UpdateProfilePage />} />
             <Route path="/notifications" element={<NotificationPage />} />
             <Route path="/confirm-booking" element={<ConfirmBooking />} />
