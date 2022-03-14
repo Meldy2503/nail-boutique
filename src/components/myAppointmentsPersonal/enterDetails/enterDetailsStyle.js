@@ -16,7 +16,7 @@ export const FormField = styled.form`
   flex-direction: column;
   height: 100%;
   margin-top: 1%;
-  margin-bottom: 20%;
+  /* margin-bottom: 20%; */
   position: relative;
   /* overflow: scroll; */
 
@@ -137,5 +137,11 @@ export const RememberMe = styled.span`
     border: 0.5px solid ${({ theme }) => theme.colors.tertiary2};
     accent-color: ${({ theme }) => theme.colors.tertiary2};
     background-color: #000;
+  }
+`;
+
+export const Policy = styled.div`
+  h2 {
+    margin-bottom: 1rem;
   }
 `;

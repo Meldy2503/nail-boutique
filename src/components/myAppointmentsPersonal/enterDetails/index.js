@@ -17,7 +17,7 @@ import {
   InputField,
   Comment,
   ErrorMsg,
-  SubmitBtn,
+  Policy,
   RememberMe,
 } from "./enterDetailsStyle";
 import { useFormik } from "formik";
@@ -158,9 +158,23 @@ function EnterDetails() {
               </span>
             </FormField>
           </EnterDetailsContainer>
+          <Policy>
+            <h2>Company Policy</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+              mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+            </p>
+          </Policy>
+          <Button to="/confirm-booking">Temp Next</Button>
         </RightContentCol1>
         <RightContentCol2>
-          <BookingSummary to="/confirm-booking" />
+          <BookingSummary />
         </RightContentCol2>
       </RightContent>
     </ContentContainer>

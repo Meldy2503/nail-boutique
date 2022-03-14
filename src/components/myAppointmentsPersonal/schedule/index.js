@@ -22,8 +22,8 @@ function Schedule() {
         <RightContent>
           <RightContentCol1>
             <HeadingStyle>
-              <h2>Shedule</h2>
-              <Back to="/select-services">
+              <h2>Schedule</h2>
+              <Back to="/select-technician">
                 <MdChevronLeft />
                 Go back
               </Back>
