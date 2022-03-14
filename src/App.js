@@ -31,7 +31,6 @@ const theme = {
     secondary3: "#BBBBBB",
     secondary4: "#959595",
     secondary5: "#9C9C9C",
-    secondary6: "#555555",
     secondary7: "#737373",
 
     tertiary1: "#B57224",
