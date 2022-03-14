@@ -16,20 +16,20 @@ export const FormField = styled.form`
   flex-direction: column;
   height: 100%;
   margin-top: 1%;
-  /* margin-bottom: 20%; */
+  margin-bottom: 7%;
   position: relative;
   /* overflow: scroll; */
 
-  & > span {
-    display: block;
-    overflow: scroll;
-    height: 60vh;
+  /* & > span {
+    display: block; */
+  /* overflow: scroll; */
+  /* height: 60vh; */
 
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      overflow: visible;
-      height: fit-content;
-    }
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    overflow: visible;
+    height: fit-content;
   }
+  /* } */
 
   .names {
     display: flex;
@@ -147,6 +147,9 @@ export const RememberMe = styled.span`
 
 export const Policy = styled.div`
   margin-bottom: 4rem;
+  border-top: 1px solid ${({ theme }) => theme.colors.primary5};
+  padding-top: 6rem;
+  /* margin-top: 6rem; */
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
   }

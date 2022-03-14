@@ -22,6 +22,7 @@ import {
 } from "./enterDetailsStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
 
 function EnterDetails() {
   const formik = useFormik({
@@ -65,112 +66,117 @@ function EnterDetails() {
               Go back
             </Back>
           </HeadingStyle>
-          <EnterDetailsContainer>
-            <FormField onSubmit={formik.handleSubmit}>
-              <span>
-                <div className="names">
+          <ScrollContainer>
+            <div>
+              <EnterDetailsContainer>
+                <FormField onSubmit={formik.handleSubmit}>
+                  {/* <span> */}
+                  <div className="names">
+                    <InputField>
+                      <label htmlFor="firstName">First Name</label>
+                      <input
+                        type="text"
+                        name="firstName"
+                        id="firstName"
+                        placeholder="Enter your First Name"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.firstName}
+                      />
+                      <ErrorMsg>
+                        {formik.touched.firstName && formik.errors.firstName ? (
+                          <p>{formik.errors.firstName}</p>
+                        ) : null}
+                      </ErrorMsg>
+                    </InputField>
+                    <InputField>
+                      <label htmlFor="lastName">Last Name</label>
+                      <input
+                        type="text"
+                        name="lastName"
+                        id="lastName"
+                        placeholder="Enter your Last Name"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.lastName}
+                      />
+                      <ErrorMsg>
+                        {formik.touched.lastName && formik.errors.lastName ? (
+                          <p>{formik.errors.lastName}</p>
+                        ) : null}
+                      </ErrorMsg>
+                    </InputField>
+                  </div>
                   <InputField>
-                    <label htmlFor="firstName">First Name</label>
+                    <label htmlFor="email">Email</label>
                     <input
-                      type="text"
-                      name="firstName"
-                      id="firstName"
-                      placeholder="Enter your First Name"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Enter your Email"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      value={formik.values.firstName}
+                      value={formik.values.email}
                     />
                     <ErrorMsg>
-                      {formik.touched.firstName && formik.errors.firstName ? (
-                        <p>{formik.errors.firstName}</p>
+                      {formik.touched.email && formik.errors.email ? (
+                        <p>{formik.errors.email}</p>
                       ) : null}
                     </ErrorMsg>
                   </InputField>
                   <InputField>
-                    <label htmlFor="lastName">Last Name</label>
+                    <label htmlFor="phone">Phone Number</label>
                     <input
                       type="text"
-                      name="lastName"
-                      id="lastName"
-                      placeholder="Enter your Last Name"
+                      name="phone"
+                      id="phone"
+                      placeholder="Enter phone number"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      value={formik.values.lastName}
+                      value={formik.values.phone}
                     />
                     <ErrorMsg>
-                      {formik.touched.lastName && formik.errors.lastName ? (
-                        <p>{formik.errors.lastName}</p>
+                      {formik.touched.phone && formik.errors.phone ? (
+                        <p>{formik.errors.phone}</p>
                       ) : null}
                     </ErrorMsg>
                   </InputField>
-                </div>
-                <InputField>
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Enter your Email"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.email}
-                  />
-                  <ErrorMsg>
-                    {formik.touched.email && formik.errors.email ? (
-                      <p>{formik.errors.email}</p>
-                    ) : null}
-                  </ErrorMsg>
-                </InputField>
-                <InputField>
-                  <label htmlFor="phone">Phone Number</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    id="phone"
-                    placeholder="Enter phone number"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.phone}
-                  />
-                  <ErrorMsg>
-                    {formik.touched.phone && formik.errors.phone ? (
-                      <p>{formik.errors.phone}</p>
-                    ) : null}
-                  </ErrorMsg>
-                </InputField>
-                <Comment>
-                  <label htmlFor="comment">State</label>
-                  <textarea
-                    name="comment"
-                    id="comment"
-                    cols="30"
-                    rows="1"
-                    placeholder="Comments (Optional)"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.comment}
-                  ></textarea>
-                </Comment>
-                <RememberMe>
-                  <input type="checkbox" name="remember" id="remember" />
-                  <label htmlFor="remember"></label> Remember Me
-                </RememberMe>
-              </span>
-            </FormField>
-          </EnterDetailsContainer>
-          <Policy>
-            <h2>Company Policy</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-              mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-            </p>
-          </Policy>
+                  <Comment>
+                    <label htmlFor="comment">State</label>
+                    <textarea
+                      name="comment"
+                      id="comment"
+                      cols="30"
+                      rows="1"
+                      placeholder="Comments (Optional)"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.comment}
+                    ></textarea>
+                  </Comment>
+                  <RememberMe>
+                    <input type="checkbox" name="remember" id="remember" />
+                    <label htmlFor="remember"></label> Remember Me
+                  </RememberMe>
+                  {/* </span> */}
+                </FormField>
+              </EnterDetailsContainer>
+              <Policy>
+                <h2>Company Policy</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                  natoque penatibus et magnis dis parturient montes, nascetur
+                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                  eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                  justo. Nullam dictum felis eu pede mollis pretium. Integer
+                  tincidunt. Cras dapibus. Vivamus
+                </p>
+              </Policy>
+            </div>
+          </ScrollContainer>
           <Button to="/confirm-booking">Temp Next</Button>
         </RightContentCol1>
         <RightContentCol2>

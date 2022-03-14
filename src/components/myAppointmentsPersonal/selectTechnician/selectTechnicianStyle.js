@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-// export const TechnicianContainer = styled.div``;
+// export const TechnicianContainer = styled.div`
+//   overflow: scroll;
+//   height: 60%;
+// `;
 export const Row2 = styled.div`
   display: flex;
   justify-content: space-between;

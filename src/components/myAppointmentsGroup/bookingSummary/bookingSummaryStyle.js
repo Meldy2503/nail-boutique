@@ -251,8 +251,8 @@ export const Btn = styled.div`
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 100%;
   text-align: left;
-  position: sticky;
-  bottom: 0;
+  /* position: sticky;
+  bottom: 0; */
 
   /* padding: 1rem 0;
   margin-top: 1rem; */

@@ -79,8 +79,8 @@ export const RightContent = styled.div`
 export const RightContentCol1 = styled.div`
   margin: 4rem 2rem 4rem 3rem;
   width: 70%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-y: scroll; */
+  /* overflow-x: hidden; */
   height: 85%;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
@@ -94,9 +94,9 @@ export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
-  height: 85%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  height: 88%;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     display: ${({ display }) => display || "none"};
