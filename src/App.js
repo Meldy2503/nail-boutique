@@ -14,6 +14,7 @@ import SelectTechnician from "./components/myAppointmentsPersonal/selectTechnici
 import Schedule from "./components/myAppointmentsPersonal/schedule/index";
 import ConfirmBooking from "./components/myAppointmentsPersonal/confirmBooking/index";
 import EnterDetails from "./components/myAppointmentsPersonal/enterDetails/index";
+import BookingIndex from "./pages/BookingIndex";
 // import Success from "./components/myAppointmentsPersonal/success/index";
 
 const theme = {
@@ -54,18 +55,19 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
-            <Route path="/*" element={<Booking />} />
-            <Route path="/confirm-booking" element={<ConfirmBooking />} />
-            <Route path="/update-profile" element={<UpdateProfile />} />
-            <Route path="/notifications" element={<Notification />} />
-            <Route path="/select-location" element={<SelectLocation />} />
-            <Route path="/select-services" element={<SelectService />} />
-            <Route path="/select-servicestwo" element={<SelectServiceTwo />} />
-            <Route path="/select-technician" element={<SelectTechnician />} />
-            <Route path="/schedule" element={<Schedule />} />
-            <Route path="/enter-details" element={<EnterDetails />} />
-            <Route path="/confirm-booking" element={<ConfirmBooking />} />
-            {/* <Route path="/success" element={<Success />} /> */}
+            <Route path="/booking" element={<BookingIndex />}>
+              <Route index element={<Booking />} />
+              <Route path="confirm-booking" element={<ConfirmBooking />} />
+              <Route path="update-profile" element={<UpdateProfile />} />
+              <Route path="notifications" element={<Notification />} />
+              <Route path="select-location" element={<SelectLocation />} />
+              <Route path="select-services" element={<SelectService />} />
+              <Route path="select-servicestwo" element={<SelectServiceTwo />} />
+              <Route path="select-technician" element={<SelectTechnician />} />
+              <Route path="schedule" element={<Schedule />} />
+              <Route path="enter-details" element={<EnterDetails />} />
+              <Route path="confirm-booking" element={<ConfirmBooking />} />
+            </Route>
           </Routes>
           <LeftContent />
         </Fragment>
@@ -75,3 +77,12 @@ function App() {
 }
 
 export default App;
+
+/* <Route path="/" element={<App />}>
+        <Route index element={<Home />} />
+        <Route path="teams" element={<Teams />}>
+          <Route path=":teamId" element={<Team />} />
+          <Route path="new" element={<NewTeamForm />} />
+          <Route index element={<LeagueStandings />} />
+        </Route>
+      </Route> */

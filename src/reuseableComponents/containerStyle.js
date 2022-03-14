@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-// We need to create a background div that would have the navbar and sidebar on mobile screen set to position absolute. It would act as the parent container with position relative
-
 export const ContentContainer = styled.section`
   height: 95vh;
   width: 90%;
@@ -13,6 +11,7 @@ export const ContentContainer = styled.section`
   gap: 0.5rem;
   overflow: scroll;
   padding-top: 12rem;
+  /* padding-top: 11rem; */
   position: relative;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
@@ -24,6 +23,7 @@ export const ContentContainer = styled.section`
     flex-direction: column-reverse;
     height: 93.5vh;
     padding-top: 4rem;
+    /* padding-top: 5.9rem; */
   }
 `;
 

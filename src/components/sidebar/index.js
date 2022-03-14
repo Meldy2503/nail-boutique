@@ -8,6 +8,14 @@ import { BsPersonCircle } from "react-icons/bs";
 import { FaPeopleArrows } from "react-icons/fa";
 
 function Sidebar() {
+  const checkActiveRoute = (url) => {
+    let path = window.location.pathname;
+    if (path.includes(url)) {
+      return "active";
+    }
+  };
+
+  // this should give you "/booking/whatever"
   return (
     <LeftContent>
       <StyledUl>
@@ -23,7 +31,9 @@ function Sidebar() {
         <li>
           <NavLink
             end
-            className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
+            className={({ isActive }) =>
+              `navLink ${checkActiveRoute("/booking")}`
+            }
             to="/booking"
           >
             <FaPeopleArrows className="icon" />

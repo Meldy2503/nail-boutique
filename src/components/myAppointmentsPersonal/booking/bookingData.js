@@ -6,7 +6,7 @@ const bookingData = [
     id: 1,
     icon: personal,
     title: "Personal Booking",
-    link: "/select-location",
+    link: "/booking/select-location",
   },
   {
     id: 2,

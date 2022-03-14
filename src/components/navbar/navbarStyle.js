@@ -2,8 +2,27 @@
 
 import styled from "styled-components";
 
+export const Padding = styled.div`
+  height: 2.5rem;
+  width: 100%;
+  position: fixed;
+  /* background: red; */
+  /* top: 89px; */
+  /* top: 8.9rem; */
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    height: 2rem;
+    /* top: 89px; */
+  }
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    /* top: 6rem; */
+  }
+`;
+
 export const NavContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
+  /* background: red; */
   height: 9rem;
   width: 100%;
   z-index: 1500;
@@ -56,7 +75,7 @@ export const StyledNav = styled.nav`
       background-color: ${({ theme }) => theme.colors.primary1};
       opacity: 0.9;
       position: absolute;
-      top: 9rem;
+      top: 6rem;
       right: -10%;
       width: 70%;
       height: 100vh;
