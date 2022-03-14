@@ -4,8 +4,9 @@ export const TechnicianContainer = styled.div``;
 export const Row2 = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 3.2rem;
+  gap: 3rem;
   margin-top: 2rem;
+  padding-bottom: 2rem;
 `;
 export const Search = styled.div`
   width: 100%;
@@ -38,10 +39,12 @@ export const Search = styled.div`
     color: ${({ theme }) => theme.colors.primary6};
   }
 `;
+
 export const Orientation = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
+
 export const Grid = styled.div`
   display: flex;
   justify-content: center;
@@ -51,7 +54,8 @@ export const Grid = styled.div`
   .grid {
     color: ${({ theme }) => theme.colors.secondary2};
     margin: 0 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    cursor: pointer;
   }
 `;
 
@@ -59,12 +63,13 @@ export const List = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.primary6};
+  /* background-color: ${({ theme }) => theme.colors.primary6}; */
 
   .list {
     color: ${({ theme }) => theme.colors.secondary2};
     margin: 0 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    cursor: pointer;
   }
 `;
 
