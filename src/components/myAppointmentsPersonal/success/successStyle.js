@@ -4,11 +4,18 @@ export const SuccessContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0000001f;
+  background-color: #000000cc;
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9000;
 `;
 export const Popup = styled.div`
+  /* change height and width to proper units */
   height: 493px;
   width: 477px;
   background-color: ${({ theme }) => theme.colors.primary2};
@@ -25,7 +32,18 @@ export const Popup = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    height: 40rem;
+    height: 39rem;
+
+    h3 {
+      font-size: 3.6rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 5rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
 
     img {
       max-width: 100%;
