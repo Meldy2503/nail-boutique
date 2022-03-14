@@ -11,7 +11,7 @@ function Success() {
         <Popup>
           <div>
             <img src={tick} alt="tick" />
-            <h2>Success!</h2>
+            <h3>Success!</h3>
             <p>
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s, when an unknown printer took a galley of type and

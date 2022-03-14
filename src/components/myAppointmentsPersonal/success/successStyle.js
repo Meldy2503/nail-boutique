@@ -25,7 +25,18 @@ export const Popup = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    height: 40rem;
+    height: 39rem;
+
+    h3 {
+      font-size: 3.6rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 5rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
 
     img {
       max-width: 100%;
