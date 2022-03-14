@@ -1,12 +1,7 @@
 import styled from "styled-components";
 
 export const NotificationContainer = styled.div`
-  h2 {
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 4.8rem;
-  }
+  padding: 0 3rem;
 `;
 
 export const Row1 = styled.div`

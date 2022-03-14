@@ -20,7 +20,6 @@ import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
 import { Button } from "../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../../components/myAppointmentsPersonal/bookingSummary/index";
 import Success from "../../myAppointmentsPersonal/success/index";
-// import { Popup } from "../success/successStyle";
 
 function ConfirmBooking() {
   const [popup, setPopup] = useState(false);

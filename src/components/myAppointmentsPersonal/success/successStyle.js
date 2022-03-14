@@ -15,6 +15,7 @@ export const SuccessContainer = styled.div`
   z-index: 9000;
 `;
 export const Popup = styled.div`
+  /* change height and width to proper units */
   height: 493px;
   width: 477px;
   background-color: ${({ theme }) => theme.colors.primary2};

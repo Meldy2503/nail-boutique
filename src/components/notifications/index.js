@@ -5,15 +5,10 @@ import {
 } from "../../reuseableComponents/containerStyle";
 import { Back } from "../../reuseableComponents/goBack/goBackStyle";
 import Sidebar from "../sidebar";
-import {
-  Alert,
-  NotificationContainer,
-  Row1,
-  Row2,
-  Item,
-} from "./notificationStyle";
+import { Alert, NotificationContainer, Row2, Item } from "./notificationStyle";
 import { MdChevronLeft } from "react-icons/md";
 import alertData from "../../components/notifications/notificationData";
+import { HeadingStyle } from "../../reuseableComponents/headingStyle";
 
 function Notification() {
   return (
@@ -21,13 +16,13 @@ function Notification() {
       <Sidebar />
       <RightContent>
         <NotificationContainer>
-          <Row1>
+          <HeadingStyle>
             <h2>Notifications</h2>
             <Back to="/location">
               <MdChevronLeft />
               Go back
             </Back>
-          </Row1>
+          </HeadingStyle>
           <Row2>
             <Alert>
               {alertData.map((items) => (
