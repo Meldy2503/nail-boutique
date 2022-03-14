@@ -11,7 +11,7 @@ import {
   RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
-import { ScheduleContainer } from "./scheduleStyle";
+import { ScheduleContainer, Waitlist } from "./scheduleStyle";
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
 
 function Schedule() {
@@ -31,7 +31,11 @@ function Schedule() {
             <ScheduleContainer>
               <img src={cal} alt="calender" />
             </ScheduleContainer>
-            <Button to="/enter-details">CONTINUE</Button>
+            <Button to="/enter-details">ADD ANOTHER SERVICES</Button>
+            <Waitlist>
+              <input type="checkbox" name="waitlist" id="waitlist" />
+              <label htmlFor="waitlist"></label>Join our waitlist
+            </Waitlist>
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />
