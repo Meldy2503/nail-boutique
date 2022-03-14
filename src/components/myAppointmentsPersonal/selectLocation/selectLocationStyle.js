@@ -1,29 +1,42 @@
 import styled from "styled-components";
 
-export const Column = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-`;
-export const Col1 = styled.div`
-  width: 65%;
-  padding: 0 3rem;
-  margin-top: 4rem;
-`;
-export const Col2 = styled.div`
-  width: 32.5%;
+// export const Column = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
+// `;
+// export const Col1 = styled.div`
+//   width: 65%;
+//   padding: 0 3rem;
+//   margin-top: 4rem;
+// `;
+// export const Col2 = styled.div`
+//   /* width: 32.5%; */
+//   div {
+//     img {
+//       max-width: 100%;
+//       height: 7rem;
+//     }
+//   }
+// `;
+
+export const ContentCol2 = styled.div`
+  width: 35%;
+
   img {
+    height: 80vh;
     max-width: 100%;
   }
 `;
+
 export const LocationHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 4.9rem;
+  margin-bottom: 2rem;
 
   h1 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
   p {
     font-size: 1.4rem;
@@ -49,22 +62,23 @@ export const Content = styled.div`
   }
   .checkbox {
     display: inline-block;
-    height: 4.3rem;
-    width: 4.3rem;
+    height: 3rem;
+    width: 3rem;
     background: ${({ theme }) => theme.colors.secondary6};
     border: 1px ${({ theme }) => theme.colors.secondary4} solid;
-    margin-right: 4rem;
+    margin-right: 2rem;
     border-radius: 0.7rem;
   }
 `;
+
 export const Contents = styled.div`
-  padding: 4rem 0 4rem 4rem;
-  width: 85%;
+  padding: 3rem 0 3rem 3rem;
   h4 {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
   }
   p {
-    font-size: 1.6rem;
+    width: 90%;
+    font-size: 1.5rem;
     color: ${({ theme }) => theme.colors.secondary7};
   }
 `;

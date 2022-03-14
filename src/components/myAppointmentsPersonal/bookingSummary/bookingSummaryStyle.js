@@ -63,14 +63,6 @@ export const Service = styled.div`
   color: #b9b9b9;
   display: flex;
   flex-direction: column;
-
-  /* @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    width: 100%;
-    border-top: 1px solid ${({ theme }) => theme.colors.primary5};
-    color: #b9b9b9;
-    display: flex;
-    flex-direction: column;
-  } */
 `;
 
 export const Manicure = styled.div`
@@ -141,9 +133,6 @@ export const Technician = styled.div`
   width: 90%;
   padding: 1rem 0;
 
-  /* p {
-  } */
-
   div {
     border: 1px solid #555555;
     filter: drop-shadow(0px 7px 39px rgba(0, 0, 0, 0.08));
@@ -172,14 +161,6 @@ export const Technician = styled.div`
       }
     }
 
-    /* .name {
-      width: 55%;
-
-      @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-        width: 70%;
-      }
-    } */
-
     .icon {
       color: #e48f04;
       font-size: 2rem;
@@ -204,12 +185,6 @@ export const Day = styled.div`
     font-size: 2.3rem;
     color: #878787;
   }
-  /* 
-  div {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  } */
 
   h6 {
     font-size: 1.4rem;
@@ -253,7 +228,4 @@ export const Btn = styled.div`
   text-align: left;
   position: sticky;
   bottom: 0;
-
-  /* padding: 1rem 0;
-  margin-top: 1rem; */
 `;

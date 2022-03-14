@@ -61,6 +61,7 @@ export const RightContent = styled.div`
   display: ${({ display }) => display || "flex"};
   justify-content: ${({ jc }) => jc || "space-between"};
   align-items: ${({ alit }) => alit || "flex-start"};
+  flex-direction: ${({ alit }) => alit || "row"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 95%;
@@ -71,6 +72,7 @@ export const RightContent = styled.div`
     height: 95%;
     margin-left: 0;
     margin: 0 auto;
+    flex-direction: ${({ alit }) => alit || "column"};
   }
 `;
 
@@ -85,7 +87,7 @@ export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
-  height: fit-content;
+  height: 85%;
   overflow-y: scroll;
   overflow-x: hidden;
 `;
