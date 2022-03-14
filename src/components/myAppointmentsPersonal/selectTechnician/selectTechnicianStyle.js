@@ -4,8 +4,9 @@ import styled from "styled-components";
 export const Row2 = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 3.2rem;
+  gap: 3rem;
   margin-top: 2rem;
+  padding-bottom: 2rem;
 `;
 export const Search = styled.div`
   width: 100%;
@@ -38,8 +39,10 @@ export const Search = styled.div`
     color: ${({ theme }) => theme.colors.primary6};
   }
 `;
+
 export const Orientation = styled.div`
   display: flex;
+  gap: 0.5rem;
   /* justify-content: space-around; */
   /* gap: 1rem; */
 
@@ -49,13 +52,20 @@ export const Orientation = styled.div`
     font-size: 2.2rem;
   }
 `;
+
 export const Grid = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  &:hover {
-    background-color: #373737;
+  .grid {
+    color: ${({ theme }) => theme.colors.secondary2};
+    margin: 0 1rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #373737;
+    }
   }
 `;
 
@@ -63,9 +73,17 @@ export const List = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-color: ${({ theme }) => theme.colors.primary6}; */
 
-  &:hover {
-    background-color: #373737;
+  .list {
+    color: ${({ theme }) => theme.colors.secondary2};
+    margin: 0 1rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #373737;
+    }
   }
 `;
 

@@ -101,6 +101,13 @@ export const Comment = styled.div`
     letter-spacing: 0em;
     text-align: left;
     color: ${({ theme }) => theme.colors.secondary1};
+
+    &:focus {
+      border-bottom: 1px solid ${({ theme }) => theme.colors.secondary3};
+      outline: none;
+      color: ${({ theme }) => theme.colors.secondary1};
+      background-color: ${({ theme }) => theme.colors.primary7};
+    }
   }
 `;
 
