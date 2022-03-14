@@ -14,7 +14,7 @@ import SelectTechnician from "./components/myAppointmentsPersonal/selectTechnici
 import Schedule from "./components/myAppointmentsPersonal/schedule/index";
 import ConfirmBooking from "./components/myAppointmentsPersonal/confirmBooking/index";
 import EnterDetails from "./components/myAppointmentsPersonal/enterDetails/index";
-import Success from "./components/myAppointmentsPersonal/success/index";
+// import Success from "./components/myAppointmentsPersonal/success/index";
 
 const theme = {
   colors: {
@@ -31,7 +31,6 @@ const theme = {
     secondary3: "#BBBBBB",
     secondary4: "#959595",
     secondary5: "#9C9C9C",
-    secondary6: "#555555",
     secondary7: "#737373",
 
     tertiary1: "#B57224",
@@ -66,7 +65,7 @@ function App() {
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/enter-details" element={<EnterDetails />} />
             <Route path="/confirm-booking" element={<ConfirmBooking />} />
-            <Route path="/success" element={<Success />} />
+            {/* <Route path="/success" element={<Success />} /> */}
           </Routes>
           <LeftContent />
         </Fragment>

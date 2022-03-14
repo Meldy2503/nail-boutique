@@ -29,16 +29,13 @@ export const ContentContainer = styled.section`
 
 export const LeftContent = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
-  width: 25rem;
-  height: 60vh;
+  width: 25%;
+  height: 100%;
   color: ${({ theme }) => theme.colors.secondary5};
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.7rem;
-  position: fixed;
   /* display: block; */
-  z-index: 1500;
-  overflow: hidden;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 6rem;
@@ -46,7 +43,6 @@ export const LeftContent = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 100vw;
-    /* flex-direction: column-reverse; */
     align-items: center;
     justify-content: center;
     height: fit-content;
@@ -60,23 +56,23 @@ export const LeftContent = styled.div`
 export const RightContent = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
   width: 77%;
-  margin-left: 26rem;
   color: ${({ theme }) => theme.colors.secondary2};
   height: 100%;
   display: ${({ display }) => display || "flex"};
   justify-content: ${({ jc }) => jc || "space-between"};
   align-items: ${({ alit }) => alit || "flex-start"};
+  flex-direction: ${({ alit }) => alit || "row"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 95%;
-    margin-left: 7rem;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 95%;
-    height: 96%;
+    width: 98%;
+    height: 95%;
     margin-left: 0;
     margin: 0 auto;
+    flex-direction: ${({ alit }) => alit || "column"};
   }
 `;
 
@@ -91,7 +87,7 @@ export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
-  height: fit-content;
+  height: 85%;
   overflow-y: scroll;
   overflow-x: hidden;
 `;

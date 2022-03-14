@@ -2,10 +2,12 @@
 import {
   ContentContainer,
   RightContent,
+  RightContentCol1,
+  RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import {
-  TechnicianContainer,
+  // TechnicianContainer,
   Search,
   Row2,
   Row3,
@@ -25,19 +27,15 @@ import { HiOutlineSearch, HiUserGroup, HiDotsHorizontal } from "react-icons/hi";
 import { IoGrid } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
 import { Button } from "../../../reuseableComponents/buttonStyle";
+import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
 
 function SelectTechnician() {
-  //   const [list, setList] = useState(false);
-
-  //   const togglelist = () => {
-  //     setState((prevState) => !prevState);
-  //   };
-
   return (
     <ContentContainer>
       <Sidebar />
       <RightContent>
-        <TechnicianContainer>
+        <RightContentCol1>
+          {/* <TechnicianContainer> */}
           <HeadingStyle>
             <h2>Select Technician</h2>
             <Back to="/select-servicestwo">
@@ -60,7 +58,7 @@ function SelectTechnician() {
                 <IoGrid className="grid" />
               </Grid>
               <List>
-                <FaThList className="list" />
+                <FaThList className="grid" />
               </List>
             </Orientation>
           </Row2>
@@ -74,16 +72,14 @@ function SelectTechnician() {
                 <Technician>
                   <img src={item.avatar} alt="avatar" />
                   <h4>{item.name}</h4>
-                  <div className="row1">
-                    <p>{`${item.role} - ${item.age}Yrs`}</p>
-                  </div>
-                  <div className="row2">
+                  <p>{`${item.role} - ${item.age}Yrs`}</p>
+                  <div>
                     <span>
-                      <HiUserGroup className="client-icon" />
+                      <HiUserGroup className="icon" />
                       <p>{item.clients} clients</p>
                     </span>
                     <span>
-                      <MdStar className="rating-icon" />
+                      <MdStar className="icon star" />
                       <p>{item.rating} ratings</p>
                     </span>
                   </div>
@@ -95,7 +91,11 @@ function SelectTechnician() {
           <Row4>
             <Button to="/schedule">CONTINUE</Button>
           </Row4>
-        </TechnicianContainer>
+          {/* </TechnicianContainer> */}
+        </RightContentCol1>
+        <RightContentCol2>
+          <BookingSummary />
+        </RightContentCol2>
       </RightContent>
     </ContentContainer>
   );

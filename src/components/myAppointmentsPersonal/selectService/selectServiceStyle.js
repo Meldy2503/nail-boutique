@@ -5,6 +5,9 @@ export const Title = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  background-color: ${({ theme }) => theme.colors.primary2};
 
   h2 {
     font-size: 2.8rem;

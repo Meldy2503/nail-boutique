@@ -8,13 +8,17 @@ export const Button = styled(Link)`
   border: none;
   padding: ${({ padding }) => padding || "1rem 0"};
   display: inline-block;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-align: center;
-  width: 100%;
+  width: ${({ width }) => width || "100%"};
 
   &:hover {
     background: linear-gradient(180deg, #f5d061 -1%, #e48f04 100%);
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 1.45rem;
   }
 `;
