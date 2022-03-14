@@ -4,9 +4,15 @@ export const SuccessContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0000001f;
+  background-color: #000000cc;
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9000;
 `;
 export const Popup = styled.div`
   height: 493px;
