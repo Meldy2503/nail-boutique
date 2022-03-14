@@ -10,7 +10,7 @@ export const Button = styled(Link)`
   display: inline-block;
   border-radius: 0.8rem;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: ${({ fs }) => fs || "1.6rem"};
   text-align: center;
   width: ${({ width }) => width || "100%"};
 
