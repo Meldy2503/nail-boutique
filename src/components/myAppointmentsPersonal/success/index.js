@@ -17,7 +17,7 @@ function Success() {
               the 1500s, when an unknown printer took a galley of type and
               scrambled
             </p>
-            <Button width="80%" to="/booking">
+            <Button fs="1.3rem" width="65%" to="/booking">
               GO BACK HOME
             </Button>
           </div>
