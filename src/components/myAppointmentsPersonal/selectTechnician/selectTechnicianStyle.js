@@ -63,8 +63,9 @@ export const Grid = styled.div`
     margin: 0 1rem;
     font-size: 2.5rem;
     cursor: pointer;
-  &:hover {
-    background-color: #373737;
+    &:hover {
+      background-color: #373737;
+    }
   }
 `;
 
@@ -80,8 +81,9 @@ export const List = styled.div`
     font-size: 2.5rem;
     cursor: pointer;
 
-  &:hover {
-    background-color: #373737;
+    &:hover {
+      background-color: #373737;
+    }
   }
 `;
 
