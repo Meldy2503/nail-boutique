@@ -12,7 +12,7 @@ export const Button = styled(Link)`
   font-weight: 400;
   font-size: 1.8rem;
   text-align: center;
-  width: 100%;
+  width: ${({ width }) => width || "100%"};
 
   &:hover {
     background: linear-gradient(180deg, #f5d061 -1%, #e48f04 100%);
