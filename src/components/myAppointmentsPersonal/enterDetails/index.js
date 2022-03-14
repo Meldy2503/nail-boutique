@@ -9,6 +9,8 @@ import {
   RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
+import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
+import { MdChevronLeft } from "react-icons/md";
 
 function EnterDetails() {
   return (
@@ -16,8 +18,14 @@ function EnterDetails() {
       <Sidebar />
       <RightContent>
         <RightContentCol1>
-          <Back to="/schedule">Back</Back>
-          <h1>Enter your details</h1>
+          <HeadingStyle>
+            <h2>Enter your details</h2>
+            <Back to="/schedule">
+              <MdChevronLeft />
+              Go back
+            </Back>
+          </HeadingStyle>
+
           <Button to="/confirm-booking">CONTINUE</Button>
         </RightContentCol1>
         <RightContentCol2>

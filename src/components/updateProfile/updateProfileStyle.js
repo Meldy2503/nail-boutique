@@ -5,6 +5,10 @@ export const UpdateProfileContainer = styled.div`
   width: 85%;
   margin: 0 auto;
   padding-top: 3rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 95%;
+  }
 `;
 
 export const FormField = styled.form`
@@ -14,11 +18,24 @@ export const FormField = styled.form`
   height: 100%;
   margin-top: 1%;
   margin-bottom: 20%;
+  position: relative;
+  /* overflow: scroll; */
+
+  & > span {
+    display: block;
+    overflow: scroll;
+    height: 60vh;
+  }
 
   .names {
     display: flex;
     flex-direction: row;
     gap: 1.6rem;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      flex-direction: column;
+      gap: 0rem;
+    }
   }
 `;
 
@@ -77,12 +94,13 @@ export const Comment = styled.div`
     border: none;
     border-radius: 0.4rem;
     font-family: Poppins;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+    color: ${({ theme }) => theme.colors.secondary1};
   }
 `;
 
@@ -101,12 +119,18 @@ export const Row1 = styled.div`
 export const SubmitBtn = styled.button`
   color: #000000;
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
-  padding: 1rem 26%;
+  padding: 1rem 0;
   border-radius: 1rem;
   font-weight: 400;
   font-size: 1.6rem;
   text-align: center;
   border: none;
+  width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    position: sticky;
+    bottom: 1.4rem;
+  }
 `;
 
 export const RememberMe = styled.span`
