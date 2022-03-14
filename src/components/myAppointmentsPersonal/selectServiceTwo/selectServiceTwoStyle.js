@@ -25,10 +25,6 @@ export const Title = styled.div`
   }
 `;
 
-export const ServicesContainer = styled.div`
-  /* overflow: scroll; */
-`;
-
 export const Services = styled.div`
   border: 0.5px solid #555555;
   margin-bottom: 2rem;
@@ -73,7 +69,6 @@ export const FormContainer = styled.form`
 export const FormContents = styled.div`
   border-top: 0.5px solid #555555;
   padding-bottom: 1rem;
-  /* height: 10rem; */
 `;
 
 export const InputContainer = styled.div`
@@ -125,11 +120,3 @@ export const Btn = styled.div`
   height: 5rem;
   bottom: 0;
 `;
-
-/* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-  
- }
- @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-   
- }
- color: ${({ theme }) => theme.colors.secondary5}; */

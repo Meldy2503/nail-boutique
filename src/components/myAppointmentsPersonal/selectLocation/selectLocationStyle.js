@@ -24,7 +24,7 @@ export const ContentCol2 = styled.div`
   width: 35%;
 
   img {
-    height: 100vh;
+    height: 80vh;
     max-width: 100%;
   }
 `;

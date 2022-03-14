@@ -87,7 +87,7 @@ export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
-  height: fit-content;
+  height: 85%;
   overflow-y: scroll;
   overflow-x: hidden;
 `;
