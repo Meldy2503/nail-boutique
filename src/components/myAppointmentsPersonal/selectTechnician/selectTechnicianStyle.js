@@ -93,6 +93,10 @@ export const Row3 = styled.div`
   flex-wrap: wrap;
   overflow-y: scroll;
   /* height: 80vh; */
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    overflow-y: visible;
+  }
 `;
 
 export const Card = styled.div`
@@ -113,6 +117,8 @@ export const Card = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .top {

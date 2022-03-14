@@ -1,5 +1,11 @@
 import React from "react";
-import { NavContainer, Logo, StyledNav, MenuIcon } from "./navbarStyle";
+import {
+  NavContainer,
+  Logo,
+  StyledNav,
+  MenuIcon,
+  Padding,
+} from "./navbarStyle";
 import { NavLink } from "react-router-dom";
 import { Spin as Hamburger } from "hamburger-react";
 import logo from "../../images/nail-logo.svg";
@@ -12,6 +18,7 @@ function Navbar() {
 
   return (
     <NavContainer>
+      <Padding />
       <StyledNav>
         <Logo>
           <img src={logo} alt="nail-boutique-logo" />

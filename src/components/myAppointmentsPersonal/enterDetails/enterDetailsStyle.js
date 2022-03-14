@@ -6,7 +6,7 @@ export const EnterDetailsContainer = styled.div`
   padding-top: 3rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 95%;
+    width: 100%;
   }
 `;
 
@@ -24,6 +24,11 @@ export const FormField = styled.form`
     display: block;
     overflow: scroll;
     height: 60vh;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      overflow: visible;
+      height: fit-content;
+    }
   }
 
   .names {
@@ -141,6 +146,11 @@ export const RememberMe = styled.span`
 `;
 
 export const Policy = styled.div`
+  margin-bottom: 4rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+  }
+
   h2 {
     margin-bottom: 1rem;
   }
