@@ -6,13 +6,13 @@ const bookingData = [
     id: 1,
     icon: personal,
     title: "Personal Booking",
-    link: "/personal-booking",
+    link: "/select-location",
   },
   {
     id: 2,
     icon: group,
     title: "Group Booking",
-    link: "/group-booking",
+    link: "/select-location",
   },
 ];
 export default bookingData;

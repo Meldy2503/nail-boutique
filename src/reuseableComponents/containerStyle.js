@@ -66,6 +66,7 @@ export const RightContent = styled.div`
   display: ${({ display }) => display || "flex"};
   justify-content: ${({ jc }) => jc || "space-between"};
   align-items: ${({ alit }) => alit || "flex-start"};
+  flex-direction: ${({ alit }) => alit || "row"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 95%;
@@ -77,6 +78,7 @@ export const RightContent = styled.div`
     height: 96%;
     margin-left: 0;
     margin: 0 auto;
+    flex-direction: ${({ alit }) => alit || "column"};
   }
 `;
 
