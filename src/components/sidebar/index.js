@@ -49,7 +49,6 @@ function Sidebar() {
           </NavLink>
         </li>
       </StyledUl>
-      <Padding />
     </LeftContent>
   );
 }

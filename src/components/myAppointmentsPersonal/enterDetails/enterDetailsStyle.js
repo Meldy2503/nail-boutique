@@ -148,13 +148,21 @@ export const RememberMe = styled.span`
 export const Policy = styled.div`
   margin-bottom: 4rem;
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
-  padding-top: 6rem;
+  padding-top: 4rem;
   /* margin-top: 6rem; */
 
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+  h2 {
+    margin-bottom: 0.6rem;
+    font-size: 1.8rem;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+      font-size: 1.7rem;
+    }
   }
 
-  h2 {
-    margin-bottom: 1rem;
+  p {
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 1.6;
   }
 `;

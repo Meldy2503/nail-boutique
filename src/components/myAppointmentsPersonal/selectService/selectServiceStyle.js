@@ -51,6 +51,10 @@ export const ServiceType = styled.div`
       font-weight: 600;
       margin-bottom: 0.2rem;
       color: ${({ theme }) => theme.colors.secondary2};
+
+      @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+        font-size: 1.6rem;
+      }
     }
 
     p {

@@ -46,7 +46,18 @@ export const Terms = styled.div`
   margin-top: 5rem;
 
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.8rem;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+      font-size: 1.7rem;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 1.6;
   }
 `;
 
