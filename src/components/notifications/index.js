@@ -29,8 +29,8 @@ function Notification() {
               <Row2>
                 <Alert>
                   {alertData.map((items) => (
-                    <Item>
-                      <div key={items.id}>
+                    <Item key={items.id}>
+                      <div>
                         <h3>{items.heading}</h3>
                         <p>{items.body}</p>
                       </div>

@@ -1,6 +1,7 @@
 // This is a desktop first styling approach
 
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const NavContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
@@ -36,7 +37,7 @@ export const Padding = styled.div`
   }
 `;
 
-export const Logo = styled.div`
+export const Logo = styled(Link)`
   img {
     max-width: 100%;
 

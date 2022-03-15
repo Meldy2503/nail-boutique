@@ -20,7 +20,7 @@ function Navbar() {
     <NavContainer>
       <Padding />
       <StyledNav>
-        <Logo>
+        <Logo to="/booking">
           <img src={logo} alt="nail-boutique-logo" />
         </Logo>
 
