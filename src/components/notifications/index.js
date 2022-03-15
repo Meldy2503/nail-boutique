@@ -9,6 +9,7 @@ import { Alert, NotificationContainer, Row2, Item } from "./notificationStyle";
 import { MdChevronLeft } from "react-icons/md";
 import alertData from "../../components/notifications/notificationData";
 import { HeadingStyle } from "../../reuseableComponents/headingStyle";
+import { ScrollContainer } from "../../reuseableComponents/scrollStyle";
 
 function Notification() {
   return (
@@ -23,18 +24,22 @@ function Notification() {
               Go back
             </Back>
           </HeadingStyle>
-          <Row2>
-            <Alert>
-              {alertData.map((items) => (
-                <Item>
-                  <div key={items.id}>
-                    <h3>{items.heading}</h3>
-                    <p>{items.body}</p>
-                  </div>
-                </Item>
-              ))}
-            </Alert>
-          </Row2>
+          <ScrollContainer>
+            <div>
+              <Row2>
+                <Alert>
+                  {alertData.map((items) => (
+                    <Item>
+                      <div key={items.id}>
+                        <h3>{items.heading}</h3>
+                        <p>{items.body}</p>
+                      </div>
+                    </Item>
+                  ))}
+                </Alert>
+              </Row2>
+            </div>
+          </ScrollContainer>
         </NotificationContainer>
       </RightContent>
     </ContentContainer>
