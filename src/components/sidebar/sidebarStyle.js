@@ -60,6 +60,7 @@ export const StyledUl = styled.ul`
       @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
         margin: 0 auto;
         font-size: 2.5rem;
+        margin-top: 1.5rem;
         display: inline-block;
       }
     }

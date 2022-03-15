@@ -21,7 +21,7 @@ export const ContentContainer = styled.section`
     width: 100%;
     flex-direction: column-reverse;
     height: 93.5vh;
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
 `;
 
@@ -98,7 +98,7 @@ export const RightContentCol2 = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     display: ${({ display }) => display || "none"};
-    width: 100%;
-
+    width: 96%;
+    height: 40vh;
   }
 `;

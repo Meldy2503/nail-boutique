@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import locationData from "./selectLocationData";
 import Map from "../../../images/map.png";
 import { MdChevronLeft } from "react-icons/md";
-import {
-  Content,
-  Contents,
-  LocationHeader,
-  MapImg,
-} from "./selectLocationStyle";
+import { Content, Contents, MapImg } from "./selectLocationStyle";
 import {
   ContentContainer,
   RightContent,
@@ -25,6 +20,7 @@ import {
   useSpringRef,
 } from "react-spring";
 import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
+import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
 
 function SelectLocation() {
   const [isChecked, setIsChecked] = useState(false);
@@ -56,13 +52,13 @@ function SelectLocation() {
       <Sidebar />
       <RightContent alitm="column-reverse">
         <RightContentCol1>
-          <LocationHeader>
+          <HeadingStyle>
             <h1>Select Location</h1>
             <Back to="/booking">
               <MdChevronLeft />
               Go back
             </Back>
-          </LocationHeader>
+          </HeadingStyle>
           <ScrollContainer>
             <div>
               {locationData.map((data) => (

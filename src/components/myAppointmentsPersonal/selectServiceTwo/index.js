@@ -11,7 +11,6 @@ import { Button } from "../../../reuseableComponents/buttonStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
-  Title,
   ServiceContainer,
   Services,
   ServiceType,
@@ -24,6 +23,8 @@ import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./data";
 import BookingSummary from "../bookingSummary";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
+import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
+import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
 
 function SelectServiceTwo() {
   const [onClick, setOnClick] = React.useState({});
@@ -53,87 +54,89 @@ function SelectServiceTwo() {
       <Sidebar />
       <RightContent>
         <RightContentCol1>
-          <Title>
+          <HeadingStyle>
             <h2>Select Services</h2>
             <Back to="/select-services">
               <MdChevronLeft />
               Go back
             </Back>
-          </Title>
-          <ServiceContainer>
-            {serviceData.map((items, index) => {
-              return (
-                <Services key={items.id}>
-                  <ServiceType>
-                    <div>
-                      <h3>{items.title}</h3>
-                      <p>{items.text}</p>
-                    </div>
-                    <span onClick={handleClick(index)}>
-                      {onClick[index] ? <FaAngleRight /> : <FaAngleDown />}
-                    </span>
-                  </ServiceType>
+          </HeadingStyle>
+          <ScrollContainer>
+            <ServiceContainer>
+              {serviceData.map((items, index) => {
+                return (
+                  <Services key={items.id}>
+                    <ServiceType>
+                      <div>
+                        <h3>{items.title}</h3>
+                        <p>{items.text}</p>
+                      </div>
+                      <span onClick={handleClick(index)}>
+                        {onClick[index] ? <FaAngleRight /> : <FaAngleDown />}
+                      </span>
+                    </ServiceType>
 
-                  {onClick[index] && (
-                    <FormContainer onSubmit={formik.handleSubmit}>
-                      <FormContents>
-                        <InputContainer>
-                          <input
-                            type="checkbox"
-                            id="optionA"
-                            name="options"
-                            value={formik.values.options}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          />
-                          <span></span>
-                          <label htmlFor="optionA">
-                            <h5>Basic Manicure</h5>
-                            <p>30 mins - ₦5000</p>
-                          </label>
-                        </InputContainer>
+                    {onClick[index] && (
+                      <FormContainer onSubmit={formik.handleSubmit}>
+                        <FormContents>
+                          <InputContainer>
+                            <input
+                              type="checkbox"
+                              id="optionA"
+                              name="options"
+                              value={formik.values.options}
+                              onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
+                            />
+                            <span></span>
+                            <label htmlFor="optionA">
+                              <h5>Basic Manicure</h5>
+                              <p>30 mins - ₦5000</p>
+                            </label>
+                          </InputContainer>
 
-                        <InputContainer>
-                          <input
-                            type="checkbox"
-                            id="optionB"
-                            name="options"
-                            value={formik.values.options}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          />
-                          <span></span>
-                          <label htmlFor="optionB">
-                            <h5>Basic Manicure</h5>
-                            <p>30 mins - ₦5000</p>
-                          </label>
-                        </InputContainer>
+                          <InputContainer>
+                            <input
+                              type="checkbox"
+                              id="optionB"
+                              name="options"
+                              value={formik.values.options}
+                              onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
+                            />
+                            <span></span>
+                            <label htmlFor="optionB">
+                              <h5>Basic Manicure</h5>
+                              <p>30 mins - ₦5000</p>
+                            </label>
+                          </InputContainer>
 
-                        <InputContainer>
-                          <input
-                            type="checkbox"
-                            id="optionC"
-                            name="options"
-                            value={formik.values.options}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          />
-                          <span></span>
-                          <label htmlFor="optionC">
-                            <h5>Basic Manicure</h5>
-                            <p>30 mins - ₦5000</p>
-                          </label>
-                        </InputContainer>
-                      </FormContents>
-                    </FormContainer>
-                  )}
-                </Services>
-              );
-            })}
-            <Btn>
-              <Button to="/select-technician">Continue</Button>
-            </Btn>
-          </ServiceContainer>
+                          <InputContainer>
+                            <input
+                              type="checkbox"
+                              id="optionC"
+                              name="options"
+                              value={formik.values.options}
+                              onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
+                            />
+                            <span></span>
+                            <label htmlFor="optionC">
+                              <h5>Basic Manicure</h5>
+                              <p>30 mins - ₦5000</p>
+                            </label>
+                          </InputContainer>
+                        </FormContents>
+                      </FormContainer>
+                    )}
+                  </Services>
+                );
+              })}
+            </ServiceContainer>
+          </ScrollContainer>
+          <Btn>
+            <Button to="/select-technician">Continue</Button>
+          </Btn>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

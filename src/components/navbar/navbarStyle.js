@@ -72,10 +72,11 @@ export const StyledNav = styled.nav`
       flex-direction: column;
       background-color: ${({ theme }) => theme.colors.primary1};
       opacity: 0.9;
+
       position: absolute;
-      top: 9rem;
+      top: 6rem;
       right: -10%;
-      width: 70%;
+      width: 80%;
       height: 100vh;
       z-index: 1000;
       overflow: scroll;

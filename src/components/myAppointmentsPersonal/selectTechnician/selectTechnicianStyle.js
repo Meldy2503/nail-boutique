@@ -8,8 +8,8 @@ export const Row2 = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 3rem;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
+  /* margin-top: 5rem; */
+  padding-bottom: 1rem;
 `;
 export const Search = styled.div`
   width: 100%;

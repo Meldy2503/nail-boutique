@@ -7,7 +7,6 @@ import {
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import {
-  // TechnicianContainer,
   Search,
   Row2,
   Row3,

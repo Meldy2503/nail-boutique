@@ -10,7 +10,6 @@ import { Button } from "../../../reuseableComponents/buttonStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
-  Title,
   ServiceContainer,
   Services,
   ServiceType,
@@ -24,6 +23,8 @@ import { MdChevronLeft } from "react-icons/md";
 import serviceData from "./selectServiceData";
 import BookingSummary from "../bookingSummary";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
+import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
+import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
 
 function SelectServices() {
   const [onClick, setOnClick] = React.useState({});
@@ -56,96 +57,98 @@ function SelectServices() {
       <Sidebar />
       <RightContent>
         <RightContentCol1>
-          <Title>
+          <HeadingStyle>
             <h2>Select Services</h2>
             <Back to="/select-location">
               <MdChevronLeft />
               Go back
             </Back>
-          </Title>
-          <ServiceContainer>
-            {serviceData.map((items, index) => {
-              return (
-                <Services key={items.id}>
-                  <ServiceType>
-                    <div>
-                      <h3>{items.title}</h3>
-                      <p>{items.text}</p>
-                    </div>
-                    <span onClick={handleClick(index)}>
-                      {onClick[index] ? <FaAngleRight /> : <FaAngleDown />}
-                    </span>
-                  </ServiceType>
+          </HeadingStyle>
+          <ScrollContainer>
+            <ServiceContainer>
+              {serviceData.map((items, index) => {
+                return (
+                  <Services key={items.id}>
+                    <ServiceType>
+                      <div>
+                        <h3>{items.title}</h3>
+                        <p>{items.text}</p>
+                      </div>
+                      <span onClick={handleClick(index)}>
+                        {onClick[index] ? <FaAngleRight /> : <FaAngleDown />}
+                      </span>
+                    </ServiceType>
 
-                  {onClick[index] && (
-                    <FormContainer onSubmit={formik.handleSubmit}>
-                      <FormContents>
-                        <InputContainer>
-                          <input
-                            type="checkbox"
-                            id="optionA"
-                            name="options"
-                            value={formik.values.options}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          />
-                          <span></span>
-                          <label htmlFor="optionA">
-                            <h5>Basic Manicure</h5>
-                            <p>30 mins - ₦5000</p>
-                          </label>
-                          {/* {formik.touched.options && formik.errors.options ? (
+                    {onClick[index] && (
+                      <FormContainer onSubmit={formik.handleSubmit}>
+                        <FormContents>
+                          <InputContainer>
+                            <input
+                              type="checkbox"
+                              id="optionA"
+                              name="options"
+                              value={formik.values.options}
+                              onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
+                            />
+                            <span></span>
+                            <label htmlFor="optionA">
+                              <h5>Basic Manicure</h5>
+                              <p>30 mins - ₦5000</p>
+                            </label>
+                            {/* {formik.touched.options && formik.errors.options ? (
                             <p className="errors">{formik.errors.options}</p>
                           ) : null} */}
-                        </InputContainer>
+                          </InputContainer>
 
-                        <InputContainer>
-                          <input
-                            type="checkbox"
-                            id="optionB"
-                            name="options"
-                            value={formik.values.options}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          />
-                          <span></span>
-                          <label htmlFor="optionB">
-                            <h5>Basic Manicure</h5>
-                            <p>30 mins - ₦5000</p>
-                          </label>
-                          {/* {formik.touched.options && formik.errors.options ? (
+                          <InputContainer>
+                            <input
+                              type="checkbox"
+                              id="optionB"
+                              name="options"
+                              value={formik.values.options}
+                              onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
+                            />
+                            <span></span>
+                            <label htmlFor="optionB">
+                              <h5>Basic Manicure</h5>
+                              <p>30 mins - ₦5000</p>
+                            </label>
+                            {/* {formik.touched.options && formik.errors.options ? (
                             <p className="errors">{formik.errors.options}</p>
                           ) : null} */}
-                        </InputContainer>
+                          </InputContainer>
 
-                        <InputContainer>
-                          <input
-                            type="checkbox"
-                            id="optionC"
-                            name="options"
-                            value={formik.values.options}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          />
-                          <span></span>
-                          <label htmlFor="optionC">
-                            <h5>Basic Manicure</h5>
-                            <p>30 mins - ₦5000</p>
-                          </label>
-                          {/* {formik.touched.options && formik.errors.options ? (
+                          <InputContainer>
+                            <input
+                              type="checkbox"
+                              id="optionC"
+                              name="options"
+                              value={formik.values.options}
+                              onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
+                            />
+                            <span></span>
+                            <label htmlFor="optionC">
+                              <h5>Basic Manicure</h5>
+                              <p>30 mins - ₦5000</p>
+                            </label>
+                            {/* {formik.touched.options && formik.errors.options ? (
                             <p className="errors">{formik.errors.options}</p>
                           ) : null} */}
-                        </InputContainer>
-                      </FormContents>
-                    </FormContainer>
-                  )}
-                </Services>
-              );
-            })}
-            <Btn>
-              <Button to="/select-servicestwo">Continue</Button>
-            </Btn>
-          </ServiceContainer>
+                          </InputContainer>
+                        </FormContents>
+                      </FormContainer>
+                    )}
+                  </Services>
+                );
+              })}
+            </ServiceContainer>
+          </ScrollContainer>
+          <Btn>
+            <Button to="/select-servicestwo">Continue</Button>
+          </Btn>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

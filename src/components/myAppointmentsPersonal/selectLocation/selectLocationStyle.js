@@ -25,28 +25,36 @@ export const MapImg = styled.div`
   }
 
   img {
+    /* width: 32%; */
     max-width: 100%;
+    height: 80vh;
+    /* margin-left: 6rem; */
+
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      max-width: 40%;
-      width: 80rem;
+      /* max-width: 40%; */
+      width: 92vw;
       margin: 0 auto;
-      overflow-x: hidden;
+      text-align: center;
+      /* padding-left: 2rem; */
+      height: 36vh;
+      overflow: hidden;
+      /* height: 85vh; */
     }
   }
 `;
-export const LocationHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+// export const LocationHeader = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-bottom: 2rem;
 
-  h1 {
-    font-size: 2.8rem;
-  }
-  p {
-    font-size: 1.4rem;
-  }
-`;
+//   h1 {
+//     font-size: 2.8rem;
+//   }
+//   p {
+//     font-size: 1.4rem;
+//   }
+// `;
 export const Content = styled.div`
   width: 100%;
   display: flex;
@@ -77,7 +85,7 @@ export const Content = styled.div`
 `;
 
 export const Contents = styled.div`
-  padding: 3rem 0 3rem 3rem;
+  padding: 1.5rem 0 1.5rem 2rem;
   h4 {
     font-size: 1.8rem;
   }
