@@ -6,14 +6,14 @@ export const HeadingStyle = styled.div`
   margin-bottom: 1rem;
   align-items: center;
 
-  h2 {
-    font-size: 2.8rem;
+  h1 {
+    font-size: 3rem;
     font-style: normal;
     font-weight: 700;
     /* line-height: 1.4; */
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       padding-top: 1rem;
     }
 

@@ -36,7 +36,7 @@ function SelectTechnician() {
       <RightContent>
         <RightContentCol1>
           <HeadingStyle>
-            <h2>Select Technician</h2>
+            <h1>Select Technician</h1>
             <Back to="/select-servicestwo">
               <MdChevronLeft />
               Go back
