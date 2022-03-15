@@ -1,6 +1,6 @@
 import React from "react";
 import { LeftContent } from "../../reuseableComponents/containerStyle";
-import { Padding, StyledUl } from "./sidebarStyle";
+import { StyledUl } from "./sidebarStyle";
 import { NavLink } from "react-router-dom";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { IoLogOutOutline } from "react-icons/io5";
