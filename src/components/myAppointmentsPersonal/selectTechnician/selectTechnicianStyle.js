@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-// export const TechnicianContainer = styled.div``;
+// export const TechnicianContainer = styled.div`
+//   overflow: scroll;
+//   height: 60%;
+// `;
 export const Row2 = styled.div`
   display: flex;
   justify-content: space-between;
@@ -93,6 +96,10 @@ export const Row3 = styled.div`
   flex-wrap: wrap;
   overflow-y: scroll;
   /* height: 80vh; */
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    overflow-y: visible;
+  }
 `;
 
 export const Card = styled.div`
@@ -113,6 +120,8 @@ export const Card = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .top {

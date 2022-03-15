@@ -65,3 +65,16 @@ export const StyledUl = styled.ul`
     }
   }
 `;
+
+export const Padding = styled.div`
+  display: none;
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    display: flex;
+    height: 1.5rem;
+    bottom: 60px;
+    position: fixed;
+    color: #000;
+    width: 100%;
+    z-index: 9001;
+  }
+`;

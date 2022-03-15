@@ -20,15 +20,20 @@ import styled from "styled-components";
 //   }
 // `;
 
-export const ContentCol2 = styled.div`
-  width: 35%;
+export const MapImg = styled.div`
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+  }
 
   img {
-    height: 80vh;
     max-width: 100%;
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      max-width: 40%;
+      /* width: 100vw; */
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
   }
 `;
-
 export const LocationHeader = styled.div`
   display: flex;
   justify-content: space-between;

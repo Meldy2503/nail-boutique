@@ -16,7 +16,7 @@ export const Intro = styled.div`
 `;
 
 export const Title = styled.div`
-  padding: 2rem 0 1.5rem 0;
+  padding: 2rem 5% 1.5rem 5%;
 
   h2 {
     font-size: 2.5rem;
@@ -222,10 +222,10 @@ export const Btn = styled.div`
   margin: 0 auto;
   width: 90%;
   padding: 1rem 0 0 0;
-  height: 7rem;
+  /* height: 7rem; */
   background-color: ${({ theme }) => theme.colors.primary4};
-  width: 100%;
+  /* width: 100%; */
   text-align: left;
-  position: sticky;
-  bottom: 0;
+  /* position: sticky;
+  bottom: 0; */
 `;

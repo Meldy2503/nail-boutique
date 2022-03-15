@@ -10,18 +10,18 @@ export const ContentContainer = styled.section`
   align-items: stretch;
   gap: 0.5rem;
   overflow: scroll;
-  padding-top: 12rem;
+  padding-top: 11.5rem;
   position: relative;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    padding-top: 9rem;
+    padding-top: 8rem;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 100%;
     flex-direction: column-reverse;
     height: 93.5vh;
-    padding-top: 4rem;
+    padding-top: 5rem;
   }
 `;
 
@@ -66,39 +66,39 @@ export const RightContent = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 98%;
+    width: 95%;
     height: 95%;
     margin-left: 0;
     margin: 0 auto;
-    flex-direction: ${({ alit }) => alit || "column"};
+    flex-direction: ${({ alitm }) => alitm || "column"};
   }
 `;
 
 export const RightContentCol1 = styled.div`
   margin: 4rem 2rem 4rem 3rem;
   width: 70%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-y: scroll; */
+  /* overflow-x: hidden; */
   height: 85%;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
-    margin: 0 auto;
     height: 95%;
+    margin: 0 auto;
+    /* overflow: scroll; */
   }
 `;
 export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
-  height: 85%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  height: 88%;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 90%;
-    margin: 0 auto;
-    height: 95%;
-    margin-top: 5rem;
+    display: ${({ display }) => display || "none"};
+    width: 100%;
+
   }
 `;

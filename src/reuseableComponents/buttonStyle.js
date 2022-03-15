@@ -13,6 +13,7 @@ export const Button = styled(Link)`
   font-size: ${({ fs }) => fs || "1.6rem"};
   text-align: center;
   width: ${({ width }) => width || "100%"};
+  margin-top: 1.5rem;
 
   &:hover {
     background: linear-gradient(180deg, #f5d061 -1%, #e48f04 100%);

@@ -62,3 +62,8 @@ export const Agreement = styled.span`
     background-color: #000;
   }
 `;
+
+export const Scroll = styled.div`
+  overflow-y: scroll;
+  height: 50vh;
+`;

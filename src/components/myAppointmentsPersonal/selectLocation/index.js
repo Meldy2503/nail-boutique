@@ -6,12 +6,13 @@ import {
   Content,
   Contents,
   LocationHeader,
-  ContentCol2,
+  MapImg,
 } from "./selectLocationStyle";
 import {
   ContentContainer,
   RightContent,
   RightContentCol1,
+  RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
@@ -52,7 +53,7 @@ function SelectLocation() {
   return (
     <ContentContainer>
       <Sidebar />
-      <RightContent>
+      <RightContent alitm="column-reverse">
         <RightContentCol1>
           <LocationHeader>
             <h1>Select Location</h1>
@@ -103,9 +104,11 @@ function SelectLocation() {
             CONTINUE
           </Button>
         </RightContentCol1>
-        <ContentCol2>
-          <img src={Map} alt="location" />
-        </ContentCol2>
+        <RightContentCol2 display="block">
+          <MapImg>
+            <img src={Map} alt="location" />
+          </MapImg>
+        </RightContentCol2>
       </RightContent>
     </ContentContainer>
   );
