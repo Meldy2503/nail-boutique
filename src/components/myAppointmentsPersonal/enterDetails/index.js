@@ -66,7 +66,7 @@ function EnterDetails() {
               Go back
             </Back>
           </HeadingStyle>
-          <ScrollContainer>
+          <ScrollContainer height="55%">
             <div>
               <EnterDetailsContainer>
                 <FormField onSubmit={formik.handleSubmit}>
