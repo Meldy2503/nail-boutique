@@ -87,10 +87,14 @@ export const Content = styled.div`
 export const Contents = styled.div`
   padding: 1.5rem 0 1.5rem 2rem;
   h4 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      font-size: 1.6rem;
+      font-size: 2rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      font-size: 1.8rem;
     }
   }
   p {

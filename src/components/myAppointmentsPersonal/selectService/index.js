@@ -58,7 +58,7 @@ function SelectServices() {
       <RightContent>
         <RightContentCol1>
           <HeadingStyle>
-            <h1>Select Services</h1>
+            <h2>Select Services</h2>
             <Back to="/select-location">
               <MdChevronLeft />
               Go back

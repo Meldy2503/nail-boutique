@@ -60,7 +60,7 @@ function EnterDetails() {
       <RightContent>
         <RightContentCol1>
           <HeadingStyle>
-            <h1>Enter your details</h1>
+            <h2>Enter your details</h2>
             <Back to="/schedule">
               <MdChevronLeft />
               Go back

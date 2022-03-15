@@ -5,7 +5,7 @@ import {
 } from "../../reuseableComponents/containerStyle";
 import { Back } from "../../reuseableComponents/goBack/goBackStyle";
 import Sidebar from "../sidebar";
-import { Alert, NotificationContainer, Row2, Item } from "./notificationStyle";
+import { NotificationContainer, Item, Span } from "./notificationStyle";
 import { MdChevronLeft } from "react-icons/md";
 import alertData from "../../components/notifications/notificationData";
 import { HeadingStyle } from "../../reuseableComponents/headingStyle";
@@ -25,20 +25,17 @@ function Notification() {
             </Back>
           </HeadingStyle>
           <ScrollContainer>
-            <div>
-              <Row2>
-                <Alert>
-                  {alertData.map((items) => (
-                    <Item key={items.id}>
-                      <div>
-                        <h3>{items.heading}</h3>
-                        <p>{items.body}</p>
-                      </div>
-                    </Item>
-                  ))}
-                </Alert>
-              </Row2>
-            </div>
+            {alertData.map((items) => (
+              <Item key={items.id}>
+                <div>
+                  <Span />
+                  <span>
+                    <h3>{items.heading}</h3>
+                    <p>{items.body}</p>
+                  </span>
+                </div>
+              </Item>
+            ))}
           </ScrollContainer>
         </NotificationContainer>
       </RightContent>

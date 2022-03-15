@@ -35,7 +35,7 @@ function ConfirmBooking() {
           <RightContentCol1>
             <ConfirmBookingContainer>
               <HeadingStyle>
-                <h1>Confirm Booking</h1>
+                <h2>Confirm Booking</h2>
                 <Back to="/enter-details">
                   <MdChevronLeft />
                   Go back

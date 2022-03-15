@@ -47,17 +47,20 @@ export const Terms = styled.div`
 
   h2 {
     margin-bottom: 0.6rem;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      font-size: 1.7rem;
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      font-size: 2rem;
     }
   }
 
   p {
     font-size: 1.6rem;
-    text-align: justify;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 `;
 

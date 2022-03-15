@@ -72,7 +72,7 @@ function SelectLocation() {
 
                 <label>
                   <input
-                    size={200}
+                    size={150}
                     type="checkbox"
                     onChange={() => {
                       setIsChecked(!isChecked);

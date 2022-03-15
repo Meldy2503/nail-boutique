@@ -53,7 +53,7 @@ function SelectLocation() {
       <RightContent alitm="column-reverse">
         <RightContentCol1>
           <HeadingStyle>
-            <h1>Select Location</h1>
+            <h2>Select Location</h2>
             <Back to="/booking">
               <MdChevronLeft />
               Go back
@@ -70,7 +70,7 @@ function SelectLocation() {
 
                   <label>
                     <input
-                      size={200}
+                      size={150}
                       type="checkbox"
                       onChange={() => {
                         setIsChecked(!isChecked);

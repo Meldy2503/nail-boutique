@@ -2,7 +2,6 @@ import React from "react";
 // import GoBack from "../../reuseableComponents/goBack/GoBack";
 import {
   UpdateProfileStyled,
-  Row1,
   FormField,
   UpdateProfileContainer,
   InputField,
@@ -20,6 +19,7 @@ import {
   RightContent,
 } from "../../reuseableComponents/containerStyle";
 import Sidebar from "../sidebar";
+import { HeadingStyle } from "../../reuseableComponents/headingStyle";
 
 function UpdateProfile() {
   const formik = useFormik({
@@ -57,13 +57,13 @@ function UpdateProfile() {
       <RightContent display="block">
         <UpdateProfileStyled>
           <UpdateProfileContainer>
-            <Row1>
+            <HeadingStyle>
               <h2>Update Profile</h2>
-              <Back to="/location">
+              <Back to="/enter-details">
                 <MdChevronLeft />
                 Go back
               </Back>
-            </Row1>
+            </HeadingStyle>
             <FormField onSubmit={formik.handleSubmit}>
               <span>
                 <div className="names">
