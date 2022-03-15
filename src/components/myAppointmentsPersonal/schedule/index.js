@@ -31,7 +31,7 @@ function Schedule() {
         <RightContent>
           <RightContentCol1>
             <HeadingStyle>
-              <h2>Schedule</h2>
+              <h1>Schedule</h1>
               <Back to="/select-technician">
                 <MdChevronLeft />
                 Go back
