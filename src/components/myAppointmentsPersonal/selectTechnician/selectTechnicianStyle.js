@@ -152,14 +152,14 @@ export const Technician = styled.div`
     margin-top: 0.7rem;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #cacaca;
+    /* color: #cacaca; */
   }
 
   p {
     margin: 0.1rem 0 1rem 0;
     font-size: 0.8rem;
     font-weight: 400;
-    color: #8a8a8a;
+    /* color: #8a8a8a; */
     font-style: italic;
   }
 
@@ -187,7 +187,7 @@ export const Technician = styled.div`
         margin-right: 0.05rem;
         font-size: 1.2rem;
         font-weight: 400;
-        color: #8a8a8a;
+        /* color: #8a8a8a; */
       }
 
       .star {
