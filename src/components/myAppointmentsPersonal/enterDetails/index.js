@@ -177,7 +177,7 @@ function EnterDetails() {
               </Policy>
             </div>
           </ScrollContainer>
-          <Button to="/confirm-booking">Temp Next</Button>
+          <Button to="/confirm-booking">TEMP NEXT</Button>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

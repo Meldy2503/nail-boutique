@@ -4,6 +4,7 @@ export const HeadingStyle = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  align-items: center;
 
   h2 {
     font-size: 2.8rem;

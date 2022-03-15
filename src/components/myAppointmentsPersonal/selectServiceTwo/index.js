@@ -135,7 +135,7 @@ function SelectServiceTwo() {
             </ServiceContainer>
           </ScrollContainer>
           <Btn>
-            <Button to="/select-technician">Continue</Button>
+            <Button to="/select-technician">CONTINUE</Button>
           </Btn>
         </RightContentCol1>
         <RightContentCol2>

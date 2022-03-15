@@ -83,7 +83,7 @@ function ConfirmBooking() {
                 </div>
               </Scroll>
               <Button onClick={handlePopup} to="/confirm-booking">
-                Temp CONTINUE
+                TEMP CONTINUE
               </Button>
             </ConfirmBookingContainer>
           </RightContentCol1>
