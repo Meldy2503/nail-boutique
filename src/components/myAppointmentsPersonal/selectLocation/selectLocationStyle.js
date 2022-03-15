@@ -28,7 +28,7 @@ export const MapImg = styled.div`
     max-width: 100%;
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
       max-width: 40%;
-      /* width: 100vw; */
+      width: 80rem;
       margin: 0 auto;
       overflow-x: hidden;
     }
