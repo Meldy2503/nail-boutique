@@ -13,6 +13,8 @@ export const BookingStyle = styled.div`
     flex-direction: column;
     width: 100%;
     justify-content: center;
+    height: 83vh;
+    padding: 5rem;
   }
 `;
 
@@ -23,13 +25,13 @@ export const Book = styled.div`
   border: 1px solid #636363;
 
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 55%;
-
+    width: 60%;
     margin-top: 2rem;
+    /* margin: 5rem 0; */
   }
 
-  @media screen and (max-width: 480px) {
-    width: 80%;
+  @media screen and (max-width: 500px) {
+    width: 100%;
   }
 
   & > div {
@@ -40,7 +42,7 @@ export const Book = styled.div`
     height: 100%;
 
     @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      padding: 3rem 4rem;
+      padding: 1.5rem 4rem;
     }
 
     h4 {
