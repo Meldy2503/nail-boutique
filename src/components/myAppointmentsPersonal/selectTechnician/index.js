@@ -61,7 +61,7 @@ function SelectTechnician() {
               </List>
             </Orientation>
           </Row2>
-          <ScrollContainer height="63%">
+          <ScrollContainer height="55%">
             <div>
               <Row3>
                 {technicianData.map((item) => (

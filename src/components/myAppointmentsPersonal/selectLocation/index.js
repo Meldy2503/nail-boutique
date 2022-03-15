@@ -59,7 +59,7 @@ function SelectLocation() {
               Go back
             </Back>
           </HeadingStyle>
-          <ScrollContainer height="65%">
+          <ScrollContainer height="55%">
             <div>
               {locationData.map((data) => (
                 <Content key={data.id}>

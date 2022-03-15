@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ScrollContainer = styled.div`
   overflow: scroll;
   /* height: 70%; */
-  height: ${({ height }) => height || "82%"};
+  height: ${({ height }) => height || "73%"};
 
   /* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     height: ${({ heightt }) => heightt || "60%"};
