@@ -48,6 +48,7 @@ export const LeftContent = styled.div`
     bottom: 0;
     z-index: 1500;
     padding: 0;
+    margin-top: 1rem;
   }
 `;
 

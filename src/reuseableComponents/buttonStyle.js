@@ -26,4 +26,8 @@ export const Button = styled(Link)`
   @media screen and (max-width: 400px) {
     font-size: 1.4rem;
   }
+
+  @media screen and (max-width: 350px) {
+    font-size: 1.2rem;
+  }
 `;

@@ -13,7 +13,7 @@ export const BookingStyle = styled.div`
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    height: 83vh;
+    height: 75vh;
     padding: 5rem;
   }
 `;
@@ -50,6 +50,10 @@ export const Book = styled.div`
       line-height: 1.3;
       width: 10rem;
       color: ${({ theme }) => theme.colors.secondary1};
+
+      @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+        font-size: 1.6rem;
+      }
     }
 
     img {
@@ -57,6 +61,11 @@ export const Book = styled.div`
       width: 5rem;
       height: 5rem;
       max-width: 100%;
+
+      @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+        width: 25%;
+        height: auto;
+      }
     }
   }
 `;
