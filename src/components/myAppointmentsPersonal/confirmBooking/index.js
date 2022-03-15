@@ -11,6 +11,7 @@ import {
   Agreement,
   ConfirmBookingContainer,
   Location,
+  Scroll,
   Terms,
 } from "./confirmBookingStyle";
 import { MdChevronLeft } from "react-icons/md";
@@ -20,7 +21,6 @@ import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
 import { Button } from "../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../../components/myAppointmentsPersonal/bookingSummary/index";
 import Success from "../../myAppointmentsPersonal/success/index";
-import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
 
 function ConfirmBooking() {
   const [popup, setPopup] = useState(false);
@@ -41,7 +41,7 @@ function ConfirmBooking() {
                   Go back
                 </Back>
               </HeadingStyle>
-              <ScrollContainer>
+              <Scroll>
                 <div>
                   <Location>
                     <span>
@@ -81,7 +81,7 @@ function ConfirmBooking() {
                     Condition
                   </Agreement>
                 </div>
-              </ScrollContainer>
+              </Scroll>
               <Button onClick={handlePopup} to="/confirm-booking">
                 Temp CONTINUE
               </Button>
