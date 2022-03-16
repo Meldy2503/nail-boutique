@@ -17,7 +17,6 @@ import {
   FormContainer,
   FormContents,
   InputContainer,
-  Btn,
 } from "./selectServiceTwoStyle";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./data";
@@ -134,9 +133,7 @@ function SelectServiceTwo() {
               })}
             </ServiceContainer>
           </ScrollContainer>
-          <Btn>
-            <Button to="/select-technician">CONTINUE</Button>
-          </Btn>
+          <Button to="/select-technician">CONTINUE</Button>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

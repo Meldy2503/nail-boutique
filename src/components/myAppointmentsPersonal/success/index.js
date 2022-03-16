@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import { ButtonS } from "../../../reuseableComponents/buttonStyle";
 import { ContentContainer } from "../../../reuseableComponents/containerStyle";
 import { Popup, SuccessContainer } from "./successStyle";
 import tick from "../../../images/tick2.png";
@@ -17,9 +17,9 @@ function Success() {
               the 1500s, when an unknown printer took a galley of type and
               scrambled
             </p>
-            <Button fs="1.3rem" width="65%" to="/booking">
+            <ButtonS fs="1.3rem" width="65%" to="/booking">
               GO BACK HOME
-            </Button>
+            </ButtonS>
           </div>
         </Popup>
       </SuccessContainer>

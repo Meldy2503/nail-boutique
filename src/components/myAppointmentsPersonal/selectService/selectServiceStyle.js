@@ -47,17 +47,17 @@ export const ServiceType = styled.div`
   div {
     width: 85%;
     h3 {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 600;
       margin-bottom: 0.2rem;
       color: ${({ theme }) => theme.colors.secondary2};
 
       @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-        font-size: 2rem;
+        font-size: 1.9rem;
       }
 
       @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
       }
     }
 
@@ -127,20 +127,3 @@ export const InputContainer = styled.div`
     }
   }
 `;
-
-export const Btn = styled.div`
-  width: 100%;
-  margin-bottom: 3rem;
-  position: sticky;
-  background-color: #1c1c1c;
-  height: 5rem;
-  bottom: 0;
-`;
-
-/* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-  
- }
- @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-   
- }
- color: ${({ theme }) => theme.colors.secondary5}; */

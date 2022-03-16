@@ -103,7 +103,7 @@ export const StyledNav = styled.nav`
       text-align: left;
       border-bottom: 1px solid #959595;
       display: block;
-      margin: 1.8rem 1rem;
+      margin: 1.5rem;
       overflow: scroll;
       padding: 0;
     }
@@ -118,9 +118,10 @@ export const StyledNav = styled.nav`
   .icon {
     color: #959595;
     margin-top: 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
       margin: 0;
+      padding: 0;
     }
   }
 `;
@@ -138,6 +139,18 @@ export const MenuIcon = styled.div`
 
     @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
       font-size: 2.8rem;
+    }
+  }
+`;
+export const SideUl = styled.ul`
+  display: none;
+
+  @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    display: block;
+    background-color: transparent;
+
+    & > li {
+      margin-bottom: 3rem;
     }
   }
 `;

@@ -16,7 +16,6 @@ import {
   FormContainer,
   FormContents,
   InputContainer,
-  Btn,
 } from "./selectServiceStyle";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import { MdChevronLeft } from "react-icons/md";
@@ -146,9 +145,7 @@ function SelectServices() {
               })}
             </ServiceContainer>
           </ScrollContainer>
-          <Btn>
-            <Button to="/select-servicestwo">CONTINUE</Button>
-          </Btn>
+          <Button to="/select-servicestwo">CONTINUE</Button>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

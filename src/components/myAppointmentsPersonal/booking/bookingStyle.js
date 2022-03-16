@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const BookingStyle = styled.div`
   display: flex;
-
   align-items: center;
   height: 100%;
   width: 80%;
@@ -13,8 +12,12 @@ export const BookingStyle = styled.div`
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    height: 75vh;
-    padding: 5rem;
+    height: 78vh;
+    margin: 5rem auto;
+  }
+
+  @media screen and (max-width: 300px) {
+    height: 70vh;
   }
 `;
 
@@ -31,7 +34,7 @@ export const Book = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-    width: 100%;
+    width: 80%;
   }
 
   & > div {
@@ -42,7 +45,7 @@ export const Book = styled.div`
     height: 100%;
 
     @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      padding: 1.5rem 4rem;
+      padding: 2rem 3rem;
     }
 
     h4 {
@@ -52,7 +55,7 @@ export const Book = styled.div`
       color: ${({ theme }) => theme.colors.secondary1};
 
       @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
       }
     }
 

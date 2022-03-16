@@ -1,26 +1,27 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.section`
-  height: 95vh;
   width: 90%;
+  height: 97vh;
   max-width: 140rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 0.5rem;
-  overflow: scroll;
+  overflow: auto;
   padding-top: 11.5rem;
-  position: relative;
+  /* position: relative; */
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    height: 98vh;
     padding-top: 8rem;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 100%;
+    /* width: 90%; */
     flex-direction: column-reverse;
-    height: 93.5vh;
+    /* height: 93.5vh; */
     padding-top: 3rem;
   }
 `;
@@ -33,9 +34,13 @@ export const LeftContent = styled.div`
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.7rem;
-  /* display: block; */
+  overflow: auto;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    display: none;
+  }
+
+  /* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 6rem;
   }
 
@@ -49,7 +54,7 @@ export const LeftContent = styled.div`
     z-index: 1500;
     padding: 0;
     margin-top: 1rem;
-  }
+  } */
 `;
 
 export const RightContent = styled.div`
@@ -63,16 +68,17 @@ export const RightContent = styled.div`
   flex-direction: ${({ alit }) => alit || "row"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    width: 95%;
+    width: 100%;
+    margin: 0 auto;
   }
 
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+  /* @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 95%;
     height: 95%;
     margin-left: 0;
     margin: 0 auto;
     flex-direction: ${({ alitm }) => alitm || "column"};
-  }
+  } */
 `;
 
 export const RightContentCol1 = styled.div`
@@ -81,10 +87,15 @@ export const RightContentCol1 = styled.div`
   /* overflow-y: scroll; */
   /* overflow-x: hidden; */
   height: 85%;
+  overflow: auto;
+  /* position: relative; */
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
-    height: 95%;
+    height: 93%;
+    overflow: auto;
+
+    /* height: 95%; */
     margin: 0 auto;
     /* overflow: scroll; */
   }
@@ -93,13 +104,16 @@ export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
-  height: 88%;
+  overflow: auto;
+  /* position: relative; */
+  /* height: 88%; */
   /* overflow-y: scroll;
   overflow-x: hidden; */
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     display: ${({ display }) => display || "none"};
-    width: 96%;
-    height: 40vh;
+    /* width: 96%;
+    height: 90%;
+    overflow: scroll; */
   }
 `;

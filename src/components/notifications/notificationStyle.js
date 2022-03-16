@@ -12,17 +12,25 @@ export const Item = styled.div`
     margin-bottom: 0rem;
     display: flex;
 
-    span {
-      h3 {
-        font-size: 2.2rem;
+    h3 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+        font-size: 1.8rem;
       }
     }
   }
 `;
 
 export const Span = styled.div`
-  height: 3rem;
-  width: 0.1rem;
+  height: 10rem;
+  width: 1rem;
   background-color: ${({ theme }) => theme.colors.tertiary2};
   margin-right: 3rem;
+  margin
 `;
