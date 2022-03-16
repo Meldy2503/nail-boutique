@@ -9,7 +9,7 @@ export const ConfirmBookingContainer = styled.div`
 export const Location = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.primary5};
   background-color: ${({ theme }) => theme.colors.primary3};
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: 0.5rem;
   width: 80%;
 
@@ -22,28 +22,28 @@ export const Location = styled.div`
 
   span {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 3rem;
+    padding: 2rem;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
       padding: 1rem;
     }
   }
   .pin {
-    font-size: 3.5rem;
-    width: 20%;
+    font-size: 3rem;
+    width: 10%;
   }
 
   p {
-    width: 80%;
+    width: 87%;
   }
 `;
 
 export const Terms = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
-  padding-top: 4rem;
-  margin-top: 5rem;
+  padding-top: 3rem;
+  margin-top: 4rem;
 
   h2 {
     margin-bottom: 0.6rem;
@@ -77,7 +77,7 @@ export const Agreement = styled.span`
   }
 `;
 
-export const Scroll = styled.div`
-  overflow-y: scroll;
-  height: 50vh;
-`;
+// export const Scroll = styled.div`
+//   overflow-y: scroll;
+//   height: 50vh;
+// `;
