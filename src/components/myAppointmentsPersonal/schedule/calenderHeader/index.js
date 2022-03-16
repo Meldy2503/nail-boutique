@@ -30,7 +30,7 @@ const CalenderHeader = () => {
         </StyledGreen>
         <StyledRed>
           <img src={Red} alt="indicator" />
-          <h4>unvailable</h4>
+          <h4>Unavailable</h4>
         </StyledRed>
       </Monitor>
     </HeaderWrapper>

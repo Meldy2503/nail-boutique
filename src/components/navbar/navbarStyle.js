@@ -1,12 +1,13 @@
 // This is a desktop first styling approach
 
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const NavContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
   height: 9rem;
   width: 100%;
-  z-index: 1500;
+  z-index: 3000;
   position: fixed;
   top: 0;
 
@@ -19,7 +20,24 @@ export const NavContainer = styled.div`
   }
 `;
 
-export const Logo = styled.div`
+export const Padding = styled.div`
+  height: 2.5rem;
+  width: 100%;
+  position: fixed;
+  background: #000;
+  top: 9rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    height: 2rem;
+    top: 6rem;
+  }
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    height: 1.5rem;
+    top: 6rem;
+  }
+`;
+
+export const Logo = styled(Link)`
   img {
     max-width: 100%;
 
@@ -38,7 +56,7 @@ export const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   position: relative;
-  z-index: 2000;
+  z-index: 2500;
   padding: 1.1rem 0 1.2rem 0;
 
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
@@ -54,15 +72,19 @@ export const StyledNav = styled.nav`
       display: flex;
       flex-direction: column;
       background-color: ${({ theme }) => theme.colors.primary1};
-      opacity: 0.9;
+      opacity: 0.96;
       position: absolute;
-      top: 9rem;
+      top: 6rem;
       right: -10%;
-      width: 70%;
+      width: 60%;
       height: 100vh;
-      z-index: 1000;
-      overflow: scroll;
+      z-index: 3000;
+      overflow: auto;
       padding-top: 2rem;
+
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
     }
   }
   .ulBigScreen {
@@ -84,7 +106,7 @@ export const StyledNav = styled.nav`
       text-align: left;
       border-bottom: 1px solid #959595;
       display: block;
-      margin: 1.8rem 1rem;
+      margin: 1.5rem;
       overflow: scroll;
       padding: 0;
     }
@@ -99,9 +121,10 @@ export const StyledNav = styled.nav`
   .icon {
     color: #959595;
     margin-top: 1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
       margin: 0;
+      padding: 0;
     }
   }
 `;
@@ -111,14 +134,22 @@ export const MenuIcon = styled.div`
 
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     display: block;
-    font-size: 3.5rem;
     margin-top: -5rem;
     color: ${({ theme }) => theme.colors.tertiary2};
+    right: 0;
     transform: translate(-1%, 50%);
     cursor: pointer;
+  }
+`;
+export const SideUl = styled.ul`
+  display: none;
 
-    @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      font-size: 2.8rem;
+  @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    display: block;
+    background-color: transparent;
+
+    & > li {
+      margin-bottom: 3rem;
     }
   }
 `;

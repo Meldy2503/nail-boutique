@@ -16,7 +16,7 @@ export const FormField = styled.form`
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
-  margin-top: 1%;
+  margin-top: 2.5rem;
   margin-bottom: 20%;
   position: relative;
   /* overflow: scroll; */
@@ -46,7 +46,7 @@ export const InputField = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.8rem;
@@ -81,7 +81,7 @@ export const Comment = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.8rem;
@@ -94,10 +94,10 @@ export const Comment = styled.div`
     border: none;
     border-radius: 0.4rem;
     font-family: Poppins;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 21px;
+    line-height: 2.1rem;
     letter-spacing: 0em;
     text-align: left;
     color: ${({ theme }) => theme.colors.secondary1};
@@ -108,18 +108,6 @@ export const Comment = styled.div`
       color: ${({ theme }) => theme.colors.secondary1};
       background-color: ${({ theme }) => theme.colors.primary7};
     }
-  }
-`;
-
-export const Row1 = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  h2 {
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 4.8rem;
   }
 `;
 

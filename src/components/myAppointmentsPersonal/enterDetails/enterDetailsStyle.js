@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const EnterDetailsContainer = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding-top: 3rem;
+  padding-top: 1.5rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 95%;
+    width: 100%;
   }
 `;
 
@@ -15,16 +15,20 @@ export const FormField = styled.form`
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
-  margin-top: 1%;
-  /* margin-bottom: 20%; */
+  margin-bottom: 7%;
   position: relative;
   /* overflow: scroll; */
 
-  & > span {
-    display: block;
-    overflow: scroll;
-    height: 60vh;
+  /* & > span {
+    display: block; */
+  /* overflow: scroll; */
+  /* height: 60vh; */
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    overflow: visible;
+    height: fit-content;
   }
+  /* } */
 
   .names {
     display: flex;
@@ -45,7 +49,7 @@ export const InputField = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.8rem;
@@ -80,7 +84,7 @@ export const Comment = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.8rem;
@@ -93,10 +97,10 @@ export const Comment = styled.div`
     border: none;
     border-radius: 0.4rem;
     font-family: Poppins;
-    font-size: 12px;
+    font-size: 1.3rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 21px;
+    line-height: 2.1rem;
     letter-spacing: 0em;
     text-align: left;
     color: ${({ theme }) => theme.colors.secondary1};
@@ -120,11 +124,6 @@ export const SubmitBtn = styled.button`
   text-align: center;
   border: none;
   width: 100%;
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    position: sticky;
-    bottom: 1.4rem;
-  }
 `;
 
 export const RememberMe = styled.span`
@@ -141,7 +140,26 @@ export const RememberMe = styled.span`
 `;
 
 export const Policy = styled.div`
+  margin-bottom: 4rem;
+  border-top: 1px solid ${({ theme }) => theme.colors.primary5};
+  padding-top: 4rem;
+  /* margin-top: 6rem; */
+
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 2.4rem;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.7;
   }
 `;

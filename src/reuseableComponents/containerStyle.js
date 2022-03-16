@@ -1,29 +1,29 @@
 import styled from "styled-components";
 
-// We need to create a background div that would have the navbar and sidebar on mobile screen set to position absolute. It would act as the parent container with position relative
-
 export const ContentContainer = styled.section`
-  height: 95vh;
   width: 90%;
+  height: 97vh;
   max-width: 140rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 0.5rem;
-  overflow: scroll;
-  padding-top: 12rem;
+  overflow: auto;
+  padding-top: 11.5rem;
   position: relative;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    padding-top: 9rem;
+    height: 98vh;
+    padding-top: 8rem;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 100%;
-    flex-direction: column-reverse;
-    height: 93.5vh;
-    padding-top: 4rem;
+    width: 95%;
+    /* width: 90%; */
+    /* flex-direction: column-reverse; */
+    /* height: 93.5vh; */
+    padding-top: 3rem;
   }
 `;
 
@@ -35,9 +35,12 @@ export const LeftContent = styled.div`
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.7rem;
-  /* display: block; */
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    display: none;
+  }
+
+  /* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 6rem;
   }
 
@@ -50,7 +53,8 @@ export const LeftContent = styled.div`
     bottom: 0;
     z-index: 1500;
     padding: 0;
-  }
+    margin-top: 1rem;
+  } */
 `;
 
 export const RightContent = styled.div`
@@ -61,33 +65,79 @@ export const RightContent = styled.div`
   display: ${({ display }) => display || "flex"};
   justify-content: ${({ jc }) => jc || "space-between"};
   align-items: ${({ alit }) => alit || "flex-start"};
-  flex-direction: ${({ alit }) => alit || "row"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    width: 95%;
+    width: 100%;
+    margin: 0 auto;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 98%;
-    height: 95%;
-    margin-left: 0;
+    width: 100%;
     margin: 0 auto;
-    flex-direction: ${({ alit }) => alit || "column"};
   }
 `;
 
 export const RightContentCol1 = styled.div`
   margin: 4rem 2rem 4rem 3rem;
   width: 70%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 85%;
+  height: 90%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scroll-padding-right: 5rem;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+
+    /* position: absolute; */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.colors.primary2};
+    /* margin-right: 5rem; */
+    /* margin-block: 7rem; */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.primary5};
+    border-radius: 2rem;
+    border-top: 4rem solid transparent;
+    border-bottom: 4rem solid transparent;
+    background-clip: padding-box;
+    /* border-right: 4px solid #000; */
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      border-top: 12rem solid transparent;
+      border-bottom: 0rem solid transparent;
+    }
+  }
+
+  /* position: relative; */
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 90%;
+    height: 93%;
+    overflow: auto;
+
+    /* height: 95%; */
+    margin: 0 auto;
+    /* overflow: scroll; */
+  }
 `;
 export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
-  height: 85%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  height: 90%;
+  overflow-y: auto;
+  /* position: relative; */
+  /* height: 88%; */
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    display: ${({ display }) => display || "none"};
+    /* width: 96%;
+    height: 90%;
+    overflow: scroll; */
+  }
 `;

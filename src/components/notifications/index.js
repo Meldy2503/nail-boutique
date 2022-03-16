@@ -5,10 +5,11 @@ import {
 } from "../../reuseableComponents/containerStyle";
 import { Back } from "../../reuseableComponents/goBack/goBackStyle";
 import Sidebar from "../sidebar";
-import { Alert, NotificationContainer, Row2, Item } from "./notificationStyle";
+import { NotificationContainer, Item, Span } from "./notificationStyle";
 import { MdChevronLeft } from "react-icons/md";
 import alertData from "../../components/notifications/notificationData";
 import { HeadingStyle } from "../../reuseableComponents/headingStyle";
+import { ScrollContainer } from "../../reuseableComponents/scrollStyle";
 
 function Notification() {
   return (
@@ -23,18 +24,19 @@ function Notification() {
               Go back
             </Back>
           </HeadingStyle>
-          <Row2>
-            <Alert>
-              {alertData.map((items) => (
-                <Item>
-                  <div key={items.id}>
+          <ScrollContainer>
+            {alertData.map((items) => (
+              <Item key={items.id}>
+                <div>
+                  <Span />
+                  <span>
                     <h3>{items.heading}</h3>
                     <p>{items.body}</p>
-                  </div>
-                </Item>
-              ))}
-            </Alert>
-          </Row2>
+                  </span>
+                </div>
+              </Item>
+            ))}
+          </ScrollContainer>
         </NotificationContainer>
       </RightContent>
     </ContentContainer>
