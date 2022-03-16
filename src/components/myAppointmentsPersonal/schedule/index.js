@@ -17,13 +17,21 @@ import {
   Waitlist,
 } from "./scheduleStyle";
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
+import CalenderGrid from "./calender";
+import moment from "moment";
+import CalenderHeader from "./calenderHeader";
 
 function Schedule() {
-  // const totalDays = 42;
-  // const daysArray = [...Array(array)];
+  moment.updateLocale("en", { week: { dow: 1 } });
+  const today = moment();
+  // const [today, setToday] = useState(moment());
+  const startDay = moment().startOf("month").startOf("week");
+  // const endDay = moment().endOf("month").endOf("week")
+
+  window.moment = moment;
+  // const [today, setToday] = useState(moment());
+  // const startDay = today.clone().startOf('month').startOf('week');
+
   return (
     <div>
       <ContentContainer>
@@ -37,38 +45,26 @@ function Schedule() {
                 Go back
               </Back>
             </HeadingStyle>
-            <ScrollContainer>
-              <div>
-                <ScheduleContainer>
-                  <div></div>
-                  {
-                    <FullCalendar
-                      plugins={[dayGridPlugin]}
-                      initialView="dayGridMonth"
-                      // events={[
-                      //   { title: "event 1", date: "2019-04-01" },
-                      //   { title: "event 2", date: "2019-04-02" },
-                      // ]}
-                    />
-                  }
-                  <Time>
-                    <h1>Available Time</h1>
-                    <SelectAvailableTime>
-                      <input type="checkbox" name="9pm" id="9am" />
-                      <label htmlFor="9am">9:00AM</label>
-                      <input type="checkbox" name="1pm" id="1pm" />
-                      <label htmlFor="1pm">1:00PM</label>
-                      <input type="checkbox" name="3pm" id="3pm" />
-                      <label htmlFor="3pm">3:00PM</label>
-                      <input type="checkbox" name="5pm" id="5pm" />
-                      <label htmlFor="5pm">5:00PM</label>
-                      <input type="checkbox" name="7pm" id="7pm" />
-                      <label htmlFor="7pm">7:00PM</label>
-                    </SelectAvailableTime>
-                  </Time>
-                </ScheduleContainer>
-              </div>
-            </ScrollContainer>
+            <ScheduleContainer>
+              <CalenderHeader today={today} />
+              <CalenderGrid startDay={startDay} />
+              <Time>
+                <h1>Available Time</h1>
+                <SelectAvailableTime>
+                  <input type="checkbox" name="9pm" id="9am" />
+                  <label htmlFor="9am">9:00AM</label>
+                  <input type="checkbox" name="1pm" id="1pm" />
+                  <label htmlFor="1pm">1:00PM</label>
+                  <input type="checkbox" name="3pm" id="3pm" />
+                  <label htmlFor="3pm">3:00PM</label>
+                  <input type="checkbox" name="5pm" id="5pm" />
+                  <label htmlFor="5pm">5:00PM</label>
+                  <input type="checkbox" name="7pm" id="7pm" />
+                  <label htmlFor="7pm">7:00PM</label>
+                </SelectAvailableTime>
+              </Time>
+            </ScheduleContainer>
+            {/* <Button to="/enter-details">ADD ANOTHER SERVICES</Button> */}
             <Waitlist>
               <input type="checkbox" name="waitlist" id="waitlist" />
               <label htmlFor="waitlist"></label>Join our waitlist
