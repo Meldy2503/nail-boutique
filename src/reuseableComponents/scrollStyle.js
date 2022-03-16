@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ScrollContainer = styled.div`
-  overflow: auto;
+  /* overflow: auto; */
   /* overflow: auto;
   &::-webkit-scrollbar {
     width: 6rem;

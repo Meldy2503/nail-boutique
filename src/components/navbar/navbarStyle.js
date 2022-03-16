@@ -7,7 +7,7 @@ export const NavContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
   height: 9rem;
   width: 100%;
-  z-index: 1500;
+  z-index: 3000;
   position: fixed;
   top: 0;
 
@@ -56,7 +56,7 @@ export const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   position: relative;
-  z-index: 2000;
+  z-index: 2500;
   padding: 1.1rem 0 1.2rem 0;
 
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
@@ -73,15 +73,18 @@ export const StyledNav = styled.nav`
       flex-direction: column;
       background-color: ${({ theme }) => theme.colors.primary1};
       opacity: 0.96;
-
       position: absolute;
       top: 6rem;
       right: -10%;
-      width: 80%;
+      width: 60%;
       height: 100vh;
-      z-index: 1000;
-      overflow: scroll;
+      z-index: 3000;
+      overflow: auto;
       padding-top: 2rem;
+
+      @media screen and (max-width: 500px) {
+        width: 80%;
+      }
     }
   }
   .ulBigScreen {
@@ -131,15 +134,11 @@ export const MenuIcon = styled.div`
 
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     display: block;
-    font-size: 3.5rem;
     margin-top: -5rem;
     color: ${({ theme }) => theme.colors.tertiary2};
+    right: 0;
     transform: translate(-1%, 50%);
     cursor: pointer;
-
-    @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      font-size: 2.8rem;
-    }
   }
 `;
 export const SideUl = styled.ul`

@@ -74,12 +74,7 @@ function ConfirmBooking() {
                   </p>
                 </Terms>
                 <Agreement>
-                  <input
-                    type="checkbox"
-                    name="agreement"
-                    id="agreement"
-                    checked
-                  />
+                  <input type="checkbox" name="agreement" id="agreement" />
                   <label htmlFor="agreement"></label> I agree to the Terms and
                   Condition
                 </Agreement>

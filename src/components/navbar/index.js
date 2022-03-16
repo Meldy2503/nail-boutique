@@ -110,10 +110,11 @@ function Navbar() {
         </ul>
         <MenuIcon onClick={handleClick}>
           <Hamburger
+            // className="hamburger"
             onClick={handleClick}
             toggled={onIconClick}
             toggle={setOnIconClick}
-            size={28}
+            size={25}
           />
         </MenuIcon>
       </StyledNav>

@@ -35,7 +35,6 @@ export const LeftContent = styled.div`
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.7rem;
-  overflow: auto;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     display: none;
@@ -66,8 +65,6 @@ export const RightContent = styled.div`
   display: ${({ display }) => display || "flex"};
   justify-content: ${({ jc }) => jc || "space-between"};
   align-items: ${({ alit }) => alit || "flex-start"};
-  flex-direction: ${({ alit }) => alit || "row"};
-  overflow: ${({ overflow }) => overflow || "hidden"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 100%;
@@ -78,23 +75,29 @@ export const RightContent = styled.div`
     width: 100%;
     margin: 0 auto;
   }
-
-  /* @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 95%;
-    height: 95%;
-    margin-left: 0;
-    margin: 0 auto;
-    flex-direction: ${({ alitm }) => alitm || "column"};
-  } */
 `;
 
 export const RightContentCol1 = styled.div`
   margin: 4rem 2rem 4rem 3rem;
   width: 70%;
-  /* overflow-y: scroll; */
-  /* overflow-x: hidden; */
   height: 90%;
-  overflow: auto;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: red;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: blue;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: yellow;
+    border-radius: 2rem;
+  }
+
   /* position: relative; */
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
@@ -111,7 +114,8 @@ export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
-  overflow: auto;
+  height: 90%;
+  overflow-y: auto;
   /* position: relative; */
   /* height: 88%; */
   /* overflow-y: scroll;
