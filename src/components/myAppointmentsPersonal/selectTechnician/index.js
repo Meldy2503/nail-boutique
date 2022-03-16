@@ -47,7 +47,7 @@ function SelectTechnician() {
                 type="text"
                 name="search"
                 id="search"
-                placeholder="Search StylIst"
+                placeholder="Search Stylist"
               />
               <HiOutlineSearch className="search-icon" />
             </Search>
@@ -60,7 +60,7 @@ function SelectTechnician() {
               </List>
             </Orientation>
           </Row2>
-          <ScrollContainer height="55%">
+          <ScrollContainer>
             <div>
               <Row3>
                 {technicianData.map((item) => (
