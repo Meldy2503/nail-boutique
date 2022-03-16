@@ -19,8 +19,9 @@ export const ContentContainer = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 95%;
     /* width: 90%; */
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     /* height: 93.5vh; */
     padding-top: 3rem;
   }
@@ -92,7 +93,7 @@ export const RightContentCol1 = styled.div`
   width: 70%;
   /* overflow-y: scroll; */
   /* overflow-x: hidden; */
-  height: 85%;
+  height: 90%;
   overflow: auto;
   /* position: relative; */
 

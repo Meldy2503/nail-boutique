@@ -10,7 +10,6 @@ import {
   Search,
   Row2,
   Row3,
-  Row4,
   Orientation,
   Grid,
   List,
@@ -91,9 +90,7 @@ function SelectTechnician() {
               </Row3>
             </div>
           </ScrollContainer>
-          <Row4>
-            <Button to="/schedule">CONTINUE</Button>
-          </Row4>
+          <Button to="/schedule">CONTINUE</Button>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

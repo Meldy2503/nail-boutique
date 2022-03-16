@@ -7,13 +7,15 @@ export const BookingStyle = styled.div`
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;
+  overflow: auto;
+  /* position: absolute; */
 
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     flex-direction: column;
     width: 100%;
     justify-content: center;
     height: 78vh;
-    margin: 5rem auto;
+    margin: 6rem auto;
   }
 
   @media screen and (max-width: 300px) {

@@ -69,11 +69,11 @@ function Schedule() {
                 </ScheduleContainer>
               </div>
             </ScrollContainer>
-            <Button to="/enter-details">ADD ANOTHER SERVICES</Button>
             <Waitlist>
               <input type="checkbox" name="waitlist" id="waitlist" />
               <label htmlFor="waitlist"></label>Join our waitlist
             </Waitlist>
+            <Button to="/enter-details">ADD ANOTHER SERVICES</Button>
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />

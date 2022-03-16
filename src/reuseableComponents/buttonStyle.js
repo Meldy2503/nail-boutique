@@ -13,7 +13,12 @@ export const Button = styled(Link)`
   font-size: ${({ fs }) => fs || "1.6rem"};
   text-align: center;
   width: ${({ width }) => width || "100%"};
-  margin: 2rem 0;
+  z-index: 1500;
+  /* margin: 5rem 0; */
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
   &:hover {
     background: linear-gradient(180deg, #f5d061 -1%, #e48f04 100%);
@@ -22,9 +27,9 @@ export const Button = styled(Link)`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin: 0 auto;
     font-size: ${({ mfs }) => mfs || "1.5rem"};
-    width: 80%;
+    width: 86%;
     position: fixed;
-    bottom: 2.5rem;
+    bottom: 2.7rem;
     right: 0;
     left: 0;
   }

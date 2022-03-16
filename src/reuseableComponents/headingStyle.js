@@ -5,9 +5,13 @@ export const HeadingStyle = styled.div`
   justify-content: space-between;
   margin-bottom: 1.5rem;
   align-items: center;
+  position: sticky;
+  z-index: 1000;
+  background-color: ${({ theme }) => theme.colors.primary2};
+  top: 0;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    padding-top: 0rem;
+    padding-top: 0;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
