@@ -83,13 +83,18 @@ export const RightContentCol1 = styled.div`
   height: 90%;
   overflow-y: auto;
   scrollbar-width: thin;
+  scroll-padding-right: 5rem;
 
   &::-webkit-scrollbar {
     width: 0.5rem;
+
+    /* position: absolute; */
   }
 
   &::-webkit-scrollbar-track {
     background-color: ${({ theme }) => theme.colors.primary2};
+    /* margin-right: 5rem; */
+    /* margin-block: 7rem; */
   }
 
   &::-webkit-scrollbar-thumb {
@@ -98,6 +103,12 @@ export const RightContentCol1 = styled.div`
     border-top: 4rem solid transparent;
     border-bottom: 4rem solid transparent;
     background-clip: padding-box;
+    /* border-right: 4px solid #000; */
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      border-top: 12rem solid transparent;
+      border-bottom: 0rem solid transparent;
+    }
   }
 
   /* position: relative; */

@@ -6,7 +6,7 @@ export const HeadingStyle = styled.div`
   margin-bottom: 1.5rem;
   align-items: center;
   position: sticky;
-  z-index: 3000;
+  z-index: 1000;
   background-color: ${({ theme }) => theme.colors.primary2};
   top: 0;
 
