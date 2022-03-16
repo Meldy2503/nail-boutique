@@ -1,32 +1,36 @@
 import styled from "styled-components";
 
 export const NotificationContainer = styled.div`
-  padding: 0 3rem;
+  padding: 3rem 3rem;
 `;
 
-export const Row1 = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-export const Row2 = styled.div``;
+export const Item = styled.div`
+  padding: 1rem 0 1rem 0;
 
-export const Item = styled.div``;
-
-export const Alert = styled.div`
   & > div {
-    padding: 1.5% 6%;
-    position: relative;
     background-color: ${({ theme }) => theme.colors.primary7};
-    margin: 2rem 0;
+    margin-bottom: 0rem;
+    display: flex;
 
-    &::before {
-      content: "";
-      width: 0.6rem;
-      height: 80%;
-      background-color: ${({ theme }) => theme.colors.tertiary2};
-      position: absolute;
-      top: 10%;
-      left: 1rem;
+    h3 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+
+      @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+        font-size: 1.8rem;
+      }
     }
   }
+`;
+
+export const Span = styled.div`
+  height: 10rem;
+  width: 1rem;
+  background-color: ${({ theme }) => theme.colors.tertiary2};
+  margin-right: 3rem;
+  margin
 `;

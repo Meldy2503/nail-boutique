@@ -1,15 +1,28 @@
 import styled from "styled-components";
 
-// export const TechnicianContainer = styled.div``;
+// export const TechnicianContainer = styled.div`
+//   overflow: scroll;
+//   height: 60%;
+// `;
 export const Row2 = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
+  align-items: center;
+  /* gap: 3rem; */
+  position: sticky;
+  top: 3rem;
+  height: 6rem;
+  z-index: 1000;
+  background-color: ${({ theme }) => theme.colors.primary2};
+  padding-bottom: 1rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    top: 8rem;
+    height: 4rem;
+  }
 `;
 export const Search = styled.div`
-  width: 100%;
+  width: 75%;
   position: relative;
 
   input {
@@ -42,14 +55,14 @@ export const Search = styled.div`
 
 export const Orientation = styled.div`
   display: flex;
-  gap: 0.5rem;
+  width: 22%;
   /* justify-content: space-around; */
   /* gap: 1rem; */
 
   .grid {
     color: #c4c4c4;
-    margin: 0 0.7rem;
-    font-size: 2.2rem;
+    margin-left: 0.7rem;
+    font-size: 2rem;
   }
 `;
 
@@ -60,8 +73,8 @@ export const Grid = styled.div`
 
   .grid {
     color: ${({ theme }) => theme.colors.secondary2};
-    margin: 0 1rem;
-    font-size: 2.5rem;
+    margin-left: 0.7rem;
+    font-size: 2rem;
     cursor: pointer;
     &:hover {
       background-color: #373737;
@@ -91,13 +104,17 @@ export const Row3 = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   /* height: 80vh; */
+
+  /* @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    /* overflow-y: visible; */
 `;
 
 export const Card = styled.div`
   background-color: ${({ theme }) => theme.colors.primary7};
-  margin: 2rem 0 0 0;
+  margin: 0.5rem 0 2rem 0;
+  padding: 2.5rem 1.5rem;
   width: 31.5%;
   border-radius: 1.1rem;
   color: ${({ theme }) => theme.colors.secondary2};
@@ -107,18 +124,31 @@ export const Card = styled.div`
     color: #000;
   }
 
-  @media (max-width: 1024px) {
-    width: 48%;
+  @media (max-width: 1200px) {
+    width: 47%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    width: 43%;
+    margin: 1rem auto;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 90%;
+    width: 31%;
+  }
+
+  @media (max-width: 650px) {
+    width: 45%;
+  }
+
+  @media (max-width: 450px) {
+    width: 85%;
   }
 
   .top {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 1.5rem 0 1.5rem;
+    padding: 1rem 0;
     img {
       max-width: 100%;
     }
@@ -143,14 +173,14 @@ export const Technician = styled.div`
     margin-top: 0.7rem;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #cacaca;
+    /* color: #cacaca; */
   }
 
   p {
     margin: 0.1rem 0 1rem 0;
     font-size: 0.8rem;
     font-weight: 400;
-    color: #8a8a8a;
+    /* color: #8a8a8a; */
     font-style: italic;
   }
 
@@ -178,7 +208,7 @@ export const Technician = styled.div`
         margin-right: 0.05rem;
         font-size: 1.2rem;
         font-weight: 400;
-        color: #8a8a8a;
+        /* color: #8a8a8a; */
       }
 
       .star {
@@ -219,6 +249,6 @@ export const Select = styled.button`
     background-repeat: no-repeat;
   }
 `;
-export const Row4 = styled.div`
-  margin: 2rem 0;
-`;
+// export const Row4 = styled.div`
+//   margin: 2rem 0;
+// `;

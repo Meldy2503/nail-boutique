@@ -26,7 +26,9 @@ body {
     background-color: ${({ theme }) => theme.colors.primary1} ;
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
+   
 }
+
 
 
 

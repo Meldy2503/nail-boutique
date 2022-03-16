@@ -4,7 +4,7 @@ export const SuccessContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000cc;
+  background-color: #000000db;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -16,8 +16,8 @@ export const SuccessContainer = styled.div`
 `;
 export const Popup = styled.div`
   /* change height and width to proper units */
-  height: 493px;
-  width: 477px;
+  width: 34rem;
+  height: 36rem;
   background-color: ${({ theme }) => theme.colors.primary2};
   text-align: center;
   color: ${({ theme }) => theme.colors.secondary1};
@@ -26,28 +26,42 @@ export const Popup = styled.div`
   justify-content: center;
   flex-direction: column;
 
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 26rem;
+    height: 30rem;
+  }
+
   & > div {
-    width: 70%;
+    /* width: 25rem; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-direction: column;
-    height: 39rem;
+    padding: 15%;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      padding: 6% 8%;
+    }
 
     h3 {
-      font-size: 3.6rem;
+      font-size: 2.5rem;
       font-style: normal;
       font-weight: 800;
       line-height: 5rem;
     }
 
     p {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 300;
     }
 
     img {
       max-width: 100%;
-      width: 50%;
+      width: 25%;
+
+      @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+        width: 20%;
+      }
     }
   }
 `;

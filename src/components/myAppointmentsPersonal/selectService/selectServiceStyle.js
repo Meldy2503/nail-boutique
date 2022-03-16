@@ -1,32 +1,32 @@
 import styled from "styled-components";
 
-export const Title = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  position: sticky;
-  top: 0;
-  background-color: ${({ theme }) => theme.colors.primary2};
+// export const Title = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-bottom: 2rem;
+//   position: sticky;
+//   top: 0;
+//   background-color: ${({ theme }) => theme.colors.primary2};
 
-  h2 {
-    font-size: 2.8rem;
-    font-weight: 600;
-  }
+//   h2 {
+//     font-size: 2.8rem;
+//     font-weight: 600;
+//   }
 
-  div {
-    display: flex;
-    color: #676767;
-    align-items: center;
-    font-size: 2rem;
-  }
+//   div {
+//     display: flex;
+//     color: #676767;
+//     align-items: center;
+//     font-size: 2rem;
+//   }
 
-  a {
-    color: #525252;
-    margin-left: 0.2rem;
-    font-size: 1.4rem;
-  }
-`;
+//   a {
+//     color: #525252;
+//     margin-left: 0.2rem;
+//     font-size: 1.4rem;
+//   }
+// `;
 
 export const ServicesContainer = styled.div`
   /* overflow: scroll; */
@@ -47,10 +47,22 @@ export const ServiceType = styled.div`
   div {
     width: 85%;
     h3 {
-      font-size: 1.75rem;
+      font-size: 2rem;
       font-weight: 600;
       margin-bottom: 0.2rem;
       color: ${({ theme }) => theme.colors.secondary2};
+
+      @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+        font-size: 1.7rem;
+      }
+
+      @media (max-width: 410px) {
+        font-size: 1.6rem;
+      }
     }
 
     p {
@@ -119,20 +131,3 @@ export const InputContainer = styled.div`
     }
   }
 `;
-
-export const Btn = styled.div`
-  width: 100%;
-  margin-bottom: 3rem;
-  position: sticky;
-  background-color: #1c1c1c;
-  height: 5rem;
-  bottom: 0;
-`;
-
-/* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-  
- }
- @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-   
- }
- color: ${({ theme }) => theme.colors.secondary5}; */

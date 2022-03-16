@@ -2,14 +2,14 @@
 import {
   ContentContainer,
   RightContent,
-  RightContentCol1,
-  RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import {
+  TechnicianContainer,
   Search,
   Row2,
   Row3,
+  Row4,
   Orientation,
   Grid,
   List,
@@ -25,15 +25,19 @@ import { HiOutlineSearch, HiUserGroup, HiDotsHorizontal } from "react-icons/hi";
 import { IoGrid } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
 import { Button } from "../../../reuseableComponents/buttonStyle";
-import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
-import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
 
 function SelectTechnician() {
+  //   const [list, setList] = useState(false);
+
+  //   const togglelist = () => {
+  //     setState((prevState) => !prevState);
+  //   };
+
   return (
     <ContentContainer>
       <Sidebar />
       <RightContent>
-        <RightContentCol1>
+        <TechnicianContainer>
           <HeadingStyle>
             <h2>Select Technician</h2>
             <Back to="/select-servicestwo">
@@ -47,7 +51,7 @@ function SelectTechnician() {
                 type="text"
                 name="search"
                 id="search"
-                placeholder="Search Stylist"
+                placeholder="Search StylIst"
               />
               <HiOutlineSearch className="search-icon" />
             </Search>
@@ -56,45 +60,42 @@ function SelectTechnician() {
                 <IoGrid className="grid" />
               </Grid>
               <List>
-                <FaThList className="grid" />
+                <FaThList className="list" />
               </List>
             </Orientation>
           </Row2>
-          <ScrollContainer>
-            <div>
-              <Row3>
-                {technicianData.map((item) => (
-                  <Card key={item.id}>
-                    <div className="top">
-                      <img src={item.tick} alt="tick" />
-                      <HiDotsHorizontal className="dots" />
-                    </div>
-                    <Technician>
-                      <img src={item.avatar} alt="avatar" />
-                      <h4>{item.name}</h4>
-                      <p>{`${item.role} - ${item.age}Yrs`}</p>
-                      <div>
-                        <span>
-                          <HiUserGroup className="icon" />
-                          <p>{item.clients} clients</p>
-                        </span>
-                        <span>
-                          <MdStar className="icon star" />
-                          <p>{item.rating} ratings</p>
-                        </span>
-                      </div>
-                      <Select>SELECT</Select>
-                    </Technician>
-                  </Card>
-                ))}
-              </Row3>
-            </div>
-          </ScrollContainer>
-          <Button to="/schedule">CONTINUE</Button>
-        </RightContentCol1>
-        <RightContentCol2>
-          <BookingSummary />
-        </RightContentCol2>
+          <Row3>
+            {technicianData.map((item) => (
+              <Card key={item.id}>
+                <div className="top">
+                  <img src={item.tick} alt="tick" />
+                  <HiDotsHorizontal className="dots" />
+                </div>
+                <Technician>
+                  <img src={item.avatar} alt="avatar" />
+                  <h4>{item.name}</h4>
+                  <div className="row1">
+                    <p>{`${item.role} - ${item.age}Yrs`}</p>
+                  </div>
+                  <div className="row2">
+                    <span>
+                      <HiUserGroup className="client-icon" />
+                      <p>{item.clients} clients</p>
+                    </span>
+                    <span>
+                      <MdStar className="rating-icon" />
+                      <p>{item.rating} ratings</p>
+                    </span>
+                  </div>
+                  <Select>SELECT</Select>
+                </Technician>
+              </Card>
+            ))}
+          </Row3>
+          <Row4>
+            <Button to="/schedule">CONTINUE</Button>
+          </Row4>
+        </TechnicianContainer>
       </RightContent>
     </ContentContainer>
   );

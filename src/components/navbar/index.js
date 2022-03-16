@@ -1,5 +1,12 @@
 import React from "react";
-import { NavContainer, Logo, StyledNav, MenuIcon } from "./navbarStyle";
+import {
+  NavContainer,
+  Logo,
+  StyledNav,
+  SideUl,
+  MenuIcon,
+  Padding,
+} from "./navbarStyle";
 import { NavLink } from "react-router-dom";
 import { Spin as Hamburger } from "hamburger-react";
 import logo from "../../images/nail-logo.svg";
@@ -12,8 +19,9 @@ function Navbar() {
 
   return (
     <NavContainer>
+      <Padding />
       <StyledNav>
-        <Logo>
+        <Logo to="/booking">
           <img src={logo} alt="nail-boutique-logo" />
         </Logo>
 
@@ -51,20 +59,62 @@ function Navbar() {
 
           <li>
             <NavLink
-              className={(navLink) => (navLink.isActive ? "active" : "")}
+              className={(navLink) => (navLink.isActive ? "active" : "navLink")}
               onClick={closeMenuLink}
               to="/notifications"
             >
               <IoIosNotificationsOutline className="icon" />
             </NavLink>
           </li>
+
+          <SideUl>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `navLink ${isActive ? "active" : "navlink"}`
+                }
+                onClick={closeMenuLink}
+                to="/update-profile"
+              >
+                {/* <BsPersonCircle className="icon" /> */}
+                Update profile
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                end
+                className={({ isActive }) =>
+                  `navLink ${isActive ? "active" : "navlink"}`
+                }
+                onClick={closeMenuLink}
+                to="/booking"
+              >
+                {/* <FaPeopleArrows className="icon" /> */}
+                My Appointments
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `navLink ${isActive ? "active" : "navlink"}`
+                }
+                onClick={closeMenuLink}
+                to="/logout"
+              >
+                {/* <IoLogOutOutline className="icon" size={28} /> */}
+                Logout
+              </NavLink>
+            </li>
+          </SideUl>
         </ul>
         <MenuIcon onClick={handleClick}>
           <Hamburger
+            // className="hamburger"
             onClick={handleClick}
             toggled={onIconClick}
             toggle={setOnIconClick}
-            size={28}
+            size={25}
           />
         </MenuIcon>
       </StyledNav>
