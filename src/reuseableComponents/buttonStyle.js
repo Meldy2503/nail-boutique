@@ -24,7 +24,7 @@ export const Button = styled(Link)`
     font-size: ${({ mfs }) => mfs || "1.5rem"};
     width: 80%;
     position: absolute;
-    bottom: 4%;
+    bottom: 3rem;
   }
 
   @media screen and (max-width: 400px) {
