@@ -11,7 +11,7 @@ export const ContentContainer = styled.section`
   gap: 0.5rem;
   overflow: auto;
   padding-top: 11.5rem;
-  /* position: relative; */
+  position: relative;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     height: 98vh;

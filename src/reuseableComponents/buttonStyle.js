@@ -22,9 +22,9 @@ export const Button = styled(Link)`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin: 0 auto;
     font-size: ${({ mfs }) => mfs || "1.5rem"};
-    width: 80%;
+    width: 90%;
     position: absolute;
-    bottom: 3rem;
+    bottom: 2rem;
   }
 
   @media screen and (max-width: 400px) {
