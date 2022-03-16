@@ -66,8 +66,14 @@ export const RightContent = styled.div`
   justify-content: ${({ jc }) => jc || "space-between"};
   align-items: ${({ alit }) => alit || "flex-start"};
   flex-direction: ${({ alit }) => alit || "row"};
+  overflow: ${({ overflow }) => overflow || "hidden"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 100%;
     margin: 0 auto;
   }
