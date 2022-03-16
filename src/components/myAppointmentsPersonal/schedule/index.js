@@ -17,12 +17,21 @@ import {
   Waitlist,
 } from "./scheduleStyle";
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
+import CalenderGrid from "./calender";
+import moment from "moment";
+import CalenderHeader from "./calenderHeader";
 
 function Schedule() {
-  // const totalDays = 42;
-  // const daysArray = [...Array(array)];
+  moment.updateLocale("en", { week: { dow: 1 } });
+  const today = moment();
+  // const [today, setToday] = useState(moment());
+  const startDay = moment().startOf("month").startOf("week");
+  // const endDay = moment().endOf("month").endOf("week")
+
+  window.moment = moment;
+  // const [today, setToday] = useState(moment());
+  // const startDay = today.clone().startOf('month').startOf('week');
+
   return (
     <div>
       <ContentContainer>
@@ -37,17 +46,8 @@ function Schedule() {
               </Back>
             </HeadingStyle>
             <ScheduleContainer>
-              <div></div>
-              {
-                <FullCalendar
-                  plugins={[dayGridPlugin]}
-                  initialView="dayGridMonth"
-                  // events={[
-                  //   { title: "event 1", date: "2019-04-01" },
-                  //   { title: "event 2", date: "2019-04-02" },
-                  // ]}
-                />
-              }
+              <CalenderHeader today={today} />
+              <CalenderGrid startDay={startDay} />
               <Time>
                 <h1>Available Time</h1>
                 <SelectAvailableTime>
