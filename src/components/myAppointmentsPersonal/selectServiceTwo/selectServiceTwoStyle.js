@@ -40,17 +40,21 @@ export const ServiceType = styled.div`
   div {
     width: 85%;
     h3 {
-      font-size: 2.1rem;
+      font-size: 2rem;
       font-weight: 600;
       margin-bottom: 0.2rem;
       color: ${({ theme }) => theme.colors.secondary2};
 
       @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
       }
 
-      @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+      @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
         font-size: 1.7rem;
+      }
+
+      @media (max-width: 410px) {
+        font-size: 1.6rem;
       }
     }
 
