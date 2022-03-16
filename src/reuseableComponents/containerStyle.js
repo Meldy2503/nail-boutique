@@ -83,18 +83,17 @@ export const RightContentCol1 = styled.div`
   height: 90%;
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: red;
 
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
 
   &::-webkit-scrollbar-track {
-    background: blue;
+    background-color: ${({ theme }) => theme.colors.primary2};
   }
 
   &::-webkit-scrollbar-thumb {
-    background: yellow;
+    background-color: ${({ theme }) => theme.colors.tertiary2};
     border-radius: 2rem;
   }
 
