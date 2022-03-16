@@ -138,11 +138,11 @@ export const Card = styled.div`
   }
 
   @media (max-width: 650px) {
-    width: 40%;
+    width: 45%;
   }
 
   @media (max-width: 450px) {
-    width: 70%;
+    width: 85%;
   }
 
   .top {
