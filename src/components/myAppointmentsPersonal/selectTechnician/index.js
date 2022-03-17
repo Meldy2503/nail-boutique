@@ -25,7 +25,10 @@ import { MdChevronLeft, MdStar } from "react-icons/md";
 import { HiOutlineSearch, HiUserGroup, HiDotsHorizontal } from "react-icons/hi";
 import { IoGrid } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import {
+  Button,
+  ButtonContainer,
+} from "../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
 import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
 
@@ -93,7 +96,9 @@ function SelectTechnician() {
               </Row3>
             </div>
           </ScrollContainer>
-          <Button to="/schedule">CONTINUE</Button>
+          <ButtonContainer>
+            <Button to="/schedule">CONTINUE</Button>
+          </ButtonContainer>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

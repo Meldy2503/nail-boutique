@@ -6,7 +6,10 @@ import {
   RightContentCol2,
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import {
+  Button,
+  ButtonContainer,
+} from "../../../reuseableComponents/buttonStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
@@ -145,7 +148,9 @@ function SelectServices() {
               })}
             </ServiceContainer>
           </ScrollContainer>
-          <Button to="/select-servicestwo">CONTINUE</Button>
+          <ButtonContainer paddingm="0.5rem 0">
+            <Button to="/select-servicestwo">CONTINUE</Button>
+          </ButtonContainer>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

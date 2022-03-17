@@ -7,7 +7,10 @@ import {
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import { MdChevronLeft } from "react-icons/md";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import {
+  Button,
+  ButtonContainer,
+} from "../../../reuseableComponents/buttonStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
@@ -133,7 +136,9 @@ function SelectServiceTwo() {
               })}
             </ServiceContainer>
           </ScrollContainer>
-          <Button to="/select-technician">CONTINUE</Button>
+          <ButtonContainer>
+            <Button to="/select-technician">CONTINUE</Button>
+          </ButtonContainer>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

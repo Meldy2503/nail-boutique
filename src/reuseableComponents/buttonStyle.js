@@ -1,6 +1,19 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+export const ButtonContainer = styled.div`
+  padding: ${({ padding }) => padding || "2% 0"};
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: ${({ theme }) => theme.colors.primary2};
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    /* padding: ${({ paddingm }) => paddingm || "1.5rem 0"}; */
+  }
+`;
+
 export const Button = styled(Link)`
   color: ${({ color }) => color || "#000000"};
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);

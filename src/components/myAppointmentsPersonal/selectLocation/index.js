@@ -12,7 +12,10 @@ import {
 import { ContentContainer } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import {
+  Button,
+  ButtonContainer,
+} from "../../../reuseableComponents/buttonStyle";
 import {
   animated,
   useSpring,
@@ -98,8 +101,9 @@ function SelectLocation() {
               </label>
             </Content>
           ))}
-
-          <Button to="/select-services">CONTINUE</Button>
+          <ButtonContainer>
+            <Button to="/select-services">CONTINUE</Button>
+          </ButtonContainer>
         </Location>
 
         <MapImg>
