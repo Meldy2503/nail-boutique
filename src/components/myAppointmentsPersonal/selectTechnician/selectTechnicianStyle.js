@@ -4,6 +4,16 @@ import styled from "styled-components";
 //   overflow: scroll;
 //   height: 60%;
 // `;
+export const Top = styled.div`
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color: ${({ theme }) => theme.colors.primary2};
+`;
+
 export const Row2 = styled.div`
   display: flex;
   justify-content: space-between;
@@ -15,6 +25,7 @@ export const Row2 = styled.div`
   z-index: 1000;
   background-color: ${({ theme }) => theme.colors.primary2};
   padding-bottom: 1rem;
+  padding-top: 1rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     top: 8rem;
@@ -22,7 +33,7 @@ export const Row2 = styled.div`
   }
 `;
 export const Search = styled.div`
-  width: 75%;
+  width: 85%;
   position: relative;
 
   input {
@@ -55,8 +66,8 @@ export const Search = styled.div`
 
 export const Orientation = styled.div`
   display: flex;
-  width: 22%;
-  /* justify-content: space-around; */
+  width: 13%;
+  justify-content: space-around;
   /* gap: 1rem; */
 
   .grid {
