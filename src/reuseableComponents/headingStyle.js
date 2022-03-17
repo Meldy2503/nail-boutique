@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeadingStyle = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
+  padding-bottom: ${({ PdBottom }) => PdBottom || "1.5rem"};
   align-items: center;
   position: sticky;
   z-index: 1000;
