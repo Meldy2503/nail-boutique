@@ -7,7 +7,6 @@ import {
   Contents,
   MapImg,
   Location,
-  PickLocation,
   RightContent,
 } from "./selectLocationStyle";
 import { ContentContainer } from "../../../reuseableComponents/containerStyle";
