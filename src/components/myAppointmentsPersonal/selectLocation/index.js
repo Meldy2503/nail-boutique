@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import locationData from "./selectLocationData";
 import Map from "../../../images/map.png";
 import { MdChevronLeft } from "react-icons/md";
-import { Content, Contents, MapImg } from "./selectLocationStyle";
 import {
-  ContentContainer,
+  Content,
+  Contents,
+  MapImg,
+  Location,
+  PickLocation,
   RightContent,
-  RightContentCol1,
-  RightContentCol2,
-} from "../../../reuseableComponents/containerStyle";
+} from "./selectLocationStyle";
+import { ContentContainer } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
 import { Button } from "../../../reuseableComponents/buttonStyle";
@@ -19,7 +21,6 @@ import {
   useChain,
   useSpringRef,
 } from "react-spring";
-import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
 
 function SelectLocation() {
@@ -50,68 +51,63 @@ function SelectLocation() {
   return (
     <ContentContainer>
       <Sidebar />
-      <RightContent alitm="column-reverse">
-        <RightContentCol1>
-          <HeadingStyle>
+      <RightContent>
+        <Location>
+          <HeadingStyle mPdTop="0">
             <h2>Select Location</h2>
             <Back to="/booking">
               <MdChevronLeft />
               Go back
             </Back>
           </HeadingStyle>
-          <ScrollContainer height="55%">
-            <div>
-              {locationData.map((data) => (
-                <Content key={data.id}>
-                  <Contents>
-                    <h4>{data.heading}</h4>
-                    <p>{data.address}</p>
-                  </Contents>
 
-                  <label>
-                    <input
-                      size={150}
-                      type="checkbox"
-                      onChange={() => {
-                        setIsChecked(!isChecked);
-                      }}
-                    />
-                    <animated.svg
-                      style={checkboxAnimationStyle}
-                      className={`checkbox ${
-                        isChecked ? "checkbox--active" : ""
-                      }`}
-                      aria-hidden="true"
-                      viewBox="0 0 15 11"
-                      fill="none"
-                    >
-                      <animated.path
-                        d="M1 4.5L5 9L13 1"
-                        strokeWidth="1"
-                        stroke={isChecked ? "#B57224" : "none"}
-                        strokeDasharray={checkmarkLength}
-                        strokeDashoffset={checkmarkAnimationStyle.x}
-                        ref={(ref) => {
-                          if (ref) {
-                            setCheckmarkLength(ref.getTotalLength());
-                          }
-                        }}
-                      />
-                    </animated.svg>
-                  </label>
-                </Content>
-              ))}
-            </div>
-          </ScrollContainer>
+          {locationData.map((data) => (
+            <Content key={data.id}>
+              <Contents>
+                <h4>{data.heading}</h4>
+                <p>{data.address}</p>
+              </Contents>
+
+              <label>
+                <input
+                  size={150}
+                  type="checkbox"
+                  onChange={() => {
+                    setIsChecked(!isChecked);
+                  }}
+                />
+                <animated.svg
+                  style={checkboxAnimationStyle}
+                  className={`checkbox ${isChecked ? "checkbox--active" : ""}`}
+                  aria-hidden="true"
+                  viewBox="0 0 15 11"
+                  fill="none"
+                >
+                  <animated.path
+                    d="M1 4.5L5 9L13 1"
+                    strokeWidth="1"
+                    stroke={isChecked ? "#B57224" : "none"}
+                    strokeDasharray={checkmarkLength}
+                    strokeDashoffset={checkmarkAnimationStyle.x}
+                    ref={(ref) => {
+                      if (ref) {
+                        setCheckmarkLength(ref.getTotalLength());
+                      }
+                    }}
+                  />
+                </animated.svg>
+              </label>
+            </Content>
+          ))}
+
           <Button to="/select-services" padding="1rem 40%">
             CONTINUE
           </Button>
-        </RightContentCol1>
-        <RightContentCol2 display="block">
-          <MapImg>
-            <img src={Map} alt="location" />
-          </MapImg>
-        </RightContentCol2>
+        </Location>
+
+        <MapImg>
+          <img src={Map} alt="location" />
+        </MapImg>
       </RightContent>
     </ContentContainer>
   );

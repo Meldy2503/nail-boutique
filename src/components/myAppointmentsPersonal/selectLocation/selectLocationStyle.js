@@ -1,60 +1,49 @@
 import styled from "styled-components";
 
-// export const Column = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   width: 100%;
-// `;
-// export const Col1 = styled.div`
-//   width: 65%;
-//   padding: 0 3rem;
-//   margin-top: 4rem;
-// `;
-// export const Col2 = styled.div`
-//   /* width: 32.5%; */
-//   div {
-//     img {
-//       max-width: 100%;
-//       height: 7rem;
-//     }
-//   }
-// `;
-
 export const MapImg = styled.div`
+  width: 40%;
+  /* height: 100%; */
+
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 100%;
+    margin: 0 auto;
+    /* height: 50%; */
   }
 
   img {
-    /* width: 32%; */
-    max-width: 100%;
-    height: 80vh;
-    /* margin-left: 6rem; */
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      /* max-width: 40%; */
-      width: 92vw;
-      margin: 0 auto;
-      text-align: center;
-      /* padding-left: 2rem; */
-      height: 36vh;
-      overflow: hidden;
-      /* height: 85vh; */
-    }
+    width: 100%;
+    height: 100%;
   }
 `;
-// export const LocationHeader = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   margin-bottom: 2rem;
+export const RightContent = styled.div`
+  background-color: ${({ theme }) => theme.colors.primary2};
+  width: 77%;
+  color: ${({ theme }) => theme.colors.secondary2};
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 
-//   h1 {
-//     font-size: 2.8rem;
-//   }
-//   p {
-//     font-size: 1.4rem;
-//   }
-// `;
+  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    width: 100%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`;
+export const Location = styled.div`
+  margin: 4rem 2rem 4rem 3rem;
+  width: 72%;
+  height: 90%;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    margin: 2rem auto;
+    width: 90%;
+    height: 50%;
+  }
+`;
+
 export const Content = styled.div`
   width: 100%;
   display: flex;
