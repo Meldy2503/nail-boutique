@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const MapImg = styled.div`
   width: 40%;
-  /* height: 100%; */
+  height: 100%;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 100%;
     margin: 0 auto;
-    /* height: 50%; */
+    height: 50%;
+  }
+  @media (max-width: 300px) {
+    height: 45%;
   }
 
   img {
@@ -38,9 +41,12 @@ export const Location = styled.div`
   height: 90%;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    margin: 2rem auto;
+    margin: 1rem auto;
     width: 90%;
-    height: 50%;
+  }
+
+  @media (max-width: 600px) {
+    margin: 1rem auto;
   }
 `;
 
@@ -53,6 +59,10 @@ export const Content = styled.div`
   border-radius: 1rem;
   margin-bottom: 2.3rem;
 
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    margin-bottom: 1rem;
+  }
+
   & input[type="checkbox"] {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -64,17 +74,26 @@ export const Content = styled.div`
   }
   .checkbox {
     display: inline-block;
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
     background: ${({ theme }) => theme.colors.secondary6};
     border: 1px ${({ theme }) => theme.colors.secondary4} solid;
     margin-right: 2rem;
-    border-radius: 0.7rem;
+    border-radius: 0.5rem;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      margin-right: 1rem;
+    }
   }
 `;
 
 export const Contents = styled.div`
   padding: 1.5rem 0 1.5rem 2rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    padding: 1rem 0 1rem 1rem;
+  }
+
   h4 {
     font-size: 2rem;
 
@@ -86,14 +105,19 @@ export const Contents = styled.div`
       font-size: 1.7rem;
     }
 
-    @media (max-width: 410px) {
-      font-size: 1.6rem;
+    @media (max-width: 400px) {
+      font-size: 1.5rem;
     }
   }
 
   p {
-    width: 90%;
+    width: 85%;
     font-size: 1.5rem;
     color: ${({ theme }) => theme.colors.secondary7};
+
+    @media (max-width: 600px) {
+      font-size: 1.3rem;
+      width: 88%;
+    }
   }
 `;

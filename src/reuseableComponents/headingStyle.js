@@ -16,6 +16,7 @@ export const HeadingStyle = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     padding-top: ${({ mPdTop }) => mPdTop || "7.5rem"};
+    margin-bottom: 1rem;
   }
 
   h2 {
@@ -33,7 +34,7 @@ export const HeadingStyle = styled.div`
     }
 
     @media (max-width: 410px) {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 `;

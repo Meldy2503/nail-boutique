@@ -100,9 +100,7 @@ function SelectLocation() {
             </Content>
           ))}
 
-          <Button to="/select-services" padding="1rem 40%">
-            CONTINUE
-          </Button>
+          <Button to="/select-services">CONTINUE</Button>
         </Location>
 
         <MapImg>
