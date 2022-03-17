@@ -130,7 +130,7 @@ export const Card = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     width: 43%;
-    margin: 2rem auto;
+    margin: 1rem auto;
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
@@ -138,11 +138,11 @@ export const Card = styled.div`
   }
 
   @media (max-width: 650px) {
-    width: 40%;
+    width: 45%;
   }
 
   @media (max-width: 450px) {
-    width: 60%;
+    width: 85%;
   }
 
   .top {

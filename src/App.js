@@ -25,12 +25,14 @@ const theme = {
     primary5: "#3C3C3C",
     primary6: "#585858",
     primary7: "#262626",
+    primary8: "#292929",
 
     secondary1: "#FFFFFF",
     secondary2: "#B1B1B1",
     secondary3: "#BBBBBB",
     secondary4: "#959595",
     secondary5: "#9C9C9C",
+    secondary6: "#676767",
     secondary7: "#737373",
 
     tertiary1: "#B57224",

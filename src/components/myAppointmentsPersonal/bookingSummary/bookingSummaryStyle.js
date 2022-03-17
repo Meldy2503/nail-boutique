@@ -42,6 +42,7 @@ export const Location = styled.div`
   background: #212121;
   border: 1px solid #3c3c3c;
   border-radius: 0.5rem;
+
   div {
     display: flex;
     justify-content: space-between;
@@ -90,6 +91,7 @@ export const Manicure = styled.div`
         font-size: 1.5rem;
         font-weight: 500;
         width: 35%;
+        text-align: right;
       }
     }
   }
@@ -122,6 +124,7 @@ export const SubTotal = styled.div`
       font-size: 1.5rem;
       font-weight: 500;
       width: 35%;
+      text-align: right;
     }
   }
 `;
@@ -234,6 +237,7 @@ export const Total = styled.div`
       margin-bottom: 1.2rem;
       width: 35%;
       padding-right: 0.8rem;
+      text-align: right;
     }
   }
 `;
