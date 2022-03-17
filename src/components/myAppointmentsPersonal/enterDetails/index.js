@@ -1,7 +1,10 @@
 import React from "react";
 import BookingSummary from "../bookingSummary";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import {
+  Button,
+  ButtonContainer,
+} from "../../../reuseableComponents/buttonStyle";
 import {
   ContentContainer,
   RightContent,
@@ -177,7 +180,9 @@ function EnterDetails() {
               </Policy>
             </div>
           </ScrollContainer>
-          <Button to="/confirm-booking">NEXT</Button>
+          <ButtonContainer>
+            <Button to="/confirm-booking">NEXT</Button>
+          </ButtonContainer>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

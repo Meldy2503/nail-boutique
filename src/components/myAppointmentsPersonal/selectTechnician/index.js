@@ -16,6 +16,7 @@ import {
   Card,
   Technician,
   Select,
+  Top,
 } from "./selectTechnicianStyle";
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
@@ -24,7 +25,10 @@ import { MdChevronLeft, MdStar } from "react-icons/md";
 import { HiOutlineSearch, HiUserGroup, HiDotsHorizontal } from "react-icons/hi";
 import { IoGrid } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import {
+  Button,
+  ButtonContainer,
+} from "../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
 import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
 
@@ -34,32 +38,34 @@ function SelectTechnician() {
       <Sidebar />
       <RightContent>
         <RightContentCol1>
-          <HeadingStyle>
-            <h2>Select Technician</h2>
-            <Back to="/select-servicestwo">
-              <MdChevronLeft />
-              Go back
-            </Back>
-          </HeadingStyle>
-          <Row2>
-            <Search>
-              <input
-                type="text"
-                name="search"
-                id="search"
-                placeholder="Search Stylist"
-              />
-              <HiOutlineSearch className="search-icon" />
-            </Search>
-            <Orientation>
-              <Grid>
-                <IoGrid className="grid" />
-              </Grid>
-              <List>
-                <FaThList className="grid" />
-              </List>
-            </Orientation>
-          </Row2>
+          <Top>
+            <HeadingStyle PdBottom="0">
+              <h2>Select Technician</h2>
+              <Back to="/select-servicestwo">
+                <MdChevronLeft />
+                Go back
+              </Back>
+            </HeadingStyle>
+            <Row2>
+              <Search>
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="Search Stylist"
+                />
+                <HiOutlineSearch className="search-icon" />
+              </Search>
+              <Orientation>
+                <Grid>
+                  <IoGrid className="grid" />
+                </Grid>
+                <List>
+                  <FaThList className="grid" />
+                </List>
+              </Orientation>
+            </Row2>
+          </Top>
           <ScrollContainer>
             <div>
               <Row3>
@@ -90,7 +96,9 @@ function SelectTechnician() {
               </Row3>
             </div>
           </ScrollContainer>
-          <Button to="/schedule">CONTINUE</Button>
+          <ButtonContainer>
+            <Button to="/schedule">CONTINUE</Button>
+          </ButtonContainer>
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />

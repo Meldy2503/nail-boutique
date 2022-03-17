@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeadingStyle = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  padding-bottom: ${({ PdBottom }) => PdBottom || "1.5rem"};
   align-items: center;
   position: sticky;
   z-index: 1000;
@@ -16,7 +16,7 @@ export const HeadingStyle = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     padding-top: ${({ mPdTop }) => mPdTop || "7.5rem"};
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 
   h2 {

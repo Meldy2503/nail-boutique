@@ -17,7 +17,10 @@ import { MdChevronLeft } from "react-icons/md";
 import confirmLocation from "./confirmBookingData";
 import { IoLocationOutline } from "react-icons/io5";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import {
+  Button,
+  ButtonContainer,
+} from "../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../../components/myAppointmentsPersonal/bookingSummary/index";
 import Success from "../../myAppointmentsPersonal/success/index";
 
@@ -80,9 +83,11 @@ function ConfirmBooking() {
                 </Agreement>
               </div>
               {/* </Scroll> */}
-              <Button onClick={handlePopup} to="/confirm-booking">
-                TEMP CONTINUE
-              </Button>
+              <ButtonContainer>
+                <Button onClick={handlePopup} to="/confirm-booking">
+                  TEMP CONTINUE
+                </Button>
+              </ButtonContainer>
             </ConfirmBookingContainer>
           </RightContentCol1>
           <RightContentCol2>
