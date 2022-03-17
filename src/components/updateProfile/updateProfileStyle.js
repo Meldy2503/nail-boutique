@@ -19,7 +19,6 @@ export const FormField = styled.form`
   margin-top: 2.5rem;
   margin-bottom: 20%;
   position: relative;
-  /* overflow: scroll; */
 
   & > span {
     display: block;
@@ -132,6 +131,7 @@ export const RememberMe = styled.span`
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  font-size: 1.4rem;
 
   input {
     margin-right: 1rem;

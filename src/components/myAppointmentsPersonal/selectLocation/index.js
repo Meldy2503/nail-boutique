@@ -23,7 +23,13 @@ import {
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
 
 function SelectLocation() {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState({
+    location: [],
+  });
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   const checkboxAnimationRef = useSpringRef();
   const checkboxAnimationStyle = useSpring({
     backgroundColor: isChecked ? "#271602" : "#1C1C1C",
@@ -69,12 +75,25 @@ function SelectLocation() {
 
               <label>
                 <input
-                  size={150}
+                  size={180}
                   type="checkbox"
-                  onChange={() => {
-                    setIsChecked(!isChecked);
-                  }}
+                  onChange={handleChange}
+                  checked={isChecked}
+                  id="istLocation"
+                  name="location"
+                  value="istLocation"
                 />
+
+                <input
+                  size={180}
+                  type="checkbox"
+                  onChange={handleChange}
+                  checked={isChecked}
+                  id="secondLocation"
+                  name="location"
+                  value="secondLocation"
+                />
+
                 <animated.svg
                   style={checkboxAnimationStyle}
                   className={`checkbox ${isChecked ? "checkbox--active" : ""}`}

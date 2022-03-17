@@ -76,7 +76,6 @@ function Navbar() {
                 onClick={closeMenuLink}
                 to="/update-profile"
               >
-                {/* <BsPersonCircle className="icon" /> */}
                 Update profile
               </NavLink>
             </li>
@@ -89,7 +88,6 @@ function Navbar() {
                 onClick={closeMenuLink}
                 to="/booking"
               >
-                {/* <FaPeopleArrows className="icon" /> */}
                 My Appointments
               </NavLink>
             </li>

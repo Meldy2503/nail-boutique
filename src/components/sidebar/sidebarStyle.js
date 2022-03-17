@@ -8,45 +8,14 @@ export const StyledUl = styled.ul`
     display: none;
   }
 
-  /* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    padding: 3rem 0 0 0;
-  }
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 8%;
-  } */
-
   & > li {
     padding: 1rem 1rem 2rem 0;
-
-    /* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      padding: 1rem 0 2.5rem 0.5rem;
-    }
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      padding: 0;
-    } */
 
     .navLink {
       font-size: 1.6rem;
       font-weight: 400;
       color: ${({ theme }) => theme.colors.secondary5};
       padding: 2rem;
-
-      /* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-        padding: 2rem 1rem;
-      }
-
-      @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-        padding: 0;
-      } */
-
-      /* & > span {
-        @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-          display: none;
-        }
-      } */
     }
 
     .active {
@@ -71,15 +40,14 @@ export const StyledUl = styled.ul`
   }
 `;
 
-export const Padding = styled.div`
-  display: none;
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    display: flex;
-    height: 1.5rem;
-    bottom: 60px;
-    position: fixed;
-    color: #000;
-    width: 100%;
-    z-index: 9001;
-  }
-`;
+// export const Padding = styled.div`
+//   display: none;
+//   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+//     display: flex;
+//     height: 1.5rem;
+//     bottom: 60px;
+//     position: fixed;
+//     color: #000;
+//     width: 100%;
+//     z-index: 9001;
+//   }

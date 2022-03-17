@@ -1,5 +1,4 @@
 import React from "react";
-// import GoBack from "../../reuseableComponents/goBack/GoBack";
 import {
   UpdateProfileStyled,
   FormField,
@@ -39,7 +38,6 @@ function UpdateProfile() {
         .required("*Required"),
       email: Yup.string()
         .email("Invalid Email")
-        // .max(15, "Must be 15 characters or less")
         .required("*Required"),
       phone: Yup.string()
         .max(15, "Must be 15 characters or less")
@@ -51,6 +49,8 @@ function UpdateProfile() {
     onSubmit: (values) => console.log(values),
   });
   console.log(formik.values);
+
+
   return (
     <ContentContainer>
       <Sidebar />
