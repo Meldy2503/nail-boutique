@@ -19,7 +19,7 @@ function Sidebar() {
           <NavLink
             end
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
-            to="/booking"
+            to="/my-appointments"
           >
             My Appointments
           </NavLink>

@@ -2,10 +2,10 @@ import React from "react";
 import {
   ContentContainer,
   RightContent,
-} from "../../../reuseableComponents/containerStyle";
-import Sidebar from "../../sidebar";
+} from "../../reuseableComponents/containerStyle";
+import Sidebar from "../sidebar";
 import { BookingStyle, Book } from "./bookingStyle";
-import { ButtonS } from "../../../reuseableComponents/buttonStyle";
+import { ButtonS } from "../../reuseableComponents/buttonStyle";
 import bookingData from "./bookingData";
 
 function Booking() {

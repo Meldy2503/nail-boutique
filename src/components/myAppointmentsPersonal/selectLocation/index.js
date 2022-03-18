@@ -63,7 +63,7 @@ function SelectLocation() {
         <Location>
           <HeadingStyle mPdTop="0">
             <h2>Select Location</h2>
-            <Back to="/booking">
+            <Back to="/my-appointments">
               <MdChevronLeft />
               Go back
             </Back>
@@ -121,7 +121,9 @@ function SelectLocation() {
             </Content>
           ))}
           <ButtonContainer>
-            <Button to="/select-services">CONTINUE</Button>
+            <Button to="/my-appointments/personal-booking/select-services">
+              CONTINUE
+            </Button>
           </ButtonContainer>
         </Location>
 
