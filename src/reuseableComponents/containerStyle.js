@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContentContainer = styled.section`
   width: 90%;
-  height: 97vh;
+  height: 93vh;
   max-width: 140rem;
   margin: 0 auto;
   display: flex;

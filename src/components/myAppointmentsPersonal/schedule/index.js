@@ -11,27 +11,19 @@ import {
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import {
+  Option,
   ScheduleContainer,
   SelectAvailableTime,
   Time,
   Waitlist,
 } from "./scheduleStyle";
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
-import CalenderGrid from "./calender";
-import moment from "moment";
-import CalenderHeader from "./calenderHeader";
+import Calendar from "react-calendar";
+import "./calendar.css";
+import { CalendarContainer } from "react-datepicker";
 
 function Schedule() {
-  moment.updateLocale("en", { week: { dow: 1 } });
-  const today = moment();
-  // const [today, setToday] = useState(moment());
-  const startDay = moment().startOf("month").startOf("week");
-  // const endDay = moment().endOf("month").endOf("week")
-
-  window.moment = moment;
-  // const [today, setToday] = useState(moment());
-  // const startDay = today.clone().startOf('month').startOf('week');
-
+  const [value, onChange] = React.useState(new Date());
   return (
     <div>
       <ContentContainer>
@@ -46,21 +38,32 @@ function Schedule() {
               </Back>
             </HeadingStyle>
             <ScheduleContainer>
-              <CalenderHeader today={today} />
-              <CalenderGrid startDay={startDay} />
+              <CalendarContainer>
+                <Calendar onChange={onChange} value={value} />
+              </CalendarContainer>
               <Time>
                 <h1>Available Time</h1>
                 <SelectAvailableTime>
-                  <input type="checkbox" name="9pm" id="9am" />
-                  <label htmlFor="9am">9:00AM</label>
-                  <input type="checkbox" name="1pm" id="1pm" />
-                  <label htmlFor="1pm">1:00PM</label>
-                  <input type="checkbox" name="3pm" id="3pm" />
-                  <label htmlFor="3pm">3:00PM</label>
-                  <input type="checkbox" name="5pm" id="5pm" />
-                  <label htmlFor="5pm">5:00PM</label>
-                  <input type="checkbox" name="7pm" id="7pm" />
-                  <label htmlFor="7pm">7:00PM</label>
+                  <Option>
+                    <input type="checkbox" name="9pm" id="9am" />
+                    <label htmlFor="9am">9:00AM</label>
+                  </Option>
+                  <Option>
+                    <input type="checkbox" name="1pm" id="1pm" />
+                    <label htmlFor="1pm">1:00PM</label>
+                  </Option>
+                  <Option>
+                    <input type="checkbox" name="3pm" id="3pm" />
+                    <label htmlFor="3pm">3:00PM</label>
+                  </Option>
+                  <Option>
+                    <input type="checkbox" name="5pm" id="5pm" />
+                    <label htmlFor="5pm">5:00PM</label>
+                  </Option>
+                  <Option>
+                    <input type="checkbox" name="7pm" id="7pm" />
+                    <label htmlFor="7pm">7:00PM</label>
+                  </Option>
                 </SelectAvailableTime>
               </Time>
             </ScheduleContainer>

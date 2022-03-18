@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
+export const CalendarContainer = styled.div``;
+
 export const ScheduleContainer = styled.div`
   margin: 0 auto;
   /* padding: 2rem; */
   margin-bottom: 3rem;
 `;
+
 export const Time = styled.div`
   width: 100%;
   h1 {
@@ -12,16 +15,24 @@ export const Time = styled.div`
     margin-top: 1rem;
   }
 `;
+export const Option = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+`;
 
 export const SelectAvailableTime = styled.div`
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 
   input[type="checkbox"] {
     width: 2rem;
     height: 2rem;
+    margin-right: 1rem;
     background-color: aqua;
   }
   /* .checkbox {
