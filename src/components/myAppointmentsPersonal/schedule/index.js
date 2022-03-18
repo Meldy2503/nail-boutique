@@ -24,6 +24,7 @@ import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
 import Calendar from "react-calendar";
 import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
+import timeData from "./scheduleData";
 
 function Schedule() {
   const [value, onChange] = React.useState(new Date());
@@ -42,38 +43,30 @@ function Schedule() {
             </HeadingStyle>
             <ScheduleContainer>
               <CalendarContainer>
-                <Calendar onChange={onChange} value={value} />
+                <Calendar calendarType="US" onChange={onChange} value={value} />
               </CalendarContainer>
               <Time>
                 <h1>Available Time</h1>
+
                 <SelectAvailableTime>
-                  <Option>
-                    <input type="checkbox" name="9pm" id="9am" />
-                    <label htmlFor="9am">9:00AM</label>
-                  </Option>
-                  <Option>
-                    <input type="checkbox" name="1pm" id="1pm" />
-                    <label htmlFor="1pm">1:00PM</label>
-                  </Option>
-                  <Option>
-                    <input type="checkbox" name="3pm" id="3pm" />
-                    <label htmlFor="3pm">3:00PM</label>
-                  </Option>
-                  <Option>
-                    <input type="checkbox" name="5pm" id="5pm" />
-                    <label htmlFor="5pm">5:00PM</label>
-                  </Option>
-                  <Option>
-                    <input type="checkbox" name="7pm" id="7pm" />
-                    <label htmlFor="7pm">7:00PM</label>
-                  </Option>
+                  {timeData.map((time) => {
+                    return (
+                      <Option key={time.id}>
+                        <input
+                          type="checkbox"
+                          name={time.name}
+                          id={time.name}
+                        />
+                        <label htmlFor={time.name}>{time.time}</label>
+                      </Option>
+                    );
+                  })}
                 </SelectAvailableTime>
               </Time>
             </ScheduleContainer>
-            {/* <Button to="/enter-details">ADD ANOTHER SERVICES</Button> */}
             <Waitlist>
               <input type="checkbox" name="waitlist" id="waitlist" />
-              <label htmlFor="waitlist"></label>Join our waitlist
+              <label htmlFor="waitlist">Join our waitlist</label>
             </Waitlist>
             <ButtonContainer>
               <Button to="/enter-details">ADD ANOTHER SERVICES</Button>

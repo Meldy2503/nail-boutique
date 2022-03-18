@@ -81,7 +81,7 @@
 }
 /* Neighbourung months */
 .react-calendar__month-view__days__day--neighboringMonth {
-  color: #757575;
+  color: #757575 !important;
 }
 .react-calendar__year-view .react-calendar__tile,
 .react-calendar__decade-view .react-calendar__tile,

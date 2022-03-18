@@ -16,18 +16,21 @@ export const Time = styled.div`
   }
 `;
 export const Option = styled.div`
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  margin-right: 2rem;
+  /* margin-right: 4rem; */
   margin-bottom: 2rem;
+  /* width: 25%; */
 `;
 
-export const SelectAvailableTime = styled.div`
+export const SelectAvailableTime = styled.span`
   display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  width: 100%;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  /* align-items: center; */
   flex-wrap: wrap;
+  /* width: 90%; */
+  /* margin: 0 auto; */
 
   input[type="checkbox"] {
     width: 2rem;
@@ -35,15 +38,6 @@ export const SelectAvailableTime = styled.div`
     margin-right: 1rem;
     background-color: aqua;
   }
-  /* .checkbox {
-    display: inline-block;
-    height: 4.3rem;
-    width: 4.3rem;
-    background: ${({ theme }) => theme.colors.secondary6};
-    border: 1px ${({ theme }) => theme.colors.secondary4} solid;
-    margin-right: 4rem;
-    border-radius: 0.7rem;
-  } */
 `;
 
 export const Waitlist = styled.div`
