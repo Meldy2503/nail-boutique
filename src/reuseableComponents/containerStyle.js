@@ -108,6 +108,7 @@ export const RightContentCol1 = styled.div`
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
       border-top: 12rem solid transparent;
       border-bottom: 0rem solid transparent;
+      height: 95%;
     }
   }
 

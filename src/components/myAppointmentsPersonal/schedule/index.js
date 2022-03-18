@@ -1,7 +1,10 @@
 import React from "react";
 import BookingSummary from "../bookingSummary";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import {
+  Button,
+  ButtonContainer,
+} from "../../../reuseableComponents/buttonStyle";
 import { MdChevronLeft } from "react-icons/md";
 import {
   ContentContainer,
@@ -11,27 +14,20 @@ import {
 } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
 import {
+  Option,
   ScheduleContainer,
   SelectAvailableTime,
   Time,
   Waitlist,
 } from "./scheduleStyle";
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
-import CalenderGrid from "./calender";
-import moment from "moment";
-import CalenderHeader from "./calenderHeader";
+import Calendar from "react-calendar";
+import "./calendar.css";
+import { CalendarContainer } from "react-datepicker";
+import timeData from "./scheduleData";
 
 function Schedule() {
-  moment.updateLocale("en", { week: { dow: 1 } });
-  const today = moment();
-  // const [today, setToday] = useState(moment());
-  const startDay = moment().startOf("month").startOf("week");
-  // const endDay = moment().endOf("month").endOf("week")
-
-  window.moment = moment;
-  // const [today, setToday] = useState(moment());
-  // const startDay = today.clone().startOf('month').startOf('week');
-
+  const [value, onChange] = React.useState(new Date());
   return (
     <div>
       <ContentContainer>
@@ -46,30 +42,35 @@ function Schedule() {
               </Back>
             </HeadingStyle>
             <ScheduleContainer>
-              <CalenderHeader today={today} />
-              <CalenderGrid startDay={startDay} />
+              <CalendarContainer>
+                <Calendar calendarType="US" onChange={onChange} value={value} />
+              </CalendarContainer>
               <Time>
                 <h1>Available Time</h1>
+
                 <SelectAvailableTime>
-                  <input type="checkbox" name="9pm" id="9am" />
-                  <label htmlFor="9am">9:00AM</label>
-                  <input type="checkbox" name="1pm" id="1pm" />
-                  <label htmlFor="1pm">1:00PM</label>
-                  <input type="checkbox" name="3pm" id="3pm" />
-                  <label htmlFor="3pm">3:00PM</label>
-                  <input type="checkbox" name="5pm" id="5pm" />
-                  <label htmlFor="5pm">5:00PM</label>
-                  <input type="checkbox" name="7pm" id="7pm" />
-                  <label htmlFor="7pm">7:00PM</label>
+                  {timeData.map((time) => {
+                    return (
+                      <Option key={time.id}>
+                        <input
+                          type="checkbox"
+                          name={time.name}
+                          id={time.name}
+                        />
+                        <label htmlFor={time.name}>{time.time}</label>
+                      </Option>
+                    );
+                  })}
                 </SelectAvailableTime>
               </Time>
             </ScheduleContainer>
-            {/* <Button to="/enter-details">ADD ANOTHER SERVICES</Button> */}
             <Waitlist>
               <input type="checkbox" name="waitlist" id="waitlist" />
-              <label htmlFor="waitlist"></label>Join our waitlist
+              <label htmlFor="waitlist">Join our waitlist</label>
             </Waitlist>
-            <Button to="/enter-details">ADD ANOTHER SERVICES</Button>
+            <ButtonContainer>
+              <Button to="/enter-details">ADD ANOTHER SERVICES</Button>
+            </ButtonContainer>
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />
