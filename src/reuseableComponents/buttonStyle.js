@@ -17,7 +17,6 @@ export const ButtonContainer = styled.div`
 export const Button = styled(Link)`
   color: ${({ color }) => color || "#000000"};
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
-  width: ${({ w }) => w || "100%"};
   border: none;
   padding: ${({ padding }) => padding || ".8rem 0"};
   display: inline-block;

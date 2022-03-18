@@ -27,10 +27,9 @@ export const Item = styled.div`
   }
 `;
 
-export const Span = styled.div`
+export const RightBorder = styled.div`
   height: 10rem;
   width: 1rem;
   background-color: ${({ theme }) => theme.colors.tertiary2};
   margin-right: 3rem;
-  margin
 `;

@@ -1,29 +1,19 @@
 import { Fragment } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import { LeftContent } from "./reuseableComponents/containerStyle";
 import Navbar from "./components/navbar/index";
-import SideBarPage from "./pages/SidebarPage";
-import MyAppointmentsPage from "./pages/MyAppointmentsPage";
-import PersonalBookingPage from "./pages/PersonalBookingPage";
-// import GroupBookingPage from "./pages/GroupBookingPage";
+import Booking from "./components/booking/index";
 import UpdateProfile from "./components/updateProfile/index";
 import Notification from "./components/notifications/index";
 import SelectLocation from "./components/myAppointmentsPersonal/selectLocation/index";
-
-// bbbbbbbbbbbb
-// import SelectService from "./components/myAppointmentsPersonal/selectService/index";
-// import SelectServiceTwo from "./components/myAppointmentsPersonal/selectServiceTwo/index";
-// import SelectTechnician from "./components/myAppointmentsPersonal/selectTechnician/index";
-// import Schedule from "./components/myAppointmentsPersonal/schedule/index";
-// import ConfirmBooking from "./components/myAppointmentsPersonal/confirmBooking/index";
-// import EnterDetails from "./components/myAppointmentsPersonal/enterDetails/index";
+import SelectService from "./components/myAppointmentsPersonal/selectService/index";
+import SelectServiceTwo from "./components/myAppointmentsPersonal/selectServiceTwo/index";
+import SelectTechnician from "./components/myAppointmentsPersonal/selectTechnician/index";
+import Schedule from "./components/myAppointmentsPersonal/schedule/index";
+import ConfirmBooking from "./components/myAppointmentsPersonal/confirmBooking/index";
+import EnterDetails from "./components/myAppointmentsPersonal/enterDetails/index";
 
 const theme = {
   colors: {
@@ -65,54 +55,7 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
-            <Route path="/" element={<SideBarPage />}>
-              <Route
-                path="/"
-                element={<Navigate replace to="my-appointments" />}
-              />
-              <Route path="update-profile" element={<UpdateProfile />} />
-              <Route path="notifications" element={<Notification />} />
-              <Route path="my-appointments" element={<MyAppointmentsPage />}>
-                <Route
-                  path="/my-appointments"
-                  element={<Navigate replace to="personal-booking" />}
-                >
-                  <Route
-                    path="personal-booking"
-                    element={<PersonalBookingPage />}
-                  >
-                    <Route
-                      path="/my-appointments/personal-booking"
-                      element={<Navigate replace to="select-location" />}
-                    />
-                    <Route
-                      path="select-location"
-                      element={<SelectLocation />}
-                    />
-                  </Route>
-                </Route>
-              </Route>
-            </Route>
-
-            {/* <Route path="select-services" element={<SelectService />} />
-                    <Route
-                      path="select-servicestwo"
-                      element={<SelectServiceTwo />}
-                    />
-                    <Route
-                      path="select-technician"
-                      element={<SelectTechnician />}
-                    />
-                    <Route path="schedule" element={<Schedule />} />
-                    <Route path="enter-details" element={<EnterDetails />} />
-                    <Route
-                      path="confirm-booking"
-                      element={<ConfirmBooking />}
-                    />  */}
-
-            {/* <Route path="group-booking" element={<GroupBookingPage />} /> */}
-
-            {/* <Route path="/*" element={<Booking />} />
+            <Route path="/*" element={<Booking />} />
             <Route path="/confirm-booking" element={<ConfirmBooking />} />
             <Route path="/update-profile" element={<UpdateProfile />} />
             <Route path="/notifications" element={<Notification />} />

@@ -114,16 +114,34 @@ export const SubmitBtn = styled.button`
   color: #000000;
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
   padding: 1rem 0;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   font-weight: 400;
   font-size: 1.6rem;
   text-align: center;
   border: none;
   width: 100%;
+  z-index: 1500;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    position: sticky;
-    bottom: 1.4rem;
+    margin: 0 auto;
+    font-size: ${({ mfs }) => mfs || "1.5rem"};
+    width: 86%;
+    position: fixed;
+    bottom: 2.7rem;
+    right: 0;
+    left: 0;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.4rem;
+  }
+
+  @media screen and (max-width: 350px) {
+    font-size: 1.2rem;
   }
 `;
 
