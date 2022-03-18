@@ -1,7 +1,10 @@
 import React from "react";
 import BookingSummary from "../bookingSummary";
 import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
-import { Button } from "../../../reuseableComponents/buttonStyle";
+import {
+  Button,
+  ButtonContainer,
+} from "../../../reuseableComponents/buttonStyle";
 import { MdChevronLeft } from "react-icons/md";
 import {
   ContentContainer,
@@ -72,7 +75,9 @@ function Schedule() {
               <input type="checkbox" name="waitlist" id="waitlist" />
               <label htmlFor="waitlist"></label>Join our waitlist
             </Waitlist>
-            <Button to="/enter-details">ADD ANOTHER SERVICES</Button>
+            <ButtonContainer>
+              <Button to="/enter-details">ADD ANOTHER SERVICES</Button>
+            </ButtonContainer>
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />

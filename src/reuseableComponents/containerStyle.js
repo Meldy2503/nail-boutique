@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContentContainer = styled.section`
   width: 90%;
-  height: 93vh;
+  height: 97vh;
   max-width: 140rem;
   margin: 0 auto;
   display: flex;
@@ -108,6 +108,7 @@ export const RightContentCol1 = styled.div`
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
       border-top: 12rem solid transparent;
       border-bottom: 0rem solid transparent;
+      height: 95%;
     }
   }
 
