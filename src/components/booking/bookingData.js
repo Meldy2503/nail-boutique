@@ -1,5 +1,5 @@
-import personal from "../../../images/personal.svg";
-import group from "../../../images/group.svg";
+import personal from "../../images/personal.svg";
+import group from "../../images/group.svg";
 
 const bookingData = [
   {

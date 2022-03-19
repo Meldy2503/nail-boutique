@@ -8,7 +8,6 @@ export const BookingStyle = styled.div`
   margin: 0 auto;
   justify-content: space-between;
   overflow: auto;
-  /* position: absolute; */
 
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     flex-direction: column;
@@ -32,7 +31,6 @@ export const Book = styled.div`
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 60%;
     margin-top: 2rem;
-    /* margin: 5rem 0; */
   }
 
   @media screen and (max-width: 500px) {

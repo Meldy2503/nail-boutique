@@ -109,11 +109,6 @@ export const SubTotal = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    /* @media screen and (max-width: 1200px) {
-      flex-direction: column;
-      align-items: flex-start;
-    } */
-
     h6 {
       font-size: 1.6rem;
       font-weight: 500;

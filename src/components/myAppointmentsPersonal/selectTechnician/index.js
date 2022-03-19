@@ -19,7 +19,7 @@ import {
   Top,
 } from "./selectTechnicianStyle";
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
-import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
+import { Back } from "../../../reuseableComponents/goBackStyle";
 import technicianData from "./selectTechnicianData";
 import { MdChevronLeft, MdStar } from "react-icons/md";
 import { HiOutlineSearch, HiUserGroup, HiDotsHorizontal } from "react-icons/hi";
@@ -30,7 +30,6 @@ import {
   ButtonContainer,
 } from "../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
-import { ScrollContainer } from "../../../reuseableComponents/scrollStyle";
 
 function SelectTechnician() {
   return (
@@ -66,36 +65,34 @@ function SelectTechnician() {
               </Orientation>
             </Row2>
           </Top>
-          <ScrollContainer>
-            <div>
-              <Row3>
-                {technicianData.map((item) => (
-                  <Card key={item.id}>
-                    <div className="top">
-                      <img src={item.tick} alt="tick" />
-                      <HiDotsHorizontal className="dots" />
+          <div>
+            <Row3>
+              {technicianData.map((item) => (
+                <Card key={item.id}>
+                  <div className="top">
+                    <img src={item.tick} alt="tick" />
+                    <HiDotsHorizontal className="dots" />
+                  </div>
+                  <Technician>
+                    <img src={item.avatar} alt="avatar" />
+                    <h4>{item.name}</h4>
+                    <p>{`${item.role} - ${item.age}Yrs`}</p>
+                    <div>
+                      <span>
+                        <HiUserGroup className="icon" />
+                        <p>{item.clients} clients</p>
+                      </span>
+                      <span>
+                        <MdStar className="icon star" />
+                        <p>{item.rating} ratings</p>
+                      </span>
                     </div>
-                    <Technician>
-                      <img src={item.avatar} alt="avatar" />
-                      <h4>{item.name}</h4>
-                      <p>{`${item.role} - ${item.age}Yrs`}</p>
-                      <div>
-                        <span>
-                          <HiUserGroup className="icon" />
-                          <p>{item.clients} clients</p>
-                        </span>
-                        <span>
-                          <MdStar className="icon star" />
-                          <p>{item.rating} ratings</p>
-                        </span>
-                      </div>
-                      <Select>SELECT</Select>
-                    </Technician>
-                  </Card>
-                ))}
-              </Row3>
-            </div>
-          </ScrollContainer>
+                    <Select>SELECT</Select>
+                  </Technician>
+                </Card>
+              ))}
+            </Row3>
+          </div>
           <ButtonContainer>
             <Button to="/schedule">CONTINUE</Button>
           </ButtonContainer>

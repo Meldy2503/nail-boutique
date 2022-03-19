@@ -11,7 +11,7 @@ import {
 } from "./selectLocationStyle";
 import { ContentContainer } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
-import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
+import { Back } from "../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,
@@ -26,7 +26,13 @@ import {
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
 
 function SelectLocation() {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState({
+    location: [],
+  });
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   const checkboxAnimationRef = useSpringRef();
   const checkboxAnimationStyle = useSpring({
     backgroundColor: isChecked ? "#271602" : "#1C1C1C",
@@ -57,7 +63,7 @@ function SelectLocation() {
         <Location>
           <HeadingStyle mPdTop="0">
             <h2>Select Location</h2>
-            <Back to="/booking">
+            <Back to="/my-appointments">
               <MdChevronLeft />
               Go back
             </Back>
@@ -72,12 +78,25 @@ function SelectLocation() {
 
               <label>
                 <input
-                  size={150}
+                  size={180}
                   type="checkbox"
-                  onChange={() => {
-                    setIsChecked(!isChecked);
-                  }}
+                  onChange={handleChange}
+                  checked={isChecked}
+                  id="istLocation"
+                  name="location"
+                  value="istLocation"
                 />
+
+                <input
+                  size={180}
+                  type="checkbox"
+                  onChange={handleChange}
+                  checked={isChecked}
+                  id="secondLocation"
+                  name="location"
+                  value="secondLocation"
+                />
+
                 <animated.svg
                   style={checkboxAnimationStyle}
                   className={`checkbox ${isChecked ? "checkbox--active" : ""}`}

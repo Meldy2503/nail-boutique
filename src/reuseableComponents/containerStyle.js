@@ -9,7 +9,6 @@ export const ContentContainer = styled.section`
   justify-content: space-between;
   align-items: stretch;
   gap: 0.5rem;
-  overflow: auto;
   padding-top: 11.5rem;
   position: relative;
 
@@ -81,20 +80,22 @@ export const RightContentCol1 = styled.div`
   margin: 4rem 2rem 4rem 3rem;
   width: 70%;
   height: 90%;
-  overflow-y: auto;
+  overflow: auto;
   scrollbar-width: thin;
   scroll-padding-right: 5rem;
 
-  &::-webkit-scrollbar {
-    width: 0.5rem;
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    width: 90%;
+    height: 93%;
+    margin: 0 auto;
+  }
 
-    /* position: absolute; */
+  &::-webkit-scrollbar {
+    width: 0.3rem;
   }
 
   &::-webkit-scrollbar-track {
     background-color: ${({ theme }) => theme.colors.primary2};
-    /* margin-right: 5rem; */
-    /* margin-block: 7rem; */
   }
 
   &::-webkit-scrollbar-thumb {
@@ -103,7 +104,6 @@ export const RightContentCol1 = styled.div`
     border-top: 4rem solid transparent;
     border-bottom: 4rem solid transparent;
     background-clip: padding-box;
-    /* border-right: 4px solid #000; */
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
       border-top: 12rem solid transparent;
@@ -111,34 +111,39 @@ export const RightContentCol1 = styled.div`
       height: 95%;
     }
   }
-
-  /* position: relative; */
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 90%;
-    height: 93%;
-    overflow: auto;
-
-    /* height: 95%; */
-    margin: 0 auto;
-    /* overflow: scroll; */
-  }
 `;
 export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
   height: 90%;
-  overflow-y: auto;
-  /* position: relative; */
-  /* height: 88%; */
-  /* overflow-y: scroll;
-  overflow-x: hidden; */
+  overflow: auto;
+  scrollbar-width: thin;
+  scroll-padding-right: 5rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     display: ${({ display }) => display || "none"};
-    /* width: 96%;
-    height: 90%;
-    overflow: scroll; */
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.colors.primary2};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.primary5};
+    border-radius: 2rem;
+    border-top: 4rem solid transparent;
+    border-bottom: 4rem solid transparent;
+    background-clip: padding-box;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      border-top: 12rem solid transparent;
+      border-bottom: 0rem solid transparent;
+      height: 95%;
+    }
   }
 `;

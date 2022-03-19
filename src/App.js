@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import { LeftContent } from "./reuseableComponents/containerStyle";
-import UpdateProfile from "./components/updateProfile/index";
 import Navbar from "./components/navbar/index";
+import Booking from "./components/booking/index";
+import UpdateProfile from "./components/updateProfile/index";
 import Notification from "./components/notifications/index";
-import Booking from "./components/myAppointmentsPersonal/booking/index";
 import SelectLocation from "./components/myAppointmentsPersonal/selectLocation/index";
 import SelectService from "./components/myAppointmentsPersonal/selectService/index";
 import SelectServiceTwo from "./components/myAppointmentsPersonal/selectServiceTwo/index";
@@ -14,7 +14,6 @@ import SelectTechnician from "./components/myAppointmentsPersonal/selectTechnici
 import Schedule from "./components/myAppointmentsPersonal/schedule/index";
 import ConfirmBooking from "./components/myAppointmentsPersonal/confirmBooking/index";
 import EnterDetails from "./components/myAppointmentsPersonal/enterDetails/index";
-// import Success from "./components/myAppointmentsPersonal/success/index";
 
 const theme = {
   colors: {
@@ -66,8 +65,7 @@ function App() {
             <Route path="/select-technician" element={<SelectTechnician />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/enter-details" element={<EnterDetails />} />
-            <Route path="/confirm-booking" element={<ConfirmBooking />} />
-            {/* <Route path="/success" element={<Success />} /> */}
+            <Route path="/confirm-booking" element={<ConfirmBooking />} /> */}
           </Routes>
           <LeftContent />
         </Fragment>

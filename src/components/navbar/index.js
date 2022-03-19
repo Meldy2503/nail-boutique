@@ -5,7 +5,7 @@ import {
   StyledNav,
   SideUl,
   MenuIcon,
-  Padding,
+  NavBarBorderBottom,
 } from "./navbarStyle";
 import { NavLink } from "react-router-dom";
 import { Spin as Hamburger } from "hamburger-react";
@@ -19,7 +19,7 @@ function Navbar() {
 
   return (
     <NavContainer>
-      <Padding />
+      <NavBarBorderBottom />
       <StyledNav>
         <Logo to="/booking">
           <img src={logo} alt="nail-boutique-logo" />
@@ -63,6 +63,7 @@ function Navbar() {
               onClick={closeMenuLink}
               to="/notifications"
             >
+              <span className="notification">Notification</span>
               <IoIosNotificationsOutline className="icon" />
             </NavLink>
           </li>
@@ -76,7 +77,6 @@ function Navbar() {
                 onClick={closeMenuLink}
                 to="/update-profile"
               >
-                {/* <BsPersonCircle className="icon" /> */}
                 Update profile
               </NavLink>
             </li>
@@ -89,7 +89,6 @@ function Navbar() {
                 onClick={closeMenuLink}
                 to="/booking"
               >
-                {/* <FaPeopleArrows className="icon" /> */}
                 My Appointments
               </NavLink>
             </li>
@@ -102,7 +101,6 @@ function Navbar() {
                 onClick={closeMenuLink}
                 to="/logout"
               >
-                {/* <IoLogOutOutline className="icon" size={28} /> */}
                 Logout
               </NavLink>
             </li>
@@ -110,7 +108,6 @@ function Navbar() {
         </ul>
         <MenuIcon onClick={handleClick}>
           <Hamburger
-            // className="hamburger"
             onClick={handleClick}
             toggled={onIconClick}
             toggle={setOnIconClick}

@@ -20,7 +20,7 @@ export const NavContainer = styled.div`
   }
 `;
 
-export const Padding = styled.div`
+export const NavBarBorderBottom  = styled.div`
   height: 2.5rem;
   width: 100%;
   position: fixed;
@@ -122,9 +122,17 @@ export const StyledNav = styled.nav`
     color: #959595;
     margin-top: 1rem;
     font-size: 2.5rem;
+
     @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      margin: 0;
-      padding: 0;
+      display: none;
+    }
+  }
+
+  .notification {
+    display: none;
+
+    @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+      display: block;
     }
   }
 `;
@@ -141,6 +149,9 @@ export const MenuIcon = styled.div`
     cursor: pointer;
   }
 `;
+
+// merging the sidebar and navbar in tablet and mobile breakpoints
+
 export const SideUl = styled.ul`
   display: none;
 
