@@ -66,8 +66,12 @@ export const Book = styled.div`
       max-width: 100%;
 
       @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-        width: 25%;
+        width: 20%;
         height: auto;
+      }
+
+      @media screen and (max-width: 650px) {
+        width: 25%;
       }
     }
   }

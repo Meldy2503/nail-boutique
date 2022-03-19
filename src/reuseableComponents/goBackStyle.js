@@ -7,5 +7,4 @@ export const Back = styled(Link)`
   justify-content: flex-end;
   align-items: center;
   color: ${({ theme }) => theme.colors.primary6};
-  /* width: 8rem; */
 `;

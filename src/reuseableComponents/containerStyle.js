@@ -21,9 +21,6 @@ export const ContentContainer = styled.section`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 95%;
-    /* width: 90%; */
-    /* flex-direction: column-reverse; */
-    /* height: 93.5vh; */
     padding-top: 3rem;
   }
 `;
@@ -40,22 +37,6 @@ export const LeftContent = styled.div`
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     display: none;
   }
-
-  /* @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    width: 6rem;
-  }
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    position: fixed;
-    bottom: 0;
-    z-index: 1500;
-    padding: 0;
-    margin-top: 1rem;
-  } */
 `;
 
 export const RightContent = styled.div`

@@ -18,6 +18,7 @@ import {
 } from "../../reuseableComponents/containerStyle";
 import Sidebar from "../sidebar";
 import { HeadingStyle } from "../../reuseableComponents/headingStyle";
+import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
 
 function UpdateProfile() {
   const formik = useFormik({
@@ -52,7 +53,7 @@ function UpdateProfile() {
       <Sidebar />
       <RightContent display="block">
         <UpdateProfileContainer>
-          <HeadingStyle mPdTop="4rem">
+          <HeadingStyle PdBottom="1rem" mPdTop="4rem">
             <h2>Update Profile</h2>
             <Back to="/enter-details">
               <MdChevronLeft />
@@ -148,7 +149,9 @@ function UpdateProfile() {
                 <input type="checkbox" name="remember" id="remember" />
                 <label htmlFor="remember"></label> Remember Me
               </RememberMe>
-              <SubmitBtn>UPDATE PROFILE</SubmitBtn>
+              <ButtonContainer>
+                <SubmitBtn>UPDATE PROFILE</SubmitBtn>
+              </ButtonContainer>
             </span>
           </FormField>
         </UpdateProfileContainer>

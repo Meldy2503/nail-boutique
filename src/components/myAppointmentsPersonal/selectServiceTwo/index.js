@@ -17,7 +17,6 @@ import {
   Services,
   ServiceType,
   FormContainer,
-  FormContents,
   InputContainer,
 } from "./selectServiceTwoStyle";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
@@ -76,55 +75,53 @@ function SelectServiceTwo() {
 
                 {onClick[index] && (
                   <FormContainer onSubmit={formik.handleSubmit}>
-                    <FormContents>
-                      <InputContainer>
-                        <input
-                          type="checkbox"
-                          id="optionA"
-                          name="options"
-                          value={formik.values.options}
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
-                        />
-                        <span></span>
-                        <label htmlFor="optionA">
-                          <h5>Basic Manicure</h5>
-                          <p>30 mins - ₦5000</p>
-                        </label>
-                      </InputContainer>
+                    <InputContainer>
+                      <input
+                        type="checkbox"
+                        id="optionA"
+                        name="options"
+                        value={formik.values.options}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                      />
+                      <span></span>
+                      <label htmlFor="optionA">
+                        <h5>Basic Manicure</h5>
+                        <p>30 mins - ₦5000</p>
+                      </label>
+                    </InputContainer>
 
-                      <InputContainer>
-                        <input
-                          type="checkbox"
-                          id="optionB"
-                          name="options"
-                          value={formik.values.options}
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
-                        />
-                        <span></span>
-                        <label htmlFor="optionB">
-                          <h5>Basic Manicure</h5>
-                          <p>30 mins - ₦5000</p>
-                        </label>
-                      </InputContainer>
+                    <InputContainer>
+                      <input
+                        type="checkbox"
+                        id="optionB"
+                        name="options"
+                        value={formik.values.options}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                      />
+                      <span></span>
+                      <label htmlFor="optionB">
+                        <h5>Basic Manicure</h5>
+                        <p>30 mins - ₦5000</p>
+                      </label>
+                    </InputContainer>
 
-                      <InputContainer>
-                        <input
-                          type="checkbox"
-                          id="optionC"
-                          name="options"
-                          value={formik.values.options}
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
-                        />
-                        <span></span>
-                        <label htmlFor="optionC">
-                          <h5>Basic Manicure</h5>
-                          <p>30 mins - ₦5000</p>
-                        </label>
-                      </InputContainer>
-                    </FormContents>
+                    <InputContainer>
+                      <input
+                        type="checkbox"
+                        id="optionC"
+                        name="options"
+                        value={formik.values.options}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                      />
+                      <span></span>
+                      <label htmlFor="optionC">
+                        <h5>Basic Manicure</h5>
+                        <p>30 mins - ₦5000</p>
+                      </label>
+                    </InputContainer>
                   </FormContainer>
                 )}
               </Services>
