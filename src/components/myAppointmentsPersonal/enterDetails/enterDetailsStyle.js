@@ -130,8 +130,7 @@ export const RememberMe = styled.span`
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-
-  input {
+  font-size: 1.5rem input {
     margin-right: 1rem;
     border: 0.5px solid ${({ theme }) => theme.colors.tertiary2};
     accent-color: ${({ theme }) => theme.colors.tertiary2};
@@ -147,19 +146,23 @@ export const Policy = styled.div`
 
   h2 {
     margin-bottom: 0.6rem;
-    font-size: 2.4rem;
+    font-size: 2rem;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      font-size: 2.2rem;
+      font-size: 1.9rem;
     }
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 
   p {
     font-size: 1.6rem;
     line-height: 1.7;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      font-size: 1.5rem;
+    }
   }
 `;
