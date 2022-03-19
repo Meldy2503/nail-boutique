@@ -17,7 +17,6 @@ import {
   Services,
   ServiceType,
   FormContainer,
-  FormContents,
   InputContainer,
 } from "./selectServiceStyle";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
@@ -42,9 +41,6 @@ function SelectServices() {
     },
     validationSchema: Yup.object({
       options: Yup.array(),
-      // .min(1, "select atleast one option")
-      // .required("Required"),
-      // options: Yup.boolean().oneOf([true], "select atleast one option"),
     }),
 
     onSubmit: (values, { resetForm }) => {
@@ -81,7 +77,6 @@ function SelectServices() {
 
                   {onClick[index] && (
                     <FormContainer onSubmit={formik.handleSubmit}>
-                      <FormContents>
                         <InputContainer>
                           <input
                             type="checkbox"
@@ -96,9 +91,6 @@ function SelectServices() {
                             <h5>Basic Manicure</h5>
                             <p>30 mins - ₦5000</p>
                           </label>
-                          {/* {formik.touched.options && formik.errors.options ? (
-                            <p className="errors">{formik.errors.options}</p>
-                          ) : null} */}
                         </InputContainer>
 
                         <InputContainer>
@@ -115,9 +107,6 @@ function SelectServices() {
                             <h5>Basic Manicure</h5>
                             <p>30 mins - ₦5000</p>
                           </label>
-                          {/* {formik.touched.options && formik.errors.options ? (
-                            <p className="errors">{formik.errors.options}</p>
-                          ) : null} */}
                         </InputContainer>
 
                         <InputContainer>
@@ -134,11 +123,7 @@ function SelectServices() {
                             <h5>Basic Manicure</h5>
                             <p>30 mins - ₦5000</p>
                           </label>
-                          {/* {formik.touched.options && formik.errors.options ? (
-                            <p className="errors">{formik.errors.options}</p>
-                          ) : null} */}
                         </InputContainer>
-                      </FormContents>
                     </FormContainer>
                   )}
                 </Services>

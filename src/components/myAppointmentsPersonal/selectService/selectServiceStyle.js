@@ -1,37 +1,5 @@
 import styled from "styled-components";
 
-// export const Title = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   margin-bottom: 2rem;
-//   position: sticky;
-//   top: 0;
-//   background-color: ${({ theme }) => theme.colors.primary2};
-
-//   h2 {
-//     font-size: 2.8rem;
-//     font-weight: 600;
-//   }
-
-//   div {
-//     display: flex;
-//     color: #676767;
-//     align-items: center;
-//     font-size: 2rem;
-//   }
-
-//   a {
-//     color: #525252;
-//     margin-left: 0.2rem;
-//     font-size: 1.4rem;
-//   }
-// `;
-
-export const ServicesContainer = styled.div`
-  /* overflow: scroll; */
-`;
-
 export const Services = styled.div`
   border: 0.5px solid #555555;
   margin-bottom: 2rem;
@@ -87,14 +55,8 @@ export const ServiceContainer = styled.form`
 `;
 
 export const FormContainer = styled.form`
-  /* height: 10rem;
-  overflow: scroll; */
-`;
-
-export const FormContents = styled.div`
   border-top: 0.5px solid #555555;
   padding-bottom: 1rem;
-  /* height: 10rem; */
 `;
 
 export const InputContainer = styled.div`

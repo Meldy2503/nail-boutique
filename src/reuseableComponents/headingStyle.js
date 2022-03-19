@@ -23,7 +23,6 @@ export const HeadingStyle = styled.div`
     font-size: 2.7rem;
     font-style: normal;
     font-weight: 700;
-    /* line-height: 1.4; */
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
       font-size: 2.5rem;
@@ -33,8 +32,12 @@ export const HeadingStyle = styled.div`
       font-size: 2.3rem;
     }
 
-    @media (max-width: 410px) {
+    @media (max-width: 420px) {
       font-size: 1.8rem;
+    }
+
+    @media (max-width: 300px) {
+      font-size: 1.7rem;
     }
   }
 `;

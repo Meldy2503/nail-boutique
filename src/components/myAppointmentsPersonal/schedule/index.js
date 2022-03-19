@@ -69,7 +69,7 @@ function Schedule() {
               <label htmlFor="waitlist">Join our waitlist</label>
             </Waitlist>
             <ButtonContainer>
-              <Button to="/enter-details">ADD ANOTHER SERVICES</Button>
+              <Button to="/enter-details">ADD OTHER SERVICES</Button>
             </ButtonContainer>
           </RightContentCol1>
           <RightContentCol2>

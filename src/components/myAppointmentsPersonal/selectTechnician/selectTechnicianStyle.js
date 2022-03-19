@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Top = styled.div`
-  /* height: 5rem; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -16,8 +15,6 @@ export const Row2 = styled.div`
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  /* top: 3rem; */
-  /* height: 6rem; */
   z-index: 1000;
   background-color: ${({ theme }) => theme.colors.primary2};
   padding-bottom: 2rem;
@@ -64,7 +61,6 @@ export const Orientation = styled.div`
   display: flex;
   width: 13%;
   justify-content: space-around;
-  /* gap: 1rem; */
 
   .grid {
     color: #c4c4c4;
@@ -93,7 +89,6 @@ export const List = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: ${({ theme }) => theme.colors.primary6}; */
 
   .list {
     color: ${({ theme }) => theme.colors.secondary2};
@@ -112,8 +107,6 @@ export const Row3 = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 2rem;
-  /* overflow-y: scroll; */
-  /* height: 80vh; */
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin-bottom: 3rem;
@@ -168,8 +161,6 @@ export const Technician = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
-  /* width: 50%; */
   margin: 0 auto;
 
   img {
@@ -182,26 +173,21 @@ export const Technician = styled.div`
     margin-top: 0.7rem;
     font-size: 1.3rem;
     font-weight: 600;
-    /* color: #cacaca; */
   }
 
   p {
     margin: 0.1rem 0 1rem 0;
     font-size: 0.8rem;
     font-weight: 400;
-    /* color: #8a8a8a; */
     font-style: italic;
   }
 
   div {
     display: flex;
     margin-bottom: 0.7rem;
-    /* justify-content: space-between; */
     align-items: center;
     justify-content: center;
     width: 80%;
-    /* margin: 0 auto;
-    text-align: center; */
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.secondary3};
@@ -210,14 +196,11 @@ export const Technician = styled.div`
 
     span {
       display: flex;
-      /* width: 48%; */
-      /* align-items: center; */
 
       .icon {
         margin-right: 0.05rem;
         font-size: 1.2rem;
         font-weight: 400;
-        /* color: #8a8a8a; */
       }
 
       .star {
@@ -230,19 +213,15 @@ export const Technician = styled.div`
 
 export const Select = styled.button`
   background-color: transparent;
-  /* color: ${({ theme }) => theme.colors.secondary2}; */
   color: inherit;
-  /* color: #a7a7a7; */
 
   border: 1px solid ${({ theme }) => theme.colors.secondary2};
   padding: 0.4rem 1.2rem;
   display: inline-block;
   border-radius: 0.5rem;
-  /* border: 1px solid #a7a7a7; */
   font-weight: 400;
   font-size: 1.2rem;
   text-align: center;
-  /* width: 10rem; */
   cursor: pointer;
   letter-spacing: 0.3rem;
   margin-bottom: 2rem;
@@ -252,12 +231,8 @@ export const Select = styled.button`
   }
 
   &:hover {
-    /* border: 1px solid transparent; */
     color: ${({ theme }) => theme.colors.primary1};
     background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
     background-repeat: no-repeat;
   }
 `;
-// export const Row4 = styled.div`
-//   margin: 2rem 0;
-// `;

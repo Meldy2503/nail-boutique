@@ -36,7 +36,6 @@ function Navbar() {
               Dashboard
             </NavLink>
           </li>
-
           <li>
             <NavLink
               onClick={closeMenuLink}
@@ -46,7 +45,6 @@ function Navbar() {
               Overview
             </NavLink>
           </li>
-
           <li>
             <NavLink
               onClick={closeMenuLink}
@@ -56,7 +54,6 @@ function Navbar() {
               Help
             </NavLink>
           </li>
-
           <li>
             <NavLink
               className={(navLink) => (navLink.isActive ? "active" : "navLink")}
@@ -68,6 +65,7 @@ function Navbar() {
             </NavLink>
           </li>
 
+          {/* merged the navbar and side bar for tablet and mobile views */}
           <SideUl>
             <li>
               <NavLink

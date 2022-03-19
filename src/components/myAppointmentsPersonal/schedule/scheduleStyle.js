@@ -4,7 +4,6 @@ export const CalendarContainer = styled.div``;
 
 export const ScheduleContainer = styled.div`
   margin: 0 auto;
-  /* padding: 2rem; */
   margin-bottom: 3rem;
 `;
 
@@ -18,19 +17,13 @@ export const Time = styled.div`
 export const Option = styled.div`
   display: inline-flex;
   align-items: center;
-  /* margin-right: 4rem; */
   margin-bottom: 2rem;
-  /* width: 25%; */
 `;
 
 export const SelectAvailableTime = styled.span`
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
-  /* align-items: center; */
   flex-wrap: wrap;
-  /* width: 90%; */
-  /* margin: 0 auto; */
 
   input[type="checkbox"] {
     width: 2rem;

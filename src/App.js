@@ -65,7 +65,7 @@ function App() {
             <Route path="/select-technician" element={<SelectTechnician />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/enter-details" element={<EnterDetails />} />
-            <Route path="/confirm-booking" element={<ConfirmBooking />} /> */}
+            <Route path="/confirm-booking" element={<ConfirmBooking />} />
           </Routes>
           <LeftContent />
         </Fragment>
