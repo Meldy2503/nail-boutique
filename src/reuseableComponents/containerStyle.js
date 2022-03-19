@@ -10,7 +10,9 @@ export const ContentContainer = styled.section`
   align-items: stretch;
   gap: 0.5rem;
   padding-top: 11.5rem;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     height: 98vh;

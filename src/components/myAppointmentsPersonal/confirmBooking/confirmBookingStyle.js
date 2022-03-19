@@ -47,20 +47,24 @@ export const Terms = styled.div`
 
   h2 {
     margin-bottom: 0.6rem;
-    font-size: 2.4rem;
+    font-size: 2rem;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      font-size: 2.2rem;
+      font-size: 1.9rem;
     }
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 
   p {
     font-size: 1.6rem;
     line-height: 1.7;
+
+    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+      font-size: 1.5rem;
+    }
   }
 `;
 
@@ -68,6 +72,7 @@ export const Agreement = styled.span`
   display: flex;
   align-items: center;
   margin: 2rem 0;
+  font-size: 1.4rem;
 
   input {
     margin-right: 1rem;
