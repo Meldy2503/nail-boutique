@@ -10,7 +10,7 @@ export const ContentContainer = styled.section`
   align-items: stretch;
   gap: 0.5rem;
   padding-top: 11.5rem;
-  position: fixed;
+  position: sticky;
   left: 0;
   right: 0;
 
