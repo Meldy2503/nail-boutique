@@ -11,7 +11,7 @@ import {
 } from "./selectLocationStyle";
 import { ContentContainer } from "../../../reuseableComponents/containerStyle";
 import Sidebar from "../../sidebar";
-import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
+import { Back } from "../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,

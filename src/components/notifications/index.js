@@ -3,7 +3,7 @@ import {
   ContentContainer,
   RightContent,
 } from "../../reuseableComponents/containerStyle";
-import { Back } from "../../reuseableComponents/goBack/goBackStyle";
+import { Back } from "../../reuseableComponents/goBackStyle";
 import Sidebar from "../sidebar";
 import { NotificationContainer, Item, RightBorder } from "./notificationStyle";
 import { MdChevronLeft } from "react-icons/md";

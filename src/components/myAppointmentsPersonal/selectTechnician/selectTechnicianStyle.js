@@ -1,17 +1,13 @@
 import styled from "styled-components";
 
-// export const TechnicianContainer = styled.div`
-//   overflow: scroll;
-//   height: 60%;
-// `;
-
 export const Top = styled.div`
-  height: 5rem;
+  /* height: 5rem; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: sticky;
   top: 0;
+  margin-bottom: 1rem;
   background-color: ${({ theme }) => theme.colors.primary2};
 `;
 
@@ -19,13 +15,12 @@ export const Row2 = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 3rem; */
   position: sticky;
-  top: 3rem;
-  height: 6rem;
+  /* top: 3rem; */
+  /* height: 6rem; */
   z-index: 1000;
   background-color: ${({ theme }) => theme.colors.primary2};
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   padding-top: 1rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
@@ -116,11 +111,13 @@ export const Row3 = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
   /* overflow-y: scroll; */
   /* height: 80vh; */
 
-  /* @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    /* overflow-y: visible; */
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    margin-bottom: 3rem;
+  }
 `;
 
 export const Card = styled.div`

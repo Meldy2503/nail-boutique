@@ -1,6 +1,6 @@
 import React from "react";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
+import { Back } from "../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,

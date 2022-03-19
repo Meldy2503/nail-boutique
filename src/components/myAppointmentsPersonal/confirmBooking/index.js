@@ -16,7 +16,7 @@ import {
 import { MdChevronLeft } from "react-icons/md";
 import confirmLocation from "./confirmBookingData";
 import { IoLocationOutline } from "react-icons/io5";
-import { Back } from "../../../reuseableComponents/goBack/goBackStyle";
+import { Back } from "../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,

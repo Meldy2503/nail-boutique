@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-export const UpdateProfileStyled = styled.div``;
 export const UpdateProfileContainer = styled.div`
   width: 85%;
   margin: 0 auto;
@@ -16,13 +15,12 @@ export const FormField = styled.form`
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   margin-bottom: 20%;
   position: relative;
 
   & > span {
     display: block;
-    overflow: scroll;
     height: 60vh;
   }
 

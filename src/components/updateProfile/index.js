@@ -9,7 +9,7 @@ import {
   RememberMe,
 } from "./updateProfileStyle";
 import { MdChevronLeft } from "react-icons/md";
-import { Back } from "../../reuseableComponents/goBack/goBackStyle";
+import { Back } from "../../reuseableComponents/goBackStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
@@ -52,7 +52,7 @@ function UpdateProfile() {
       <Sidebar />
       <RightContent display="block">
         <UpdateProfileContainer>
-          <HeadingStyle>
+          <HeadingStyle mPdTop="4rem">
             <h2>Update Profile</h2>
             <Back to="/enter-details">
               <MdChevronLeft />
