@@ -15,6 +15,8 @@ import Schedule from "./components/myAppointments/myAppointmentsPersonal/schedul
 import ConfirmBooking from "./components/myAppointments/myAppointmentsPersonal/confirmBooking/index";
 import EnterDetails from "./components/myAppointments/myAppointmentsPersonal/enterDetails/index";
 import MyAppointmentIndex from "./components/pages/MyAppointmentIndex";
+import PersonalBookingIndex from "./components/pages/PersonalBookingIndex";
+import GroupBookingIndex from "./components/pages/GroupBookingIndex";
 
 const theme = {
   colors: {
@@ -58,13 +60,23 @@ function App() {
           <Routes>
             <Route path="/my-appointments" element={<MyAppointmentIndex />}>
               <Route index element={<MyAppointments />} />
-              <Route path="select-location" element={<SelectLocation />} />
-              <Route path="select-services" element={<SelectService />} />
-              <Route path="confirm-booking" element={<ConfirmBooking />} />
-              <Route path="select-servicestwo" element={<SelectServiceTwo />} />
-              <Route path="select-technician" element={<SelectTechnician />} />
-              <Route path="schedule" element={<Schedule />} />
-              <Route path="enter-details" element={<EnterDetails />} />
+              <Route path="personal-booking" element={<PersonalBookingIndex />}>
+                <Route index element={<SelectLocation />} />
+                <Route path="select-location" element={<SelectLocation />} />
+                <Route path="select-services" element={<SelectService />} />
+                <Route path="confirm-booking" element={<ConfirmBooking />} />
+                <Route
+                  path="select-servicestwo"
+                  element={<SelectServiceTwo />}
+                />
+                <Route
+                  path="select-technician"
+                  element={<SelectTechnician />}
+                />
+                <Route path="schedule" element={<Schedule />} />
+                <Route path="enter-details" element={<EnterDetails />} />
+              </Route>
+              <Route element={<GroupBookingIndex />} />
             </Route>
             <Route path="update-profile" element={<UpdateProfile />} />
             <Route path="notifications" element={<Notifications />} />

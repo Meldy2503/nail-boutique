@@ -55,7 +55,7 @@ function SelectServiceTwo() {
         <RightContentCol1>
           <HeadingStyle>
             <h2>Select Services</h2>
-            <Back to="/my-appointments/select-services">
+            <Back to="/my-appointments/personal-booking/select-services">
               <MdChevronLeft />
               Go back
             </Back>
@@ -128,7 +128,9 @@ function SelectServiceTwo() {
             );
           })}
           <ButtonContainer>
-            <Button to="/my-appointments/select-technician">CONTINUE</Button>
+            <Button to="/my-appointments/personal-booking/select-technician">
+              CONTINUE
+            </Button>
           </ButtonContainer>
         </RightContentCol1>
         <RightContentCol2>
