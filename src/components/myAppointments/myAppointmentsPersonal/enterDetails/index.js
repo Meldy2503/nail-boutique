@@ -21,12 +21,12 @@ import {
   Comment,
   ErrorMsg,
   Policy,
-  RememberMe,
 } from "./enterDetailsStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Check from "../../../../reuseableComponents/Check";
 
-function EnterDetails() {
+function EnterDetails({ label }) {
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -155,11 +155,7 @@ function EnterDetails() {
                     value={formik.values.comment}
                   ></textarea>
                 </Comment>
-                <RememberMe>
-                  <input type="checkbox" name="remember" id="remember" />
-                  <label htmlFor="remember"></label> Remember Me
-                </RememberMe>
-                {/* </span> */}
+                <Check label="Remember Me" name="remember" />
               </FormField>
             </EnterDetailsContainer>
             <Policy>

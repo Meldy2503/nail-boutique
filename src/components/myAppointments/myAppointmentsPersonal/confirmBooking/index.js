@@ -7,7 +7,6 @@ import {
 } from "../../../../reuseableComponents/containerStyle";
 import Sidebar from "../../../sidebar";
 import {
-  Agreement,
   ConfirmBookingContainer,
   Location,
   Terms,
@@ -23,8 +22,7 @@ import BookingSummary from "../bookingSummary";
 import Success from "../../../myAppointments/myAppointmentsPersonal/success/index";
 import { Back } from "../../../../reuseableComponents/goBackStyle";
 import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
-import { GoCheck } from "react-icons/go";
-import Checkbox from "react-custom-checkbox";
+import Check from "../../../../reuseableComponents/Check";
 
 function ConfirmBooking() {
   const [popup, setPopup] = useState(false);
@@ -77,38 +75,10 @@ function ConfirmBooking() {
                 </p>
               </Terms>
               <div>
-                <Checkbox
-                  icon={
-                    <div
-                      style={{
-                        display: "flex",
-                        flex: 1,
-                        backgroundColor: "#271602",
-                        alignSelf: "center",
-                        borderRadius: "4px",
-                        height: "110%",
-                        width: "110%",
-                        border: " 1px solid #B57224",
-                      }}
-                    >
-                      <GoCheck color="#B57224" size={15} />
-                    </div>
-                  }
-                  name="agreement"
-                  className="checkbox"
-                  checked={true}
-                  onChange={(value) => {
-                    console.log(value);
-                  }}
-                  borderColor="#696969"
-                  borderWidth={1}
-                  style={{ cursor: "pointer" }}
-                  labelStyle={{
-                    marginLeft: 5,
-                    userSelect: "none",
-                  }}
+                <Check
                   label="I agree to the Terms and
                     Condition"
+                  name="agreement"
                 />
               </div>
               <ButtonContainer>
