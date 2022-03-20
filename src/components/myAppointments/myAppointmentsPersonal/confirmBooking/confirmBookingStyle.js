@@ -4,6 +4,24 @@ export const ConfirmBookingContainer = styled.div`
   hr {
     color: ${({ theme }) => theme.colors.primary3};
   }
+
+  & > div {
+    padding-bottom: 2rem;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    /* margin: 2rem 0; */
+    font-size: 1.4rem;
+
+    input {
+      margin-right: 1rem;
+      border: 0.5px solid ${({ theme }) => theme.colors.tertiary2};
+      accent-color: ${({ theme }) => theme.colors.tertiary2};
+      background-color: #000;
+    }
+  }
 `;
 
 export const Location = styled.div`
@@ -67,22 +85,3 @@ export const Terms = styled.div`
     }
   }
 `;
-
-export const Agreement = styled.span`
-  display: flex;
-  align-items: center;
-  margin: 2rem 0;
-  font-size: 1.4rem;
-
-  input {
-    margin-right: 1rem;
-    border: 0.5px solid ${({ theme }) => theme.colors.tertiary2};
-    accent-color: ${({ theme }) => theme.colors.tertiary2};
-    background-color: #000;
-  }
-`;
-
-// export const Scroll = styled.div`
-//   overflow-y: scroll;
-//   height: 50vh;
-// `;
