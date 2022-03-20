@@ -8,13 +8,13 @@ import UpdateProfile from "./components/updateProfile/index";
 import Notifications from "./components/notifications/index";
 
 // my appointments personal
-import SelectLocation from "./components/myAppointments/myAppointmentsPersonal/selectLocation/index";
-import SelectService from "./components/myAppointments/myAppointmentsPersonal/selectService/index";
-import SelectServiceTwo from "./components/myAppointments/myAppointmentsPersonal/selectServiceTwo/index";
-import SelectTechnician from "./components/myAppointments/myAppointmentsPersonal/selectTechnician/index";
-import Schedule from "./components/myAppointments/myAppointmentsPersonal/schedule/index";
-import ConfirmBooking from "./components/myAppointments/myAppointmentsPersonal/confirmBooking/index";
-import EnterDetails from "./components/myAppointments/myAppointmentsPersonal/enterDetails/index";
+import SelectLocationPersonal from "./components/myAppointments/myAppointmentsPersonal/selectLocation/index";
+import SelectServicePersonal from "./components/myAppointments/myAppointmentsPersonal/selectService/index";
+import SelectServiceTwoPersonal from "./components/myAppointments/myAppointmentsPersonal/selectServiceTwo/index";
+import SelectTechnicianPersonal from "./components/myAppointments/myAppointmentsPersonal/selectTechnician/index";
+import SchedulePersonal from "./components/myAppointments/myAppointmentsPersonal/schedule/index";
+import ConfirmBookingPersonal from "./components/myAppointments/myAppointmentsPersonal/confirmBooking/index";
+import EnterDetailsPersonal from "./components/myAppointments/myAppointmentsPersonal/enterDetails/index";
 
 // my appointments group
 import SelectLocationGroup from "./components/myAppointments/myAppointmentsGroup/selectLocation/index";
@@ -73,20 +73,32 @@ function App() {
             <Route path="/my-appointments" element={<MyAppointmentIndex />}>
               <Route index element={<MyAppointments />} />
               <Route path="personal-booking" element={<PersonalBookingIndex />}>
-                <Route index element={<SelectLocation />} />
-                <Route path="select-location" element={<SelectLocation />} />
-                <Route path="select-services" element={<SelectService />} />
-                <Route path="confirm-booking" element={<ConfirmBooking />} />
+                <Route index element={<SelectLocationPersonal />} />
+                <Route
+                  path="select-location"
+                  element={<SelectLocationPersonal />}
+                />
+                <Route
+                  path="select-services"
+                  element={<SelectServicePersonal />}
+                />
+                <Route
+                  path="confirm-booking"
+                  element={<ConfirmBookingPersonal />}
+                />
                 <Route
                   path="select-servicestwo"
-                  element={<SelectServiceTwo />}
+                  element={<SelectServiceTwoPersonal />}
                 />
                 <Route
                   path="select-technician"
-                  element={<SelectTechnician />}
+                  element={<SelectTechnicianPersonal />}
                 />
-                <Route path="schedule" element={<Schedule />} />
-                <Route path="enter-details" element={<EnterDetails />} />
+                <Route path="schedule" element={<SchedulePersonal />} />
+                <Route
+                  path="enter-details"
+                  element={<EnterDetailsPersonal />}
+                />
               </Route>
               <Route path="group-booking" element={<GroupBookingIndex />}>
                 <Route index element={<SelectLocationGroup />} />
