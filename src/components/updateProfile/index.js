@@ -6,7 +6,6 @@ import {
   Comment,
   ErrorMsg,
   SubmitBtn,
-  RememberMe,
 } from "./updateProfileStyle";
 import { MdChevronLeft } from "react-icons/md";
 import { Back } from "../../reuseableComponents/goBackStyle";
@@ -19,6 +18,7 @@ import {
 import Sidebar from "../sidebar";
 import { HeadingStyle } from "../../reuseableComponents/headingStyle";
 import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
+import Check from "../../reuseableComponents/Check";
 
 function UpdateProfile() {
   const formik = useFormik({
@@ -145,10 +145,7 @@ function UpdateProfile() {
                   value={formik.values.comment}
                 ></textarea>
               </Comment>
-              <RememberMe>
-                <input type="checkbox" name="remember" id="remember" />
-                <label htmlFor="remember"></label> Remember Me
-              </RememberMe>
+              <Check label="Remember Me" name="remember" />
               <ButtonContainer>
                 <SubmitBtn>UPDATE PROFILE</SubmitBtn>
               </ButtonContainer>
