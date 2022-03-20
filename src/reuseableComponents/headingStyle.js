@@ -9,6 +9,7 @@ export const HeadingStyle = styled.div`
   z-index: 1000;
   background-color: ${({ theme }) => theme.colors.primary2};
   top: 0;
+  height: ${({ height }) => height || "fit-content"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     padding-top: 0;

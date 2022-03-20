@@ -20,7 +20,7 @@ function Notification() {
       <Sidebar />
       <RightContent display="block">
         <NotificationContainer>
-          <HeadingStyle PdBottom="1rem" mPdTop="4rem">
+          <HeadingStyle height="8rem" PdBottom="0" mPdTop="4rem">
             <h2>Notifications</h2>
             <Back to="/location">
               <MdChevronLeft />
