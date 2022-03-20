@@ -29,6 +29,7 @@ import ExpectedClientsGroup from "./components/myAppointments/myAppointmentsGrou
 import MyAppointmentIndex from "./components/pages/MyAppointmentIndex";
 import PersonalBookingIndex from "./components/pages/PersonalBookingIndex";
 import GroupBookingIndex from "./components/pages/GroupBookingIndex";
+import Dashboard from "./components/dashboard";
 
 const theme = {
   colors: {
@@ -70,6 +71,7 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
+            <Route path="/*" element={<Dashboard />} />
             <Route path="/my-appointments" element={<MyAppointmentIndex />}>
               <Route index element={<MyAppointments />} />
               <Route path="personal-booking" element={<PersonalBookingIndex />}>

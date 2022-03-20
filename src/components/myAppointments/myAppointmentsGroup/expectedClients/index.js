@@ -27,7 +27,11 @@ function ExpectedClients() {
             </Back>
           </HeadingStyle>
           <InputField>
-            <input type="number" name="expClnts" id="expClnts" />
+            <input
+              type="number"
+              name="expected-clients"
+              id="expected-clients"
+            />
           </InputField>
           <Button to="/my-appointments/group-booking/schedule">CONTINUE</Button>
         </RightContentCol1>

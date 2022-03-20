@@ -28,7 +28,6 @@ function Navbar() {
         <ul className={onIconClick ? "ulSmallScreen" : "ulBigScreen"}>
           <li>
             <NavLink
-              end
               className={(navLink) => (navLink.isActive ? "active" : "navLink")}
               onClick={closeMenuLink}
               to="/dashboard"
