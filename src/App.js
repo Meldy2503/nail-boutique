@@ -6,7 +6,8 @@ import Navbar from "./components/navbar/index";
 import MyAppointments from "./components/myAppointments/index";
 import UpdateProfile from "./components/updateProfile/index";
 import Notifications from "./components/notifications/index";
-// my appointments
+
+// my appointments personal
 import SelectLocation from "./components/myAppointments/myAppointmentsPersonal/selectLocation/index";
 import SelectService from "./components/myAppointments/myAppointmentsPersonal/selectService/index";
 import SelectServiceTwo from "./components/myAppointments/myAppointmentsPersonal/selectServiceTwo/index";
@@ -14,6 +15,17 @@ import SelectTechnician from "./components/myAppointments/myAppointmentsPersonal
 import Schedule from "./components/myAppointments/myAppointmentsPersonal/schedule/index";
 import ConfirmBooking from "./components/myAppointments/myAppointmentsPersonal/confirmBooking/index";
 import EnterDetails from "./components/myAppointments/myAppointmentsPersonal/enterDetails/index";
+
+// my appointments group
+import SelectLocationGroup from "./components/myAppointments/myAppointmentsGroup/selectLocation/index";
+import SelectServiceGroup from "./components/myAppointments/myAppointmentsGroup/selectService/index";
+import SelectServiceTwoGroup from "./components/myAppointments/myAppointmentsGroup/selectServiceTwo/index";
+import ScheduleGroup from "./components/myAppointments/myAppointmentsGroup/schedule/index";
+import ConfirmBookingGroup from "./components/myAppointments/myAppointmentsGroup/confirmBooking/index";
+import EnterDetailsGroup from "./components/myAppointments/myAppointmentsGroup/enterDetails/index";
+import ExpectedClientsGroup from "./components/myAppointments/myAppointmentsGroup/expectedClients/index";
+
+// Outlets
 import MyAppointmentIndex from "./components/pages/MyAppointmentIndex";
 import PersonalBookingIndex from "./components/pages/PersonalBookingIndex";
 import GroupBookingIndex from "./components/pages/GroupBookingIndex";
@@ -76,7 +88,31 @@ function App() {
                 <Route path="schedule" element={<Schedule />} />
                 <Route path="enter-details" element={<EnterDetails />} />
               </Route>
-              <Route element={<GroupBookingIndex />} />
+              <Route path="group-booking" element={<GroupBookingIndex />}>
+                <Route index element={<SelectLocationGroup />} />
+                <Route
+                  path="select-location"
+                  element={<SelectLocationGroup />}
+                />
+                <Route
+                  path="select-services"
+                  element={<SelectServiceGroup />}
+                />
+                <Route
+                  path="confirm-booking"
+                  element={<ConfirmBookingGroup />}
+                />
+                <Route
+                  path="select-servicestwo"
+                  element={<SelectServiceTwoGroup />}
+                />
+                <Route
+                  path="expected-clients"
+                  element={<ExpectedClientsGroup />}
+                />
+                <Route path="schedule" element={<ScheduleGroup />} />
+                <Route path="enter-details" element={<EnterDetailsGroup />} />
+              </Route>
             </Route>
             <Route path="update-profile" element={<UpdateProfile />} />
             <Route path="notifications" element={<Notifications />} />
