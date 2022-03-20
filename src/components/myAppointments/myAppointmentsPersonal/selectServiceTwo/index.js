@@ -4,13 +4,13 @@ import {
   RightContent,
   RightContentCol1,
   RightContentCol2,
-} from "../../../reuseableComponents/containerStyle";
-import Sidebar from "../../sidebar";
+} from "../../../../reuseableComponents/containerStyle";
+import Sidebar from "../../../sidebar";
 import { MdChevronLeft } from "react-icons/md";
 import {
   Button,
   ButtonContainer,
-} from "../../../reuseableComponents/buttonStyle";
+} from "../../../../reuseableComponents/buttonStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
@@ -22,8 +22,8 @@ import {
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./data";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../reuseableComponents/goBackStyle";
-import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
+import { Back } from "../../../../reuseableComponents/goBackStyle";
+import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
 
 function SelectServiceTwo() {
   const [onClick, setOnClick] = React.useState({});

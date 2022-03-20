@@ -1,18 +1,18 @@
 import React from "react";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../reuseableComponents/goBackStyle";
+import { Back } from "../../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,
-} from "../../../reuseableComponents/buttonStyle";
+} from "../../../../reuseableComponents/buttonStyle";
 import { MdChevronLeft } from "react-icons/md";
 import {
   ContentContainer,
   RightContent,
   RightContentCol1,
   RightContentCol2,
-} from "../../../reuseableComponents/containerStyle";
-import Sidebar from "../../sidebar";
+} from "../../../../reuseableComponents/containerStyle";
+import Sidebar from "../../../sidebar";
 import {
   Option,
   ScheduleContainer,
@@ -20,7 +20,7 @@ import {
   Time,
   Waitlist,
 } from "./scheduleStyle";
-import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
+import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
 import Calendar from "react-calendar";
 import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";

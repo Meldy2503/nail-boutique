@@ -4,9 +4,9 @@ import {
   RightContent,
 } from "../../reuseableComponents/containerStyle";
 import Sidebar from "../sidebar";
-import { BookingStyle, Book } from "./bookingStyle";
+import { BookingStyle, Book } from "./myAppointmentsStyle";
 import { ButtonS } from "../../reuseableComponents/buttonStyle";
-import bookingData from "./bookingData";
+import bookingData from "./myAppointmentsData";
 
 function Booking() {
   return (

@@ -4,9 +4,8 @@ import {
   RightContent,
   RightContentCol1,
   RightContentCol2,
-} from "../../../reuseableComponents/containerStyle";
-import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
-import Sidebar from "../../sidebar";
+} from "../../../../reuseableComponents/containerStyle";
+import Sidebar from "../../../sidebar";
 import {
   Agreement,
   ConfirmBookingContainer,
@@ -16,13 +15,14 @@ import {
 import { MdChevronLeft } from "react-icons/md";
 import confirmLocation from "./confirmBookingData";
 import { IoLocationOutline } from "react-icons/io5";
-import { Back } from "../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,
-} from "../../../reuseableComponents/buttonStyle";
-import BookingSummary from "../../../components/myAppointmentsPersonal/bookingSummary/index";
-import Success from "../../myAppointmentsPersonal/success/index";
+} from "../../../../reuseableComponents/buttonStyle";
+import BookingSummary from "../bookingSummary";
+import Success from "../../../myAppointments/myAppointmentsPersonal/success/index";
+import { Back } from "../../../../reuseableComponents/goBackStyle";
+import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
 
 function ConfirmBooking() {
   const [popup, setPopup] = useState(false);

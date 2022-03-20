@@ -11,7 +11,7 @@ import { MdChevronLeft } from "react-icons/md";
 import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
 import Sidebar from "../../sidebar";
 import BookingSummary from "../bookingSummary";
-import { InputField } from "./expectedClientsStyle";
+// import { InputField } from "./expectedClientsStyle";
 
 function index() {
   return (

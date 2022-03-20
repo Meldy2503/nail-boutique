@@ -4,16 +4,17 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import { LeftContent } from "./reuseableComponents/containerStyle";
 import Navbar from "./components/navbar/index";
-import Booking from "./components/booking/index";
+import MyAppointment from "./components/myAppointments/index";
 import UpdateProfile from "./components/updateProfile/index";
 import Notification from "./components/notifications/index";
-import SelectLocation from "./components/myAppointmentsPersonal/selectLocation/index";
-import SelectService from "./components/myAppointmentsPersonal/selectService/index";
-import SelectServiceTwo from "./components/myAppointmentsPersonal/selectServiceTwo/index";
-import SelectTechnician from "./components/myAppointmentsPersonal/selectTechnician/index";
-import Schedule from "./components/myAppointmentsPersonal/schedule/index";
-import ConfirmBooking from "./components/myAppointmentsPersonal/confirmBooking/index";
-import EnterDetails from "./components/myAppointmentsPersonal/enterDetails/index";
+// my appointments
+import SelectLocation from "./components/myAppointments/myAppointmentsPersonal/selectLocation/index";
+import SelectService from "./components/myAppointments/myAppointmentsPersonal/selectService/index";
+import SelectServiceTwo from "./components/myAppointments/myAppointmentsPersonal/selectServiceTwo/index";
+import SelectTechnician from "./components/myAppointments/myAppointmentsPersonal/selectTechnician/index";
+import Schedule from "./components/myAppointments/myAppointmentsPersonal/schedule/index";
+import ConfirmBooking from "./components/myAppointments/myAppointmentsPersonal/confirmBooking/index";
+import EnterDetails from "./components/myAppointments/myAppointmentsPersonal/enterDetails/index";
 
 const theme = {
   colors: {
@@ -55,7 +56,7 @@ function App() {
           <GlobalStyle />
           <Navbar />
           <Routes>
-            <Route path="/*" element={<Booking />} />
+            <Route path="/*" element={<MyAppointment />} />
             <Route path="/confirm-booking" element={<ConfirmBooking />} />
             <Route path="/update-profile" element={<UpdateProfile />} />
             <Route path="/notifications" element={<Notification />} />
@@ -65,7 +66,6 @@ function App() {
             <Route path="/select-technician" element={<SelectTechnician />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/enter-details" element={<EnterDetails />} />
-            <Route path="/confirm-booking" element={<ConfirmBooking />} />
           </Routes>
           <LeftContent />
         </Fragment>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import locationData from "./selectLocationData";
-import Map from "../../../images/map.png";
+import Map from "../../../../images/map.png";
 import { MdChevronLeft } from "react-icons/md";
 import {
   Content,
@@ -9,13 +9,13 @@ import {
   Location,
   RightContent,
 } from "./selectLocationStyle";
-import { ContentContainer } from "../../../reuseableComponents/containerStyle";
-import Sidebar from "../../sidebar";
-import { Back } from "../../../reuseableComponents/goBackStyle";
+import { ContentContainer } from "../../../../reuseableComponents/containerStyle";
+import Sidebar from "../../../sidebar";
+import { Back } from "../../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,
-} from "../../../reuseableComponents/buttonStyle";
+} from "../../../../reuseableComponents/buttonStyle";
 import {
   animated,
   useSpring,
@@ -23,7 +23,7 @@ import {
   useChain,
   useSpringRef,
 } from "react-spring";
-import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
+import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
 
 function SelectLocation() {
   const [isChecked, setIsChecked] = useState({

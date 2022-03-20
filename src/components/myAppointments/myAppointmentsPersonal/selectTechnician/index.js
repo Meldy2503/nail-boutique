@@ -4,8 +4,7 @@ import {
   RightContent,
   RightContentCol1,
   RightContentCol2,
-} from "../../../reuseableComponents/containerStyle";
-import Sidebar from "../../sidebar";
+} from "../../../../reuseableComponents/containerStyle";
 import {
   Search,
   Row2,
@@ -18,8 +17,8 @@ import {
   Select,
   Top,
 } from "./selectTechnicianStyle";
-import { HeadingStyle } from "../../../reuseableComponents/headingStyle";
-import { Back } from "../../../reuseableComponents/goBackStyle";
+import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import { Back } from "../../../../reuseableComponents/goBackStyle";
 import technicianData from "./selectTechnicianData";
 import { MdChevronLeft, MdStar } from "react-icons/md";
 import { HiOutlineSearch, HiUserGroup, HiDotsHorizontal } from "react-icons/hi";
@@ -28,8 +27,9 @@ import { FaThList } from "react-icons/fa";
 import {
   Button,
   ButtonContainer,
-} from "../../../reuseableComponents/buttonStyle";
+} from "../../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
+import Sidebar from "../../../sidebar";
 
 function SelectTechnician() {
   return (

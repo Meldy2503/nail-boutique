@@ -1,8 +1,8 @@
 import React from "react";
-import { ButtonS } from "../../../reuseableComponents/buttonStyle";
-import { ContentContainer } from "../../../reuseableComponents/containerStyle";
+import { ButtonS } from "../../../../reuseableComponents/buttonStyle";
+import { ContentContainer } from "../../../../reuseableComponents/containerStyle";
 import { Popup, SuccessContainer } from "./successStyle";
-import tick from "../../../images/tick2.png";
+import tick from "../../../../images/tick2.png";
 
 function Success() {
   return (

@@ -1,8 +1,8 @@
 const technicianData = [
   {
     id: 1,
-    tick: require("../../../images/tick.png"),
-    avatar: require("../../../images/avatar1.png"),
+    tick: require("../../../../images/tick.png"),
+    avatar: require("../../../../images/avatar1.png"),
     name: "Ademide Ruth",
     role: "Hair Stylist",
     age: 26,
@@ -12,8 +12,8 @@ const technicianData = [
   },
   {
     id: 2,
-    tick: require("../../../images/tick.png"),
-    avatar: require("../../../images/avatar1.png"),
+    tick: require("../../../../images/tick.png"),
+    avatar: require("../../../../images/avatar1.png"),
     name: "Ademide Ruth",
     role: "Hair Stylist",
     age: 26,
@@ -23,8 +23,8 @@ const technicianData = [
   },
   {
     id: 3,
-    tick: require("../../../images/tick.png"),
-    avatar: require("../../../images/avatar1.png"),
+    tick: require("../../../../images/tick.png"),
+    avatar: require("../../../../images/avatar1.png"),
     name: "Ademide Ruth",
     role: "Hair Stylist",
     age: 26,
@@ -34,8 +34,8 @@ const technicianData = [
   },
   {
     id: 4,
-    tick: require("../../../images/tick.png"),
-    avatar: require("../../../images/avatar1.png"),
+    tick: require("../../../../images/tick.png"),
+    avatar: require("../../../../images/avatar1.png"),
     name: "Ademide Ruth",
     role: "Hair Stylist",
     age: 26,
@@ -45,8 +45,8 @@ const technicianData = [
   },
   {
     id: 5,
-    tick: require("../../../images/tick.png"),
-    avatar: require("../../../images/avatar1.png"),
+    tick: require("../../../../images/tick.png"),
+    avatar: require("../../../../images/avatar1.png"),
     name: "Ademide Ruth",
     role: "Hair Stylist",
     age: 26,
@@ -56,8 +56,8 @@ const technicianData = [
   },
   {
     id: 6,
-    tick: require("../../../images/tick.png"),
-    avatar: require("../../../images/avatar1.png"),
+    tick: require("../../../../images/tick.png"),
+    avatar: require("../../../../images/avatar1.png"),
     name: "Ademide Ruth",
     role: "Hair Stylist",
     age: 26,
@@ -67,8 +67,8 @@ const technicianData = [
   },
   {
     id: 7,
-    tick: require("../../../images/tick.png"),
-    avatar: require("../../../images/avatar1.png"),
+    tick: require("../../../../images/tick.png"),
+    avatar: require("../../../../images/avatar1.png"),
     name: "Ademide Ruth",
     role: "Hair Stylist",
     age: 26,
@@ -78,8 +78,8 @@ const technicianData = [
   },
   {
     id: 8,
-    tick: require("../../../images/tick.png"),
-    avatar: require("../../../images/avatar1.png"),
+    tick: require("../../../../images/tick.png"),
+    avatar: require("../../../../images/avatar1.png"),
     name: "Ademide Ruth",
     role: "Hair Stylist",
     age: 26,
@@ -89,8 +89,8 @@ const technicianData = [
   },
   {
     id: 9,
-    tick: require("../../../images/tick.png"),
-    avatar: require("../../../images/avatar1.png"),
+    tick: require("../../../../images/tick.png"),
+    avatar: require("../../../../images/avatar1.png"),
     name: "Ademide Ruth",
     role: "Hair Stylist",
     age: 26,
