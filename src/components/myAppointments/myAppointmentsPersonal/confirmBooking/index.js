@@ -38,7 +38,7 @@ function ConfirmBooking() {
             <ConfirmBookingContainer>
               <HeadingStyle>
                 <h2>Confirm Booking</h2>
-                <Back to="/enter-details">
+                <Back to="/my-appointments/enter-details">
                   <MdChevronLeft />
                   Go back
                 </Back>
@@ -84,7 +84,10 @@ function ConfirmBooking() {
               </div>
               {/* </Scroll> */}
               <ButtonContainer>
-                <Button onClick={handlePopup} to="/confirm-booking">
+                <Button
+                  onClick={handlePopup}
+                  to="/my-appointments/confirm-booking"
+                >
                   TEMP CONTINUE
                 </Button>
               </ButtonContainer>

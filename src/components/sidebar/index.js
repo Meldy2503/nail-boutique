@@ -25,7 +25,7 @@ function Sidebar() {
           <NavLink
             end
             className={({ isActive }) =>
-              `navLink ${checkActiveRoute("/booking")}`
+              `navLink ${checkActiveRoute("/my-appointments")}`
             }
             to="/my-appointments"
           >

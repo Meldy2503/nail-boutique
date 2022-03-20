@@ -40,7 +40,7 @@ function SelectTechnician() {
           <Top>
             <HeadingStyle PdBottom="0">
               <h2>Select Technician</h2>
-              <Back to="/select-servicestwo">
+              <Back to="/my-appointments/select-servicestwo">
                 <MdChevronLeft />
                 Go back
               </Back>
@@ -94,7 +94,7 @@ function SelectTechnician() {
             </Row3>
           </div>
           <ButtonContainer>
-            <Button to="/schedule">CONTINUE</Button>
+            <Button to="/my-appointments/schedule">CONTINUE</Button>
           </ButtonContainer>
         </RightContentCol1>
         <RightContentCol2>

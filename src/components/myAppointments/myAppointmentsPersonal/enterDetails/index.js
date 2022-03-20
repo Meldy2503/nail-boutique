@@ -63,7 +63,7 @@ function EnterDetails() {
         <RightContentCol1>
           <HeadingStyle>
             <h2>Enter your details</h2>
-            <Back to="/schedule">
+            <Back to="/my-appointments/schedule">
               <MdChevronLeft />
               Go back
             </Back>
@@ -178,7 +178,7 @@ function EnterDetails() {
             </Policy>
           </div>
           <ButtonContainer>
-            <Button to="/confirm-booking">NEXT</Button>
+            <Button to="/my-appointments/confirm-booking">NEXT</Button>
           </ButtonContainer>
         </RightContentCol1>
         <RightContentCol2>

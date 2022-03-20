@@ -36,7 +36,7 @@ function Schedule() {
           <RightContentCol1>
             <HeadingStyle>
               <h2>Schedule</h2>
-              <Back to="/select-technician">
+              <Back to="/my-appointments/select-technician">
                 <MdChevronLeft />
                 Go back
               </Back>
@@ -69,7 +69,9 @@ function Schedule() {
               <label htmlFor="waitlist">Join our waitlist</label>
             </Waitlist>
             <ButtonContainer>
-              <Button to="/enter-details">ADD OTHER SERVICES</Button>
+              <Button to="/my-appointments/enter-details">
+                ADD OTHER SERVICES
+              </Button>
             </ButtonContainer>
           </RightContentCol1>
           <RightContentCol2>

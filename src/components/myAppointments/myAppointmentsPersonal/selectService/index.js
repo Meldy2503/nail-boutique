@@ -56,7 +56,7 @@ function SelectServices() {
         <RightContentCol1>
           <HeadingStyle>
             <h2>Select Services</h2>
-            <Back to="/select-location">
+            <Back to="/my-appointments/select-location">
               <MdChevronLeft />
               Go back
             </Back>
@@ -131,7 +131,7 @@ function SelectServices() {
             })}
           </ServiceContainer>
           <ButtonContainer paddingm="0.5rem 0">
-            <Button to="/select-servicestwo">CONTINUE</Button>
+            <Button to="/my-appointments/select-servicestwo">CONTINUE</Button>
           </ButtonContainer>
         </RightContentCol1>
         <RightContentCol2>

@@ -121,7 +121,7 @@ function SelectLocation() {
             </Content>
           ))}
           <ButtonContainer>
-            <Button to="/select-services">CONTINUE</Button>
+            <Button to="/my-appointments/select-services">CONTINUE</Button>
           </ButtonContainer>
         </Location>
 

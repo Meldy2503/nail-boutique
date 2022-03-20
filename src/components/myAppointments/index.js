@@ -6,15 +6,15 @@ import {
 import Sidebar from "../sidebar";
 import { BookingStyle, Book } from "./myAppointmentsStyle";
 import { ButtonS } from "../../reuseableComponents/buttonStyle";
-import bookingData from "./myAppointmentsData";
+import myAppointmentsData from "./myAppointmentsData";
 
-function Booking() {
+function MyAppointments() {
   return (
     <ContentContainer>
       <Sidebar />
       <RightContent display="block">
         <BookingStyle>
-          {bookingData.map((book) => {
+          {myAppointmentsData.map((book) => {
             return (
               <Book key={book.id}>
                 <div>
@@ -32,4 +32,4 @@ function Booking() {
   );
 }
 
-export default Booking;
+export default MyAppointments;
