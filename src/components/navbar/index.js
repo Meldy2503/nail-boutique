@@ -21,7 +21,7 @@ function Navbar() {
     <NavContainer>
       <NavBarBorderBottom />
       <StyledNav>
-        <Logo to="/booking">
+        <Logo to="/my-appointments">
           <img src={logo} alt="nail-boutique-logo" />
         </Logo>
 
@@ -85,7 +85,7 @@ function Navbar() {
                   `navLink ${isActive ? "active" : "navlink"}`
                 }
                 onClick={closeMenuLink}
-                to="/booking"
+                to="my-appointments"
               >
                 My Appointments
               </NavLink>

@@ -4,6 +4,12 @@ import { StyledUl } from "./sidebarStyle";
 import { NavLink } from "react-router-dom";
 
 function Sidebar() {
+  const checkActiveRoute = (url) => {
+    let path = window.location.pathname;
+    if (path.includes(url)) {
+      return "active";
+    }
+  };
   return (
     <LeftContent>
       <StyledUl>
@@ -18,7 +24,9 @@ function Sidebar() {
         <li>
           <NavLink
             end
-            className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
+            className={({ isActive }) =>
+              `navLink ${checkActiveRoute("/my-appointments")}`
+            }
             to="/my-appointments"
           >
             My Appointments
