@@ -12,12 +12,12 @@ export const ButtonContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     position: fixed;
-    bottom: 1.5rem;
+    bottom: 2rem;
     right: 0;
     left: 0;
     width: 90%;
     margin: 0 auto;
-    padding: ${({ padding }) => padding || "3rem 0 3rem 0"};
+    padding: ${({ padding }) => padding || "3rem 0 2rem 0"};
   }
 `;
 

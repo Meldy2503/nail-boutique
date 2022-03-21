@@ -18,7 +18,7 @@ import {
 import Sidebar from "../sidebar";
 import { HeadingStyle } from "../../reuseableComponents/headingStyle";
 import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
-import Check from "../../reuseableComponents/Checkbox";
+import CheckBox from "../../reuseableComponents/Checkbox";
 
 function UpdateProfile() {
   const formik = useFormik({
@@ -145,7 +145,7 @@ function UpdateProfile() {
                   value={formik.values.comment}
                 ></textarea>
               </Comment>
-              <Check label="Remember Me" name="remember" />
+              <CheckBox label="Remember Me" name="remember" />
               <ButtonContainer>
                 <SubmitBtn>UPDATE PROFILE</SubmitBtn>
               </ButtonContainer>

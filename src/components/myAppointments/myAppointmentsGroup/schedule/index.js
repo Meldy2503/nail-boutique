@@ -25,6 +25,7 @@ import Calendar from "react-calendar";
 import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
 import timeData from "./scheduleData";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function Schedule() {
   const [value, onChange] = React.useState(new Date());
@@ -52,22 +53,14 @@ function Schedule() {
                   {timeData.map((time) => {
                     return (
                       <Option key={time.id}>
-                        <input
-                          type="checkbox"
-                          name={time.name}
-                          id={time.name}
-                        />
-                        <label htmlFor={time.name}>{time.time}</label>
+                        <CheckBox label={time.time} name={time.name} />
                       </Option>
                     );
                   })}
                 </SelectAvailableTime>
               </Time>
             </ScheduleContainer>
-            <Waitlist>
-              <input type="checkbox" name="waitlist" id="waitlist" />
-              <label htmlFor="waitlist">Join our waitlist</label>
-            </Waitlist>
+            <Waitlist to="/waitlist">Join our waitlist</Waitlist>
             <ButtonContainer>
               <Button to="/my-appointments/group-booking/enter-details">
                 ADD OTHER SERVICES

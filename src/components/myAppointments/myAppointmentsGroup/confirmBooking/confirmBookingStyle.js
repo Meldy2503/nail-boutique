@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ConfirmBookingContainer = styled.div`
+  margin-bottom: 4rem;
   hr {
     color: ${({ theme }) => theme.colors.primary3};
   }
@@ -15,9 +16,6 @@ export const Location = styled.div`
 
   @media (max-width: 1355px) {
     width: 100%;
-  }
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    /* width: 95%; */
   }
 
   span {
@@ -61,28 +59,10 @@ export const Terms = styled.div`
   p {
     font-size: 1.6rem;
     line-height: 1.7;
+    margin-bottom: 1rem;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
       font-size: 1.5rem;
     }
   }
 `;
-
-export const Agreement = styled.span`
-  display: flex;
-  align-items: center;
-  margin: 2rem 0;
-  font-size: 1.4rem;
-
-  input {
-    margin-right: 1rem;
-    border: 0.5px solid ${({ theme }) => theme.colors.tertiary2};
-    accent-color: ${({ theme }) => theme.colors.tertiary2};
-    background-color: #000;
-  }
-`;
-
-// export const Scroll = styled.div`
-//   overflow-y: scroll;
-//   height: 50vh;
-// `;

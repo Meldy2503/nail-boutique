@@ -21,12 +21,12 @@ export const HeadingStyle = styled.div`
   }
 
   h2 {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 700;
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
 
     @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {

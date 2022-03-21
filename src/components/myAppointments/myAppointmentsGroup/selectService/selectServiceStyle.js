@@ -25,28 +25,31 @@ export const ServiceType = styled.div`
       }
 
       @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
       }
 
       @media (max-width: 410px) {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
       }
     }
 
     p {
       color: #737373;
       font-size: 1.5rem;
+
+      @media (max-width: 410px) {
+        font-size: 1.4rem;
+      }
     }
   }
 
   span {
     color: #676767;
-    font-size: 3rem;
-    font-weight: 100;
+    font-size: 2.5re;
   }
 `;
 
-export const ServiceContainer = styled.form`
+export const ServiceContainer = styled.div`
   margin-bottom: 3rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
@@ -54,7 +57,7 @@ export const ServiceContainer = styled.form`
   }
 `;
 
-export const FormContainer = styled.form`
+export const FormContainer = styled.div`
   border-top: 0.5px solid #555555;
   padding-bottom: 1rem;
 `;
@@ -62,33 +65,14 @@ export const FormContainer = styled.form`
 export const InputContainer = styled.div`
   display: flex;
   color: #aeaeae;
-  padding: 1rem 2rem 0 4.6rem;
+  padding: 0.7rem 2rem 0 0.5rem;
   cursor: pointer;
   user-select: none;
-  position: relative;
-
-  input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  span {
-    background-color: transparent;
-    border: 1px solid #696969;
-    border-radius: 0.3rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    position: absolute;
-    top: 1.2rem;
-    left: 2.3rem;
-  }
 
   label {
+    margin-left: 1.5rem;
     h5 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 0.1rem;
     }

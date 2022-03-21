@@ -24,7 +24,7 @@ import {
 } from "./enterDetailsStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import Check from "../../../../reuseableComponents/Checkbox";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function EnterDetails({ label }) {
   const formik = useFormik({
@@ -42,10 +42,7 @@ function EnterDetails({ label }) {
       lastName: Yup.string()
         .max(15, "Must be 15 characters or less")
         .required("*Required"),
-      email: Yup.string()
-        .email("Invalid Email")
-        // .max(15, "Must be 15 characters or less")
-        .required("*Required"),
+      email: Yup.string().email("Invalid Email").required("*Required"),
       phone: Yup.string()
         .max(15, "Must be 15 characters or less")
         .required("*Required"),
@@ -71,7 +68,6 @@ function EnterDetails({ label }) {
           <div>
             <EnterDetailsContainer>
               <FormField onSubmit={formik.handleSubmit}>
-                {/* <span> */}
                 <div className="names">
                   <InputField>
                     <label htmlFor="firstName">First Name</label>
@@ -155,7 +151,7 @@ function EnterDetails({ label }) {
                     value={formik.values.comment}
                   ></textarea>
                 </Comment>
-                <Check label="Remember Me" name="remember" />
+                <CheckBox label="Remember Me" name="remember" />
               </FormField>
             </EnterDetailsContainer>
             <Policy>

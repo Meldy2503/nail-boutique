@@ -25,7 +25,7 @@ import Calendar from "react-calendar";
 import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
 import timeData from "./scheduleData";
-import Check from "../../../../reuseableComponents/Checkbox";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function Schedule() {
   const [value, onChange] = React.useState(new Date());
@@ -53,7 +53,7 @@ function Schedule() {
                   {timeData.map((time) => {
                     return (
                       <Option key={time.id}>
-                        <Check label={time.time} name={time.name} />
+                        <CheckBox label={time.time} name={time.name} />
                       </Option>
                     );
                   })}

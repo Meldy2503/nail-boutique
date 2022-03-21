@@ -22,7 +22,7 @@ import BookingSummary from "../bookingSummary";
 import Success from "../../../myAppointments/myAppointmentsPersonal/success/index";
 import { Back } from "../../../../reuseableComponents/goBackStyle";
 import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
-import Check from "../../../../reuseableComponents/Checkbox";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function ConfirmBooking() {
   const [popup, setPopup] = useState(false);
@@ -75,12 +75,13 @@ function ConfirmBooking() {
                 </p>
               </Terms>
               <div>
-                <Check
+                <CheckBox
                   label="I agree to the Terms and
                     Condition"
                   name="agreement"
                 />
               </div>
+                </ConfirmBookingContainer>
               <ButtonContainer>
                 <Button
                   onClick={handlePopup}
@@ -89,7 +90,6 @@ function ConfirmBooking() {
                   TEMP CONTINUE
                 </Button>
               </ButtonContainer>
-            </ConfirmBookingContainer>
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />

@@ -25,6 +25,7 @@ import {
 } from "./enterDetailsStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function EnterDetails() {
   const formik = useFormik({
@@ -71,7 +72,6 @@ function EnterDetails() {
           <div>
             <EnterDetailsContainer>
               <FormField onSubmit={formik.handleSubmit}>
-                {/* <span> */}
                 <div className="names">
                   <InputField>
                     <label htmlFor="firstName">First Name</label>
@@ -155,11 +155,7 @@ function EnterDetails() {
                     value={formik.values.comment}
                   ></textarea>
                 </Comment>
-                <RememberMe>
-                  <input type="checkbox" name="remember" id="remember" />
-                  <label htmlFor="remember"></label> Remember Me
-                </RememberMe>
-                {/* </span> */}
+                <CheckBox label="Remember Me" name="remember" />
               </FormField>
             </EnterDetailsContainer>
             <Policy>
