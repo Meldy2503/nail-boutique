@@ -22,7 +22,7 @@ import BookingSummary from "../bookingSummary";
 import Success from "../../../myAppointments/myAppointmentsPersonal/success/index";
 import { Back } from "../../../../reuseableComponents/goBackStyle";
 import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
-import Check from "../../../../reuseableComponents/Check";
+import Check from "../../../../reuseableComponents/Checkbox";
 
 function ConfirmBooking() {
   const [popup, setPopup] = useState(false);

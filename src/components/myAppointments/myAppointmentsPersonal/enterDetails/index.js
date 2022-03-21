@@ -24,7 +24,7 @@ import {
 } from "./enterDetailsStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import Check from "../../../../reuseableComponents/Check";
+import Check from "../../../../reuseableComponents/Checkbox";
 
 function EnterDetails({ label }) {
   const formik = useFormik({

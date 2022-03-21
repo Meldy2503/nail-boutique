@@ -18,7 +18,7 @@ import {
 import Sidebar from "../sidebar";
 import { HeadingStyle } from "../../reuseableComponents/headingStyle";
 import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
-import Check from "../../reuseableComponents/Check";
+import Check from "../../reuseableComponents/Checkbox";
 
 function UpdateProfile() {
   const formik = useFormik({

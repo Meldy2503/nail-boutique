@@ -25,7 +25,7 @@ import Calendar from "react-calendar";
 import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
 import timeData from "./scheduleData";
-import Check from "../../../../reuseableComponents/Check";
+import Check from "../../../../reuseableComponents/Checkbox";
 
 function Schedule() {
   const [value, onChange] = React.useState(new Date());
