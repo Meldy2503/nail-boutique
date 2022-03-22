@@ -21,8 +21,11 @@ import {
 } from "../../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../bookingSummary";
 import Success from "../../myAppointmentsPersonal/success/index";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function ConfirmBooking() {
   const [popup, setPopup] = useState(false);
@@ -43,55 +46,53 @@ function ConfirmBooking() {
                   Go back
                 </Back>
               </HeadingStyle>
-              {/* <Scroll> */}
+              <Location>
+                <span>
+                  <IoLocationOutline className="pin" />
+                  <p>{confirmLocation.location}</p>
+                </span>
+              </Location>
+              <Terms>
+                <h2>Terms & Condition</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                  natoque penatibus et magnis dis parturient montes, nascetur
+                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                  eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                  justo. Nullam dictum felis eu pede mollis pretium. Integer
+                  tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+                  vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+                  consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+                  dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                  nulla ut metus varius laoreet. Quisque rutrum. Aenean
+                  imperdiet. Etiam ultricies nisi vel augue. Curabitur
+                  ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                  Maecenas tempus, tellus eget condimentum rhoncus, sem quam
+                  semper libero, sit amet adipiscing sem neque sed ipsum. Nam
+                  quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+                  Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien
+                  ut libero .
+                </p>
+              </Terms>
               <div>
-                <Location>
-                  <span>
-                    <IoLocationOutline className="pin" />
-                    <p>{confirmLocation.location}</p>
-                  </span>
-                </Location>
-                <Terms>
-                  <h2>Terms & Condition</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                    natoque penatibus et magnis dis parturient montes, nascetur
-                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                    eu, pretium quis, sem. Nulla consequat massa quis enim.
-                    Donec pede justo, fringilla vel, aliquet nec, vulputate
-                    eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                    venenatis vitae, justo. Nullam dictum felis eu pede mollis
-                    pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-                    semper nisi. Aenean vulputate eleifend tellus. Aenean leo
-                    ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                    tellus. Phasellus viverra nulla ut metus varius laoreet.
-                    Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel
-                    augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                    Etiam rhoncus. Maecenas tempus, tellus eget condimentum
-                    rhoncus, sem quam semper libero, sit amet adipiscing sem
-                    neque sed ipsum. Nam quam nunc, blandit vel, luctus
-                    pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-                    tincidunt tempus. Donec vitae sapien ut libero .
-                  </p>
-                </Terms>
-                <Agreement>
-                  <input type="checkbox" name="agreement" id="agreement" />
-                  <label htmlFor="agreement"></label> I agree to the Terms and
-                  Condition
-                </Agreement>
+                <CheckBox
+                  label="I agree to the Terms and
+                    Condition"
+                  name="agreement"
+                />
               </div>
-              {/* </Scroll> */}
-              <ButtonContainer>
-                <Button
-                  onClick={handlePopup}
-                  to="/my-appointments/group-booking/confirm-booking"
-                >
-                  TEMP CONTINUE
-                </Button>
-              </ButtonContainer>
             </ConfirmBookingContainer>
+            <ButtonContainer>
+              <Button
+                onClick={handlePopup}
+                to="/my-appointments/group-booking/confirm-booking"
+              >
+                TEMP CONTINUE
+              </Button>
+            </ButtonContainer>
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />

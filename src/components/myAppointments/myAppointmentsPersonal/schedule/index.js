@@ -1,6 +1,5 @@
 import React from "react";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,
@@ -18,14 +17,18 @@ import {
   ScheduleContainer,
   SelectAvailableTime,
   Time,
+  Dots,
   Waitlist,
 } from "./scheduleStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import Calendar from "react-calendar";
 import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
 import timeData from "./scheduleData";
-import Check from "../../../../reuseableComponents/Check";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function Schedule() {
   const [value, onChange] = React.useState(new Date());
@@ -46,6 +49,16 @@ function Schedule() {
               <CalendarContainer>
                 <Calendar calendarType="US" onChange={onChange} value={value} />
               </CalendarContainer>
+              <Dots>
+                <div>
+                  <span className="available"></span>
+                  <p>Available</p>
+                </div>
+                <div>
+                  <span className="unavailable"></span>
+                  <p>Unavailable</p>
+                </div>
+              </Dots>
               <Time>
                 <h1>Available Time</h1>
 
@@ -53,7 +66,7 @@ function Schedule() {
                   {timeData.map((time) => {
                     return (
                       <Option key={time.id}>
-                        <Check label={time.time} name={time.name} />
+                        <CheckBox label={time.time} name={time.name} />
                       </Option>
                     );
                   })}

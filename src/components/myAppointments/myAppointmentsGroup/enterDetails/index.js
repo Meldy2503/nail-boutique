@@ -1,6 +1,5 @@
 import React from "react";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,
@@ -12,7 +11,10 @@ import {
   RightContentCol2,
 } from "../../../../reuseableComponents/containerStyle";
 import Sidebar from "../../../sidebar";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import { MdChevronLeft } from "react-icons/md";
 import {
   EnterDetailsContainer,
@@ -21,10 +23,10 @@ import {
   Comment,
   ErrorMsg,
   Policy,
-  RememberMe,
 } from "./enterDetailsStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function EnterDetails() {
   const formik = useFormik({
@@ -71,7 +73,6 @@ function EnterDetails() {
           <div>
             <EnterDetailsContainer>
               <FormField onSubmit={formik.handleSubmit}>
-                {/* <span> */}
                 <div className="names">
                   <InputField>
                     <label htmlFor="firstName">First Name</label>
@@ -155,11 +156,7 @@ function EnterDetails() {
                     value={formik.values.comment}
                   ></textarea>
                 </Comment>
-                <RememberMe>
-                  <input type="checkbox" name="remember" id="remember" />
-                  <label htmlFor="remember"></label> Remember Me
-                </RememberMe>
-                {/* </span> */}
+                <CheckBox label="Remember Me" name="remember" />
               </FormField>
             </EnterDetailsContainer>
             <Policy>

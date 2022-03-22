@@ -57,43 +57,16 @@ export const Content = styled.div`
   align-items: center;
   border: 1px solid ${({ theme }) => theme.colors.secondary6};
   border-radius: 1rem;
-  margin-bottom: 2.3rem;
+  margin-bottom: 2rem;
+  padding: 2rem 3rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin-bottom: 1rem;
-  }
-
-  & input[type="checkbox"] {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-  .checkbox {
-    display: inline-block;
-    height: 2rem;
-    width: 2rem;
-    background: ${({ theme }) => theme.colors.secondary6};
-    border: 1px ${({ theme }) => theme.colors.secondary4} solid;
-    margin-right: 2rem;
-    border-radius: 0.5rem;
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      margin-right: 1rem;
-    }
+    padding: 1rem;
   }
 `;
 
-export const Contents = styled.div`
-  padding: 1.5rem 0 1.5rem 2rem;
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    padding: 1rem 0 1rem 1rem;
-  }
-
+export const LocationText = styled.div`
   h4 {
     font-size: 2rem;
 

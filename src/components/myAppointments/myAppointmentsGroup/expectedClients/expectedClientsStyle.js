@@ -8,7 +8,8 @@ export const InputField = styled.div`
 
   input {
     width: 100%;
-    padding: 1rem 1.6rem;
+    margin-top: 5rem 0 2rem 0;
+    padding: 1.4rem 1.6rem;
     background-color: ${({ theme }) => theme.colors.primary7};
     border: none;
     border-radius: 0.4rem;

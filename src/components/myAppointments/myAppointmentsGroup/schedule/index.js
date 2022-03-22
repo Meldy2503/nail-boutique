@@ -1,6 +1,5 @@
 import React from "react";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,
@@ -18,13 +17,18 @@ import {
   ScheduleContainer,
   SelectAvailableTime,
   Time,
+  Dots,
   Waitlist,
 } from "./scheduleStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import Calendar from "react-calendar";
 import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
 import timeData from "./scheduleData";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function Schedule() {
   const [value, onChange] = React.useState(new Date());
@@ -45,6 +49,16 @@ function Schedule() {
               <CalendarContainer>
                 <Calendar calendarType="US" onChange={onChange} value={value} />
               </CalendarContainer>
+              <Dots>
+                <div>
+                  <span className="available"></span>
+                  <p>Available</p>
+                </div>
+                <div>
+                  <span className="unavailable"></span>
+                  <p>Unavailable</p>
+                </div>
+              </Dots>
               <Time>
                 <h1>Available Time</h1>
 
@@ -52,22 +66,14 @@ function Schedule() {
                   {timeData.map((time) => {
                     return (
                       <Option key={time.id}>
-                        <input
-                          type="checkbox"
-                          name={time.name}
-                          id={time.name}
-                        />
-                        <label htmlFor={time.name}>{time.time}</label>
+                        <CheckBox label={time.time} name={time.name} />
                       </Option>
                     );
                   })}
                 </SelectAvailableTime>
               </Time>
             </ScheduleContainer>
-            <Waitlist>
-              <input type="checkbox" name="waitlist" id="waitlist" />
-              <label htmlFor="waitlist">Join our waitlist</label>
-            </Waitlist>
+            <Waitlist to="/waitlist">Join our waitlist</Waitlist>
             <ButtonContainer>
               <Button to="/my-appointments/group-booking/enter-details">
                 ADD OTHER SERVICES

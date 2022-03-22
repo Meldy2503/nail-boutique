@@ -11,8 +11,6 @@ import {
   Button,
   ButtonContainer,
 } from "../../../../reuseableComponents/buttonStyle";
-import { useFormik } from "formik";
-import * as Yup from "yup";
 import {
   Services,
   ServiceType,
@@ -22,8 +20,11 @@ import {
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./data";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
+import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function SelectServiceTwo() {
   const [onClick, setOnClick] = React.useState({});
@@ -33,20 +34,6 @@ function SelectServiceTwo() {
       [index]: !state[index],
     }));
   };
-
-  const formik = useFormik({
-    initialValues: {
-      options: [],
-    },
-    validationSchema: Yup.object({
-      options: Yup.array(),
-    }),
-
-    onSubmit: (values, { resetForm }) => {
-      console.log(values);
-      resetForm();
-    },
-  });
 
   return (
     <ContentContainer>
@@ -72,54 +59,29 @@ function SelectServiceTwo() {
                     {onClick[index] ? <FaAngleRight /> : <FaAngleDown />}
                   </span>
                 </ServiceType>
-
                 {onClick[index] && (
-                  <FormContainer onSubmit={formik.handleSubmit}>
+                  <FormContainer>
                     <InputContainer>
-                      <input
-                        type="checkbox"
-                        id="optionA"
-                        name="options"
-                        value={formik.values.options}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                      />
-                      <span></span>
-                      <label htmlFor="optionA">
-                        <h5>Basic Manicure</h5>
-                        <p>30 mins - ₦5000</p>
+                      <CheckBox value={items.value1} name={items.name} />
+                      <label htmlFor={items.value1}>
+                        <h5>{items.labelA}</h5>
+                        <p>{items.labelB}</p>
                       </label>
                     </InputContainer>
 
                     <InputContainer>
-                      <input
-                        type="checkbox"
-                        id="optionB"
-                        name="options"
-                        value={formik.values.options}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                      />
-                      <span></span>
-                      <label htmlFor="optionB">
-                        <h5>Basic Manicure</h5>
-                        <p>30 mins - ₦5000</p>
+                      <CheckBox value={items.value2} name={items.name} />
+                      <label htmlFor={items.value2}>
+                        <h5>{items.labelA}</h5>
+                        <p>{items.labelB}</p>
                       </label>
                     </InputContainer>
 
                     <InputContainer>
-                      <input
-                        type="checkbox"
-                        id="optionC"
-                        name="options"
-                        value={formik.values.options}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                      />
-                      <span></span>
-                      <label htmlFor="optionC">
-                        <h5>Basic Manicure</h5>
-                        <p>30 mins - ₦5000</p>
+                      <CheckBox value={items.value3} name={items.name} />
+                      <label htmlFor={items.value3}>
+                        <h5>{items.labelA}</h5>
+                        <p>{items.labelB}</p>
                       </label>
                     </InputContainer>
                   </FormContainer>
