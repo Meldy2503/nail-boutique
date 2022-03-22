@@ -7,7 +7,6 @@ import {
 } from "../../../../reuseableComponents/containerStyle";
 import Sidebar from "../../../sidebar";
 import {
-  Agreement,
   ConfirmBookingContainer,
   Location,
   Terms,
