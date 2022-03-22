@@ -8,6 +8,39 @@ export const ScheduleContainer = styled.div`
   margin-bottom: 1rem;
 `;
 
+export const Dots = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+
+    span {
+      height: 1rem;
+      width: 1rem;
+      background-color: red;
+      margin-right: 1rem;
+      border-radius: 50%;
+    }
+  }
+  .available {
+    background-color: #00ff66;
+  }
+
+  .unavailable {
+    background-color: #ff0000;
+  }
+`;
+
 export const Time = styled.div`
   width: 100%;
   h1 {

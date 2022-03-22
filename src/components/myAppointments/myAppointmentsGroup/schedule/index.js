@@ -17,6 +17,7 @@ import {
   ScheduleContainer,
   SelectAvailableTime,
   Time,
+  Dots,
   Waitlist,
 } from "./scheduleStyle";
 import {
@@ -48,6 +49,16 @@ function Schedule() {
               <CalendarContainer>
                 <Calendar calendarType="US" onChange={onChange} value={value} />
               </CalendarContainer>
+              <Dots>
+                <div>
+                  <span className="available"></span>
+                  <p>Available</p>
+                </div>
+                <div>
+                  <span className="unavailable"></span>
+                  <p>Unavailable</p>
+                </div>
+              </Dots>
               <Time>
                 <h1>Available Time</h1>
 
