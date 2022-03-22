@@ -34,11 +34,11 @@ export const HeadingStyle = styled.div`
     }
 
     @media (max-width: 420px) {
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
 
     @media (max-width: 300px) {
-      font-size: 1.7rem;
+      font-size: 1.8rem;
     }
   }
 `;

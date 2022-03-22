@@ -30,7 +30,8 @@ export const Search = styled.div`
   position: relative;
 
   input {
-    width: 100%;
+    width: 95%;
+    position: relative;
     padding: 0.9rem 1.6rem;
     background-color: #1c1c1c;
     border: 1px solid ${({ theme }) => theme.colors.primary6};
@@ -51,7 +52,7 @@ export const Search = styled.div`
 
   .search-icon {
     position: absolute;
-    right: 1rem;
+    right: 13%;
     top: 1rem;
     color: ${({ theme }) => theme.colors.primary6};
   }
@@ -59,13 +60,18 @@ export const Search = styled.div`
 
 export const Orientation = styled.div`
   display: flex;
-  width: 13%;
+  width: 15%;
   justify-content: space-around;
+  margin-right: 1.5rem;
 
   .grid {
     color: #c4c4c4;
     margin-left: 0.7rem;
     font-size: 2rem;
+
+    @media (max-width: 350px) {
+      font-size: 1.8rem;
+    }
   }
 `;
 
@@ -79,8 +85,13 @@ export const Grid = styled.div`
     margin-left: 0.7rem;
     font-size: 2rem;
     cursor: pointer;
+
     &:hover {
       background-color: #373737;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 1.8rem;
     }
   }
 `;
