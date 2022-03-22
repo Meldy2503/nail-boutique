@@ -21,8 +21,10 @@ import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import { MdChevronLeft } from "react-icons/md";
 import serviceData from "./selectServiceData";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function SelectServices() {

@@ -8,7 +8,6 @@ import {
   SubmitBtn,
 } from "./updateProfileStyle";
 import { MdChevronLeft } from "react-icons/md";
-import { Back } from "../../reuseableComponents/goBackStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
@@ -16,7 +15,7 @@ import {
   RightContent,
 } from "../../reuseableComponents/containerStyle";
 import Sidebar from "../sidebar";
-import { HeadingStyle } from "../../reuseableComponents/headingStyle";
+import { HeadingStyle, Back } from "../../reuseableComponents/headingStyle";
 import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
 import CheckBox from "../../reuseableComponents/Checkbox";
 

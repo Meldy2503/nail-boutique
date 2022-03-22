@@ -11,12 +11,14 @@ import {
 } from "./selectLocationStyle";
 import { ContentContainer } from "../../../../reuseableComponents/containerStyle";
 import Sidebar from "../../../sidebar";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,
 } from "../../../../reuseableComponents/buttonStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function SelectLocation() {

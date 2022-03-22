@@ -21,8 +21,10 @@ import {
 } from "../../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../bookingSummary";
 import Success from "../../myAppointmentsPersonal/success/index";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function ConfirmBooking() {

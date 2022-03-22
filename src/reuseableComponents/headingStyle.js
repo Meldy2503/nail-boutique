@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeadingStyle = styled.div`
@@ -41,4 +42,12 @@ export const HeadingStyle = styled.div`
       font-size: 1.8rem;
     }
   }
+`;
+
+export const Back = styled(Link)`
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: flex-end;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.primary6};
 `;

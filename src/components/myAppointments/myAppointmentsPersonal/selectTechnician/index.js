@@ -17,8 +17,10 @@ import {
   Select,
   Top,
 } from "./selectTechnicianStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import technicianData from "./selectTechnicianData";
 import { MdChevronLeft, MdStar } from "react-icons/md";
 import { HiOutlineSearch, HiUserGroup, HiDotsHorizontal } from "react-icons/hi";

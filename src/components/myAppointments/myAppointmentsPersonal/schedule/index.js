@@ -1,6 +1,5 @@
 import React from "react";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
 import {
   Button,
   ButtonContainer,
@@ -20,7 +19,10 @@ import {
   Time,
   Waitlist,
 } from "./scheduleStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import Calendar from "react-calendar";
 import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";

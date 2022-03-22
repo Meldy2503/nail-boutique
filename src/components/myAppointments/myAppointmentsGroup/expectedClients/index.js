@@ -6,9 +6,11 @@ import {
   RightContentCol1,
   RightContentCol2,
 } from "../../../../reuseableComponents/containerStyle";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
 import { MdChevronLeft } from "react-icons/md";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import Sidebar from "../../../sidebar";
 import BookingSummary from "../bookingSummary";
 import { InputField } from "./expectedClientsStyle";

@@ -20,8 +20,10 @@ import {
 } from "../../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../bookingSummary";
 import Success from "../../../myAppointments/myAppointmentsPersonal/success/index";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function ConfirmBooking() {
@@ -81,15 +83,15 @@ function ConfirmBooking() {
                   name="agreement"
                 />
               </div>
-                </ConfirmBookingContainer>
-              <ButtonContainer>
-                <Button
-                  onClick={handlePopup}
-                  to="/my-appointments/personal-booking/confirm-booking"
-                >
-                  TEMP CONTINUE
-                </Button>
-              </ButtonContainer>
+            </ConfirmBookingContainer>
+            <ButtonContainer>
+              <Button
+                onClick={handlePopup}
+                to="/my-appointments/personal-booking/confirm-booking"
+              >
+                TEMP CONTINUE
+              </Button>
+            </ButtonContainer>
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />

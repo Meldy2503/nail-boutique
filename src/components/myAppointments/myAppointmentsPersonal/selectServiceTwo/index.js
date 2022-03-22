@@ -20,8 +20,10 @@ import {
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import serviceData from "./data";
 import BookingSummary from "../bookingSummary";
-import { Back } from "../../../../reuseableComponents/goBackStyle";
-import { HeadingStyle } from "../../../../reuseableComponents/headingStyle";
+import {
+  HeadingStyle,
+  Back,
+} from "../../../../reuseableComponents/headingStyle";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function SelectServiceTwo() {
