@@ -1,26 +1,23 @@
 import React from "react";
-// import GoBack from "../../reuseableComponents/goBack/GoBack";
 import {
-  UpdateProfileStyled,
-  Row1,
   FormField,
   UpdateProfileContainer,
   InputField,
   Comment,
   ErrorMsg,
   SubmitBtn,
-  RememberMe,
 } from "./updateProfileStyle";
 import { MdChevronLeft } from "react-icons/md";
-import { Back } from "../../reuseableComponents/goBack/goBackStyle";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
   ContentContainer,
-  LeftContent,
   RightContent,
 } from "../../reuseableComponents/containerStyle";
 import Sidebar from "../sidebar";
+import { HeadingStyle, Back } from "../../reuseableComponents/headingStyle";
+import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
+import CheckBox from "../../reuseableComponents/Checkbox";
 
 function UpdateProfile() {
   const formik = useFormik({
@@ -38,10 +35,7 @@ function UpdateProfile() {
       lastName: Yup.string()
         .max(15, "Must be 15 characters or less")
         .required("*Required"),
-      email: Yup.string()
-        .email("Invalid Email")
-        // .max(15, "Must be 15 characters or less")
-        .required("*Required"),
+      email: Yup.string().email("Invalid Email").required("*Required"),
       phone: Yup.string()
         .max(15, "Must be 15 characters or less")
         .required("*Required"),
@@ -52,20 +46,21 @@ function UpdateProfile() {
     onSubmit: (values) => console.log(values),
   });
   console.log(formik.values);
+
   return (
     <ContentContainer>
       <Sidebar />
-      <RightContent>
-        <UpdateProfileStyled>
-          <UpdateProfileContainer>
-            <Row1>
-              <h2>Update Profile</h2>
-              <Back to="/location">
-                <MdChevronLeft />
-                Go back
-              </Back>
-            </Row1>
-            <FormField onSubmit={formik.handleSubmit}>
+      <RightContent display="block">
+        <UpdateProfileContainer>
+          <HeadingStyle PdBottom="1rem" mPdTop="4rem">
+            <h2>Update Profile</h2>
+            <Back to="/enter-details">
+              <MdChevronLeft />
+              Go back
+            </Back>
+          </HeadingStyle>
+          <FormField onSubmit={formik.handleSubmit}>
+            <span>
               <div className="names">
                 <InputField>
                   <label htmlFor="firstName">First Name</label>
@@ -148,20 +143,14 @@ function UpdateProfile() {
                   onBlur={formik.handleBlur}
                   value={formik.values.comment}
                 ></textarea>
-                <ErrorMsg>
-                  {formik.touched.comment && formik.errors.comment ? (
-                    <p>{formik.errors.comment}</p>
-                  ) : null}
-                </ErrorMsg>
               </Comment>
-              <RememberMe>
-                <input type="checkbox" name="remember" id="remember" />
-                <label htmlFor="remember"></label> Remember Me
-              </RememberMe>
-              <SubmitBtn>UPDATE PROFILE</SubmitBtn>
-            </FormField>
-          </UpdateProfileContainer>
-        </UpdateProfileStyled>
+              <CheckBox label="Remember Me" name="remember" />
+              <ButtonContainer>
+                <SubmitBtn>UPDATE PROFILE</SubmitBtn>
+              </ButtonContainer>
+            </span>
+          </FormField>
+        </UpdateProfileContainer>
       </RightContent>
     </ContentContainer>
   );

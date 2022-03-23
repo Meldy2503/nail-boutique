@@ -1,0 +1,48 @@
+const serviceData = [
+  {
+    id: 1,
+    title: "MANICURES",
+    text: "Performed on natural nails and includes regular polish",
+    name: "mani",
+    value1: "optionA",
+    value2: "optionB",
+    value3: "optionC",
+    labelA: "Basic Manicure",
+    labelB: "30 mins - ₦5000",
+  },
+  {
+    id: 2,
+    title: "PEDICURES",
+    text: "Includes regular polish",
+    name: "pedi",
+    value1: "optionA",
+    value2: "optionB",
+    value3: "optionC",
+    labelA: "Basic Manicure",
+    labelB: "30 mins - ₦5000",
+  },
+  {
+    id: 3,
+    title: "MANI/PEDI COMBOS",
+    text: "Performed on natural nails and includes regular polish",
+    name: "combo1",
+    value1: "optionA",
+    value2: "optionB",
+    value3: "optionC",
+    labelA: "Basic Manicure",
+    labelB: "30 mins - ₦5000",
+  },
+  {
+    id: 4,
+    title: "MANI/PEDI COMBOS",
+    text: "Performed on natural nails and includes regular polish",
+    name: "combo2",
+    value1: "optionA",
+    value2: "optionB",
+    value3: "optionC",
+    labelA: "Basic Manicure",
+    labelB: "30 mins - ₦5000",
+  },
+];
+
+export default serviceData;
