@@ -18,8 +18,8 @@ const serviceData = [
     value1: "optionA",
     value2: "optionB",
     value3: "optionC",
-    labelA: "Basic Manicure",
-    labelB: "30 mins - ₦5000",
+    labelA: "Basic Pedicure",
+    labelB: "30 mins - ₦10000",
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ const serviceData = [
     value1: "optionA",
     value2: "optionB",
     value3: "optionC",
-    labelA: "Basic Manicure",
-    labelB: "30 mins - ₦5000",
+    labelA: "Basic Combo1",
+    labelB: "30 mins - ₦15000",
   },
   {
     id: 4,
@@ -40,8 +40,8 @@ const serviceData = [
     value1: "optionA",
     value2: "optionB",
     value3: "optionC",
-    labelA: "Basic Manicure",
-    labelB: "30 mins - ₦5000",
+    labelA: "Basic combo2",
+    labelB: "30 mins - ₦20000",
   },
 ];
 

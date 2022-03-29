@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/index";
 import MyAppointments from "./components/myAppointments/index";
 import UpdateProfile from "./components/updateProfile/index";
 import Notifications from "./components/notifications/index";
+import { summaryProvider } from "./summaryContext";
 
 // my appointments personal
 import SelectLocationPersonal from "./components/myAppointments/myAppointmentsPersonal/selectLocation/index";
@@ -70,6 +71,7 @@ function App() {
         <Fragment>
           <GlobalStyle />
           <Navbar />
+          <summaryProvider>
           <Routes>
             <Route path="/*" element={<Dashboard />} />
             <Route path="/my-appointments" element={<MyAppointmentIndex />}>
@@ -131,6 +133,7 @@ function App() {
             <Route path="update-profile" element={<UpdateProfile />} />
             <Route path="notifications" element={<Notifications />} />
           </Routes>
+          </summaryProvider>
         </Fragment>
       </ThemeProvider>
     </Router>

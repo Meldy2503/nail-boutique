@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ContentContainer,
   RightContent,
@@ -16,6 +16,7 @@ import {
   Technician,
   Select,
   Top,
+  TechnicianPicked,
 } from "./selectTechnicianStyle";
 import {
   HeadingStyle,
@@ -32,8 +33,27 @@ import {
 } from "../../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
 import Sidebar from "../../../sidebar";
+import avatar from "../../../../images/avatar1.png";
+import { IoIosCheckmarkCircle } from "react-icons/io";
 
 function SelectTechnician() {
+  const [displayTech, setDisplayTech] = React.useState(false);
+
+  const displayStylist = () => {
+    setDisplayTech(!displayTech);
+  };
+
+  // const displayStylist = (index) => {
+  //   setDisplayTech((state) => ({
+  //     ...state,
+  //     [index]: !state[index],
+  //   }));
+  // };
+
+  // useEffect(() => {
+  //   console.log(displayTech);
+  // }, [false]);
+
   return (
     <ContentContainer>
       <Sidebar />
@@ -69,7 +89,7 @@ function SelectTechnician() {
           </Top>
           <div>
             <Row3>
-              {technicianData.map((item) => (
+              {technicianData.map((item, index) => (
                 <Card key={item.id}>
                   <div className="top">
                     <img src={item.tick} alt="tick" />
@@ -89,7 +109,7 @@ function SelectTechnician() {
                         <p>{item.rating} ratings</p>
                       </span>
                     </div>
-                    <Select>SELECT</Select>
+                    <Select onClick={displayStylist}>SELECT</Select>
                   </Technician>
                 </Card>
               ))}
@@ -103,6 +123,17 @@ function SelectTechnician() {
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />
+          {displayTech && (
+            <TechnicianPicked>
+              <IoIosCheckmarkCircle className="icon" />
+              <img src={avatar} alt="avatar" />
+
+              <span>
+                <h6> Ademide Ruth </h6>
+                <p> Hair Stylist - 26Yrs</p>
+              </span>
+            </TechnicianPicked>
+          )}
         </RightContentCol2>
       </RightContent>
     </ContentContainer>

@@ -60,18 +60,17 @@ export const InputContainer = styled.div`
   padding: 0.7rem 2rem 0 0.5rem;
   cursor: pointer;
   user-select: none;
+  margin-left: 1.5rem;
 
-  label {
-    margin-left: 1.5rem;
-    h5 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.1rem;
-    }
+  h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0 0.8rem;
+  }
 
-    p {
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 0.1rem 0.8rem;
   }
 `;

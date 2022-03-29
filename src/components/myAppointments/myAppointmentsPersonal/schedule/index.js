@@ -17,6 +17,7 @@ import {
   ScheduleContainer,
   SelectAvailableTime,
   Time,
+  Day,
   Dots,
   Waitlist,
 } from "./scheduleStyle";
@@ -29,9 +30,16 @@ import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
 import timeData from "./scheduleData";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 function Schedule() {
-  const [value, onChange] = React.useState(new Date());
+  const [date, setDate] = React.useState(new Date());
+
+  const onDateChange = (newDate) => {
+    setDate(newDate);
+    console.log(newDate);
+  };
+
   return (
     <div>
       <ContentContainer>
@@ -47,7 +55,11 @@ function Schedule() {
             </HeadingStyle>
             <ScheduleContainer>
               <CalendarContainer>
-                <Calendar calendarType="US" onChange={onChange} value={value} />
+                <Calendar
+                  calendarType="US"
+                  onChange={onDateChange}
+                  value={date}
+                />
               </CalendarContainer>
               <Dots>
                 <div>
@@ -82,6 +94,12 @@ function Schedule() {
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />
+            <Day>
+              <AiOutlineClockCircle className="icon" />
+              <h6>{date.toDateString()} &nbsp;- </h6>
+              <h6>&nbsp;09:00AM &nbsp;-&nbsp;</h6>
+              <p>In 21 days</p>
+            </Day>
           </RightContentCol2>
         </RightContent>
       </ContentContainer>
