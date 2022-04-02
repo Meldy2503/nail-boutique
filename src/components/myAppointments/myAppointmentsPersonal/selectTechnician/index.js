@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import {
   ContentContainer,
   RightContent,
@@ -37,22 +38,7 @@ import avatar from "../../../../images/avatar1.png";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
 function SelectTechnician() {
-  const [displayTech, setDisplayTech] = React.useState(false);
-
-  const displayStylist = () => {
-    setDisplayTech(!displayTech);
-  };
-
-  // const displayStylist = (index) => {
-  //   setDisplayTech((state) => ({
-  //     ...state,
-  //     [index]: !state[index],
-  //   }));
-  // };
-
-  // useEffect(() => {
-  //   console.log(displayTech);
-  // }, [false]);
+  const { summaryList, display, updateList } = useContext(SummaryContext);
 
   return (
     <ContentContainer>
@@ -89,7 +75,7 @@ function SelectTechnician() {
           </Top>
           <div>
             <Row3>
-              {technicianData.map((item, index) => (
+              {technicianData.map((item) => (
                 <Card key={item.id}>
                   <div className="top">
                     <img src={item.tick} alt="tick" />
@@ -109,7 +95,7 @@ function SelectTechnician() {
                         <p>{item.rating} ratings</p>
                       </span>
                     </div>
-                    <Select onClick={displayStylist}>SELECT</Select>
+                    <Select onClick={updateList}>SELECT</Select>
                   </Technician>
                 </Card>
               ))}
@@ -123,17 +109,19 @@ function SelectTechnician() {
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />
-          {displayTech && (
+          {/* {summaryList.map((summary, index) => { */}
+
+          {summaryList && display && (
             <TechnicianPicked>
               <IoIosCheckmarkCircle className="icon" />
               <img src={avatar} alt="avatar" />
-
               <span>
                 <h6> Ademide Ruth </h6>
                 <p> Hair Stylist - 26Yrs</p>
               </span>
             </TechnicianPicked>
           )}
+          {/* })} */}
         </RightContentCol2>
       </RightContent>
     </ContentContainer>

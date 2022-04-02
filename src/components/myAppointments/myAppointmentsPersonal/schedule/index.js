@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import BookingSummary from "../bookingSummary";
 import {
   Button,
@@ -33,10 +34,12 @@ import CheckBox from "../../../../reuseableComponents/Checkbox";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
 function Schedule() {
-  const [date, setDate] = React.useState(new Date());
+  const { summaryList, display, updateList } = useContext(SummaryContext);
 
+  const [date, setDate] = React.useState(new Date());
   const onDateChange = (newDate) => {
     setDate(newDate);
+    // updateList();
     console.log(newDate);
   };
 
@@ -94,12 +97,14 @@ function Schedule() {
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />
-            <Day>
-              <AiOutlineClockCircle className="icon" />
-              <h6>{date.toDateString()} &nbsp;- </h6>
-              <h6>&nbsp;09:00AM &nbsp;-&nbsp;</h6>
-              <p>In 21 days</p>
-            </Day>
+            {summaryList && display && (
+              <Day>
+                <AiOutlineClockCircle className="icon" />
+                <h6>{date.toDateString()} &nbsp;- </h6>
+                <h6>&nbsp;09:00AM &nbsp;-&nbsp;</h6>
+                <p>In 21 days</p>
+              </Day>
+            )}
           </RightContentCol2>
         </RightContent>
       </ContentContainer>

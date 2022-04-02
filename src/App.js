@@ -6,7 +6,7 @@ import Navbar from "./components/navbar/index";
 import MyAppointments from "./components/myAppointments/index";
 import UpdateProfile from "./components/updateProfile/index";
 import Notifications from "./components/notifications/index";
-import { summaryProvider } from "./summaryContext";
+import { SummaryProvider } from "./summaryContext";
 
 // my appointments personal
 import SelectLocationPersonal from "./components/myAppointments/myAppointmentsPersonal/selectLocation/index";
@@ -71,69 +71,72 @@ function App() {
         <Fragment>
           <GlobalStyle />
           <Navbar />
-          <summaryProvider>
-          <Routes>
-            <Route path="/*" element={<Dashboard />} />
-            <Route path="/my-appointments" element={<MyAppointmentIndex />}>
-              <Route index element={<MyAppointments />} />
-              <Route path="personal-booking" element={<PersonalBookingIndex />}>
-                <Route index element={<SelectLocationPersonal />} />
+          <SummaryProvider>
+            <Routes>
+              <Route path="/*" element={<Dashboard />} />
+              <Route path="/my-appointments" element={<MyAppointmentIndex />}>
+                <Route index element={<MyAppointments />} />
                 <Route
-                  path="select-location"
-                  element={<SelectLocationPersonal />}
-                />
-                <Route
-                  path="select-services"
-                  element={<SelectServicePersonal />}
-                />
-                <Route
-                  path="confirm-booking"
-                  element={<ConfirmBookingPersonal />}
-                />
-                <Route
-                  path="select-servicestwo"
-                  element={<SelectServiceTwoPersonal />}
-                />
-                <Route
-                  path="select-technician"
-                  element={<SelectTechnicianPersonal />}
-                />
-                <Route path="schedule" element={<SchedulePersonal />} />
-                <Route
-                  path="enter-details"
-                  element={<EnterDetailsPersonal />}
-                />
+                  path="personal-booking"
+                  element={<PersonalBookingIndex />}
+                >
+                  <Route index element={<SelectLocationPersonal />} />
+                  <Route
+                    path="select-location"
+                    element={<SelectLocationPersonal />}
+                  />
+                  <Route
+                    path="select-services"
+                    element={<SelectServicePersonal />}
+                  />
+                  <Route
+                    path="confirm-booking"
+                    element={<ConfirmBookingPersonal />}
+                  />
+                  <Route
+                    path="select-servicestwo"
+                    element={<SelectServiceTwoPersonal />}
+                  />
+                  <Route
+                    path="select-technician"
+                    element={<SelectTechnicianPersonal />}
+                  />
+                  <Route path="schedule" element={<SchedulePersonal />} />
+                  <Route
+                    path="enter-details"
+                    element={<EnterDetailsPersonal />}
+                  />
+                </Route>
+                <Route path="group-booking" element={<GroupBookingIndex />}>
+                  <Route index element={<SelectLocationGroup />} />
+                  <Route
+                    path="select-location"
+                    element={<SelectLocationGroup />}
+                  />
+                  <Route
+                    path="select-services"
+                    element={<SelectServiceGroup />}
+                  />
+                  <Route
+                    path="confirm-booking"
+                    element={<ConfirmBookingGroup />}
+                  />
+                  <Route
+                    path="select-servicestwo"
+                    element={<SelectServiceTwoGroup />}
+                  />
+                  <Route
+                    path="expected-clients"
+                    element={<ExpectedClientsGroup />}
+                  />
+                  <Route path="schedule" element={<ScheduleGroup />} />
+                  <Route path="enter-details" element={<EnterDetailsGroup />} />
+                </Route>
               </Route>
-              <Route path="group-booking" element={<GroupBookingIndex />}>
-                <Route index element={<SelectLocationGroup />} />
-                <Route
-                  path="select-location"
-                  element={<SelectLocationGroup />}
-                />
-                <Route
-                  path="select-services"
-                  element={<SelectServiceGroup />}
-                />
-                <Route
-                  path="confirm-booking"
-                  element={<ConfirmBookingGroup />}
-                />
-                <Route
-                  path="select-servicestwo"
-                  element={<SelectServiceTwoGroup />}
-                />
-                <Route
-                  path="expected-clients"
-                  element={<ExpectedClientsGroup />}
-                />
-                <Route path="schedule" element={<ScheduleGroup />} />
-                <Route path="enter-details" element={<EnterDetailsGroup />} />
-              </Route>
-            </Route>
-            <Route path="update-profile" element={<UpdateProfile />} />
-            <Route path="notifications" element={<Notifications />} />
-          </Routes>
-          </summaryProvider>
+              <Route path="update-profile" element={<UpdateProfile />} />
+              <Route path="notifications" element={<Notifications />} />
+            </Routes>
+          </SummaryProvider>
         </Fragment>
       </ThemeProvider>
     </Router>
