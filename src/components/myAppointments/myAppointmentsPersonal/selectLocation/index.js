@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import locationData from "./selectLocationData";
 import Map from "../../../../images/map.png";
 import { MdChevronLeft } from "react-icons/md";
