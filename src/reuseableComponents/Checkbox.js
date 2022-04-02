@@ -8,7 +8,7 @@ const CheckboxContainer = styled.div`
     background-color: red;
   }
 `;
-function CheckBox({ label, name, value, checkbox }) {
+function CheckBox({ label, name, value, checkbox, onChange }) {
   return (
     <CheckboxContainer>
       <Checkbox
@@ -32,7 +32,8 @@ function CheckBox({ label, name, value, checkbox }) {
         className={checkbox}
         value={value}
         checked={false}
-        onChange={(value) => {
+        onChange={(v) => {
+          onChange(value);
           console.log(value);
         }}
         borderColor="#696969"

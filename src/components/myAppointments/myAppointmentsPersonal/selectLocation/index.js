@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import locationData from "./selectLocationData";
 import Map from "../../../../images/map.png";
 import { MdChevronLeft } from "react-icons/md";
@@ -22,6 +23,10 @@ import {
 import CheckBox from "../../../../reuseableComponents/Checkbox";
 
 function SelectLocation() {
+  const { updateList } = useContext(SummaryContext);
+  const handleClick = (location) => {
+    updateList({ location });
+  };
   return (
     <ContentContainer>
       <Sidebar />
@@ -41,7 +46,7 @@ function SelectLocation() {
                 <h4>{data.heading}</h4>
                 <p>{data.address}</p>
               </LocationText>
-              <CheckBox value={data.checkboxValue} name="location" />
+              <CheckBox onChange={handleClick} value={data} name="location" />
             </Content>
           ))}
           <ButtonContainer>

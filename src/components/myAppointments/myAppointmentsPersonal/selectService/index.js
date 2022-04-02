@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import {
   ContentContainer,
   RightContent,
@@ -26,15 +27,24 @@ import {
   Back,
 } from "../../../../reuseableComponents/headingStyle";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
+import { v4 as uuidv4 } from "uuid";
 
-function SelectServices({ type, index }) {
+function SelectServices({ type, id = uuidv4() }) {
+  const { updateList } = useContext(SummaryContext);
+
   const [onClick, setOnClick] = React.useState({});
-  const handleClick = (index) => () => {
+  const handleToggle = (id) => () => {
     setOnClick((state) => ({
       ...state,
-      [index]: !state[index],
+      [id]: !state[id],
     }));
   };
+  const handleClick = (services) => {
+    updateList({ services });
+  };
+  // const handleChange = () => {
+  //   updateList();
+  // };
 
   return (
     <ContentContainer>
@@ -49,7 +59,8 @@ function SelectServices({ type, index }) {
             </Back>
           </HeadingStyle>
           <ServiceContainer>
-            {serviceData.map((items, index) => {
+            {serviceData.map((items, id = uuidv4()) => {
+              console.log(id);
               return (
                 <Services key={items.id}>
                   <ServiceType>
@@ -57,46 +68,45 @@ function SelectServices({ type, index }) {
                       <h3>{items.title}</h3>
                       <p>{items.text}</p>
                     </div>
-                    <span onClick={handleClick(index)}>
-                      {onClick[index] ? <FaAngleRight /> : <FaAngleDown />}
+                    <span onClick={handleToggle(id)}>
+                      {onClick[id] ? <FaAngleRight /> : <FaAngleDown />}
                     </span>
                   </ServiceType>
-                  {onClick[index] && (
+                  {onClick[id] && (
                     <FormContainer>
                       <InputContainer>
                         <CheckBox
-                          value={items.value1}
-                          name={items.name}
+                          onChange={handleClick}
+                          value={items}
                           label={
                             <div>
-                              <h5>{items.labelA}</h5>
-                              <p>{items.labelB}</p>
+                              <h5>{items.options[0].labelA}</h5>
+                              <p>{items.options[0].labelB}</p>
                             </div>
                           }
                         />
                       </InputContainer>
-
                       <InputContainer>
                         <CheckBox
-                          value={items.value2}
-                          name={items.name}
+                          onChange={handleClick}
+                          value={items}
+                          name="services"
                           label={
                             <div>
-                              <h5>{items.labelA}</h5>
-                              <p>{items.labelB}</p>
+                              <h5>{items.options[1].labelA}</h5>
+                              <p>{items.options[1].labelB}</p>
                             </div>
                           }
                         />
                       </InputContainer>
-
                       <InputContainer>
                         <CheckBox
-                          value={items.value3}
-                          name={items.name}
+                          onChange={handleClick}
+                          value={items}
                           label={
                             <div>
-                              <h5>{items.labelA}</h5>
-                              <p>{items.labelB}</p>
+                              <h5>{items.options[2].labelA}</h5>
+                              <p>{items.options[2].labelB}</p>
                             </div>
                           }
                         />
