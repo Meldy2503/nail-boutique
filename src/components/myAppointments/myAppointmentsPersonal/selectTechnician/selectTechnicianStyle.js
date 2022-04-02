@@ -247,3 +247,46 @@ export const Select = styled.button`
     background-repeat: no-repeat;
   }
 `;
+
+export const TechnicianPicked = styled.div`
+  border: 1px solid #555555;
+  filter: drop-shadow(0px 7px 39px rgba(0, 0, 0, 0.08));
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+
+  img {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .icon {
+    color: #e48f04;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+
+    h6 {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.1rem;
+      font-style: italic;
+      opacity: 0.8;
+    }
+  }
+`;

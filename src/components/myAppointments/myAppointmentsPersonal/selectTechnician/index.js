@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import {
   ContentContainer,
   RightContent,
@@ -16,6 +17,7 @@ import {
   Technician,
   Select,
   Top,
+  TechnicianPicked,
 } from "./selectTechnicianStyle";
 import {
   HeadingStyle,
@@ -32,8 +34,12 @@ import {
 } from "../../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
 import Sidebar from "../../../sidebar";
+import avatar from "../../../../images/avatar1.png";
+import { IoIosCheckmarkCircle } from "react-icons/io";
 
 function SelectTechnician() {
+  const { summaryList, display, updateList } = useContext(SummaryContext);
+
   return (
     <ContentContainer>
       <Sidebar />
@@ -89,7 +95,7 @@ function SelectTechnician() {
                         <p>{item.rating} ratings</p>
                       </span>
                     </div>
-                    <Select>SELECT</Select>
+                    <Select onClick={updateList}>SELECT</Select>
                   </Technician>
                 </Card>
               ))}
@@ -103,6 +109,19 @@ function SelectTechnician() {
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />
+          {/* {summaryList.map((summary, index) => { */}
+
+          {summaryList && display && (
+            <TechnicianPicked>
+              <IoIosCheckmarkCircle className="icon" />
+              <img src={avatar} alt="avatar" />
+              <span>
+                <h6> Ademide Ruth </h6>
+                <p> Hair Stylist - 26Yrs</p>
+              </span>
+            </TechnicianPicked>
+          )}
+          {/* })} */}
         </RightContentCol2>
       </RightContent>
     </ContentContainer>

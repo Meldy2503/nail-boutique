@@ -27,7 +27,7 @@ import {
 } from "../../../../reuseableComponents/headingStyle";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
 
-function SelectServices() {
+function SelectServices({ type, index }) {
   const [onClick, setOnClick] = React.useState({});
   const handleClick = (index) => () => {
     setOnClick((state) => ({
@@ -61,31 +61,45 @@ function SelectServices() {
                       {onClick[index] ? <FaAngleRight /> : <FaAngleDown />}
                     </span>
                   </ServiceType>
-
                   {onClick[index] && (
                     <FormContainer>
                       <InputContainer>
-                        <CheckBox value={items.value1} name={items.name} />
-                        <label htmlFor={items.value1}>
-                          <h5>{items.labelA}</h5>
-                          <p>{items.labelB}</p>
-                        </label>
+                        <CheckBox
+                          value={items.value1}
+                          name={items.name}
+                          label={
+                            <div>
+                              <h5>{items.labelA}</h5>
+                              <p>{items.labelB}</p>
+                            </div>
+                          }
+                        />
                       </InputContainer>
 
                       <InputContainer>
-                        <CheckBox value={items.value2} name={items.name} />
-                        <label htmlFor={items.value2}>
-                          <h5>{items.labelA}</h5>
-                          <p>{items.labelB}</p>
-                        </label>
+                        <CheckBox
+                          value={items.value2}
+                          name={items.name}
+                          label={
+                            <div>
+                              <h5>{items.labelA}</h5>
+                              <p>{items.labelB}</p>
+                            </div>
+                          }
+                        />
                       </InputContainer>
 
                       <InputContainer>
-                        <CheckBox value={items.value3} name={items.name} />
-                        <label htmlFor={items.value3}>
-                          <h5>{items.labelA}</h5>
-                          <p>{items.labelB}</p>
-                        </label>
+                        <CheckBox
+                          value={items.value3}
+                          name={items.name}
+                          label={
+                            <div>
+                              <h5>{items.labelA}</h5>
+                              <p>{items.labelB}</p>
+                            </div>
+                          }
+                        />
                       </InputContainer>
                     </FormContainer>
                   )}

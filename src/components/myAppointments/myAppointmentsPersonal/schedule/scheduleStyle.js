@@ -78,3 +78,30 @@ export const SelectAvailableTime = styled.span`
 export const Waitlist = styled(Link)`
   color: ${({ theme }) => theme.colors.tertiary2};
 `;
+
+export const Day = styled.div`
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  padding-bottom: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: right;
+
+  .icon {
+    font-size: 2.2rem;
+    color: #878787;
+    margin-right: 1.2rem;
+  }
+
+  h6 {
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
+  }
+
+  p {
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+  }
+`;
