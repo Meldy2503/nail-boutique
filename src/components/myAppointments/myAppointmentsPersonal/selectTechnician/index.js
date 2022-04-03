@@ -17,7 +17,6 @@ import {
   Technician,
   Select,
   Top,
-  TechnicianPicked,
 } from "./selectTechnicianStyle";
 import {
   HeadingStyle,
@@ -34,11 +33,12 @@ import {
 } from "../../../../reuseableComponents/buttonStyle";
 import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
 import Sidebar from "../../../sidebar";
-import avatar from "../../../../images/avatar1.png";
-import { IoIosCheckmarkCircle } from "react-icons/io";
 
 function SelectTechnician() {
-  const { summaryList, display, updateList } = useContext(SummaryContext);
+  const { updateList } = useContext(SummaryContext);
+  const handleClick = (technician) => {
+    updateList({ technician });
+  };
 
   return (
     <ContentContainer>
@@ -95,7 +95,7 @@ function SelectTechnician() {
                         <p>{item.rating} ratings</p>
                       </span>
                     </div>
-                    <Select onClick={updateList}>SELECT</Select>
+                    <Select onClick={handleClick}>SELECT</Select>
                   </Technician>
                 </Card>
               ))}
@@ -111,7 +111,7 @@ function SelectTechnician() {
           <BookingSummary />
           {/* {summaryList.map((summary, index) => { */}
 
-          {summaryList && display && (
+          {/* {summaryList && display && (
             <TechnicianPicked>
               <IoIosCheckmarkCircle className="icon" />
               <img src={avatar} alt="avatar" />
@@ -120,7 +120,7 @@ function SelectTechnician() {
                 <p> Hair Stylist - 26Yrs</p>
               </span>
             </TechnicianPicked>
-          )}
+          )} */}
           {/* })} */}
         </RightContentCol2>
       </RightContent>

@@ -3,17 +3,11 @@ import { Link } from "react-router-dom";
 
 export const SummaryContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-direction: column;
-  height: 80%;
   margin: 0 auto;
   width: 100%;
-`;
-
-export const Intro = styled.div`
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 1.8rem;
+  height: 100%;
 `;
 
 export const Title = styled.div`
@@ -38,6 +32,11 @@ export const Title = styled.div`
   }
 `;
 
+export const LocationContainer = styled.div`
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1.8rem;
+`;
 export const Location = styled.div`
   background: #212121;
   border: 1px solid #3c3c3c;
@@ -126,10 +125,10 @@ export const SubTotal = styled.div`
 
 export const Booking = styled.div`
   width: 100%;
-  border-top: 1px solid ${({ theme }) => theme.colors.primary5};
 `;
 
 export const Technician = styled.div`
+  border-top: 1px solid ${({ theme }) => theme.colors.primary5};
   margin: 0 auto;
   width: 90%;
   padding: 1rem 0;
@@ -198,15 +197,15 @@ export const Day = styled.div`
 `;
 
 export const Total = styled.div`
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0 0;
   width: 100%;
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  bottom: 0;
-  background-color: ${({ theme }) => theme.colors.primary4};
+  /* background-color: ${({ theme }) => theme.colors.primary4}; */
   flex-direction: column;
+  position: sticky;
+  top: 100%;
 
   @media screen and (max-width: 1200px) {
     align-items: flex-start;

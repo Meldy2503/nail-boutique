@@ -86,7 +86,7 @@ function Booking() {
             </h6>
           </Day>
         </Booking>
-      </div>{" "}
+      </div>
       <Total>
         <div>
           <h6>BOOKING TOTAL:</h6>
@@ -360,4 +360,3 @@ export const Button = styled(Link)`
     background: linear-gradient(180deg, #f5d061 -1%, #e48f04 100%);
   }
 `;
-
