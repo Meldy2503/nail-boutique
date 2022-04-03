@@ -18,7 +18,7 @@ import {
 import { VscLocation } from "react-icons/vsc";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import avatar from "../../../../images/avatar1.png";
+// import avatar from "../../../../images/avatar1.png";
 
 function BookingSummary() {
   const { summaryList } = useContext(SummaryContext);
@@ -71,10 +71,11 @@ function BookingSummary() {
             <p> Technician Selected</p>
             <div>
               <IoIosCheckmarkCircle className="icon" />
-              <img src={avatar} alt="avatar" />
+              <img src={summaryList.technician.avatar} alt="avatar" />
 
               <span className="name">
-                <h6> {summaryList.technician.name} </h6>
+                <h6> Ruth Olamide </h6>
+                <p>Hair stylist - 26 yrs</p>
                 {/* <p>{`${summaryList.technician.role} - ${summaryList.technician.age}Yrs`}</p> */}
               </span>
             </div>
