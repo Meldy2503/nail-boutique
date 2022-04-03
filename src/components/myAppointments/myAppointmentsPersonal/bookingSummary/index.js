@@ -74,8 +74,8 @@ function BookingSummary() {
               <img src={avatar} alt="avatar" />
 
               <span className="name">
-                <h6> Ademide Ruth </h6>
-                <p> Hair Stylist - 26Yrs</p>
+                <h6> {summaryList.technician.name} </h6>
+                {/* <p>{`${summaryList.technician.role} - ${summaryList.technician.age}Yrs`}</p> */}
               </span>
             </div>
           </Technician>
