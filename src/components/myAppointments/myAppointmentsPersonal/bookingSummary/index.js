@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
 import { SummaryContext } from "../../../../summaryContext";
-import { SummaryContainer, Title } from "./bookingSummaryStyle";
 import {
-  // SummaryContainer,
-  Intro,
-  // Title,
-  Service,
+  SummaryContainer,
+  Title,
+  LocationContainer,
   Location,
+  Service,
   Manicure,
   Booking,
   SubTotal,
@@ -31,7 +30,7 @@ function BookingSummary() {
         <p>Lorem Ipsum has been the industry's iudst standard dummy.</p>
       </Title>
       {summaryList.location && (
-        <Intro>
+        <LocationContainer>
           <Location>
             <div>
               <span>
@@ -44,7 +43,7 @@ function BookingSummary() {
               </p>
             </div>
           </Location>
-        </Intro>
+        </LocationContainer>
       )}
       {summaryList.services.length && (
         <Service>
@@ -52,10 +51,6 @@ function BookingSummary() {
             <div>
               <h6>BASIC MANICURE:</h6>
               <p> N5,000.00</p>
-            </div>
-            <div>
-              <h6>HAIR RELAXING:</h6>
-              <p> N8,000.00</p>
             </div>
           </Manicure>
           <SubTotal>
@@ -70,8 +65,8 @@ function BookingSummary() {
           </SubTotal>
         </Service>
       )}
-      {summaryList.technician && (
-        <Booking>
+      <Booking>
+        {summaryList.technician && (
           <Technician>
             <p> Technician Selected</p>
             <div>
@@ -84,17 +79,24 @@ function BookingSummary() {
               </span>
             </div>
           </Technician>
-          {summaryList.schedule && (
-            <Day>
-              <AiOutlineClockCircle className="icon" />
+        )}
+        {summaryList.schedule && (
+          <Day>
+            <AiOutlineClockCircle className="icon" />
 
-              <h6>
-                Thu, 6th Feb., 2022 - 09:00AM - <em>In 21 days</em>
-              </h6>
-            </Day>
-          )}
-        </Booking>
-      )}
+            <h6>
+              Thu, 6th Feb., 2022 - 09:00AM - <em>In 21 days</em>
+            </h6>
+          </Day>
+        )}
+      </Booking>
+      <Total>
+        <div>
+          <h6>BOOKING TOTAL:</h6>
+          <p> N5,750.00</p>
+        </div>
+        {/* <Button to="/confirm">CONFIRM</Button> */}
+      </Total>
     </SummaryContainer>
   );
 }
