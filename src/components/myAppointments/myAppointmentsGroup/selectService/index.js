@@ -51,7 +51,7 @@ function SelectServices() {
           <ServiceContainer>
             {serviceData.map((items, index) => {
               return (
-                <Services key={items.id}>
+                <Services key={index}>
                   <ServiceType>
                     <div>
                       <h3>{items.title}</h3>

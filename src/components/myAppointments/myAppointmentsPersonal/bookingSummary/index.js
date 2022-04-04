@@ -12,24 +12,18 @@ import {
   Technician,
   Day,
   Total,
-  Button,
+  // Button,
 } from "./bookingSummaryStyle";
 
 import { VscLocation } from "react-icons/vsc";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import avatar from "../../../../images/avatar1.png";
-import { ThemeConsumer } from "styled-components";
+// import { ThemeConsumer } from "styled-components";
 
 function BookingSummary() {
   const { summaryList } = useContext(SummaryContext);
   console.log({ summaryList });
-
-  //   const pickTechnician = (id) => {
-
-  //   }
-
-  //  {technicianData.map((item) => {}})
 
   return (
     <SummaryContainer>
@@ -57,8 +51,11 @@ function BookingSummary() {
         <Service>
           <Manicure>
             <div>
-              <h6>BASIC MANICURE:</h6>
-              <p> N5,000.00</p>
+              {/* {summaryList.filter()} */}
+              {/* <h6>Manicure:</h6>
+              <p> N5,000.00</p> */}
+              <h6>{summaryList.services[2].product}</h6>
+              <p> {`₦${summaryList.services[2].price}`}</p>
             </div>
           </Manicure>
           <SubTotal>

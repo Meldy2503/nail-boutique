@@ -19,7 +19,7 @@ export const SummaryProvider = (props) => {
     console.log(newDate);
   };
 
-  const value = { summaryList, updateList, date, onDateChange };
+  const value = { summaryList, setSummaryList, updateList, date, onDateChange };
 
   return (
     <SummaryContext.Provider value={value}>

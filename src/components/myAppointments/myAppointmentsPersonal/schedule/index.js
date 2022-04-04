@@ -18,7 +18,7 @@ import {
   ScheduleContainer,
   SelectAvailableTime,
   Time,
-  Day,
+  // Day,
   Dots,
   Waitlist,
 } from "./scheduleStyle";

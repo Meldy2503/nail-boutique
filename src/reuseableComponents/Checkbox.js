@@ -34,7 +34,8 @@ function CheckBox({ label, name, value, checkbox, onChange }) {
         checked={false}
         onChange={() => {
           onChange(value);
-          console.log(value);
+          // onChange(value);
+          // console.log(value);
         }}
         borderColor="#696969"
         borderWidth={1}

@@ -60,7 +60,7 @@ function SelectServices({ type, id = uuidv4() }) {
           </HeadingStyle>
           <ServiceContainer>
             {serviceData.map((items, id = uuidv4()) => {
-              console.log(id);
+              // console.log(id);
               return (
                 <Services key={id}>
                   <ServiceType>
@@ -77,11 +77,11 @@ function SelectServices({ type, id = uuidv4() }) {
                       <InputContainer>
                         <CheckBox
                           onChange={handleClick}
-                          value={items}
+                          value={items.options}
                           label={
                             <div>
-                              <h5>{items.options[0].labelA}</h5>
-                              <p>{items.options[0].labelB}</p>
+                              <h5>{items.options[0].product}</h5>
+                              <p>{`${items.options[0].time} mins - ₦${items.options[0].price}`}</p>
                             </div>
                           }
                         />
@@ -89,12 +89,12 @@ function SelectServices({ type, id = uuidv4() }) {
                       <InputContainer>
                         <CheckBox
                           onChange={handleClick}
-                          value={items}
+                          value={items.options}
                           name="services"
                           label={
                             <div>
-                              <h5>{items.options[1].labelA}</h5>
-                              <p>{items.options[1].labelB}</p>
+                              <h5>{items.options[1].product}</h5>
+                              <p>{`${items.options[1].time} mins - ₦${items.options[1].price}`}</p>
                             </div>
                           }
                         />
@@ -102,11 +102,11 @@ function SelectServices({ type, id = uuidv4() }) {
                       <InputContainer>
                         <CheckBox
                           onChange={handleClick}
-                          value={items}
+                          value={items.options}
                           label={
                             <div>
-                              <h5>{items.options[2].labelA}</h5>
-                              <p>{items.options[2].labelB}</p>
+                              <h5>{items.options[2].product}</h5>
+                              <p>{`${items.options[2].time} mins - ₦${items.options[2].price}`}</p>
                             </div>
                           }
                         />
