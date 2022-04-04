@@ -109,19 +109,6 @@ function SelectTechnician() {
         </RightContentCol1>
         <RightContentCol2>
           <BookingSummary />
-          {/* {summaryList.map((summary, index) => { */}
-
-          {/* {summaryList && display && (
-            <TechnicianPicked>
-              <IoIosCheckmarkCircle className="icon" />
-              <img src={avatar} alt="avatar" />
-              <span>
-                <h6> Ademide Ruth </h6>
-                <p> Hair Stylist - 26Yrs</p>
-              </span>
-            </TechnicianPicked>
-          )} */}
-          {/* })} */}
         </RightContentCol2>
       </RightContent>
     </ContentContainer>

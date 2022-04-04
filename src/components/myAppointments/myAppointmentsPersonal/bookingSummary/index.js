@@ -18,11 +18,19 @@ import {
 import { VscLocation } from "react-icons/vsc";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { AiOutlineClockCircle } from "react-icons/ai";
-// import avatar from "../../../../images/avatar1.png";
+import avatar from "../../../../images/avatar1.png";
+import { ThemeConsumer } from "styled-components";
 
 function BookingSummary() {
   const { summaryList } = useContext(SummaryContext);
   console.log({ summaryList });
+
+  //   const pickTechnician = (id) => {
+
+  //   }
+
+  //  {technicianData.map((item) => {}})
+
   return (
     <SummaryContainer>
       <Title>
@@ -71,12 +79,11 @@ function BookingSummary() {
             <p> Technician Selected</p>
             <div>
               <IoIosCheckmarkCircle className="icon" />
-              <img src={summaryList.technician.avatar} alt="avatar" />
+              <img src={avatar} alt="avatar" />
 
               <span className="name">
-                <h6> Ruth Olamide </h6>
+                <h6>cynthia</h6>
                 <p>Hair stylist - 26 yrs</p>
-                {/* <p>{`${summaryList.technician.role} - ${summaryList.technician.age}Yrs`}</p> */}
               </span>
             </div>
           </Technician>
@@ -86,8 +93,17 @@ function BookingSummary() {
             <AiOutlineClockCircle className="icon" />
 
             <h6>
-              Thu, 6th Feb., 2022 - 09:00AM - <em>In 21 days</em>
+              {"Thur, 15th March, 2022" +
+                " " +
+                "- 09:00AM -" +
+                " " +
+                "In 21 days"}
             </h6>
+
+            {/* {console.log(date.toDateString())} */}
+            {/* <h6>
+              thur, 14th 2022 - 09:00AM - <em>In 21 days</em>
+            </h6> */}
           </Day>
         )}
       </Booking>

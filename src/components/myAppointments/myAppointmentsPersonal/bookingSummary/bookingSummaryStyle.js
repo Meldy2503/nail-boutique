@@ -125,13 +125,14 @@ export const SubTotal = styled.div`
 
 export const Booking = styled.div`
   width: 100%;
+  border-top: 1px solid ${({ theme }) => theme.colors.primary5};
 `;
 
 export const Technician = styled.div`
-  border-top: 1px solid ${({ theme }) => theme.colors.primary5};
   margin: 0 auto;
-  width: 90%;
   padding: 1rem 0;
+  font-size: 1.2rem;
+  width: 90%;
 
   div {
     border: 1px solid #555555;
@@ -182,7 +183,7 @@ export const Day = styled.div`
   padding-bottom: 1rem;
 
   .icon {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     color: #878787;
   }
 

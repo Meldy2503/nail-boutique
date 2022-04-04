@@ -62,7 +62,7 @@ function SelectServices({ type, id = uuidv4() }) {
             {serviceData.map((items, id = uuidv4()) => {
               console.log(id);
               return (
-                <Services key={items.id}>
+                <Services key={id}>
                   <ServiceType>
                     <div>
                       <h3>{items.title}</h3>
