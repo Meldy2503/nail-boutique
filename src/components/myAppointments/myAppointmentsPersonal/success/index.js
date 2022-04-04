@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
+
 import { ButtonS } from "../../../../reuseableComponents/buttonStyle";
 import { ContentContainer } from "../../../../reuseableComponents/containerStyle";
 import { Popup, SuccessContainer } from "./successStyle";
 import tick from "../../../../images/tick2.png";
 
 function Success() {
+  const { setSummaryList, updateList, onDateChange } =
+    useContext(SummaryContext);
+  const handleClick = () => {
+    updateList(setSummaryList(() => {}));
+    onDateChange({});
+  };
+
   return (
     <ContentContainer>
       <SuccessContainer>
@@ -17,7 +26,12 @@ function Success() {
               the 1500s, when an unknown printer took a galley of type and
               scrambled
             </p>
-            <ButtonS fs="1.3rem" width="65%" to="/my-appointments">
+            <ButtonS
+              onClick={handleClick}
+              fs="1.3rem"
+              width="65%"
+              to="/my-appointments"
+            >
               GO BACK HOME
             </ButtonS>
           </div>

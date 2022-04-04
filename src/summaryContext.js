@@ -9,12 +9,17 @@ export const SummaryProvider = (props) => {
     technician: null,
     schedule: null,
   });
-
   const updateList = (newList) => {
     setSummaryList((prevList) => ({ ...prevList, ...newList }));
   };
 
-  const value = { summaryList, updateList };
+  const [date, setDate] = React.useState(new Date());
+  const onDateChange = (newDate) => {
+    setDate(newDate);
+    console.log(newDate);
+  };
+
+  const value = { summaryList, updateList, date, onDateChange };
 
   return (
     <SummaryContext.Provider value={value}>

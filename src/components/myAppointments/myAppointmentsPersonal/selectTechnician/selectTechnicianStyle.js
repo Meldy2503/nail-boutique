@@ -225,7 +225,6 @@ export const Technician = styled.div`
 export const Select = styled.button`
   background-color: transparent;
   color: inherit;
-
   border: 1px solid ${({ theme }) => theme.colors.secondary2};
   padding: 0.4rem 1.2rem;
   display: inline-block;
