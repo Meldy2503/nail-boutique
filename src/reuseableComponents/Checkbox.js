@@ -32,11 +32,7 @@ function CheckBox({ label, name, value, checkbox, onChange }) {
         className={checkbox}
         value={value}
         checked={false}
-        onChange={() => {
-          onChange(value);
-          // onChange(value);
-          // console.log(value);
-        }}
+        onChange={onChange}
         borderColor="#696969"
         borderWidth={1}
         style={{ cursor: "pointer" }}

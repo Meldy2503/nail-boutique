@@ -46,7 +46,11 @@ function SelectLocation() {
                 <h4>{data.heading}</h4>
                 <p>{data.address}</p>
               </LocationText>
-              <CheckBox onChange={handleClick} value={data} name="location" />
+              <CheckBox
+                onChange={() => handleClick(data)}
+                value={data}
+                name="location"
+              />
             </Content>
           ))}
           <ButtonContainer>

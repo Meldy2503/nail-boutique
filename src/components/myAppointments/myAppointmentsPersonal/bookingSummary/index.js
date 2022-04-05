@@ -49,15 +49,16 @@ function BookingSummary() {
       )}
       {summaryList.services.length && (
         <Service>
-          <Manicure>
-            <div>
-              {/* {summaryList.filter()} */}
-              {/* <h6>Manicure:</h6>
-              <p> N5,000.00</p> */}
-              <h6>{summaryList.services[2].product}</h6>
-              <p> {`₦${summaryList.services[2].price}`}</p>
-            </div>
-          </Manicure>
+          {summaryList.services.map((s) => {
+            return (
+              <Manicure>
+                <div>
+                  <h6>{s.product}</h6>
+                  <p> {`₦${s.price}`}</p>
+                </div>
+              </Manicure>
+            );
+          })}
           <SubTotal>
             <div>
               <h6>SUB TOTAL:</h6>

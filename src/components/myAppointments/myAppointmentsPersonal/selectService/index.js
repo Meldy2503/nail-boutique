@@ -30,7 +30,8 @@ import CheckBox from "../../../../reuseableComponents/Checkbox";
 import { v4 as uuidv4 } from "uuid";
 
 function SelectServices({ type, id = uuidv4() }) {
-  const { updateList } = useContext(SummaryContext);
+  const { updateList, removeList, addServiceToList } =
+    useContext(SummaryContext);
 
   const [onClick, setOnClick] = React.useState({});
   const handleToggle = (id) => () => {
@@ -39,8 +40,15 @@ function SelectServices({ type, id = uuidv4() }) {
       [id]: !state[id],
     }));
   };
-  const handleClick = (services) => {
-    updateList({ services });
+  const handleClick = (checkboxState, service) => {
+    console.log({ service });
+    if (checkboxState) {
+      addServiceToList(service);
+    } else {
+      removeList(service);
+    }
+    // updateList({ services });
+    console.log({ checkboxState });
   };
   // const handleChange = () => {
   //   updateList();
@@ -76,7 +84,9 @@ function SelectServices({ type, id = uuidv4() }) {
                     <FormContainer>
                       <InputContainer>
                         <CheckBox
-                          onChange={handleClick}
+                          onChange={(checkboxState) =>
+                            handleClick(checkboxState, items.options[0])
+                          }
                           value={items.options}
                           label={
                             <div>
@@ -88,7 +98,9 @@ function SelectServices({ type, id = uuidv4() }) {
                       </InputContainer>
                       <InputContainer>
                         <CheckBox
-                          onChange={handleClick}
+                          onChange={(checkboxState) =>
+                            handleClick(checkboxState, items.options[1])
+                          }
                           value={items.options}
                           name="services"
                           label={
@@ -101,7 +113,9 @@ function SelectServices({ type, id = uuidv4() }) {
                       </InputContainer>
                       <InputContainer>
                         <CheckBox
-                          onChange={handleClick}
+                          onChange={(checkboxState) =>
+                            handleClick(checkboxState, items.options[2])
+                          }
                           value={items.options}
                           label={
                             <div>
