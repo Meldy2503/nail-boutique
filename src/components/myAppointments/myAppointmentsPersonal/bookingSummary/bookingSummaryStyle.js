@@ -131,13 +131,14 @@ export const BookTechnician = styled.div`
 export const Technician = styled.div`
   margin: 0 auto;
   padding: 1rem 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   width: 90%;
 
   div {
     border: 1px solid #555555;
     filter: drop-shadow(0px 7px 39px rgba(0, 0, 0, 0.08));
     border-radius: 0.5rem;
+    text-align: center;
     margin: 1rem 0;
     display: flex;
     justify-content: space-between;
@@ -146,6 +147,7 @@ export const Technician = styled.div`
     span {
       display: flex;
       flex-direction: column;
+      justify-content: center;
 
       h6 {
         font-size: 1.4rem;

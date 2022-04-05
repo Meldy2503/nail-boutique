@@ -18,7 +18,6 @@ import {
 import { VscLocation } from "react-icons/vsc";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import avatar from "../../../../images/avatar1.png";
 
 function BookingSummary() {
   const { summaryList } = useContext(SummaryContext);
