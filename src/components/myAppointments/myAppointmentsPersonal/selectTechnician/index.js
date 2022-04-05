@@ -31,6 +31,7 @@ import {
   Button,
   ButtonContainer,
 } from "../../../../reuseableComponents/buttonStyle";
+import tick from "../../../../images/tick.png";
 import BookingSummary from "../../myAppointmentsPersonal/bookingSummary/index";
 import Sidebar from "../../../sidebar";
 
@@ -78,7 +79,7 @@ function SelectTechnician() {
               {technicianData.map((item) => (
                 <Card key={item.id}>
                   <div className="top">
-                    <img src={item.tick} alt="tick" />
+                    <img src={tick} alt="tick" />
                     <HiDotsHorizontal className="dots" />
                   </div>
                   <Technician>
@@ -95,7 +96,7 @@ function SelectTechnician() {
                         <p>{item.rating} ratings</p>
                       </span>
                     </div>
-                    <Select onClick={handleClick}>SELECT</Select>
+                    <Select onClick={() => handleClick(item)}>SELECT</Select>
                   </Technician>
                 </Card>
               ))}

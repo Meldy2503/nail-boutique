@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export const SummaryContainer = styled.div`
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
@@ -17,7 +16,7 @@ export const Title = styled.div`
   background-color: ${({ theme }) => theme.colors.primary4};
 
   h2 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-weight: 900;
 
     @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
@@ -78,6 +77,7 @@ export const Manicure = styled.div`
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
+    text-transform: uppercase;
 
     h6 {
       font-size: 1.6rem;
@@ -123,7 +123,7 @@ export const SubTotal = styled.div`
   }
 `;
 
-export const Booking = styled.div`
+export const BookTechnician = styled.div`
   width: 100%;
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
 `;

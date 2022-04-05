@@ -29,8 +29,8 @@ import {
 import CheckBox from "../../../../reuseableComponents/Checkbox";
 import { v4 as uuidv4 } from "uuid";
 
-function SelectServices({ type, id = uuidv4() }) {
-  const { updateList, removeList, addServiceToList } =
+function SelectServices() {
+  const { removeServiceFromList, addServiceToList } =
     useContext(SummaryContext);
 
   const [onClick, setOnClick] = React.useState({});
@@ -40,19 +40,16 @@ function SelectServices({ type, id = uuidv4() }) {
       [id]: !state[id],
     }));
   };
+
   const handleClick = (checkboxState, service) => {
     console.log({ service });
     if (checkboxState) {
       addServiceToList(service);
     } else {
-      removeList(service);
+      removeServiceFromList(service);
     }
-    // updateList({ services });
     console.log({ checkboxState });
   };
-  // const handleChange = () => {
-  //   updateList();
-  // };
 
   return (
     <ContentContainer>
@@ -68,7 +65,6 @@ function SelectServices({ type, id = uuidv4() }) {
           </HeadingStyle>
           <ServiceContainer>
             {serviceData.map((items, id = uuidv4()) => {
-              // console.log(id);
               return (
                 <Services key={id}>
                   <ServiceType>
