@@ -99,7 +99,7 @@ export const RightContentCol2 = styled.div`
   margin: 3rem 1.5rem 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.primary4};
   width: 40%;
-  height: 85%;
+  height: 90%;
   overflow: auto;
   scrollbar-width: thin;
   scroll-padding-right: 5rem;

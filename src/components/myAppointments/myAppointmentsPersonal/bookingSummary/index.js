@@ -12,17 +12,15 @@ import {
   Technician,
   Day,
   Total,
-  // Button,
+  Button,
 } from "./bookingSummaryStyle";
 
 import { VscLocation } from "react-icons/vsc";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import avatar from "../../../../images/avatar1.png";
-// import { ThemeConsumer } from "styled-components";
 
 function BookingSummary() {
-  const { summaryList } = useContext(SummaryContext);
+  const { summaryList, date } = useContext(SummaryContext);
   console.log({ summaryList });
 
   return (
@@ -47,14 +45,14 @@ function BookingSummary() {
           </Location>
         </LocationContainer>
       )}
-      {summaryList.services.length && (
+      {summaryList.services && (
         <Service>
           {summaryList.services.map((s) => {
             return (
-              <Manicure>
+              <Manicure key={s.id}>
                 <div>
-                  <h6>{s.product}</h6>
-                  <p> {`₦${s.price}`}</p>
+                  <h6>{s.product}:</h6>
+                  <p> ₦{s.price}</p>
                 </div>
               </Manicure>
             );
@@ -62,11 +60,11 @@ function BookingSummary() {
           <SubTotal>
             <div>
               <h6>SUB TOTAL:</h6>
-              <p> N5,000.00</p>
+              <p> ₦0,000.00</p>
             </div>
             <div>
               <h6>VAT</h6>
-              <p>N750.00</p>
+              <p>₦750.00</p>
             </div>
           </SubTotal>
         </Service>
@@ -77,40 +75,41 @@ function BookingSummary() {
             <p> Technician Selected</p>
             <div>
               <IoIosCheckmarkCircle className="icon" />
-              <img src={avatar} alt="avatar" />
+              <img src={summaryList.technician.avatar} alt="avatar" />
 
               <span className="name">
-                <h6>cynthia</h6>
-                <p>Hair stylist - 26 yrs</p>
+                <h6>{summaryList.technician.name}</h6>
+                <p>
+                  {summaryList.technician.role +
+                    " - " +
+                    summaryList.technician.age}
+                  yrs
+                </p>
               </span>
             </div>
           </Technician>
         )}
         {summaryList.schedule && (
           <Day>
-            <AiOutlineClockCircle className="icon" />
-
-            <h6>
-              {"Thur, 15th March, 2022" +
-                " " +
-                "- 09:00AM -" +
-                " " +
-                "In 21 days"}
-            </h6>
-
-            {/* {console.log(date.toDateString())} */}
+            <div>
+              <AiOutlineClockCircle className="icon" />
+              <h6>
+                {date.toDateString()} &nbsp; - &nbsp;{summaryList.schedule.time}
+              </h6>
+            </div>
             {/* <h6>
               thur, 14th 2022 - 09:00AM - <em>In 21 days</em>
             </h6> */}
+
+            <Button to="/confirm">CONTINUE</Button>
           </Day>
         )}
       </Booking>
       <Total>
         <div>
           <h6>BOOKING TOTAL:</h6>
-          <p> N5,750.00</p>
+          <p> ₦0,750.00</p>
         </div>
-        {/* <Button to="/confirm">CONFIRM</Button> */}
       </Total>
     </SummaryContainer>
   );

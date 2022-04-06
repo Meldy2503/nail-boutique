@@ -11,7 +11,6 @@ import { SummaryProvider } from "./summaryContext";
 // my appointments personal
 import SelectLocationPersonal from "./components/myAppointments/myAppointmentsPersonal/selectLocation/index";
 import SelectServicePersonal from "./components/myAppointments/myAppointmentsPersonal/selectService/index";
-import SelectServiceTwoPersonal from "./components/myAppointments/myAppointmentsPersonal/selectServiceTwo/index";
 import SelectTechnicianPersonal from "./components/myAppointments/myAppointmentsPersonal/selectTechnician/index";
 import SchedulePersonal from "./components/myAppointments/myAppointmentsPersonal/schedule/index";
 import ConfirmBookingPersonal from "./components/myAppointments/myAppointmentsPersonal/confirmBooking/index";
@@ -92,10 +91,6 @@ function App() {
                   <Route
                     path="confirm-booking"
                     element={<ConfirmBookingPersonal />}
-                  />
-                  <Route
-                    path="select-servicestwo"
-                    element={<SelectServiceTwoPersonal />}
                   />
                   <Route
                     path="select-technician"

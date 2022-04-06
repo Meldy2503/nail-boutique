@@ -18,7 +18,6 @@ import {
   ScheduleContainer,
   SelectAvailableTime,
   Time,
-  // Day,
   Dots,
   Waitlist,
 } from "./scheduleStyle";
@@ -31,13 +30,15 @@ import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
 import timeData from "./scheduleData";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
-// import { AiOutlineClockCircle } from "react-icons/ai";
 
 function Schedule() {
   const { updateList, date, onDateChange } = useContext(SummaryContext);
   const handleClick = (schedule) => {
     updateList({ schedule });
-    onDateChange();
+    onDateChange(schedule);
+  };
+  const handleCheckbox = (schedule) => {
+    updateList({ schedule });
   };
 
   return (
@@ -78,7 +79,12 @@ function Schedule() {
                   {timeData.map((time) => {
                     return (
                       <Option key={time.id}>
-                        <CheckBox label={time.time} name={time.name} />
+                        <CheckBox
+                          onChange={() => handleCheckbox(time)}
+                          value={time.time}
+                          label={time.time}
+                          name="time"
+                        />
                       </Option>
                     );
                   })}
@@ -94,15 +100,6 @@ function Schedule() {
           </RightContentCol1>
           <RightContentCol2>
             <BookingSummary />
-            {/* {date.toDateString()} */}
-            {/* {summaryList && display && (
-              <Day>
-                <AiOutlineClockCircle className="icon" />
-                <h6>{date.toDateString()} &nbsp;- </h6>
-                <h6>&nbsp;09:00AM &nbsp;-&nbsp;</h6>
-                <p>In 21 days</p>
-              </Day>
-            )} */}
           </RightContentCol2>
         </RightContent>
       </ContentContainer>

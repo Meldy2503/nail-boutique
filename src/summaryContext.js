@@ -13,13 +13,16 @@ export const SummaryProvider = (props) => {
     setSummaryList((prevList) => ({ ...prevList, ...newList }));
   };
 
-  const removeList = (service) => {
-    const rem = summaryList.services.filter((item) => item.id !== service.id);
-    updateList({ services: rem });
+  const removeServiceFromList = (service) => {
+    const newServiceList = summaryList.services.filter(
+      (item) => item.id !== service.id
+    );
+    updateList({ services: newServiceList });
   };
+
   const addServiceToList = (service) => {
-    const rem = summaryList.services.concat(service);
-    updateList({ services: rem });
+    const newServiceList = summaryList.services.concat(service);
+    updateList({ services: newServiceList });
   };
 
   const [date, setDate] = React.useState(new Date());
@@ -34,7 +37,7 @@ export const SummaryProvider = (props) => {
     updateList,
     date,
     onDateChange,
-    removeList,
+    removeServiceFromList,
     addServiceToList,
   };
 
