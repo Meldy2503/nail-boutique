@@ -10,7 +10,9 @@ export const SummaryContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  padding: 1.5rem 5% 1rem 5%;
+  padding: 1.5rem 0 1rem 0rem;
+  width: 95%;
+  margin: 0 auto;
   position: sticky;
   top: 0;
   background-color: ${({ theme }) => theme.colors.primary4};
@@ -32,7 +34,7 @@ export const Title = styled.div`
 `;
 
 export const LocationContainer = styled.div`
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   margin-bottom: 1.8rem;
 `;
@@ -45,7 +47,7 @@ export const Location = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 1rem;
+    padding: 1.2rem 0.5rem;
 
     span {
       color: #878787;
@@ -70,7 +72,7 @@ export const Service = styled.div`
 
 export const Manicure = styled.div`
   margin: 0 auto;
-  width: 90%;
+  width: 95%;
   padding: 1rem 0 0 0;
 
   div {
@@ -84,12 +86,10 @@ export const Manicure = styled.div`
       font-weight: 500;
       display: flex;
       flex-direction: row;
-      width: 58%;
 
       p {
         font-size: 1.5rem;
         font-weight: 500;
-        width: 35%;
         text-align: right;
       }
     }
@@ -98,11 +98,11 @@ export const Manicure = styled.div`
 export const SubTotal = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
   width: 100%;
-  margin: 0 auto;
-  padding: 1rem 1.5rem 0 1.5rem;
 
   div {
-    margin-bottom: 1rem;
+    padding: 1rem 0 0.5rem 0;
+    width: 95%;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -111,19 +111,17 @@ export const SubTotal = styled.div`
     h6 {
       font-size: 1.6rem;
       font-weight: 500;
-      width: 58%;
     }
 
     p {
       font-size: 1.5rem;
       font-weight: 500;
-      width: 35%;
       text-align: right;
     }
   }
 `;
 
-export const BookTechnician = styled.div`
+export const Booking = styled.div`
   width: 100%;
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
 `;
@@ -132,7 +130,7 @@ export const Technician = styled.div`
   margin: 0 auto;
   padding: 1rem 0;
   font-size: 1.4rem;
-  width: 90%;
+  width: 95%;
 
   div {
     border: 1px solid #555555;
@@ -177,38 +175,45 @@ export const Technician = styled.div`
 `;
 
 export const Day = styled.div`
-  margin: 0 auto;
-  width: 90%;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  padding-bottom: 1rem;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
 
-  .icon {
-    font-size: 2.2rem;
-    color: #878787;
-  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 0 2.5rem 0;
 
-  h6 {
-    font-size: 1.4rem;
-    width: 85%;
+    .icon {
+      font-size: 2.2rem;
+      color: #878787;
+    }
 
-    em {
-      font-weight: 400;
+    h6 {
+      font-size: 1.4rem;
+      width: 85%;
+
+      em {
+        font-weight: 400;
+      }
     }
   }
 `;
 
 export const Total = styled.div`
-  padding: 1.5rem 0 0 0;
+  background-color: ${({ theme }) => theme.colors.primary4};
   width: 100%;
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
+  z-index: 4000;
   display: flex;
   justify-content: space-between;
-  /* background-color: ${({ theme }) => theme.colors.primary4}; */
   flex-direction: column;
   position: sticky;
-  top: 100%;
+  bottom: 0;
 
   @media screen and (max-width: 1200px) {
     align-items: flex-start;
@@ -219,21 +224,19 @@ export const Total = styled.div`
     justify-content: space-between;
     border-bottom: 1px solid ${({ theme }) => theme.colors.primary5};
     margin-bottom: 1rem;
+    padding: 1rem 0.6rem 1rem 0.6rem;
     width: 100%;
 
     h6 {
       font-size: 1.6rem;
       font-weight: 600;
       width: 58%;
-      padding-left: 1.4rem;
     }
 
     p {
       font-size: 1.6rem;
       font-weight: 600;
-      margin-bottom: 1.2rem;
       width: 35%;
-      padding-right: 0.8rem;
       text-align: right;
     }
   }
@@ -242,7 +245,7 @@ export const Total = styled.div`
 export const Button = styled(Link)`
   color: ${({ color }) => color || "#000000"};
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
-  width: 90%;
+  width: 95%;
   border: none;
   padding: 0.8rem 0;
   border-radius: 0.6rem;

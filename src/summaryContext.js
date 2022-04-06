@@ -19,7 +19,7 @@ export const SummaryProvider = (props) => {
     );
     updateList({ services: newServiceList });
   };
-  
+
   const addServiceToList = (service) => {
     const newServiceList = summaryList.services.concat(service);
     updateList({ services: newServiceList });

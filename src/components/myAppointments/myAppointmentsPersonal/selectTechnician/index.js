@@ -49,7 +49,7 @@ function SelectTechnician() {
           <Top>
             <HeadingStyle PdBottom="0">
               <h2>Select Technician</h2>
-              <Back to="/my-appointments/personal-booking/select-servicestwo">
+              <Back to="/my-appointments/personal-booking/select-services">
                 <MdChevronLeft />
                 Go back
               </Back>

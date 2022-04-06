@@ -128,7 +128,7 @@ function SelectServices() {
             })}
           </ServiceContainer>
           <ButtonContainer paddingm="0.5rem 0">
-            <Button to="/my-appointments/personal-booking/select-servicestwo">
+            <Button to="/my-appointments/personal-booking/select-technician">
               CONTINUE
             </Button>
           </ButtonContainer>

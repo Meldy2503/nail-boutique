@@ -7,12 +7,12 @@ import {
   Location,
   Service,
   Manicure,
-  BookTechnician,
+  Booking,
   SubTotal,
   Technician,
   Day,
   Total,
-  // Button,
+  Button,
 } from "./bookingSummaryStyle";
 
 import { VscLocation } from "react-icons/vsc";
@@ -20,7 +20,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
 function BookingSummary() {
-  const { summaryList } = useContext(SummaryContext);
+  const { summaryList, date } = useContext(SummaryContext);
   console.log({ summaryList });
 
   return (
@@ -60,7 +60,7 @@ function BookingSummary() {
           <SubTotal>
             <div>
               <h6>SUB TOTAL:</h6>
-              <p> ₦5,000.00</p>
+              <p> ₦0,000.00</p>
             </div>
             <div>
               <h6>VAT</h6>
@@ -69,8 +69,8 @@ function BookingSummary() {
           </SubTotal>
         </Service>
       )}
-      {summaryList.technician && (
-        <BookTechnician>
+      <Booking>
+        {summaryList.technician && (
           <Technician>
             <p> Technician Selected</p>
             <div>
@@ -85,36 +85,31 @@ function BookingSummary() {
                     summaryList.technician.age}
                   yrs
                 </p>
-                {/* <p>Hair stylist - 26 yrs</p> */}
               </span>
             </div>
           </Technician>
-        </BookTechnician>
-      )}
-      {summaryList.schedule && (
-        <Day>
-          <AiOutlineClockCircle className="icon" />
-
-          <h6>
-            {"Thur, 15th March, 2022" +
-              " " +
-              "- 09:00AM -" +
-              " " +
-              "In 21 days"}
-          </h6>
-
-          {/* {console.log(date.toDateString())} */}
-          {/* <h6>
+        )}
+        {summaryList.schedule && (
+          <Day>
+            <div>
+              <AiOutlineClockCircle className="icon" />
+              <h6>
+                {date.toDateString()} &nbsp; - &nbsp;{summaryList.schedule.time}
+              </h6>
+            </div>
+            {/* <h6>
               thur, 14th 2022 - 09:00AM - <em>In 21 days</em>
             </h6> */}
-        </Day>
-      )}
+
+            <Button to="/confirm">CONTINUE</Button>
+          </Day>
+        )}
+      </Booking>
       <Total>
         <div>
           <h6>BOOKING TOTAL:</h6>
-          <p> N5,750.00</p>
+          <p> ₦0,750.00</p>
         </div>
-        {/* <Button to="/confirm">CONFIRM</Button> */}
       </Total>
     </SummaryContainer>
   );
