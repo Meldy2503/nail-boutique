@@ -10,6 +10,7 @@ import {
   ConfirmBookingContainer,
   Location,
   Terms,
+  MobileSummary,
 } from "./confirmBookingStyle";
 import { MdChevronLeft } from "react-icons/md";
 import confirmLocation from "./confirmBookingData";
@@ -51,6 +52,13 @@ function ConfirmBooking() {
                   <p>{confirmLocation.location}</p>
                 </span>
               </Location>
+
+              <MobileSummary>
+                <RightContentCol2 mdisplay="flex">
+                  <BookingSummary />
+                </RightContentCol2>
+              </MobileSummary>
+
               <Terms>
                 <h2>Terms & Condition</h2>
                 <p>

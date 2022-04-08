@@ -22,6 +22,10 @@ export const Location = styled.div`
     width: 100%;
   }
 
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    display: none;
+  }
+
   span {
     display: flex;
     justify-content: space-between;
@@ -39,6 +43,15 @@ export const Location = styled.div`
 
   p {
     width: 87%;
+  }
+`;
+
+export const MobileSummary = styled.div`
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    display: flex;
+    width: 100%;
   }
 `;
 
