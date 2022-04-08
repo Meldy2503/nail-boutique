@@ -28,7 +28,6 @@ export const SummaryProvider = (props) => {
   const [date, setDate] = React.useState(new Date());
   const onDateChange = (newDate) => {
     setDate(newDate);
-    console.log(newDate);
   };
 
   const value = {

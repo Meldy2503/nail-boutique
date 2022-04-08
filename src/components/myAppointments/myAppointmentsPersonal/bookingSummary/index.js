@@ -12,7 +12,7 @@ import {
   Technician,
   Day,
   Total,
-  Button,
+  // Button,
 } from "./bookingSummaryStyle";
 
 import { VscLocation } from "react-icons/vsc";
@@ -22,6 +22,16 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 function BookingSummary() {
   const { summaryList, date } = useContext(SummaryContext);
   console.log({ summaryList });
+
+  const initialValue = 0;
+  let newSubtotal = summaryList.services;
+
+  const addSubtotal = newSubtotal.reduce(
+    (prevValue, currentValue) => prevValue + currentValue.price,
+    initialValue
+  );
+  const VAT = 0.075 * addSubtotal;
+  const addBookingTotal = VAT + addSubtotal;
 
   return (
     <SummaryContainer>
@@ -60,11 +70,11 @@ function BookingSummary() {
           <SubTotal>
             <div>
               <h6>SUB TOTAL:</h6>
-              <p> ₦0,000.00</p>
+              <p>₦{addSubtotal}</p>
             </div>
             <div>
               <h6>VAT</h6>
-              <p>₦750.00</p>
+              <p>₦{VAT}</p>
             </div>
           </SubTotal>
         </Service>
@@ -91,24 +101,21 @@ function BookingSummary() {
         )}
         {summaryList.schedule && (
           <Day>
-            <div>
-              <AiOutlineClockCircle className="icon" />
-              <h6>
-                {date.toDateString()} &nbsp; - &nbsp;{summaryList.schedule.time}
-              </h6>
-            </div>
+            <AiOutlineClockCircle className="icon" />
+            <h6>
+              {date.toDateString()} &nbsp; - &nbsp;{summaryList.schedule.time}
+            </h6>
             {/* <h6>
               thur, 14th 2022 - 09:00AM - <em>In 21 days</em>
             </h6> */}
-
-            <Button to="/confirm">CONTINUE</Button>
           </Day>
         )}
       </Booking>
+
       <Total>
         <div>
           <h6>BOOKING TOTAL:</h6>
-          <p> ₦0,750.00</p>
+          <p>₦{addBookingTotal.toFixed(2)}</p>
         </div>
       </Total>
     </SummaryContainer>

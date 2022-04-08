@@ -12,10 +12,10 @@ export const ButtonContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     position: fixed;
-    bottom: 2rem;
+    bottom: 0;
     right: 0;
     left: 0;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: ${({ padding }) => padding || "3rem 0 2rem 0"};
   }
@@ -25,7 +25,7 @@ export const Button = styled(Link)`
   color: ${({ color }) => color || "#000000"};
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
   border: none;
-  padding: ${({ padding }) => padding || "1rem 0"};
+  padding: ${({ padding }) => padding || "1.3rem 0"};
   display: inline-block;
   border-radius: 0.6rem;
   font-weight: 400;
@@ -45,9 +45,9 @@ export const Button = styled(Link)`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin: 0 auto;
     font-size: ${({ mfs }) => mfs || "1.5rem"};
-    width: 86%;
+    width: 90%;
     position: fixed;
-    bottom: 2.6rem;
+    bottom: 0.5rem;
     right: 0;
     left: 0;
   }
