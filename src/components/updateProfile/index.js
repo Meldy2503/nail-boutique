@@ -27,6 +27,7 @@ function UpdateProfile() {
       email: "",
       phone: "",
       comment: "",
+      rememberMe: true,
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
@@ -37,11 +38,12 @@ function UpdateProfile() {
         .required("*Required"),
       email: Yup.string().email("Invalid Email").required("*Required"),
       phone: Yup.string()
-        .max(15, "Must be 15 characters or less")
+        .max(11, "Must be 11 characters")
         .required("*Required"),
       comment: Yup.string()
-        .max(15, "Must be 15 characters or less")
+        .max(5, "Must be 5 characters or more")
         .required("*Required"),
+      rememberMe: Yup.boolean(),
     }),
     onSubmit: (values) => console.log(values),
   });
@@ -144,9 +146,16 @@ function UpdateProfile() {
                   value={formik.values.comment}
                 ></textarea>
               </Comment>
-              <CheckBox label="Remember Me" name="remember" />
+              <CheckBox
+                label="Remember Me"
+                name="rememberMe"
+                id="rememberMe"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                // value={formik.values.rememberMe}
+              />
               <ButtonContainer>
-                <SubmitBtn>UPDATE PROFILE</SubmitBtn>
+                <SubmitBtn type="submit">UPDATE PROFILE</SubmitBtn>
               </ButtonContainer>
             </span>
           </FormField>

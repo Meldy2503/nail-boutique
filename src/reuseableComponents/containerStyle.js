@@ -20,7 +20,8 @@ export const ContentContainer = styled.section`
   }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 95%;
+    width: 100%;
+    height: 100vh;
     padding-top: 3rem;
   }
 `;
@@ -49,11 +50,6 @@ export const RightContent = styled.div`
   align-items: ${({ alit }) => alit || "flex-start"};
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 100%;
     margin: 0 auto;
   }

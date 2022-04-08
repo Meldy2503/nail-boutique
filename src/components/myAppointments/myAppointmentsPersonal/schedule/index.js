@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { SummaryContext } from "../../../../summaryContext";
 import BookingSummary from "../bookingSummary";
 import {
@@ -91,7 +92,11 @@ function Schedule() {
                 </SelectAvailableTime>
               </Time>
             </ScheduleContainer>
-            <Waitlist to="/waitlist">Join our waitlist</Waitlist>
+            <Waitlist>
+              <Link className="link" to="/waitlist">
+                Join our waitlist
+              </Link>
+            </Waitlist>
             <ButtonContainer>
               <Button to="/my-appointments/personal-booking/enter-details">
                 ADD OTHER SERVICES

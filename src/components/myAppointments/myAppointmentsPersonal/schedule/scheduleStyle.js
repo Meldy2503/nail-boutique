@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const CalendarContainer = styled.div``;
 
@@ -14,7 +13,7 @@ export const Dots = styled.div`
   width: 70%;
   flex-wrap: wrap;
   margin-top: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.45rem;
 
   @media (max-width: 400px) {
     flex-direction: column;
@@ -54,7 +53,7 @@ export const Time = styled.div`
     }
 
     @media (max-width: 400px) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
 `;
@@ -75,8 +74,12 @@ export const SelectAvailableTime = styled.span`
   flex-wrap: wrap;
 `;
 
-export const Waitlist = styled(Link)`
-  color: ${({ theme }) => theme.colors.tertiary2};
+export const Waitlist = styled.div`
+  margin-bottom: 3rem;
+
+  .link {
+    color: ${({ theme }) => theme.colors.tertiary2};
+  }
 `;
 
 export const Day = styled.div`

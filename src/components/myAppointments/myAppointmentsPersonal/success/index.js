@@ -9,9 +9,8 @@ import tick from "../../../../images/tick2.png";
 function Success() {
   const { setSummaryList, updateList, onDateChange } =
     useContext(SummaryContext);
-  const handleClick = () => {
-    updateList(setSummaryList(() => {}));
-    onDateChange({});
+  const handleReset = () => {
+    updateList(setSummaryList.reset());
   };
 
   return (
@@ -27,7 +26,7 @@ function Success() {
               scrambled
             </p>
             <ButtonS
-              onClick={handleClick}
+              onClick={handleReset}
               fs="1.3rem"
               width="65%"
               to="/my-appointments"

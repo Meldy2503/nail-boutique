@@ -36,6 +36,7 @@ function EnterDetails({ label }) {
       email: "",
       phone: "",
       comment: "",
+      remember: true,
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
@@ -46,11 +47,17 @@ function EnterDetails({ label }) {
         .required("*Required"),
       email: Yup.string().email("Invalid Email").required("*Required"),
       phone: Yup.string()
-        .max(15, "Must be 15 characters or less")
+        .max(11, "Must be 11 characters")
         .required("*Required"),
       comment: Yup.string()
-        .max(15, "Must be 15 characters or less")
+        .max(5, "Must be 5 characters or more")
         .required("*Required"),
+      remember: Yup.boolean(),
+      // remember: Yup.boolean().oneOf([true]),
+
+      // rememberMe: Yup.boolean()
+      //   .oneOf([true], "Accept the terms and conditions")
+      //   .required("*Required"),
     }),
     onSubmit: (values) => console.log(values),
   });
@@ -153,7 +160,14 @@ function EnterDetails({ label }) {
                     value={formik.values.comment}
                   ></textarea>
                 </Comment>
-                <CheckBox label="Remember Me" name="remember" />
+                <CheckBox
+                  label="Remember Me"
+                  name="remember"
+                  id="remember"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  // value={formik.values.remember}
+                />
               </FormField>
             </EnterDetailsContainer>
             <Policy>

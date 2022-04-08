@@ -89,7 +89,7 @@ function ConfirmBooking() {
                 onClick={handlePopup}
                 to="/my-appointments/personal-booking/confirm-booking"
               >
-                TEMP CONTINUE
+                CONFIRM BOOKING
               </Button>
             </ButtonContainer>
           </RightContentCol1>

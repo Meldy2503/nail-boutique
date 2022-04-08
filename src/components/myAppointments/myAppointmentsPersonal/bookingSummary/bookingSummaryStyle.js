@@ -82,15 +82,17 @@ export const Manicure = styled.div`
     text-transform: uppercase;
 
     h6 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 500;
       display: flex;
       flex-direction: row;
+      width: 65%;
 
       p {
         font-size: 1.5rem;
         font-weight: 500;
         text-align: right;
+        width: 33%;
       }
     }
   }
@@ -109,7 +111,7 @@ export const SubTotal = styled.div`
     align-items: center;
 
     h6 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 500;
     }
 
@@ -140,7 +142,7 @@ export const Technician = styled.div`
     margin: 1rem 0;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.5rem;
 
     span {
       display: flex;
@@ -148,17 +150,17 @@ export const Technician = styled.div`
       justify-content: center;
 
       h6 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         font-weight: 700;
       }
 
       p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
 
       img {
-        width: 4.5rem;
-        height: 4.5rem;
+        width: 4.3rem;
+        height: 4.3rem;
       }
     }
 
@@ -166,10 +168,6 @@ export const Technician = styled.div`
       color: #e48f04;
       font-size: 2rem;
       margin-bottom: 0.8rem;
-
-      @media screen and (max-width: 1050px) {
-        display: none;
-      }
     }
   }
 `;
@@ -177,29 +175,23 @@ export const Technician = styled.div`
 export const Day = styled.div`
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   width: 95%;
   margin: 0 auto;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2rem;
 
-  div {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin: 0 0 2.5rem 0;
+  .icon {
+    font-size: 2.1rem;
+    color: #878787;
+  }
 
-    .icon {
-      font-size: 2.2rem;
-      color: #878787;
-    }
+  h6 {
+    font-size: 1.4rem;
+    width: 85%;
 
-    h6 {
-      font-size: 1.4rem;
-      width: 85%;
-
-      em {
-        font-weight: 400;
-      }
+    em {
+      font-weight: 400;
     }
   }
 `;
@@ -209,35 +201,27 @@ export const Total = styled.div`
   width: 100%;
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
   z-index: 4000;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   position: sticky;
-  bottom: 0;
-
-  @media screen and (max-width: 1200px) {
-    align-items: flex-start;
-  }
+  top: 100%;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primary5};
 
   div {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.primary5};
     margin-bottom: 1rem;
-    padding: 1rem 0.6rem 1rem 0.6rem;
-    width: 100%;
+    padding: 1rem 0rem 1rem 0rem;
+    width: 95%;
+    margin: 0 auto;
 
     h6 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      width: 58%;
     }
 
     p {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      width: 35%;
-      text-align: right;
     }
   }
 `;
