@@ -198,13 +198,20 @@ export const Day = styled.div`
 
 export const Total = styled.div`
   background-color: ${({ theme }) => theme.colors.primary4};
-  width: 100%;
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
   z-index: 4000;
   position: sticky;
   top: 100%;
   margin-bottom: 0.5rem;
+  width: 100%;
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary5};
+
+  @media screen and (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+  }
 
   div {
     display: flex;

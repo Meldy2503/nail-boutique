@@ -10,6 +10,7 @@ import {
   ConfirmBookingContainer,
   Location,
   Terms,
+  MobileSummary,
 } from "./confirmBookingStyle";
 import { MdChevronLeft } from "react-icons/md";
 import confirmLocation from "./confirmBookingData";
@@ -51,6 +52,13 @@ function ConfirmBooking() {
                   <p>{confirmLocation.location}</p>
                 </span>
               </Location>
+
+              <MobileSummary>
+                <RightContentCol2 mdisplay="flex">
+                  <BookingSummary />
+                </RightContentCol2>
+              </MobileSummary>
+
               <Terms>
                 <h2>Terms & Condition</h2>
                 <p>
@@ -76,11 +84,12 @@ function ConfirmBooking() {
                   ut libero .
                 </p>
               </Terms>
-              <div>
+              <div className="checkbox">
                 <CheckBox
                   label="I agree to the Terms and
                     Condition"
                   name="agreement"
+                  className="checkbox"
                 />
               </div>
             </ConfirmBookingContainer>

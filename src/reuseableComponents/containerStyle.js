@@ -53,10 +53,15 @@ export const RightContent = styled.div`
     width: 100%;
     margin: 0 auto;
   }
+
+  /* @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    flex-direction: ${({ mflexd }) => mflexd || "column"};
+  } */
 `;
 
 export const RightContentCol1 = styled.div`
-  margin: 4rem 2rem 4rem 3rem;
+  margin: 4rem 1rem 4rem 3rem;
+  padding: 0rem 2rem 0 0;
   width: 70%;
   height: 90%;
   overflow: auto;
@@ -101,7 +106,9 @@ export const RightContentCol2 = styled.div`
   scroll-padding-right: 5rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    display: ${({ display }) => display || "none"};
+    display: ${({ mdisplay }) => mdisplay || "none"};
+    width: 100%;
+    margin: 0 auto;
   }
 
   &::-webkit-scrollbar {

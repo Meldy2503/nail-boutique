@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NotificationContainer = styled.div`
   padding: 0 3rem 3rem 3rem;
-  height: 93%;
+  height: 95%;
   overflow: auto;
   scrollbar-width: thin;
   scroll-padding-right: 5rem;

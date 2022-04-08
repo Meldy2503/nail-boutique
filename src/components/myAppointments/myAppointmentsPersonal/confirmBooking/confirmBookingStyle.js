@@ -5,6 +5,10 @@ export const ConfirmBookingContainer = styled.div`
   hr {
     color: ${({ theme }) => theme.colors.primary3};
   }
+
+  .checkbox {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Location = styled.div`
@@ -16,6 +20,10 @@ export const Location = styled.div`
 
   @media (max-width: 1355px) {
     width: 100%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    display: none;
   }
 
   span {
@@ -35,6 +43,15 @@ export const Location = styled.div`
 
   p {
     width: 87%;
+  }
+`;
+
+export const MobileSummary = styled.div`
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    display: flex;
+    width: 100%;
   }
 `;
 

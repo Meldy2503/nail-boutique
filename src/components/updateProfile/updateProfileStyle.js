@@ -6,7 +6,7 @@ export const UpdateProfileContainer = styled.div`
   padding-top: 3rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 95%;
+    width: 90%;
   }
 `;
 
@@ -17,7 +17,7 @@ export const FormField = styled.form`
   margin-top: 1rem;
   margin-bottom: 20%;
   position: relative;
-  height: 90%;
+  height: 100%;
   overflow: auto;
   scrollbar-width: thin;
   scroll-padding-right: 5rem;
@@ -152,9 +152,9 @@ export const SubmitBtn = styled.button`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin: 0 auto;
     font-size: 1.5rem;
-    width: 86%;
+    width: 90%;
     position: fixed;
-    bottom: 2.7rem;
+    bottom: 1rem;
     right: 0;
     left: 0;
   }
@@ -172,7 +172,7 @@ export const RememberMe = styled.span`
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 
   input {
     margin-right: 1rem;
