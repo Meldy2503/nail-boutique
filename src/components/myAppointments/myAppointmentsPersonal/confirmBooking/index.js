@@ -76,11 +76,12 @@ function ConfirmBooking() {
                   ut libero .
                 </p>
               </Terms>
-              <div>
+              <div className="checkbox">
                 <CheckBox
                   label="I agree to the Terms and
                     Condition"
                   name="agreement"
+                  className="checkbox"
                 />
               </div>
             </ConfirmBookingContainer>

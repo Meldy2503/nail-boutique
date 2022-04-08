@@ -56,7 +56,8 @@ export const RightContent = styled.div`
 `;
 
 export const RightContentCol1 = styled.div`
-  margin: 4rem 2rem 4rem 3rem;
+  margin: 4rem 1rem 4rem 3rem;
+  padding: 0rem 2rem 0 0;
   width: 70%;
   height: 90%;
   overflow: auto;

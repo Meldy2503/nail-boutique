@@ -5,6 +5,10 @@ export const ConfirmBookingContainer = styled.div`
   hr {
     color: ${({ theme }) => theme.colors.primary3};
   }
+
+  .checkbox {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Location = styled.div`

@@ -17,13 +17,11 @@ export const FormField = styled.form`
   height: 100%;
   margin-bottom: 7%;
   position: relative;
-  
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     overflow: visible;
     height: fit-content;
   }
- 
 
   .names {
     display: flex;
@@ -125,7 +123,9 @@ export const RememberMe = styled.span`
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
-  font-size: 1.5rem input {
+  font-size: 1.3rem;
+
+  input {
     margin-right: 1rem;
     border: 0.5px solid ${({ theme }) => theme.colors.tertiary2};
     accent-color: ${({ theme }) => theme.colors.tertiary2};
@@ -137,7 +137,6 @@ export const Policy = styled.div`
   margin-bottom: 4rem;
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
   padding-top: 4rem;
-
 
   h2 {
     margin-bottom: 0.6rem;
