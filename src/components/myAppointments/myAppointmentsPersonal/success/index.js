@@ -7,8 +7,7 @@ import { Popup, SuccessContainer } from "./successStyle";
 import tick from "../../../../images/tick2.png";
 
 function Success() {
-  const { setSummaryList, updateList, onDateChange } =
-    useContext(SummaryContext);
+  const { setSummaryList, updateList } = useContext(SummaryContext);
   const handleReset = () => {
     updateList(setSummaryList.reset());
   };
