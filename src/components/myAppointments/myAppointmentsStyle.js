@@ -14,7 +14,7 @@ export const BookingStyle = styled.div`
     width: 100%;
     justify-content: center;
     height: 78vh;
-    margin: 6rem auto;
+    margin: 3rem auto;
   }
 
   @media screen and (max-width: 300px) {
@@ -36,7 +36,6 @@ export const Book = styled.div`
   @media screen and (max-width: 500px) {
     width: 80%;
   }
-
   & > div {
     padding: 4rem 4rem;
     display: flex;
