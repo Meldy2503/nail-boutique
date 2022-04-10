@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const CalendarContainer = styled.div``;
+export const CalendarContainer = styled.div`
+  margin: 0 auto;
+`;
 
 export const ScheduleContainer = styled.div`
   margin: 0 auto;

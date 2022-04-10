@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import { Button } from "../../../../reuseableComponents/buttonStyle";
 import {
   ContentContainer,
@@ -16,6 +17,13 @@ import BookingSummary from "../bookingSummary";
 import { InputField } from "./expectedClientsStyle";
 
 function ExpectedClients() {
+  const { updateList, NumberOfExpectedclient, handleExpectedClient } =
+    useContext(SummaryContext);
+  const handleChange = (numberOfClients) => {
+    updateList({ numberOfClients });
+    handleExpectedClient(numberOfClients);
+  };
+
   return (
     <ContentContainer>
       <Sidebar />
@@ -23,7 +31,7 @@ function ExpectedClients() {
         <RightContentCol1>
           <HeadingStyle>
             <h2>Number of Expected Clients</h2>
-            <Back to="/my-appointments/group-booking/select-servicestwo">
+            <Back to="/my-appointments/group-booking/select-services">
               <MdChevronLeft />
               Go back
             </Back>
@@ -33,6 +41,9 @@ function ExpectedClients() {
               type="number"
               name="expected-clients"
               id="expected-clients"
+              placeholder="Enter number of expected clients"
+              value={NumberOfExpectedclient}
+              onChange={handleChange}
             />
           </InputField>
           <Button to="/my-appointments/group-booking/schedule">CONTINUE</Button>

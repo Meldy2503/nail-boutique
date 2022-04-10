@@ -36,12 +36,12 @@ export const RightContent = styled.div`
   }
 `;
 export const Location = styled.div`
-  margin: 4rem 2rem 2rem 3rem;
+  margin: 4rem 2rem 4rem 3rem;
   width: 72%;
   height: 90%;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    margin: 1rem auto 3rem auto;
+    margin: 1rem auto;
     width: 90%;
   }
 
@@ -61,8 +61,8 @@ export const Content = styled.div`
   padding: 2rem 3rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    padding: 1rem;
     margin-bottom: 1rem;
+    padding: 1rem;
   }
 `;
 

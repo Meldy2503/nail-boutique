@@ -9,7 +9,7 @@ export const ContentContainer = styled.section`
   justify-content: space-between;
   align-items: stretch;
   gap: 0.5rem;
-  padding-top: 11.5rem;
+  padding-top: 11rem;
   position: sticky;
   left: 0;
   right: 0;
@@ -22,7 +22,7 @@ export const ContentContainer = styled.section`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 100%;
     height: 100vh;
-    padding-top: 3rem;
+    padding-top: 7rem;
   }
 `;
 
@@ -53,15 +53,11 @@ export const RightContent = styled.div`
     width: 100%;
     margin: 0 auto;
   }
-
-  /* @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    flex-direction: ${({ mflexd }) => mflexd || "column"};
-  } */
 `;
 
 export const RightContentCol1 = styled.div`
   margin: 4rem 1rem 4rem 3rem;
-  padding: 0rem 2rem 0 0;
+  padding: 0rem 1rem 0 0;
   width: 70%;
   height: 90%;
   overflow: auto;

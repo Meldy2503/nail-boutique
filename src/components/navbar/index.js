@@ -5,7 +5,6 @@ import {
   StyledNav,
   SideUl,
   MenuIcon,
-  NavBarBorderBottom,
 } from "./navbarStyle";
 import { NavLink } from "react-router-dom";
 import { Spin as Hamburger } from "hamburger-react";
@@ -19,7 +18,6 @@ function Navbar() {
 
   return (
     <NavContainer>
-      <NavBarBorderBottom />
       <StyledNav>
         <Logo to="/my-appointments">
           <img src={logo} alt="nail-boutique-logo" />

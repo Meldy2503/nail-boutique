@@ -19,7 +19,6 @@ import EnterDetailsPersonal from "./components/myAppointments/myAppointmentsPers
 // my appointments group
 import SelectLocationGroup from "./components/myAppointments/myAppointmentsGroup/selectLocation/index";
 import SelectServiceGroup from "./components/myAppointments/myAppointmentsGroup/selectService/index";
-import SelectServiceTwoGroup from "./components/myAppointments/myAppointmentsGroup/selectServiceTwo/index";
 import ScheduleGroup from "./components/myAppointments/myAppointmentsGroup/schedule/index";
 import ConfirmBookingGroup from "./components/myAppointments/myAppointmentsGroup/confirmBooking/index";
 import EnterDetailsGroup from "./components/myAppointments/myAppointmentsGroup/enterDetails/index";
@@ -89,10 +88,6 @@ function App() {
                     element={<SelectServicePersonal />}
                   />
                   <Route
-                    path="confirm-booking"
-                    element={<ConfirmBookingPersonal />}
-                  />
-                  <Route
                     path="select-technician"
                     element={<SelectTechnicianPersonal />}
                   />
@@ -100,6 +95,10 @@ function App() {
                   <Route
                     path="enter-details"
                     element={<EnterDetailsPersonal />}
+                  />
+                  <Route
+                    path="confirm-booking"
+                    element={<ConfirmBookingPersonal />}
                   />
                 </Route>
                 <Route path="group-booking" element={<GroupBookingIndex />}>
@@ -113,19 +112,15 @@ function App() {
                     element={<SelectServiceGroup />}
                   />
                   <Route
-                    path="confirm-booking"
-                    element={<ConfirmBookingGroup />}
-                  />
-                  <Route
-                    path="select-servicestwo"
-                    element={<SelectServiceTwoGroup />}
-                  />
-                  <Route
                     path="expected-clients"
                     element={<ExpectedClientsGroup />}
                   />
                   <Route path="schedule" element={<ScheduleGroup />} />
                   <Route path="enter-details" element={<EnterDetailsGroup />} />
+                  <Route
+                    path="confirm-booking"
+                    element={<ConfirmBookingGroup />}
+                  />
                 </Route>
               </Route>
               <Route path="update-profile" element={<UpdateProfile />} />

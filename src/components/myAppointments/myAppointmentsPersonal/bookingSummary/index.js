@@ -62,7 +62,7 @@ function BookingSummary() {
               <Manicure key={s.id}>
                 <div>
                   <h6>{s.product}:</h6>
-                  <p> ₦{s.price}</p>
+                  <p> ₦{s.price.toLocaleString()}</p>
                 </div>
               </Manicure>
             );
@@ -70,11 +70,11 @@ function BookingSummary() {
           <SubTotal>
             <div>
               <h6>SUB TOTAL:</h6>
-              <p>₦{addSubtotal}</p>
+              <p>₦{addSubtotal.toLocaleString()}</p>
             </div>
             <div>
-              <h6>VAT</h6>
-              <p>₦{VAT}</p>
+              <h6>VAT:</h6>
+              <p>₦{VAT.toLocaleString()}</p>
             </div>
           </SubTotal>
         </Service>
@@ -115,7 +115,13 @@ function BookingSummary() {
       <Total>
         <div>
           <h6>BOOKING TOTAL:</h6>
-          <p>₦{addBookingTotal.toFixed(2)}</p>
+          <p>
+            ₦
+            {addBookingTotal.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </p>
         </div>
       </Total>
     </SummaryContainer>

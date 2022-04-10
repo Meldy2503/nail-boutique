@@ -16,33 +16,31 @@ export const Location = styled.div`
   background-color: ${({ theme }) => theme.colors.primary3};
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  width: 80%;
-
-  @media (max-width: 1355px) {
-    width: 100%;
-  }
+  width: 100%;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     display: none;
   }
 
-  span {
+  div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
 
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      padding: 1rem;
+    span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 1.5rem;
     }
-  }
-  .pin {
-    font-size: 3rem;
-    width: 10%;
-  }
+    .pin {
+      font-size: 2.5rem;
+    }
 
-  p {
-    width: 87%;
+    p {
+      font-size: 1.5rem;
+    }
   }
 `;
 

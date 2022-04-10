@@ -20,23 +20,6 @@ export const NavContainer = styled.div`
   }
 `;
 
-export const NavBarBorderBottom  = styled.div`
-  height: 2.5rem;
-  width: 100%;
-  position: fixed;
-  background: #000;
-  top: 9rem;
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    height: 2rem;
-    top: 6rem;
-  }
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    height: 1.5rem;
-    top: 6rem;
-  }
-`;
-
 export const Logo = styled(Link)`
   img {
     max-width: 100%;
@@ -79,7 +62,7 @@ export const StyledNav = styled.nav`
       width: 60%;
       height: 100vh;
       z-index: 3000;
-      overflow: auto;
+      overflow: scroll;
       padding-top: 2rem;
 
       @media screen and (max-width: 500px) {
