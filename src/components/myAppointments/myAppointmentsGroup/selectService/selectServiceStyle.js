@@ -46,6 +46,7 @@ export const ServiceType = styled.div`
   span {
     color: #676767;
     font-size: 3rem;
+    font-weight: 100;
   }
 `;
 
@@ -79,6 +80,6 @@ export const InputContainer = styled.div`
   p {
     font-size: 1.2rem;
     font-weight: 400;
-    margin: 0 0 0 0.8rem;
+    margin: 0 0 0.1rem 0.8rem;
   }
 `;

@@ -5,6 +5,7 @@ import {
   InputField,
   Comment,
   ErrorMsg,
+  Names,
   SubmitBtn,
 } from "./updateProfileStyle";
 import { MdChevronLeft } from "react-icons/md";
@@ -54,7 +55,7 @@ function UpdateProfile() {
       <Sidebar />
       <RightContent display="block">
         <UpdateProfileContainer>
-          <HeadingStyle PdBottom="1rem" mPdTop="4rem">
+          <HeadingStyle>
             <h2>Update Profile</h2>
             <Back to="/enter-details">
               <MdChevronLeft />
@@ -62,102 +63,100 @@ function UpdateProfile() {
             </Back>
           </HeadingStyle>
           <FormField onSubmit={formik.handleSubmit}>
-            <span>
-              <div className="names">
-                <InputField>
-                  <label htmlFor="firstName">First Name</label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    id="firstName"
-                    placeholder="Enter your First Name"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.firstName}
-                  />
-                  <ErrorMsg>
-                    {formik.touched.firstName && formik.errors.firstName ? (
-                      <p>{formik.errors.firstName}</p>
-                    ) : null}
-                  </ErrorMsg>
-                </InputField>
-                <InputField>
-                  <label htmlFor="lastName">Last Name</label>
-                  <input
-                    type="text"
-                    name="lastName"
-                    id="lastName"
-                    placeholder="Enter your Last Name"
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.lastName}
-                  />
-                  <ErrorMsg>
-                    {formik.touched.lastName && formik.errors.lastName ? (
-                      <p>{formik.errors.lastName}</p>
-                    ) : null}
-                  </ErrorMsg>
-                </InputField>
-              </div>
+            <Names>
               <InputField>
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter your Email"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.email}
-                />
-                <ErrorMsg>
-                  {formik.touched.email && formik.errors.email ? (
-                    <p>{formik.errors.email}</p>
-                  ) : null}
-                </ErrorMsg>
-              </InputField>
-              <InputField>
-                <label htmlFor="phone">Phone Number</label>
+                <label htmlFor="firstName">First Name</label>
                 <input
                   type="text"
-                  name="phone"
-                  id="phone"
-                  placeholder="Enter phone number"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="Enter your First Name"
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  value={formik.values.phone}
+                  value={formik.values.firstName}
                 />
                 <ErrorMsg>
-                  {formik.touched.phone && formik.errors.phone ? (
-                    <p>{formik.errors.phone}</p>
+                  {formik.touched.firstName && formik.errors.firstName ? (
+                    <p>{formik.errors.firstName}</p>
                   ) : null}
                 </ErrorMsg>
               </InputField>
-              <Comment>
-                <label htmlFor="comment">State</label>
-                <textarea
-                  name="comment"
-                  id="comment"
-                  cols="30"
-                  rows="1"
-                  placeholder="Comments (Optional)"
+              <InputField>
+                <label htmlFor="lastName">Last Name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Enter your Last Name"
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  value={formik.values.comment}
-                ></textarea>
-              </Comment>
-              <CheckBox
-                label="Remember Me"
-                name="rememberMe"
-                id="rememberMe"
+                  value={formik.values.lastName}
+                />
+                <ErrorMsg>
+                  {formik.touched.lastName && formik.errors.lastName ? (
+                    <p>{formik.errors.lastName}</p>
+                  ) : null}
+                </ErrorMsg>
+              </InputField>
+            </Names>
+            <InputField>
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your Email"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                // value={formik.values.rememberMe}
+                value={formik.values.email}
               />
-              <ButtonContainer>
-                <SubmitBtn type="submit">UPDATE PROFILE</SubmitBtn>
-              </ButtonContainer>
-            </span>
+              <ErrorMsg>
+                {formik.touched.email && formik.errors.email ? (
+                  <p>{formik.errors.email}</p>
+                ) : null}
+              </ErrorMsg>
+            </InputField>
+            <InputField>
+              <label htmlFor="phone">Phone Number</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Enter phone number"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.phone}
+              />
+              <ErrorMsg>
+                {formik.touched.phone && formik.errors.phone ? (
+                  <p>{formik.errors.phone}</p>
+                ) : null}
+              </ErrorMsg>
+            </InputField>
+            <Comment>
+              <label htmlFor="comment">State</label>
+              <textarea
+                name="comment"
+                id="comment"
+                cols="30"
+                rows="1"
+                placeholder="Comments (Optional)"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.comment}
+              ></textarea>
+            </Comment>
+            <CheckBox
+              label="Remember Me"
+              name="rememberMe"
+              id="rememberMe"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              // value={formik.values.rememberMe}
+            />
+            <ButtonContainer>
+              <SubmitBtn type="submit">UPDATE PROFILE</SubmitBtn>
+            </ButtonContainer>
           </FormField>
         </UpdateProfileContainer>
       </RightContent>

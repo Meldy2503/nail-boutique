@@ -8,6 +8,7 @@ export const SummaryProvider = (props) => {
     services: [],
     technician: null,
     schedule: null,
+    numberOfClients: null,
   });
   const updateList = (newList) => {
     setSummaryList((prevList) => ({ ...prevList, ...newList }));
@@ -30,6 +31,13 @@ export const SummaryProvider = (props) => {
     setDate(newDate);
   };
 
+  const [NumberOfExpectedclient, setNumberOfExpectedclient] =
+    React.useState("");
+  const handleExpectedClient = (event) => {
+    setNumberOfExpectedclient(event.target.value);
+  };
+  console.log(NumberOfExpectedclient);
+
   const value = {
     summaryList,
     setSummaryList,
@@ -38,6 +46,8 @@ export const SummaryProvider = (props) => {
     onDateChange,
     removeServiceFromList,
     addServiceToList,
+    NumberOfExpectedclient,
+    handleExpectedClient,
   };
 
   return (

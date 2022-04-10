@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import {
   ContentContainer,
   RightContent,
@@ -10,9 +11,9 @@ import {
   ConfirmBookingContainer,
   Location,
   Terms,
+  MobileSummary,
 } from "./confirmBookingStyle";
 import { MdChevronLeft } from "react-icons/md";
-import confirmLocation from "./confirmBookingData";
 import { IoLocationOutline } from "react-icons/io5";
 import {
   Button,
@@ -31,6 +32,14 @@ function ConfirmBooking() {
   const handlePopup = () => {
     setPopup((prevState) => !prevState);
   };
+
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
+  const handleAgreement = () => {
+    setAgreeToTerms(!agreeToTerms);
+  };
+
+  const { summaryList } = useContext(SummaryContext);
+
   return (
     <div>
       <ContentContainer>
@@ -45,12 +54,28 @@ function ConfirmBooking() {
                   Go back
                 </Back>
               </HeadingStyle>
-              <Location>
-                <span>
-                  <IoLocationOutline className="pin" />
-                  <p>{confirmLocation.location}</p>
-                </span>
-              </Location>
+
+              {summaryList.location && (
+                <Location>
+                  <div>
+                    <span>
+                      <IoLocationOutline className="pin" />
+                    </span>
+                    <p>
+                      {summaryList.location.heading +
+                        " " +
+                        summaryList.location.address}
+                    </p>
+                  </div>
+                </Location>
+              )}
+
+              <MobileSummary>
+                <RightContentCol2 mdisplay="flex">
+                  <BookingSummary />
+                </RightContentCol2>
+              </MobileSummary>
+
               <Terms>
                 <h2>Terms & Condition</h2>
                 <p>
@@ -76,11 +101,14 @@ function ConfirmBooking() {
                   ut libero .
                 </p>
               </Terms>
-              <div>
+              <div className="checkbox">
                 <CheckBox
                   label="I agree to the Terms and
                     Condition"
                   name="agreement"
+                  value="agreement"
+                  checked={agreeToTerms}
+                  onChange={handleAgreement}
                 />
               </div>
             </ConfirmBookingContainer>
@@ -89,7 +117,7 @@ function ConfirmBooking() {
                 onClick={handlePopup}
                 to="/my-appointments/group-booking/confirm-booking"
               >
-                TEMP CONTINUE
+                CONFIRM BOOKING
               </Button>
             </ButtonContainer>
           </RightContentCol1>

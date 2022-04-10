@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const SummaryContainer = styled.div`
   display: flex;
@@ -233,24 +232,24 @@ export const Total = styled.div`
   }
 `;
 
-export const Button = styled(Link)`
-  color: ${({ color }) => color || "#000000"};
-  background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
-  width: 95%;
-  border: none;
-  padding: 0.8rem 0;
-  border-radius: 0.6rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-align: center;
-  z-index: 1500;
-  position: sticky;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
+// export const Button = styled(Link)`
+//   color: ${({ color }) => color || "#000000"};
+//   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
+//   width: 95%;
+//   border: none;
+//   padding: 0.8rem 0;
+//   border-radius: 0.6rem;
+//   font-weight: 400;
+//   font-size: 1.5rem;
+//   text-align: center;
+//   z-index: 1500;
+//   position: sticky;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   margin: 0 auto;
 
-  &:hover {
-    background: linear-gradient(180deg, #f5d061 -1%, #e48f04 100%);
-  }
-`;
+//   &:hover {
+//     background: linear-gradient(180deg, #f5d061 -1%, #e48f04 100%);
+//   }
+// `;

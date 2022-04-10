@@ -68,7 +68,7 @@ function SelectServices() {
               return (
                 <Services key={id}>
                   <ServiceType>
-                    <div>
+                    <div onClick={handleToggle(id)}>
                       <h3>{items.title}</h3>
                       <p>{items.text}</p>
                     </div>
@@ -142,3 +142,12 @@ function SelectServices() {
 }
 
 export default SelectServices;
+
+<Back to="/my-appointments/group-booking/select-location">
+  <MdChevronLeft />
+  Go back
+</Back>;
+
+<ButtonContainer paddingm="0.5rem 0">
+  <Button to="/my-appointments/group-booking/expected-clients">CONTINUE</Button>
+</ButtonContainer>;

@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
 export const NotificationContainer = styled.div`
-  padding: 0 3rem 3rem 3rem;
-  height: 95%;
+  height: 90%;
   overflow: auto;
   scrollbar-width: thin;
-  scroll-padding-right: 5rem;
+  padding: 0 3rem 0 3rem;
+  margin-top: 4rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    margin-top: 2rem;
+  }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    padding: 3.5rem 3rem 3rem 3rem;
+    margin-top: 0;
+    padding: 0rem 2.5rem 0 2.5rem;
   }
 
   &::-webkit-scrollbar {

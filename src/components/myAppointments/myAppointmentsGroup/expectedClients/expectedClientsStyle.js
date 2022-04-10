@@ -4,11 +4,11 @@ export const ClientsContainer = styled.div``;
 
 export const InputField = styled.div`
   width: 100%;
-  height: 8rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 
   input {
     width: 100%;
-    margin-top: 5rem 0 2rem 0;
     padding: 1.4rem 1.6rem;
     background-color: ${({ theme }) => theme.colors.primary7};
     border: none;
