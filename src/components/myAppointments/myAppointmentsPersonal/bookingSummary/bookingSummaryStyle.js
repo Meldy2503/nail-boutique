@@ -198,7 +198,7 @@ export const Day = styled.div`
 export const Total = styled.div`
   background-color: ${({ theme }) => theme.colors.primary4};
   border-top: 1px solid ${({ theme }) => theme.colors.primary5};
-  z-index: 4000;
+  z-index: 1000;
   position: sticky;
   top: 100%;
   margin-bottom: 0.5rem;

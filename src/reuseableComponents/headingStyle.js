@@ -12,10 +12,6 @@ export const HeadingStyle = styled.div`
   top: 0;
   height: ${({ height }) => height || "fit-content"};
 
-  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    padding-top: 2rem;
-  }
-
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     padding-top: ${({ mPdTop }) => mPdTop || "3.5rem"};
     padding-bottom: 1rem;

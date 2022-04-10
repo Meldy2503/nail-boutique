@@ -14,7 +14,7 @@ export const BookingStyle = styled.div`
     width: 100%;
     justify-content: center;
     height: 78vh;
-    margin: 2.5rem auto;
+    margin: 3rem auto;
   }
 
   @media screen and (max-width: 300px) {
