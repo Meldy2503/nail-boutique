@@ -9,6 +9,7 @@ export const ButtonContainer = styled.div`
   left: 0;
   background-color: ${({ theme }) => theme.colors.primary2};
   margin-top: 2rem;
+  z-index: 4000;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     position: fixed;
@@ -32,7 +33,7 @@ export const Button = styled(Link)`
   font-size: ${({ fs }) => fs || "1.6rem"};
   text-align: center;
   width: ${({ width }) => width || "100%"};
-  z-index: 1500;
+  z-index: 4000;
   position: sticky;
   bottom: 0;
   right: 0;

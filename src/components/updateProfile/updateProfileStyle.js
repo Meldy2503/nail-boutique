@@ -3,15 +3,11 @@ import styled from "styled-components";
 export const UpdateProfileContainer = styled.div`
   width: 85%;
   margin: 0 auto;
-  padding-top: 4.5rem;
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    padding-top: 2.5rem;
-  }
+  padding-top: 3.5rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
-    padding-top: 1rem;
+    padding-top: 0;
   }
 `;
 

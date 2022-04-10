@@ -8,13 +8,9 @@ import {
   RightContentCol2,
 } from "../../../../reuseableComponents/containerStyle";
 import { MdChevronLeft } from "react-icons/md";
-import {
-  HeadingStyle,
-  Back,
-} from "../../../../reuseableComponents/headingStyle";
 import Sidebar from "../../../sidebar";
 import BookingSummary from "../bookingSummary";
-import { InputField } from "./expectedClientsStyle";
+import { HeadingStyle, Back, InputField } from "./expectedClientsStyle";
 
 function ExpectedClients() {
   const { updateList, NumberOfExpectedclient, handleExpectedClient } =
