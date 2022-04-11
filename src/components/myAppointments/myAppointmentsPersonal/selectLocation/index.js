@@ -20,7 +20,6 @@ import {
   HeadingStyle,
   Back,
 } from "../../../../reuseableComponents/headingStyle";
-// import CheckBox from "../../../../reuseableComponents/Checkbox";
 import RadioButton from "../../../../reuseableComponents/RadioButton";
 
 function SelectLocation() {

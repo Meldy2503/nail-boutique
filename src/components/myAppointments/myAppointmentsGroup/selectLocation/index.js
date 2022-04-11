@@ -20,7 +20,7 @@ import {
   HeadingStyle,
   Back,
 } from "../../../../reuseableComponents/headingStyle";
-import CheckBox from "../../../../reuseableComponents/Checkbox";
+import RadioButton from "../../../../reuseableComponents/RadioButton";
 
 function SelectLocation() {
   const { updateList } = useContext(SummaryContext);
@@ -42,12 +42,19 @@ function SelectLocation() {
 
           {locationData.map((data) => (
             <Content key={data.id}>
-              <LocationText>
-                <h4>{data.heading}</h4>
-                <p>{data.address}</p>
-              </LocationText>
-              <CheckBox
+              <RadioButton
+                checkHeight="1.5rem"
+                checkWidth="0.8rem"
+                width="3rem"
+                height="3rem"
                 onChange={() => handleGroupLocation(data)}
+                label={
+                  <LocationText>
+                    <h4>{data.heading}</h4>
+                    <p>{data.address}</p>
+                  </LocationText>
+                }
+                flexDirection="row"
                 value={data}
                 name="location"
               />

@@ -51,10 +51,6 @@ export const Location = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border: 1px solid ${({ theme }) => theme.colors.secondary6};
   border-radius: 1rem;
   margin-bottom: 2rem;
@@ -67,6 +63,7 @@ export const Content = styled.div`
 `;
 
 export const LocationText = styled.div`
+  width: 90%;
   h4 {
     font-size: 2rem;
 
