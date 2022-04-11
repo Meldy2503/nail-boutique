@@ -30,7 +30,7 @@ import Calendar from "react-calendar";
 import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
 import timeData from "./scheduleData";
-import CheckBox from "../../../../reuseableComponents/Checkbox";
+import RadioButton from "../../../../reuseableComponents/RadioButton";
 
 function Schedule() {
   const { updateList, date, onDateChange } = useContext(SummaryContext);
@@ -75,7 +75,7 @@ function Schedule() {
                 {timeData.map((time) => {
                   return (
                     <Option key={time.id}>
-                      <CheckBox
+                      <RadioButton
                         onChange={() => handleCheckbox(time)}
                         value={time.time}
                         label={time.time}
