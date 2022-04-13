@@ -132,7 +132,7 @@ export const Comment = styled.div`
   }
 `;
 
-export const SubmitBtn = styled.button`
+export const SubmitBtn = styled.input`
   color: #000000;
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
   padding: 1rem 0;

@@ -46,9 +46,11 @@ function UpdateProfile() {
         .required("*Required"),
       rememberMe: Yup.boolean(),
     }),
-    onSubmit: (values) => console.log(values),
+    onSubmit: (values, { resetForm }) => {
+      console.log(values);
+      resetForm();
+    },
   });
-  console.log(formik.values);
 
   return (
     <ContentContainer>
@@ -155,7 +157,13 @@ function UpdateProfile() {
               // value={formik.values.rememberMe}
             />
             <ButtonContainer>
-              <SubmitBtn type="submit">UPDATE PROFILE</SubmitBtn>
+              <SubmitBtn
+                value="UPDATE PROFILE"
+                type="submit"
+                onClick={formik.handleSubmit}
+              />
+              {/* UPDATE PROFILE
+              </SubmitBtn> */}
             </ButtonContainer>
           </FormField>
         </UpdateProfileContainer>

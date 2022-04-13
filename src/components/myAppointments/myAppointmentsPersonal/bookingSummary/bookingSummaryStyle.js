@@ -129,7 +129,7 @@ export const Booking = styled.div`
 
 export const Technician = styled.div`
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
   font-size: 1.4rem;
   width: 95%;
 
@@ -178,7 +178,7 @@ export const Day = styled.div`
   flex-direction: row;
   width: 95%;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  padding: 1rem 0 2rem 0;
 
   .icon {
     font-size: 2.1rem;

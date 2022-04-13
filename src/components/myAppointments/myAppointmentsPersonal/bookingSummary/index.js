@@ -20,7 +20,8 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
 function BookingSummary() {
-  const { summaryList, date } = useContext(SummaryContext);
+  const { summaryList, date, DaysToAppointmentDay } =
+    useContext(SummaryContext);
   console.log({ summaryList });
 
   const initialValue = 0;
@@ -103,11 +104,9 @@ function BookingSummary() {
           <Day>
             <AiOutlineClockCircle className="icon" />
             <h6>
-              {date.toDateString()} &nbsp; - &nbsp;{summaryList.schedule.time}
+              {date.toDateString()} - {summaryList.schedule.time} -
+              <em> In {DaysToAppointmentDay} days</em>
             </h6>
-            {/* <h6>
-              thur, 14th 2022 - 09:00AM - <em>In 21 days</em>
-            </h6> */}
           </Day>
         )}
       </Booking>

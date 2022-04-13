@@ -31,6 +31,8 @@ import "./calendar.css";
 import { CalendarContainer } from "react-datepicker";
 import timeData from "./scheduleData";
 import RadioButton from "../../../../reuseableComponents/RadioButton";
+import greenDot from "../../../../images/green-dot.png";
+import redDot from "../../../../images/red-dot.png";
 
 function Schedule() {
   const { updateList, date, onDateChange } = useContext(SummaryContext);
@@ -56,7 +58,38 @@ function Schedule() {
           </HeadingStyle>
           <ScheduleContainer>
             <CalendarContainer>
-              <Calendar calendarType="US" onChange={handleClick} value={date} />
+              <Calendar
+                calendarType="US"
+                onChange={handleClick}
+                value={date}
+                tileContent={({ date, view }) =>
+                  view === "month" && date.getDay() !== 0 ? (
+                    <div>
+                      <img
+                        style={{
+                          position: "relative",
+                          bottom: "90%",
+                          left: "150%",
+                        }}
+                        src={greenDot}
+                        alt="greenDot"
+                      />
+                    </div>
+                  ) : (
+                    <div>
+                      <img
+                        style={{
+                          position: "relative",
+                          bottom: "90%",
+                          left: "150%",
+                        }}
+                        src={redDot}
+                        alt="redDot"
+                      />
+                    </div>
+                  )
+                }
+              />
             </CalendarContainer>
             <Dots>
               <div>
