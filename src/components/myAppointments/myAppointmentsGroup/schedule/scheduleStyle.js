@@ -26,9 +26,8 @@ export const Dots = styled.div`
     align-items: center;
 
     span {
-      height: 1rem;
-      width: 1rem;
-      background-color: red;
+      height: 0.7rem;
+      width: 0.7rem;
       margin-right: 1rem;
       border-radius: 50%;
     }
