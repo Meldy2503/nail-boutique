@@ -11,11 +11,11 @@ import {
   Row2,
   Row3,
   Orientation,
-  Grid,
-  List,
-  Card,
-  Technician,
-  Select,
+  // Grid,
+  // List,
+  // Card,
+  // Technician,
+  // Select,
   Top,
 } from "./selectTechnicianStyle";
 import {
@@ -42,6 +42,12 @@ function SelectTechnician() {
   };
   const [searchTerm, updateSearchTerm] = useState("");
 
+  const [gridOrientation, setGridOrientation] = useState(true);
+  const toggleGridOrientation = () => {
+    setGridOrientation(true);
+  };
+  const toggleListOrientation = () => setGridOrientation(false);
+
   return (
     <ContentContainer>
       <Sidebar />
@@ -67,12 +73,22 @@ function SelectTechnician() {
                 <HiOutlineSearch className="search-icon" />
               </Search>
               <Orientation>
-                <Grid>
-                  <IoGrid className="grid" />
-                </Grid>
-                <List>
-                  <FaThList className="grid" />
-                </List>
+                <div
+                  onClick={toggleGridOrientation}
+                  className={`orientation-icon-container ${
+                    gridOrientation && "toggle-selected"
+                  }`}
+                >
+                  <IoGrid className="toggle-icon" />
+                </div>
+                <div
+                  onClick={toggleListOrientation}
+                  className={`orientation-icon-container ${
+                    gridOrientation ? "" : "toggle-selected"
+                  }`}
+                >
+                  <FaThList className="toggle-icon" />
+                </div>
               </Orientation>
             </Row2>
           </Top>
@@ -95,16 +111,23 @@ function SelectTechnician() {
                   }
                 })
                 .map((item) => (
-                  <Card key={item.id}>
+                  <div
+                    key={item.id}
+                    className={gridOrientation ? "grid" : "list"}
+                  >
                     <div className="top">
                       <img src={tick} alt="tick" />
                       <HiDotsHorizontal className="dots" />
                     </div>
-                    <Technician>
+                    <div
+                      className={
+                        gridOrientation ? "grid-technician" : "list-technician"
+                      }
+                    >
                       <img src={item.avatar} alt="avatar" />
                       <h4>{item.name}</h4>
                       <p>{`${item.role} - ${item.age}Yrs`}</p>
-                      <div>
+                      <div className="client-rating">
                         <span>
                           <HiUserGroup className="icon" />
                           <p>{item.clients} clients</p>
@@ -114,9 +137,9 @@ function SelectTechnician() {
                           <p>{item.rating} ratings</p>
                         </span>
                       </div>
-                      <Select onClick={() => handleClick(item)}>SELECT</Select>
-                    </Technician>
-                  </Card>
+                      <button onClick={() => handleClick(item)}>SELECT</button>
+                    </div>
+                  </div>
                 ))}
             </Row3>
           </div>
