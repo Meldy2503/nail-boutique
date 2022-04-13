@@ -55,6 +55,7 @@ export const Content = styled.div`
   border-radius: 1rem;
   margin-bottom: 2rem;
   padding: 2rem 3rem;
+  cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin-bottom: 1rem;
@@ -64,6 +65,7 @@ export const Content = styled.div`
 
 export const LocationText = styled.div`
   width: 90%;
+  cursor: pointer;
   h4 {
     font-size: 2rem;
 

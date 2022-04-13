@@ -69,7 +69,8 @@ function Schedule() {
                         style={{
                           position: "relative",
                           bottom: "90%",
-                          left: "150%",
+                          left: "190%",
+                          width: ".4rem",
                         }}
                         src={greenDot}
                         alt="greenDot"
@@ -81,7 +82,8 @@ function Schedule() {
                         style={{
                           position: "relative",
                           bottom: "90%",
-                          left: "150%",
+                          left: "190%",
+                          width: ".4rem",
                         }}
                         src={redDot}
                         alt="redDot"
