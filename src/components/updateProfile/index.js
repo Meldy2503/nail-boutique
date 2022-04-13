@@ -157,7 +157,13 @@ function UpdateProfile() {
               // value={formik.values.rememberMe}
             />
             <ButtonContainer>
-              <SubmitBtn type="submit">UPDATE PROFILE</SubmitBtn>
+              <SubmitBtn
+                value="UPDATE PROFILE"
+                type="submit"
+                onClick={formik.handleSubmit}
+              />
+              {/* UPDATE PROFILE
+              </SubmitBtn> */}
             </ButtonContainer>
           </FormField>
         </UpdateProfileContainer>
