@@ -100,6 +100,7 @@ export const List = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   .list {
     color: ${({ theme }) => theme.colors.secondary2};
@@ -198,7 +199,7 @@ export const Technician = styled.div`
     margin-bottom: 0.7rem;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 90%;
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.secondary3};
