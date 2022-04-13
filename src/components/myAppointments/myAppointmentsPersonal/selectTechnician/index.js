@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { SummaryContext } from "../../../../summaryContext";
 import {
   ContentContainer,
@@ -40,6 +40,7 @@ function SelectTechnician() {
   const handleClick = (technician) => {
     updateList({ technician });
   };
+  const [searchTerm, updateSearchTerm] = useState("");
 
   return (
     <ContentContainer>
@@ -61,6 +62,7 @@ function SelectTechnician() {
                   name="search"
                   id="search"
                   placeholder="Search Stylist"
+                  onChange={(e) => updateSearchTerm(e.target.value)}
                 />
                 <HiOutlineSearch className="search-icon" />
               </Search>
@@ -76,30 +78,46 @@ function SelectTechnician() {
           </Top>
           <div>
             <Row3>
-              {technicianData.map((item) => (
-                <Card key={item.id}>
-                  <div className="top">
-                    <img src={tick} alt="tick" />
-                    <HiDotsHorizontal className="dots" />
-                  </div>
-                  <Technician>
-                    <img src={item.avatar} alt="avatar" />
-                    <h4>{item.name}</h4>
-                    <p>{`${item.role} - ${item.age}Yrs`}</p>
-                    <div>
-                      <span>
-                        <HiUserGroup className="icon" />
-                        <p>{item.clients} clients</p>
-                      </span>
-                      <span>
-                        <MdStar className="icon star" />
-                        <p>{item.rating} ratings</p>
-                      </span>
+              {technicianData
+                .filter((val) => {
+                  if (searchTerm === val) {
+                    return val;
+                  } else if (
+                    val.name.toLowerCase().includes(searchTerm.toLowerCase())
+                  ) {
+                    return val;
+                  } else if (
+                    val.role.toLowerCase().includes(searchTerm.toLowerCase())
+                  ) {
+                    return val;
+                  } else {
+                    return null;
+                  }
+                })
+                .map((item) => (
+                  <Card key={item.id}>
+                    <div className="top">
+                      <img src={tick} alt="tick" />
+                      <HiDotsHorizontal className="dots" />
                     </div>
-                    <Select onClick={() => handleClick(item)}>SELECT</Select>
-                  </Technician>
-                </Card>
-              ))}
+                    <Technician>
+                      <img src={item.avatar} alt="avatar" />
+                      <h4>{item.name}</h4>
+                      <p>{`${item.role} - ${item.age}Yrs`}</p>
+                      <div>
+                        <span>
+                          <HiUserGroup className="icon" />
+                          <p>{item.clients} clients</p>
+                        </span>
+                        <span>
+                          <MdStar className="icon star" />
+                          <p>{item.rating} ratings</p>
+                        </span>
+                      </div>
+                      <Select onClick={() => handleClick(item)}>SELECT</Select>
+                    </Technician>
+                  </Card>
+                ))}
             </Row3>
           </div>
           <ButtonContainer>

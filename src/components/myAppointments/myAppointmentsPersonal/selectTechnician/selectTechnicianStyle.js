@@ -52,7 +52,7 @@ export const Search = styled.div`
 
   .search-icon {
     position: absolute;
-    right: 13%;
+    right: 10%;
     top: 1rem;
     color: ${({ theme }) => theme.colors.primary6};
   }
