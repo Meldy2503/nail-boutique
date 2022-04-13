@@ -96,9 +96,8 @@ function BookingSummary() {
             <h6>
               {date.toDateString()} - {summaryList.schedule.time} -
               <em>
-                {" "}
                 In {DaysToAppointmentDay}&nbsp;
-                {DaysToAppointmentDay > 1 ? "days" : "day"}{" "}
+                {DaysToAppointmentDay > 1 ? "days" : "day"}
               </em>
             </h6>
           </Day>
