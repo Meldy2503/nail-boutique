@@ -19,6 +19,7 @@ export const Row2 = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
   padding-bottom: 2rem;
   padding-top: 1rem;
+  gap: 1rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     top: 8rem;
@@ -38,6 +39,10 @@ export const Search = styled.div`
     border-radius: 0.4rem;
     color: ${({ theme }) => theme.colors.secondary1};
 
+    @media (max-width: 400px) {
+      padding: 0.6rem 1.1rem;
+    }
+
     &:focus {
       border-bottom: 1px solid ${({ theme }) => theme.colors.secondary3};
       outline: none;
@@ -55,18 +60,26 @@ export const Search = styled.div`
     right: 8%;
     top: 1rem;
     color: ${({ theme }) => theme.colors.primary6};
+
+    @media (max-width: 400px) {
+      top: 0.7rem;
+    }
   }
 `;
 
 export const Orientation = styled.div`
   display: flex;
   width: 15%;
-  height: 3.5rem;
+  height: 3rem;
   justify-content: center;
+
+  @media (max-width: 400px) {
+    margin-right: 1rem;
+    height: 2.5rem;
+  }
 
   .toggle-selected {
     background-color: #373737;
-
     border-radius: 0.4rem;
   }
   .orientation-icon-container {
@@ -76,12 +89,13 @@ export const Orientation = styled.div`
 
     .toggle-icon {
       color: ${({ theme }) => theme.colors.secondary2};
-      width: 4rem;
+      width: 3.5rem;
       font-size: 2rem;
       cursor: pointer;
 
-      @media (max-width: 350px) {
-        font-size: 1.8rem;
+      @media (max-width: 400px) {
+        font-size: 1.6rem;
+        width: 3rem;
       }
     }
   }
@@ -165,6 +179,10 @@ export const Row3 = styled.div`
         font-style: italic;
       }
 
+      .details {
+        text-align: center;
+      }
+
       .client-rating {
         display: flex;
         margin-bottom: 0.7rem;
@@ -199,6 +217,7 @@ export const Row3 = styled.div`
         border: 1px solid ${({ theme }) => theme.colors.secondary2};
         padding: 0.4rem 1.2rem;
         display: inline-block;
+        /* display: none; */
         border-radius: 0.5rem;
         font-weight: 400;
         font-size: 1.2rem;
@@ -229,6 +248,7 @@ export const Row3 = styled.div`
     width: 100%;
     border-radius: 1.1rem;
     color: ${({ theme }) => theme.colors.secondary2};
+    cursor: pointer;
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.secondary3};
@@ -290,7 +310,12 @@ export const Row3 = styled.div`
         /* width: 20%; */
       }
 
+      .details {
+        /* text-align: center; */
+      }
+
       .client-rating {
+        /* display: none; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -321,6 +346,7 @@ export const Row3 = styled.div`
         }
       }
       button {
+        /* display: none; */
         background-color: transparent;
         color: inherit;
         border: 1px solid ${({ theme }) => theme.colors.secondary2};

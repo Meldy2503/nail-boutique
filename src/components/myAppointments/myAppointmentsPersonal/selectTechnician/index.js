@@ -125,8 +125,10 @@ function SelectTechnician() {
                       }
                     >
                       <img src={item.avatar} alt="avatar" />
-                      <h4>{item.name}</h4>
-                      <p>{`${item.role} - ${item.age}Yrs`}</p>
+                      <div className="details">
+                        <h4>{item.name}</h4>
+                        <p>{`${item.role} - ${item.age}Yrs`}</p>
+                      </div>
                       <div className="client-rating">
                         <span>
                           <HiUserGroup className="icon" />
