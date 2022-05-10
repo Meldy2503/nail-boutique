@@ -27,9 +27,9 @@ function Navbar() {
                   navLink.isActive ? "active" : "navLink"
                 }
                 onClick={closeMenuLink}
-                to="/dashboard"
+                to="/home"
               >
-                Dashboard
+                Home
               </NavLink>
             </li>
             <li>
@@ -49,9 +49,9 @@ function Navbar() {
                 className={(navLink) =>
                   navLink.isActive ? "active" : "navLink"
                 }
-                to="/help"
+                to="/contact-us"
               >
-                Help
+                Contact Us
               </NavLink>
             </li>
             <li>
@@ -90,18 +90,6 @@ function Navbar() {
                   to="my-appointments"
                 >
                   My Appointments
-                </NavLink>
-              </li>
-
-              <li>
-                <NavLink
-                  className={({ isActive }) =>
-                    `navLink ${isActive ? "active" : "navlink"}`
-                  }
-                  onClick={closeMenuLink}
-                  to="/logout"
-                >
-                  Logout
                 </NavLink>
               </li>
             </SideUl>

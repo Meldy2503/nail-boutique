@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { SummaryContext } from "../../../../summaryContext";
 import locationData from "./selectLocationData";
-import Map from "../../../../images/map.png";
 import { MdChevronLeft } from "react-icons/md";
 import {
   Content,
@@ -68,7 +67,11 @@ function SelectLocation() {
         </Location>
 
         <MapImg>
-          <img src={Map} alt="location" />
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=18tNhSgJZKpyLpEvZ7myyMEFLlqfj0xfw&ehbc=2E312F"
+            width="100%"
+            height="100%"
+          ></iframe>
         </MapImg>
       </RightContent>
     </ContentContainer>

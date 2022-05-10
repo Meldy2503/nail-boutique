@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledUl = styled.ul`
-  padding: 3rem 0 0 1rem;
+  padding: 5rem 0 0 1rem;
   margin: 0 auto;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
