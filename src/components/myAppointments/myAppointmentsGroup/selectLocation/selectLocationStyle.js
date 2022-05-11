@@ -39,6 +39,7 @@ export const Location = styled.div`
   margin: 4rem 2rem 4rem 3rem;
   width: 72%;
   height: 90%;
+  overflow: auto;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin: 1rem auto;

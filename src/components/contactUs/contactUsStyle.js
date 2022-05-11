@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const ContactUsContainer = styled.div`
   width: 85%;
   margin: 0 auto;
-  padding-top: 3.5rem;
+  margin-top: 3.5rem;
+  overflow: auto;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
@@ -18,7 +19,7 @@ export const FormField = styled.form`
   margin-top: 1rem;
   margin-bottom: 20%;
   position: relative;
-  height: 100%;
+  height: 90%;
   overflow: auto;
   scrollbar-width: thin;
   scroll-padding-right: 5rem;
