@@ -5,10 +5,8 @@ import {
 } from "../../reuseableComponents/containerStyle";
 import Sidebar from "../sidebar";
 import { AboutUsContainer, Content, TextCol, Contacts } from "./aboutUsStyle";
-// import NailSalon from "../../images/fingernail-salon.png";
 import { MdChevronLeft } from "react-icons/md";
 import { HeadingStyle, Back } from "../../reuseableComponents/headingStyle";
-// import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
 
 const AboutUs = () => {
   return (
