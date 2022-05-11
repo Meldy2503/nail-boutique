@@ -40,14 +40,6 @@ function Sidebar() {
             Notifications
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
-            to="/logout"
-          >
-            Logout
-          </NavLink>
-        </li>
       </StyledUl>
     </LeftContent>
   );

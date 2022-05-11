@@ -5,6 +5,8 @@ import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Navbar from "./components/navbar/index";
 import MyAppointments from "./components/myAppointments/index";
 import UpdateProfile from "./components/updateProfile/index";
+import ContactUs from "./components/contactUs/index";
+import AboutUs from "./components/aboutUs/index";
 import Notifications from "./components/notifications/index";
 import { SummaryProvider } from "./summaryContext";
 
@@ -28,7 +30,7 @@ import ExpectedClientsGroup from "./components/myAppointments/myAppointmentsGrou
 import MyAppointmentIndex from "./components/pages/MyAppointmentIndex";
 import PersonalBookingIndex from "./components/pages/PersonalBookingIndex";
 import GroupBookingIndex from "./components/pages/GroupBookingIndex";
-import Dashboard from "./components/dashboard";
+import Home from "./components/home";
 
 const theme = {
   colors: {
@@ -71,7 +73,7 @@ function App() {
           <Navbar />
           <SummaryProvider>
             <Routes>
-              <Route path="/*" element={<Dashboard />} />
+              <Route path="/*" element={<Home />} />
               <Route path="/my-appointments" element={<MyAppointmentIndex />}>
                 <Route index element={<MyAppointments />} />
                 <Route
@@ -125,6 +127,8 @@ function App() {
               </Route>
               <Route path="update-profile" element={<UpdateProfile />} />
               <Route path="notifications" element={<Notifications />} />
+              <Route path="contact-us" element={<ContactUs />} />
+              <Route path="about-us" element={<AboutUs />} />
             </Routes>
           </SummaryProvider>
         </Fragment>

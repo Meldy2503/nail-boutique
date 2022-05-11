@@ -5,15 +5,11 @@ import { Link } from "react-router-dom";
 
 export const NavContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
-  height: 9rem;
+  height: 7rem;
   width: 100%;
   z-index: 3000;
   position: fixed;
   top: 0;
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    height: 7rem;
-  }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     height: 6rem;
@@ -40,7 +36,6 @@ export const StyledNav = styled.nav`
   justify-content: space-between;
   position: relative;
   z-index: 2500;
-  padding: 1.1rem 0 1.2rem 0;
 
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     padding: 1rem 0;
@@ -55,7 +50,7 @@ export const StyledNav = styled.nav`
       display: flex;
       flex-direction: column;
       background-color: ${({ theme }) => theme.colors.primary1};
-      opacity: 0.96;
+      opacity: 0.9;
       position: absolute;
       top: 6rem;
       right: -10%;

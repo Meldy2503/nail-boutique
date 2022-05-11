@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const UpdateProfileContainer = styled.div`
   width: 85%;
   margin: 0 auto;
-  padding-top: 3.5rem;
+  margin-top: 3.5rem;
+  overflow: auto;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;

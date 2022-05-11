@@ -24,12 +24,7 @@ function Success() {
               the 1500s, when an unknown printer took a galley of type and
               scrambled
             </p>
-            <ButtonS
-              onClick={handleReset}
-              fs="1.3rem"
-              width="65%"
-              to="/my-appointments"
-            >
+            <ButtonS onClick={handleReset} fs="1.3rem" width="65%" to="/">
               GO BACK HOME
             </ButtonS>
           </div>
