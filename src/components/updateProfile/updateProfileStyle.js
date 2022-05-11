@@ -8,7 +8,7 @@ export const UpdateProfileContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
-    padding-top: 0;
+    margin-top: 0;
   }
 `;
 

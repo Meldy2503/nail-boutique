@@ -7,6 +7,7 @@ import Sidebar from "../sidebar";
 import { AboutUsContainer, Content, TextCol, Contacts } from "./aboutUsStyle";
 import { MdChevronLeft } from "react-icons/md";
 import { HeadingStyle, Back } from "../../reuseableComponents/headingStyle";
+import { Button, ButtonContainer } from "../../reuseableComponents/buttonStyle";
 
 const AboutUs = () => {
   return (
@@ -52,6 +53,9 @@ const AboutUs = () => {
               </div>
             </Contacts>
           </Content>
+          <ButtonContainer>
+            <Button to="/contact-us">CONTACT US</Button>
+          </ButtonContainer>
         </AboutUsContainer>
       </RightContent>
     </ContentContainer>

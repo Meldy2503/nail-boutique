@@ -7,10 +7,7 @@ export const MapImg = styled.div`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 100%;
     margin: 0 auto;
-    height: 50%;
-  }
-  @media (max-width: 300px) {
-    height: 45%;
+    height: 70%;
   }
 
   img {
@@ -42,12 +39,14 @@ export const Location = styled.div`
   overflow: auto;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    margin: 1rem auto;
+    margin: 2rem auto 5rem auto;
     width: 90%;
+    height: 50%;
+    overflow: auto;
   }
 
   @media (max-width: 600px) {
-    margin: 1rem auto;
+    /* margin: 1rem auto; */
   }
 `;
 

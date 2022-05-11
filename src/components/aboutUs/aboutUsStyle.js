@@ -10,7 +10,7 @@ export const AboutUsContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 95%;
-    padding-top: 0;
+    margin-top: 0;
   }
 `;
 
@@ -25,7 +25,11 @@ export const Content = styled.div`
   }
 `;
 export const TextCol = styled.div`
-  background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0.5), #000),
+  background-image: linear-gradient(
+      105deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7)
+    ),
     url(${NailSalon});
   padding: 1rem 1.5rem;
   color: #e48f04;
