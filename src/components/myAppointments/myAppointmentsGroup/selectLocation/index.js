@@ -71,6 +71,7 @@ function SelectLocation() {
             src="https://www.google.com/maps/d/embed?mid=18tNhSgJZKpyLpEvZ7myyMEFLlqfj0xfw&ehbc=2E312F"
             width="100%"
             height="100%"
+            title="googleMap"
           ></iframe>
         </MapImg>
       </RightContent>
