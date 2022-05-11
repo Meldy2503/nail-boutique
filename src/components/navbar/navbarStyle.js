@@ -50,7 +50,7 @@ export const StyledNav = styled.nav`
       display: flex;
       flex-direction: column;
       background-color: ${({ theme }) => theme.colors.primary1};
-      opacity: 0.96;
+      opacity: 0.9;
       position: absolute;
       top: 6rem;
       right: -10%;

@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/index";
 import MyAppointments from "./components/myAppointments/index";
 import UpdateProfile from "./components/updateProfile/index";
 import ContactUs from "./components/contactUs/index";
+import AboutUs from "./components/aboutUs/index";
 import Notifications from "./components/notifications/index";
 import { SummaryProvider } from "./summaryContext";
 
@@ -127,6 +128,7 @@ function App() {
               <Route path="update-profile" element={<UpdateProfile />} />
               <Route path="notifications" element={<Notifications />} />
               <Route path="contact-us" element={<ContactUs />} />
+              <Route path="about-us" element={<AboutUs />} />
             </Routes>
           </SummaryProvider>
         </Fragment>

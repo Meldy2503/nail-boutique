@@ -16,7 +16,7 @@ function Navbar() {
     <ClickAwayListener onClickAway={handleClickAway}>
       <NavContainer>
         <StyledNav>
-          <Logo to="/my-appointments">
+          <Logo to="/">
             <img src={logo} alt="nail-boutique-logo" />
           </Logo>
 
@@ -27,7 +27,7 @@ function Navbar() {
                   navLink.isActive ? "active" : "navLink"
                 }
                 onClick={closeMenuLink}
-                to="/home"
+                to="/"
               >
                 Home
               </NavLink>
@@ -38,9 +38,9 @@ function Navbar() {
                 className={(navLink) =>
                   navLink.isActive ? "active" : "navLink"
                 }
-                to="/overview"
+                to="/about-us"
               >
-                Overview
+                About Us
               </NavLink>
             </li>
             <li>
@@ -87,7 +87,7 @@ function Navbar() {
                     `navLink ${isActive ? "active" : "navlink"}`
                   }
                   onClick={closeMenuLink}
-                  to="my-appointments"
+                  to="/my-appointments"
                 >
                   My Appointments
                 </NavLink>
