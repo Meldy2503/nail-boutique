@@ -1,9 +1,15 @@
 import React from "react";
-// import Sidebar from "../sidebar";
 import bgVideo from "../../images/office-video.mp4";
 import bgVideoTwo from "../../images/office-video2.webm";
 import bgVideoImg from "../../images/office-video-capture.JPG";
-import { Container, BackgroundVideoContainer, Text } from "./homeStyle";
+import { ButtonS } from "../../reuseableComponents/buttonStyle";
+import {
+  Container,
+  BackgroundVideoContainer,
+  TextContainer,
+  Text,
+  Header,
+} from "./homeStyle";
 
 function Home() {
   return (
@@ -15,13 +21,29 @@ function Home() {
           Your browser is not supported!
         </video>
       </BackgroundVideoContainer>
-      <Text>
-        <h1>heading</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta,
-          maiores magni voluptatibus dolorum harum ratione!
-        </p>
-      </Text>
+      <TextContainer>
+        <Text>
+          <h3>
+            <em>Quality Never goes out of Style</em>
+          </h3>
+          <Header>
+            <h1>
+              <span>THE</span> <br />
+              <span className="subHeader yellow">NAIL</span>
+              <span className="subHeader"> BOUTIQUE</span>
+            </h1>
+          </Header>
+          <p>Click the button to book an appointment with us</p>
+          <ButtonS
+            padding="1.3rem 0"
+            width="50%"
+            fs="1.8rem"
+            to="/my-appointments"
+          >
+            START BOOKING
+          </ButtonS>
+        </Text>
+      </TextContainer>
     </Container>
   );
 }

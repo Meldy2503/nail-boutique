@@ -34,6 +34,7 @@ export const Button = styled(Link)`
   text-align: center;
   width: ${({ width }) => width || "100%"};
   z-index: 4000;
+  cursor: pointer;
   position: sticky;
   bottom: 0;
   right: 0;
@@ -75,6 +76,7 @@ export const ButtonS = styled(Link)`
   text-align: center;
   width: ${({ width }) => width || "100%"};
   margin: 1rem 0 2rem 0;
+  cursor: pointer;
 
   &:hover {
     background: linear-gradient(180deg, #f5d061 -1%, #e48f04 100%);
