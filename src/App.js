@@ -5,6 +5,7 @@ import { GlobalStyle } from "./reuseableComponents/globalStyle";
 import Navbar from "./components/navbar/index";
 import MyAppointments from "./components/myAppointments/index";
 import UpdateProfile from "./components/updateProfile/index";
+import ContactUs from "./components/contactUs/index";
 import Notifications from "./components/notifications/index";
 import { SummaryProvider } from "./summaryContext";
 
@@ -125,6 +126,7 @@ function App() {
               </Route>
               <Route path="update-profile" element={<UpdateProfile />} />
               <Route path="notifications" element={<Notifications />} />
+              <Route path="contact-us" element={<ContactUs />} />
             </Routes>
           </SummaryProvider>
         </Fragment>

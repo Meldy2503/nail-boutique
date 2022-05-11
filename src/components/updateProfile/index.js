@@ -121,7 +121,7 @@ function UpdateProfile() {
             <InputField>
               <label htmlFor="phone">Phone Number</label>
               <input
-                type="text"
+                type="tel"
                 name="phone"
                 id="phone"
                 placeholder="Enter phone number"

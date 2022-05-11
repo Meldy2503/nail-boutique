@@ -1,35 +1,29 @@
 import React from "react";
-import {
-  ContentContainer,
-  RightContent,
-} from "../../reuseableComponents/containerStyle";
-import Sidebar from "../sidebar";
-import { BookingStyle, Book } from "./homeStyle";
-import { ButtonS } from "../../reuseableComponents/buttonStyle";
-import data from "./homeData";
+// import Sidebar from "../sidebar";
+import bgVideo from "../../images/office-video.mp4";
+import bgVideoTwo from "../../images/office-video2.webm";
+import bgVideoImg from "../../images/office-video-capture.JPG";
+import { Container, BackgroundVideoContainer, Text } from "./homeStyle";
 
-function Dashboard() {
+function Home() {
   return (
-    <ContentContainer>
-      <Sidebar />
-      <RightContent display="block">
-        <BookingStyle>
-          {data.map((book) => {
-            return (
-              <Book key={book.id}>
-                <div>
-                  <img src={book.icon} alt="icon" />
-                  <h4>{book.title}</h4>
-
-                  <ButtonS to={book.link}>CREATE BOOKING</ButtonS>
-                </div>
-              </Book>
-            );
-          })}
-        </BookingStyle>
-      </RightContent>
-    </ContentContainer>
+    <Container>
+      <BackgroundVideoContainer>
+        <video autoPlay muted loop playsInline poster={bgVideoImg}>
+          <source src={bgVideo} type="video/mp4" />
+          <source src={bgVideoTwo} type="video/webm" />
+          Your browser is not supported!
+        </video>
+      </BackgroundVideoContainer>
+      <Text>
+        <h1>heading</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta,
+          maiores magni voluptatibus dolorum harum ratione!
+        </p>
+      </Text>
+    </Container>
   );
 }
 
-export default Dashboard;
+export default Home;
