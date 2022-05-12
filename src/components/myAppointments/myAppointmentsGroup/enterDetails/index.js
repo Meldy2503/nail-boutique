@@ -76,9 +76,9 @@ function EnterDetails() {
             </Back>
           </HeadingStyle>
           <EnterDetailsContainer>
-            <FormField onSubmit={formik.handleSubmit}>
+            <FormField onSubmit={formik.handleSubmit} data-aos="zoom-in">
               <Names>
-                <InputField data-aos="fade-up">
+                <InputField>
                   <label htmlFor="firstName">First Name</label>
                   <input
                     type="text"
@@ -95,7 +95,7 @@ function EnterDetails() {
                     ) : null}
                   </ErrorMsg>
                 </InputField>
-                <InputField data-aos="fade-up">
+                <InputField>
                   <label htmlFor="lastName">Last Name</label>
                   <input
                     type="text"
@@ -113,7 +113,7 @@ function EnterDetails() {
                   </ErrorMsg>
                 </InputField>
               </Names>
-              <InputField data-aos="fade-up">
+              <InputField>
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
@@ -130,7 +130,7 @@ function EnterDetails() {
                   ) : null}
                 </ErrorMsg>
               </InputField>
-              <InputField data-aos="fade-up">
+              <InputField>
                 <label htmlFor="phone">Phone Number</label>
                 <input
                   type="text"
@@ -147,7 +147,7 @@ function EnterDetails() {
                   ) : null}
                 </ErrorMsg>
               </InputField>
-              <Comment data-aos="fade-up">
+              <Comment>
                 <label htmlFor="comment">State</label>
                 <textarea
                   name="comment"
@@ -166,7 +166,6 @@ function EnterDetails() {
                 id="remember"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                // value={formik.values.remember}
               />
             </FormField>
             <Policy>

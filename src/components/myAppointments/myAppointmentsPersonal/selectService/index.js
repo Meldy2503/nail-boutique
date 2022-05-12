@@ -63,11 +63,11 @@ function SelectServices() {
               Go back
             </Back>
           </HeadingStyle>
-          <ServiceContainer>
+          <ServiceContainer data-aos="fade-up">
             {serviceData.map((items, id = uuidv4()) => {
               return (
                 <Services key={id}>
-                  <ServiceType data-aos="fade-up">
+                  <ServiceType>
                     <div onClick={handleToggle(id)}>
                       <h3>{items.title}</h3>
                       <p>{items.text}</p>
@@ -77,7 +77,7 @@ function SelectServices() {
                     </span>
                   </ServiceType>
                   {onClick[id] && (
-                    <FormContainer data-aos="fade-up">
+                    <FormContainer>
                       <InputContainer>
                         <CheckBox
                           onChange={(checkboxState) =>
