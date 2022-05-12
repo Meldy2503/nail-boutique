@@ -20,32 +20,7 @@ export const FormField = styled.form`
   margin-top: 1rem;
   margin-bottom: 20%;
   position: relative;
-  overflow: auto;
-  scrollbar-width: thin;
-  scroll-padding-right: 5rem;
   font-size: 1.5rem;
-
-  &::-webkit-scrollbar {
-    width: 0.3rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.colors.primary2};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.primary5};
-    border-radius: 2rem;
-    border-top: 4rem solid transparent;
-    border-bottom: 4rem solid transparent;
-    background-clip: padding-box;
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      border-top: 12rem solid transparent;
-      border-bottom: 0rem solid transparent;
-      height: 95%;
-    }
-  }
 `;
 
 export const InputField = styled.div`
