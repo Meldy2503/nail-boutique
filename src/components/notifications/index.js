@@ -26,9 +26,9 @@ function Notification() {
               Go back
             </Back>
           </HeadingStyle>
-          <NotificationContents>
+          <NotificationContents data-aos="fade-up">
             {alertData.map((items) => (
-              <Item key={items.id} data-aos="fade-up">
+              <Item key={items.id}>
                 <div>
                   <h3>{items.heading}</h3>
                   <p>{items.body}</p>

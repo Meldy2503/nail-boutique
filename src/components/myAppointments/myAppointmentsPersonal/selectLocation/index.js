@@ -31,7 +31,7 @@ function SelectLocation() {
       <Sidebar />
       <RightContent>
         <Location>
-          <HeadingStyle mPdTop="0" data-aos="fade-up">
+          <HeadingStyle mPdTop="0" data-aos="zoom-in">
             <h2>Select Location</h2>
             <Back to="/my-appointments">
               <MdChevronLeft />
@@ -40,7 +40,7 @@ function SelectLocation() {
           </HeadingStyle>
 
           {locationData.map((data) => (
-            <Content key={data.id} data-aos="fade-up">
+            <Content key={data.id}>
               <RadioButton
                 checkHeight="1.5rem"
                 checkWidth="0.8rem"
