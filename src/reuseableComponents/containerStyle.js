@@ -8,6 +8,7 @@ export const ContentContainer = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  overflow: hidden;
   gap: 0.5rem;
   padding-top: 11rem;
   position: sticky;

@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./reuseableComponents/globalStyle";
@@ -9,6 +9,8 @@ import ContactUs from "./components/contactUs/index";
 import AboutUs from "./components/aboutUs/index";
 import Notifications from "./components/notifications/index";
 import { SummaryProvider } from "./summaryContext";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 // my appointments personal
 import SelectLocationPersonal from "./components/myAppointments/myAppointmentsPersonal/selectLocation/index";
@@ -65,6 +67,12 @@ const theme = {
 };
 
 function App() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1500,
+    });
+  }, []);
+
   return (
     <Router>
       <ThemeProvider theme={theme}>

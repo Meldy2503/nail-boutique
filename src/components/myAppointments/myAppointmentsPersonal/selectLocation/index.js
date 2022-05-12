@@ -32,7 +32,7 @@ function SelectLocation() {
       <RightContent>
         <Location>
           <HeadingStyle mPdTop="0">
-            <h2>Select Location</h2>
+            <h2 data-aos="zoom-in">Select Location</h2>
             <Back to="/my-appointments">
               <MdChevronLeft />
               Go back
@@ -40,7 +40,7 @@ function SelectLocation() {
           </HeadingStyle>
 
           {locationData.map((data) => (
-            <Content key={data.id}>
+            <Content key={data.id} data-aos="fade-up">
               <RadioButton
                 checkHeight="1.5rem"
                 checkWidth="0.8rem"

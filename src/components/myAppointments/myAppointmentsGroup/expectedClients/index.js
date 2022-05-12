@@ -25,14 +25,14 @@ function ExpectedClients() {
       <Sidebar />
       <RightContent>
         <RightContentCol1>
-          <HeadingStyle>
+          <HeadingStyle data-aos="zoom-in">
             <h2>Number of Expected Clients</h2>
             <Back to="/my-appointments/group-booking/select-services">
               <MdChevronLeft />
               Go back
             </Back>
           </HeadingStyle>
-          <InputField>
+          <InputField data-aos="fade-up">
             <input
               type="number"
               name="expected-clients"

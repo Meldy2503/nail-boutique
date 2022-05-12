@@ -16,7 +16,7 @@ function MyAppointments() {
         <BookingStyle>
           {myAppointmentsData.map((book) => {
             return (
-              <Book key={book.id}>
+              <Book key={book.id} data-aos="flip-left">
                 <div>
                   <img src={book.icon} alt="icon" />
                   <h4>{book.title}</h4>
