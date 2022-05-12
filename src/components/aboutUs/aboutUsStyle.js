@@ -9,7 +9,7 @@ export const AboutUsContainer = styled.div`
   overflow: auto;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 95%;
+    width: 100%;
     margin-top: 0;
   }
 `;
@@ -31,7 +31,7 @@ export const TextCol = styled.div`
       rgba(0, 0, 0, 0.7)
     ),
     url(${NailSalon});
-  padding: 1rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   color: #e48f04;
   text-align: center;
   letter-spacing: 0.4rem;
@@ -44,21 +44,24 @@ export const TextCol = styled.div`
 
     ul {
       display: inline-block;
+      margin-top: 1rem;
     }
     li {
       background-color: rgba(0, 0, 0, 0.8);
-      margin-top: 0.5rem;
-      padding: 0.4rem 1rem;
+      margin-top: 0.7rem;
+      padding: 0.6rem 1rem;
       border-radius: 1rem;
       font-size: 1.5rem;
     }
   }
 `;
 export const Contacts = styled.div`
-  padding: 1rem 1.5rem 0 1.5rem;
+  padding: 2.5rem 1.5rem;
   background-color: #000;
   opacity: 0.7;
   text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.2rem;
   color: #f1f1f1;
 
   div {

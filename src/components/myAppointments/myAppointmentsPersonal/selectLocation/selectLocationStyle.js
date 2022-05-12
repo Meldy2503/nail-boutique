@@ -44,10 +44,6 @@ export const Location = styled.div`
     height: 50%;
     overflow: auto;
   }
-
-  @media (max-width: 600px) {
-    /* margin: 1rem auto; */
-  }
 `;
 
 export const Content = styled.div`

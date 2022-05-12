@@ -10,7 +10,7 @@ const CheckboxContainer = styled.div`
 `;
 function CheckBox({ label, name, value, checkbox, onChange, checked }) {
   return (
-    <CheckboxContainer>
+    <CheckboxContainer data-aos="fade-up">
       <Checkbox
         icon={
           <div

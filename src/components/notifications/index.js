@@ -19,7 +19,7 @@ function Notification() {
       <Sidebar />
       <RightContent display="block">
         <NotificationContainer>
-          <HeadingStyle>
+          <HeadingStyle data-aos="zoom-in">
             <h2>Notifications</h2>
             <Back to="/location">
               <MdChevronLeft />
@@ -28,7 +28,7 @@ function Notification() {
           </HeadingStyle>
           <NotificationContents>
             {alertData.map((items) => (
-              <Item key={items.id}>
+              <Item key={items.id} data-aos="fade-up">
                 <div>
                   <h3>{items.heading}</h3>
                   <p>{items.body}</p>

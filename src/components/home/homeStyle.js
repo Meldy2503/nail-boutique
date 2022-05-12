@@ -4,13 +4,13 @@ export const Container = styled.section`
   margin: 0 auto;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 `;
 
 export const BackgroundVideoContainer = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  overflow: hidden;
 
   video {
     min-width: 100%;
@@ -58,7 +58,7 @@ export const Text = styled.div`
     }
   }
 
-  p {
+  h6 {
     margin: 3rem 0;
     font-size: 2rem;
 

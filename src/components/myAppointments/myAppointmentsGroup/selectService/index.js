@@ -57,7 +57,7 @@ function SelectServices() {
       <RightContent>
         <RightContentCol1>
           <HeadingStyle>
-            <h2>Select Services</h2>
+            <h2 data-aos="zoom-in">Select Services</h2>
             <Back to="/my-appointments/group-booking/select-location">
               <MdChevronLeft />
               Go back
@@ -67,7 +67,7 @@ function SelectServices() {
             {serviceData.map((items, id = uuidv4()) => {
               return (
                 <Services key={id}>
-                  <ServiceType>
+                  <ServiceType data-aos="fade-up">
                     <div onClick={handleToggle(id)}>
                       <h3>{items.title}</h3>
                       <p>{items.text}</p>
@@ -77,7 +77,7 @@ function SelectServices() {
                     </span>
                   </ServiceType>
                   {onClick[id] && (
-                    <FormContainer>
+                    <FormContainer data-aos="fade-up">
                       <InputContainer>
                         <CheckBox
                           onChange={(checkboxState) =>

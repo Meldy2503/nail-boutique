@@ -57,14 +57,14 @@ function UpdateProfile() {
       <Sidebar />
       <RightContent display="block">
         <UpdateProfileContainer>
-          <HeadingStyle>
+          <HeadingStyle data-aos="zoom-in">
             <h2>Update Profile</h2>
             <Back to="/enter-details">
               <MdChevronLeft />
               Go back
             </Back>
           </HeadingStyle>
-          <FormField onSubmit={formik.handleSubmit}>
+          <FormField onSubmit={formik.handleSubmit} data-aos="zoom-in">
             <Names>
               <InputField>
                 <label htmlFor="firstName">First Name</label>
@@ -156,16 +156,10 @@ function UpdateProfile() {
               onBlur={formik.handleBlur}
               // value={formik.values.rememberMe}
             />
-            <ButtonContainer>
-              <SubmitBtn
-                value="UPDATE PROFILE"
-                type="submit"
-                onClick={formik.handleSubmit}
-              />
-              {/* UPDATE PROFILE
-              </SubmitBtn> */}
-            </ButtonContainer>
           </FormField>
+          <ButtonContainer>
+            <SubmitBtn value="UPDATE PROFILE" type="reset" />
+          </ButtonContainer>
         </UpdateProfileContainer>
       </RightContent>
     </ContentContainer>

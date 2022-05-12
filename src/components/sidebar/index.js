@@ -12,7 +12,7 @@ function Sidebar() {
   };
   return (
     <LeftContent>
-      <StyledUl>
+      <StyledUl data-aos="fade-up">
         <li>
           <NavLink
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}

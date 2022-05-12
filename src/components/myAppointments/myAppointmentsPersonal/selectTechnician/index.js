@@ -6,18 +6,7 @@ import {
   RightContentCol1,
   RightContentCol2,
 } from "../../../../reuseableComponents/containerStyle";
-import {
-  Search,
-  Row2,
-  Row3,
-  Orientation,
-  // Grid,
-  // List,
-  // Card,
-  // Technician,
-  // Select,
-  Top,
-} from "./selectTechnicianStyle";
+import { Search, Row2, Row3, Orientation, Top } from "./selectTechnicianStyle";
 import {
   HeadingStyle,
   Back,
@@ -54,14 +43,14 @@ function SelectTechnician() {
       <RightContent>
         <RightContentCol1>
           <Top>
-            <HeadingStyle PdBottom="0">
+            <HeadingStyle PdBottom="0" data-aos="zoom-in">
               <h2>Select Technician</h2>
               <Back to="/my-appointments/personal-booking/select-services">
                 <MdChevronLeft />
                 Go back
               </Back>
             </HeadingStyle>
-            <Row2>
+            <Row2 data-aos="zoom-in">
               <Search>
                 <input
                   type="text"

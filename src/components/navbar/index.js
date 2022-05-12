@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
-      <NavContainer>
+      <NavContainer data-aos="zoom-in">
         <StyledNav>
           <Logo to="/">
             <img src={logo} alt="nail-boutique-logo" />

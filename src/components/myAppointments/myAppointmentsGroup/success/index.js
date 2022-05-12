@@ -7,7 +7,7 @@ import tick from "../../../../images/tick2.png";
 function Success() {
   return (
     <ContentContainer>
-      <SuccessContainer>
+      <SuccessContainer data-aos="zoom-in">
         <Popup>
           <div>
             <img src={tick} alt="tick" />

@@ -49,7 +49,7 @@ function Schedule() {
       <Sidebar />
       <RightContent>
         <RightContentCol1>
-          <HeadingStyle>
+          <HeadingStyle data-aos="zoom-in">
             <h2>Schedule</h2>
             <Back to="/my-appointments/personal-booking/select-technician">
               <MdChevronLeft />

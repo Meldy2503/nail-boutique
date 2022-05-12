@@ -31,7 +31,7 @@ function SelectLocation() {
       <Sidebar />
       <RightContent>
         <Location>
-          <HeadingStyle mPdTop="0">
+          <HeadingStyle mPdTop="0" data-aos="fade-up">
             <h2>Select Location</h2>
             <Back to="/my-appointments">
               <MdChevronLeft />
@@ -40,7 +40,7 @@ function SelectLocation() {
           </HeadingStyle>
 
           {locationData.map((data) => (
-            <Content key={data.id}>
+            <Content key={data.id} data-aos="fade-up">
               <RadioButton
                 checkHeight="1.5rem"
                 checkWidth="0.8rem"
@@ -66,7 +66,7 @@ function SelectLocation() {
           </ButtonContainer>
         </Location>
 
-        <MapImg>
+        <MapImg data-aos="fade-up">
           <iframe
             src="https://www.google.com/maps/d/embed?mid=18tNhSgJZKpyLpEvZ7myyMEFLlqfj0xfw&ehbc=2E312F"
             width="100%"

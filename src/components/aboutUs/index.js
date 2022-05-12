@@ -15,7 +15,7 @@ const AboutUs = () => {
       <Sidebar />
       <RightContent display="block">
         <AboutUsContainer>
-          <HeadingStyle>
+          <HeadingStyle mPdLe="1.5rem" mPdRi="1.5rem">
             <h2>About Us</h2>
             <Back to="/">
               <MdChevronLeft />
@@ -25,25 +25,25 @@ const AboutUs = () => {
           <Content>
             <TextCol>
               <div>
-                <h3>OUR SERVICES:</h3>
+                <h3 data-aos="fade-up">OUR SERVICES:</h3>
                 <ul>
-                  <li>Hair Styling</li>
-                  <li>Nail Services</li>
-                  <li>Eyelash extensions</li>
-                  <li>skin treatment</li>
-                  <li>Waxing</li>
-                  <li>Make up</li>
+                  <li data-aos="fade-up">Hair Styling</li>
+                  <li data-aos="fade-up">Nail Services</li>
+                  <li data-aos="fade-up">Eyelash extensions</li>
+                  <li data-aos="fade-up">skin treatment</li>
+                  <li data-aos="fade-up">Waxing</li>
+                  <li data-aos="fade-up">Make up</li>
                 </ul>
               </div>
             </TextCol>
 
             <Contacts>
-              <div>
+              <div data-aos="fade-up">
                 <h4>Contact us:</h4>
                 <p>08037588098</p>
                 <p>emelder.charles25@gmail.com</p>
               </div>
-              <div>
+              <div data-aos="fade-up">
                 <h4>Visit us at:</h4>
                 <p>7 - 12 Rumens Road,Ikoyi, Lagos</p>
                 <p>

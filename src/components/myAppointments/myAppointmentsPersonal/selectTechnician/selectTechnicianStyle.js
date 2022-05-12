@@ -217,7 +217,6 @@ export const Row3 = styled.div`
         border: 1px solid ${({ theme }) => theme.colors.secondary2};
         padding: 0.4rem 1.2rem;
         display: inline-block;
-        /* display: none; */
         border-radius: 0.5rem;
         font-weight: 400;
         font-size: 1.2rem;
@@ -241,7 +240,6 @@ export const Row3 = styled.div`
 
   .list {
     background-color: ${({ theme }) => theme.colors.primary7};
-    /* display: flex; */
     justify-content: space-between;
     margin: 0.5rem 0 0.5rem 0;
     padding: 1rem 1rem;
@@ -254,27 +252,6 @@ export const Row3 = styled.div`
       background-color: ${({ theme }) => theme.colors.secondary3};
       color: #000;
     }
-    /* 
-    @media (max-width: 1200px) {
-      width: 47%;
-    }
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-      width: 43%;
-      margin: 1rem auto;
-    }
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      width: 31%;
-    }
-
-    @media (max-width: 650px) {
-      width: 45%;
-    }
-
-    @media (max-width: 450px) {
-      width: 85%;
-    } */
 
     .top {
       display: none;
@@ -300,35 +277,21 @@ export const Row3 = styled.div`
       h4 {
         font-size: 1.3rem;
         font-weight: 600;
-        /* width: 20%; */
       }
 
       p {
         font-size: 0.8rem;
         font-weight: 400;
         font-style: italic;
-        /* width: 20%; */
-      }
-
-      .details {
-        /* text-align: center; */
       }
 
       .client-rating {
-        /* display: none; */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* width: 100%; */
-
-        /* &:hover {
-          background-color: ${({ theme }) => theme.colors.secondary3};
-          color: #000;
-        } */
 
         span {
-          /* width: 100%; */
           display: flex;
           flex-direction: row;
           width: 7rem;
@@ -341,12 +304,10 @@ export const Row3 = styled.div`
 
           .star {
             color: #ffc107;
-            /* margin-left: 1.5rem; */
           }
         }
       }
       button {
-        /* display: none; */
         background-color: transparent;
         color: inherit;
         border: 1px solid ${({ theme }) => theme.colors.secondary2};
@@ -358,7 +319,6 @@ export const Row3 = styled.div`
         text-align: center;
         cursor: pointer;
         letter-spacing: 0.3rem;
-        /* margin-bottom: 2rem; */
 
         &:visited {
           background: linear-gradient(90deg, #e48f04 -1.65%, #f5d061 100%);
