@@ -49,7 +49,7 @@ function Schedule() {
       <Sidebar />
       <RightContent>
         <RightContentCol1>
-          <HeadingStyle>
+          <HeadingStyle data-aos="zoom-in">
             <h2>Schedule</h2>
             <Back to="/my-appointments/group-booking/expected-clients">
               <MdChevronLeft />
@@ -105,7 +105,6 @@ function Schedule() {
             </Dots>
             <Time>
               <h1>Available Time</h1>
-
               <SelectAvailableTime>
                 {timeData.map((time) => {
                   return (

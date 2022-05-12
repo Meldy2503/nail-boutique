@@ -28,14 +28,12 @@ function Home() {
           </h3>
           <Header data-aos="zoom-in">
             <h1>
-              <span>THE</span> <br />
-              <span className="subHeader yellow">NAIL</span>
-              <span className="subHeader"> BOUTIQUE</span>
+              <span>The Luxurious</span> <br />
+              <span className="subHeader yellow"> Nail Salon</span>
+              <span className="subHeader"> Experience</span>
             </h1>
           </Header>
-          <p data-aos="fade-left">
-            Click the button to book an appointment with us
-          </p>
+          <h6>Click the button to book an appointment with us</h6>
           <ButtonS
             padding="1.3rem 0"
             width="50%"

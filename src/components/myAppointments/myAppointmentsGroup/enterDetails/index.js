@@ -68,7 +68,7 @@ function EnterDetails() {
       <Sidebar />
       <RightContent>
         <RightContentCol1>
-          <HeadingStyle>
+          <HeadingStyle data-aos="zoom-in">
             <h2>Enter your details</h2>
             <Back to="/my-appointments/group-booking/schedule">
               <MdChevronLeft />
@@ -78,7 +78,7 @@ function EnterDetails() {
           <EnterDetailsContainer>
             <FormField onSubmit={formik.handleSubmit}>
               <Names>
-                <InputField>
+                <InputField data-aos="fade-up">
                   <label htmlFor="firstName">First Name</label>
                   <input
                     type="text"
@@ -95,7 +95,7 @@ function EnterDetails() {
                     ) : null}
                   </ErrorMsg>
                 </InputField>
-                <InputField>
+                <InputField data-aos="fade-up">
                   <label htmlFor="lastName">Last Name</label>
                   <input
                     type="text"
@@ -113,7 +113,7 @@ function EnterDetails() {
                   </ErrorMsg>
                 </InputField>
               </Names>
-              <InputField>
+              <InputField data-aos="fade-up">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
@@ -130,7 +130,7 @@ function EnterDetails() {
                   ) : null}
                 </ErrorMsg>
               </InputField>
-              <InputField>
+              <InputField data-aos="fade-up">
                 <label htmlFor="phone">Phone Number</label>
                 <input
                   type="text"
@@ -147,7 +147,7 @@ function EnterDetails() {
                   ) : null}
                 </ErrorMsg>
               </InputField>
-              <Comment>
+              <Comment data-aos="fade-up">
                 <label htmlFor="comment">State</label>
                 <textarea
                   name="comment"

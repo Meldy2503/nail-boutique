@@ -15,6 +15,8 @@ export const HeadingStyle = styled.div`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     padding-top: ${({ mPdTop }) => mPdTop || "3.5rem"};
     padding-bottom: 1rem;
+    padding-right: ${({ mPdRi }) => mPdRi || "0"};
+    padding-left: ${({ mPdLe }) => mPdLe || "0"};
   }
 
   h2 {

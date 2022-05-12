@@ -58,7 +58,7 @@ export const Text = styled.div`
     }
   }
 
-  p {
+  h6 {
     margin: 3rem 0;
     font-size: 2rem;
 

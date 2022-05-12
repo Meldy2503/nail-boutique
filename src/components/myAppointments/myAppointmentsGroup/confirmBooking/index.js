@@ -47,7 +47,7 @@ function ConfirmBooking() {
         <RightContent>
           <RightContentCol1>
             <ConfirmBookingContainer>
-              <HeadingStyle>
+              <HeadingStyle data-aos="zoom-in">
                 <h2>Confirm Booking</h2>
                 <Back to="/my-appointments/group-booking/enter-details">
                   <MdChevronLeft />
@@ -56,7 +56,7 @@ function ConfirmBooking() {
               </HeadingStyle>
 
               {summaryList.location && (
-                <Location>
+                <Location data-aos="fade-up">
                   <div>
                     <span>
                       <IoLocationOutline className="pin" />
@@ -70,7 +70,7 @@ function ConfirmBooking() {
                 </Location>
               )}
 
-              <MobileSummary>
+              <MobileSummary data-aos="fade-up">
                 <RightContentCol2 mdisplay="flex">
                   <BookingSummary />
                 </RightContentCol2>

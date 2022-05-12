@@ -142,12 +142,3 @@ function SelectServices() {
 }
 
 export default SelectServices;
-
-<Back to="/my-appointments/group-booking/select-location">
-  <MdChevronLeft />
-  Go back
-</Back>;
-
-<ButtonContainer paddingm="0.5rem 0">
-  <Button to="/my-appointments/group-booking/expected-clients">CONTINUE</Button>
-</ButtonContainer>;

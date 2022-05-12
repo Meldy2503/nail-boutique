@@ -52,14 +52,14 @@ function ContactUs() {
       <Sidebar />
       <RightContent display="block">
         <ContactUsContainer>
-          <HeadingStyle>
+          <HeadingStyle data-aos="zoom-in">
             <h2>Contact Us</h2>
             <Back to="/">
               <MdChevronLeft />
               Go back
             </Back>
           </HeadingStyle>
-          <FormField onSubmit={formik.handleSubmit}>
+          <FormField onSubmit={formik.handleSubmit} data-aos="zoom-in">
             <InputField>
               <label htmlFor="name">Name</label>
               <input
@@ -141,14 +141,10 @@ function ContactUs() {
                 value={formik.values.message}
               ></textarea>
             </Message>
-            <ButtonContainer>
-              <SubmitBtn
-                value="SEND MESSAGE"
-                type="submit"
-                onClick={formik.handleSubmit}
-              />
-            </ButtonContainer>
           </FormField>
+          <ButtonContainer>
+            <SubmitBtn value="SEND MESSAGE" type="reset" />
+          </ButtonContainer>
         </ContactUsContainer>
       </RightContent>
     </ContentContainer>

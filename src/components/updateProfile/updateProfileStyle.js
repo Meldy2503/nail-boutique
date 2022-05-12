@@ -5,6 +5,7 @@ export const UpdateProfileContainer = styled.div`
   margin: 0 auto;
   margin-top: 3.5rem;
   overflow: auto;
+  height: 90%;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
@@ -19,7 +20,6 @@ export const FormField = styled.form`
   margin-top: 1rem;
   margin-bottom: 20%;
   position: relative;
-  height: 100%;
   overflow: auto;
   scrollbar-width: thin;
   scroll-padding-right: 5rem;

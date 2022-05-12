@@ -109,7 +109,6 @@ function SelectTechnician() {
                       <HiDotsHorizontal className="dots" />
                     </div>
                     <div
-                      data-aos="flip-left"
                       className={
                         gridOrientation ? "grid-technician" : "list-technician"
                       }
