@@ -12,7 +12,6 @@ import {
   Technician,
   Day,
   Total,
-  // Button,
 } from "./bookingSummaryStyle";
 
 import { VscLocation } from "react-icons/vsc";
@@ -38,7 +37,7 @@ function BookingSummary() {
     <SummaryContainer data-aos="fade-up">
       <Title>
         <h2>Booking Summary</h2>
-        <p>Lorem Ipsum has been the industry's iudst standard dummy.</p>
+        <p>Please note that all prices are inclusive of the 7.5% VAT</p>
       </Title>
       {summaryList.location && (
         <LocationContainer>

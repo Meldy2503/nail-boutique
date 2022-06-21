@@ -48,7 +48,7 @@ function UpdateProfile() {
     }),
     onSubmit: (values, { resetForm }) => {
       console.log(values);
-      resetForm();
+      resetForm({ values: "" });
     },
   });
 
@@ -154,12 +154,11 @@ function UpdateProfile() {
               id="rememberMe"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              // value={formik.values.rememberMe}
             />
+            <ButtonContainer>
+              <SubmitBtn value="UPDATE PROFILE" type="submit" />
+            </ButtonContainer>
           </FormField>
-          <ButtonContainer>
-            <SubmitBtn value="UPDATE PROFILE" type="reset" />
-          </ButtonContainer>
         </UpdateProfileContainer>
       </RightContent>
     </ContentContainer>

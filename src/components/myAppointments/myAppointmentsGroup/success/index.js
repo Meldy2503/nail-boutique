@@ -13,12 +13,11 @@ function Success() {
             <img src={tick} alt="tick" />
             <h3>Success!</h3>
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled
+              See you soon!! <br /> Thanks for booking with us. We've sent an
+              email confirmation to you using your provided email address.
             </p>
             <ButtonS fs="1.3rem" width="65%" to="/">
-              GO BACK HOME
+              OK
             </ButtonS>
           </div>
         </Popup>

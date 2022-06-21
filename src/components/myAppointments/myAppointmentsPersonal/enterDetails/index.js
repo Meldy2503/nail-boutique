@@ -171,15 +171,26 @@ function EnterDetails({ label }) {
             <Policy>
               <h2>Company Policy</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                quis, sem. Nulla consequat massa quis enim. Donec pede justo,
-                fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
-                rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-                felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
-                Vivamus
+                CANCELLATION POLICY: <br /> Cancellations are allowed up to 24
+                hours in advance. <br /> <br /> NO-CASH POLICY <br /> We no
+                longer take cash as a form of payment. Kindly make payment for
+                your service via POS or Transfers only. <br /> <br /> ARRIVAL
+                POLICY:
+                <br /> We operate an appointment only service. Please arrive at
+                least 10 mins early for your scheduled appointment. Please note
+                that we provide a 15 mins grace period for appointment times.
+                Should you arrive any time after this we may not be able to
+                guarantee a service. <br /> <br /> GROUP BOOKING POLICY: <br />{" "}
+                For any bookings of 3 people or more (classified as a Group
+                booking) we will require a non- refundable booking fee to be
+                transferred before the booking is confirmed. This fee is N5k per
+                person and will be deducted from the final bill once services
+                are rendered. The deposit will be forfeited for any no shows
+                (per person) for the date and time of the Group booking. <br />{" "}
+                <br />
+                KIDS POLICY: <br /> We are currently able to serve children of 7
+                to 15 years. Any children younger than this will unfortunately
+                not be attended to.
               </p>
             </Policy>
           </EnterDetailsContainer>

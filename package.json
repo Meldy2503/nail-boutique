@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "formik": "^2.2.9",
+    "google-map-react": "^2.1.10",
     "hamburger-react": "^2.4.1",
     "intl-tel-input": "^17.0.15",
     "moment": "^2.29.1",
