@@ -54,14 +54,14 @@ export const StyledNav = styled.nav`
       position: absolute;
       top: 6rem;
       right: -10%;
-      width: 60%;
+      width: 70%;
       height: 100vh;
       z-index: 3000;
       overflow: scroll;
       padding-top: 2rem;
 
       @media screen and (max-width: 500px) {
-        width: 80%;
+        width: 90%;
       }
     }
   }

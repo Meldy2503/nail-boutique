@@ -54,8 +54,16 @@ export const InputField = styled.div`
     padding: 1rem 1.6rem;
     background-color: ${({ theme }) => theme.colors.primary7};
     border: none;
-    border-radius: 0.4rem;
     color: ${({ theme }) => theme.colors.secondary1};
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      box-shadow: 0 0 0 3rem #262626 inset !important;
+      -webkit-box-shadow: 0 0 0 3rem #262626 inset !important;
+      -webkit-text-fill-color: #fff !important;
+    }
 
     &:focus {
       border-bottom: 1px solid ${({ theme }) => theme.colors.secondary3};
@@ -91,7 +99,6 @@ export const Comment = styled.div`
     padding: 1rem 1.6rem;
     background-color: ${({ theme }) => theme.colors.primary7};
     border: none;
-    border-radius: 0.4rem;
     font-family: Poppins;
     font-size: 1.3rem;
     font-style: normal;
@@ -100,6 +107,15 @@ export const Comment = styled.div`
     letter-spacing: 0em;
     text-align: left;
     color: ${({ theme }) => theme.colors.secondary1};
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      box-shadow: 0 0 0 3rem #262626 inset !important;
+      -webkit-box-shadow: 0 0 0 3rem #262626 inset !important;
+      -webkit-text-fill-color: #fff !important;
+    }
 
     &:focus {
       border-bottom: 1px solid ${({ theme }) => theme.colors.secondary3};
