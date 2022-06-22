@@ -158,12 +158,16 @@ export const Row3 = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+
       margin: 0 auto;
 
       img {
         border-radius: 50%;
         height: 4rem;
         width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       h4 {
@@ -271,7 +275,8 @@ export const Row3 = styled.div`
       img {
         border-radius: 50%;
         max-width: 100%;
-        height: 4rem;
+        height: 4.3rem;
+        width: 4.3rem;
       }
 
       h4 {

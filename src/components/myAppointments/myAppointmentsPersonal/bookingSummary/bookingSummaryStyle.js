@@ -143,6 +143,19 @@ export const Technician = styled.div`
     justify-content: space-between;
     padding: 0.5rem;
 
+    img {
+      border-radius: 50%;
+      max-width: 100%;
+      width: 4.3rem;
+      height: 4.3rem;
+    }
+
+    .icon {
+      color: #e48f04;
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
     span {
       display: flex;
       flex-direction: column;
@@ -156,17 +169,6 @@ export const Technician = styled.div`
       p {
         font-size: 1.1rem;
       }
-
-      img {
-        width: 4.3rem;
-        height: 4.3rem;
-      }
-    }
-
-    .icon {
-      color: #e48f04;
-      font-size: 2rem;
-      margin-bottom: 0.8rem;
     }
   }
 `;
