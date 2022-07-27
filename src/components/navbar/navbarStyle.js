@@ -54,7 +54,7 @@ export const StyledNav = styled.nav`
       position: absolute;
       top: 6rem;
       right: -10%;
-      width: 70%;
+      width: 35rem;
       height: 100vh;
       z-index: 3000;
       overflow: scroll;
@@ -87,7 +87,7 @@ export const StyledNav = styled.nav`
       }
 
       @media screen and (max-width: 500px) {
-        width: 90%;
+        width: 80%;
       }
     }
   }
