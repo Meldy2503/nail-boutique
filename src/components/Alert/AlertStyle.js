@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FaCheckCircle } from "react-icons/fa";
 
 export const AlertStyle = styled.div`
   position: fixed;
@@ -53,8 +54,7 @@ export const AlertStyle = styled.div`
     align-items: center;
     font-size: clamp(1.4rem, 3vw, 1.5rem);
     padding: 2rem 0.5rem;
-    margin-left: 0.5rem;
-    gap: 0.8rem;
+    gap: 1.3rem;
 
     @media (max-width: 500px) {
       padding: 1.5rem 0.5rem;
@@ -64,4 +64,9 @@ export const AlertStyle = styled.div`
       padding: 1rem 0.5rem;
     }
   }
+`;
+
+export const Tick = styled(FaCheckCircle)`
+  display: ${({ display }) => display || "block"};
+  font-size: 2.5rem;
 `;

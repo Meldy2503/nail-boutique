@@ -6,7 +6,6 @@ import {
   Message,
   ErrorMsg,
   SubmitBtn,
-  AlertWrapper,
 } from "./contactUsStyle";
 import { MdChevronLeft } from "react-icons/md";
 import { useFormik } from "formik";
@@ -18,11 +17,17 @@ import {
 import Sidebar from "../sidebar";
 import { HeadingStyle, Back } from "../../reuseableComponents/headingStyle";
 import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
-import { Alert, AlertTitle } from "@mui/material";
+import Alert from "../Alert/Alert";
 
 function ContactUs() {
-  const [showAlert, setShowAlert] = React.useState(false);
-  const [closeAlert, setCloseAlert] = React.useState(true);
+  const [showAlert, setShowAlert] = React.useState(null);
+  const handleShowAlert = (message) => {
+    setShowAlert({ msg: message });
+    setTimeout(() => {
+      setShowAlert(null);
+    }, 6000);
+  };
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -47,10 +52,10 @@ function ContactUs() {
 
     onSubmit: (values, { resetForm }) => {
       resetForm();
-      setShowAlert(true);
-      // alert(
-      //   "Thanks for contacting us, we will get back to you as soon as possible"
-      // );
+      handleShowAlert(
+        "Thanks for contacting us, we will get back to you as soon as possible"
+      );
+
       console.log(values);
     },
   });
@@ -60,24 +65,6 @@ function ContactUs() {
       <Sidebar />
       <RightContent display="block">
         <ContactUsContainer>
-          <AlertWrapper>
-            {showAlert && closeAlert && (
-              <Alert
-                data-aos="zoom-in"
-                severity="success"
-                color="warning"
-                variant="outlined"
-                onClose={() => setCloseAlert(false)}
-              >
-                <AlertTitle>
-                  <em>The Nail Boutique</em>
-                </AlertTitle>
-                <strong>
-                  Thanks for contacting us, we will get back to you soon
-                </strong>
-              </Alert>
-            )}
-          </AlertWrapper>
           <HeadingStyle data-aos="zoom-in">
             <h2>Contact Us</h2>
             <Back to="/">
@@ -173,6 +160,7 @@ function ContactUs() {
               </SubmitBtn>
             </ButtonContainer>
           </FormField>
+          <Alert display="none" showAlert={showAlert} />
         </ContactUsContainer>
       </RightContent>
     </ContentContainer>

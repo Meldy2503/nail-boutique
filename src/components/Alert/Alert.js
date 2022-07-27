@@ -1,17 +1,15 @@
 import React from "react";
 import { AlertStyle } from "./AlertStyle";
-import { FaCheckCircle } from "react-icons/fa";
+import { Tick } from "./AlertStyle";
 
-const Alert = (props) => {
+const Alert = ({ showAlert, display }) => {
   return (
-    props.showAlert && (
+    showAlert && (
       <AlertStyle>
-        {/* <span> */}
         <p>
-          <FaCheckCircle size={28} />
-          {props.showAlert.msg}
+          <Tick display={display} />
+          {showAlert.msg}
         </p>
-        {/* </span> */}
       </AlertStyle>
     )
   );
