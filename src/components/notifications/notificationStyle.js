@@ -18,24 +18,7 @@ export const NotificationContainer = styled.div`
   }
 
   &::-webkit-scrollbar {
-    width: 0.3rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.colors.primary2};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.primary5};
-    border-radius: 2rem;
-    border-top: 4rem solid transparent;
-    border-bottom: 4rem solid transparent;
-    background-clip: padding-box;
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      border-top: 12rem solid transparent;
-      border-bottom: 0rem solid transparent;
-    }
+    width: 0;
   }
 `;
 

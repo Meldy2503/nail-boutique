@@ -5,11 +5,16 @@ export const ContactUsContainer = styled.div`
   margin: 0 auto;
   margin-top: 3.5rem;
   overflow: auto;
-  height: 90%;
+  height: 92%;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
     margin-top: 0;
+    height: 100%;
   }
 `;
 
@@ -25,7 +30,7 @@ export const FormField = styled.form`
 
 export const InputField = styled.div`
   width: 100%;
-  height: 8rem;
+  height: 9rem;
 
   label {
     display: flex;
@@ -34,14 +39,15 @@ export const InputField = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 1.8rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.8rem;
   }
   input {
     width: 100%;
-    padding: 1rem 1.6rem;
+    padding: 1.2rem 1.6rem;
     background-color: ${({ theme }) => theme.colors.primary7};
     border: none;
-    color: ${({ theme }) => theme.colors.secondary1};
+    color: ${({ theme }) => theme.colors.secondary3};
+    font-size: 1.5rem;
 
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
@@ -49,13 +55,13 @@ export const InputField = styled.div`
     &:-webkit-autofill:active {
       box-shadow: 0 0 0 3rem #262626 inset !important;
       -webkit-box-shadow: 0 0 0 3rem #262626 inset !important;
-      -webkit-text-fill-color: #fff !important;
+      -webkit-text-fill-color: #bbbbbb !important;
     }
 
     &:focus {
       border-bottom: 1px solid ${({ theme }) => theme.colors.secondary3};
       outline: none;
-      color: ${({ theme }) => theme.colors.secondary1};
+      color: ${({ theme }) => theme.colors.secondary3};
       background-color: ${({ theme }) => theme.colors.primary7};
     }
   }
@@ -70,7 +76,11 @@ export const ErrorMsg = styled.div`
 `;
 
 export const Message = styled.div`
-  height: 8rem;
+  height: 9rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    height: 17rem;
+  }
 
   label {
     display: flex;
@@ -79,11 +89,12 @@ export const Message = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 1.8rem;
+    margin-bottom: 0.8rem;
   }
 
   textarea {
     width: 100%;
-    padding: 1rem 1.6rem;
+    padding: 1.2rem 1.6rem;
     background-color: ${({ theme }) => theme.colors.primary7};
     border: none;
     font-family: Poppins;
@@ -93,7 +104,7 @@ export const Message = styled.div`
     line-height: 2.1rem;
     letter-spacing: 0em;
     text-align: left;
-    color: ${({ theme }) => theme.colors.secondary1};
+    color: ${({ theme }) => theme.colors.secondary3};
 
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
@@ -107,13 +118,13 @@ export const Message = styled.div`
     &:focus {
       border-bottom: 1px solid ${({ theme }) => theme.colors.secondary3};
       outline: none;
-      color: ${({ theme }) => theme.colors.secondary1};
+      color: ${({ theme }) => theme.colors.secondary3};
       background-color: ${({ theme }) => theme.colors.primary7};
     }
   }
 `;
 
-export const SubmitBtn = styled.input`
+export const SubmitBtn = styled.button`
   color: #000000;
   background: linear-gradient(90deg, #f5d061 -1.65%, #e48f04 100%);
   padding: 1rem 0;
@@ -133,11 +144,6 @@ export const SubmitBtn = styled.input`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin: 0 auto;
     font-size: 1.5rem;
-    width: 90%;
-    position: fixed;
-    bottom: 1rem;
-    right: 0;
-    left: 0;
   }
 
   @media screen and (max-width: 400px) {
@@ -146,5 +152,19 @@ export const SubmitBtn = styled.input`
 
   @media screen and (max-width: 350px) {
     font-size: 1.2rem;
+  }
+`;
+
+export const AlertWrapper = styled.div`
+  em {
+    font-size: 1.6rem;
+    color: #999;
+    font-weight: 700;
+  }
+
+  strong {
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: 400;
   }
 `;

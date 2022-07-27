@@ -62,8 +62,6 @@ export const RightContentCol1 = styled.div`
   width: 70%;
   height: 90%;
   overflow: auto;
-  scrollbar-width: thin;
-  scroll-padding-right: 5rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 90%;
@@ -72,25 +70,7 @@ export const RightContentCol1 = styled.div`
   }
 
   &::-webkit-scrollbar {
-    width: 0.3rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.colors.primary2};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.primary5};
-    border-radius: 2rem;
-    border-top: 4rem solid transparent;
-    border-bottom: 4rem solid transparent;
-    background-clip: padding-box;
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      border-top: 12rem solid transparent;
-      border-bottom: 0rem solid transparent;
-      height: 95%;
-    }
+    width: 0;
   }
 `;
 export const RightContentCol2 = styled.div`
@@ -99,8 +79,6 @@ export const RightContentCol2 = styled.div`
   width: 40%;
   height: 90%;
   overflow: auto;
-  scrollbar-width: thin;
-  scroll-padding-right: 5rem;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     display: ${({ mdisplay }) => mdisplay || "none"};
@@ -109,24 +87,6 @@ export const RightContentCol2 = styled.div`
   }
 
   &::-webkit-scrollbar {
-    width: 0.3rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.colors.primary2};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.primary5};
-    border-radius: 2rem;
-    border-top: 4rem solid transparent;
-    border-bottom: 4rem solid transparent;
-    background-clip: padding-box;
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      border-top: 12rem solid transparent;
-      border-bottom: 0rem solid transparent;
-      height: 95%;
-    }
+    width: 0;
   }
 `;
