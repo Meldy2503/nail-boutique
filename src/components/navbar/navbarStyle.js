@@ -60,6 +60,32 @@ export const StyledNav = styled.nav`
       overflow: scroll;
       padding-top: 2rem;
 
+      animation: slideIn 1s ease-in;
+
+      @keyframes slideIn {
+        0% {
+          transform: translateX(500px);
+          opacity: 0;
+        }
+
+        65% {
+          transform: translateX(1px);
+          opacity: 1;
+        }
+        70% {
+          transform: translateX(-1px);
+        }
+        75% {
+          transform: translateX(1px);
+        }
+        90% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+
       @media screen and (max-width: 500px) {
         width: 90%;
       }
