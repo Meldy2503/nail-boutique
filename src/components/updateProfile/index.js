@@ -19,6 +19,7 @@ import Sidebar from "../sidebar";
 import { HeadingStyle, Back } from "../../reuseableComponents/headingStyle";
 import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
 import CheckBox from "../../reuseableComponents/Checkbox";
+import toast, { Toaster } from "react-hot-toast";
 
 function UpdateProfile() {
   const formik = useFormik({
@@ -28,27 +29,26 @@ function UpdateProfile() {
       email: "",
       phone: "",
       comment: "",
-      rememberMe: true,
+      rememberMe: "",
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
-        .max(15, "Must be 15 characters or less")
+        .max(20, "Must not be more than 20 characters")
         .required("*Required"),
       lastName: Yup.string()
-        .max(15, "Must be 15 characters or less")
+        .max(20, "Must not be more than 20 characters")
         .required("*Required"),
-      email: Yup.string().email("Invalid Email").required("*Required"),
-      phone: Yup.string()
-        .max(11, "Must be 11 characters")
+      email: Yup.string()
+        .email("Enter a valid email address")
         .required("*Required"),
-      comment: Yup.string()
-        .max(5, "Must be 5 characters or more")
-        .required("*Required"),
-      rememberMe: Yup.boolean(),
+      phone: Yup.string().required("*Required"),
+      comment: Yup.string(),
     }),
+
     onSubmit: (values, { resetForm }) => {
+      resetForm();
       console.log(values);
-      resetForm({ values: "" });
+      toast("Here is your toast.");
     },
   });
 
@@ -57,6 +57,10 @@ function UpdateProfile() {
       <Sidebar />
       <RightContent display="block">
         <UpdateProfileContainer>
+          <div>
+            {/* <button onClick={notify}>Make me a toast</button> */}
+            <Toaster />
+          </div>
           <HeadingStyle data-aos="zoom-in">
             <h2>Update Profile</h2>
             <Back to="/enter-details">
@@ -64,7 +68,8 @@ function UpdateProfile() {
               Go back
             </Back>
           </HeadingStyle>
-          <FormField onSubmit={formik.handleSubmit} data-aos="zoom-in">
+
+          <FormField data-aos="zoom-in" onSubmit={formik.handleSubmit}>
             <Names>
               <InputField>
                 <label htmlFor="firstName">First Name</label>
@@ -154,9 +159,12 @@ function UpdateProfile() {
               id="rememberMe"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
+              checked
             />
             <ButtonContainer>
-              <SubmitBtn value="UPDATE PROFILE" type="submit" />
+              <SubmitBtn type="submit" onClick={formik.handleSubmit}>
+                UPDATE PROFILE
+              </SubmitBtn>
             </ButtonContainer>
           </FormField>
         </UpdateProfileContainer>
