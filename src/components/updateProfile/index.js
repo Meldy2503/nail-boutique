@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FormField,
   UpdateProfileContainer,
@@ -19,9 +19,17 @@ import Sidebar from "../sidebar";
 import { HeadingStyle, Back } from "../../reuseableComponents/headingStyle";
 import { ButtonContainer } from "../../reuseableComponents/buttonStyle";
 import CheckBox from "../../reuseableComponents/Checkbox";
-import toast, { Toaster } from "react-hot-toast";
+import Alert from "../Alert/Alert";
 
 function UpdateProfile() {
+  const [showAlert, setShowAlert] = useState(null);
+  const handleShowAlert = (message) => {
+    setShowAlert({ msg: message });
+    setTimeout(() => {
+      setShowAlert(null);
+    }, 4000);
+  };
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -47,8 +55,9 @@ function UpdateProfile() {
 
     onSubmit: (values, { resetForm }) => {
       resetForm();
+      handleShowAlert("Profile Updated Successfully");
+
       console.log(values);
-      toast("Here is your toast.");
     },
   });
 
@@ -57,10 +66,6 @@ function UpdateProfile() {
       <Sidebar />
       <RightContent display="block">
         <UpdateProfileContainer>
-          <div>
-            {/* <button onClick={notify}>Make me a toast</button> */}
-            <Toaster />
-          </div>
           <HeadingStyle data-aos="zoom-in">
             <h2>Update Profile</h2>
             <Back to="/enter-details">
@@ -68,7 +73,6 @@ function UpdateProfile() {
               Go back
             </Back>
           </HeadingStyle>
-
           <FormField data-aos="zoom-in" onSubmit={formik.handleSubmit}>
             <Names>
               <InputField>
@@ -167,6 +171,7 @@ function UpdateProfile() {
               </SubmitBtn>
             </ButtonContainer>
           </FormField>
+          <Alert showAlert={showAlert} />
         </UpdateProfileContainer>
       </RightContent>
     </ContentContainer>
