@@ -1,35 +1,24 @@
 import styled from "styled-components";
 
 export const NotificationContainer = styled.div`
-  padding: 0 3rem 3rem 3rem;
-  height: 93%;
+  height: 88%;
   overflow: auto;
   scrollbar-width: thin;
-  scroll-padding-right: 5rem;
+  padding: 0 3rem 0 3rem;
+  margin-top: 4rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
+    margin-top: 3rem;
+  }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    padding: 3.5rem 3rem 3rem 3rem;
+    margin-top: 0;
+    padding: 0rem 2.5rem 0 2.5rem;
+    height: 90%;
   }
 
   &::-webkit-scrollbar {
-    width: 0.3rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.colors.primary2};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.primary5};
-    border-radius: 2rem;
-    border-top: 4rem solid transparent;
-    border-bottom: 4rem solid transparent;
-    background-clip: padding-box;
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      border-top: 12rem solid transparent;
-      border-bottom: 0rem solid transparent;
-    }
+    width: 0;
   }
 `;
 

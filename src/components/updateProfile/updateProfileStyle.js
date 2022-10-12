@@ -1,12 +1,21 @@
 import styled from "styled-components";
 
+
 export const UpdateProfileContainer = styled.div`
   width: 85%;
   margin: 0 auto;
-  padding-top: 3rem;
+  margin-top: 3.5rem;
+  overflow: auto;
+  height: 92%;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    width: 95%;
+    width: 90%;
+    margin-top: 0;
+    height: 100%;
   }
 `;
 
@@ -17,74 +26,55 @@ export const FormField = styled.form`
   margin-top: 1rem;
   margin-bottom: 20%;
   position: relative;
-  height: 90%;
-  overflow: auto;
-  scrollbar-width: thin;
-  scroll-padding-right: 5rem;
+  font-size: 1.5rem;
+`;
 
-  &::-webkit-scrollbar {
-    width: 0.3rem;
-  }
+export const Names = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
 
-  &::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.colors.primary2};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.primary5};
-    border-radius: 2rem;
-    border-top: 4rem solid transparent;
-    border-bottom: 4rem solid transparent;
-    background-clip: padding-box;
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      border-top: 12rem solid transparent;
-      border-bottom: 0rem solid transparent;
-      height: 95%;
-    }
-  }
-
-  & > span {
-    display: block;
-    height: 60vh;
-  }
-
-  .names {
-    display: flex;
-    flex-direction: row;
-    gap: 1.6rem;
-
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      flex-direction: column;
-      gap: 0rem;
-    }
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    flex-direction: column;
+    gap: 0rem;
   }
 `;
 
 export const InputField = styled.div`
   width: 100%;
-  height: 8rem;
+  height: 9rem;
+
   label {
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.8rem;
+    margin-bottom: 0.8rem;
   }
   input {
     width: 100%;
-    padding: 1rem 1.6rem;
+    padding: 1.2rem 1.6rem;
     background-color: ${({ theme }) => theme.colors.primary7};
     border: none;
-    border-radius: 0.4rem;
-    color: ${({ theme }) => theme.colors.secondary1};
+    outline: none;
+    font-size: 1.5rem;
+    color: ${({ theme }) => theme.colors.secondary3};
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      box-shadow: 0 0 0 3rem #262626 inset !important;
+      -webkit-box-shadow: 0 0 0 3rem #262626 inset !important;
+      -webkit-text-fill-color: #bbbbbb !important;
+    }
 
     &:focus {
       border-bottom: 1px solid ${({ theme }) => theme.colors.secondary3};
       outline: none;
-      color: ${({ theme }) => theme.colors.secondary1};
+      color: ${({ theme }) => theme.colors.secondary3};
       background-color: ${({ theme }) => theme.colors.primary7};
     }
   }
@@ -92,42 +82,48 @@ export const InputField = styled.div`
 
 export const ErrorMsg = styled.div`
   p {
-    color: red;
+    color: #e48f04;
     font-size: 1.2rem;
+    margin-top: 0.3rem;
   }
 `;
 
 export const Comment = styled.div`
-  height: 8rem;
+  height: 9rem;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    height: 15rem;
+  }
+
   label {
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.8rem;
+    margin-bottom: 0.8rem;
   }
 
   textarea {
     width: 100%;
-    padding: 1rem 1.6rem;
+    padding: 1.2rem 1.6rem;
     background-color: ${({ theme }) => theme.colors.primary7};
     border: none;
-    border-radius: 0.4rem;
     font-family: Poppins;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-style: normal;
+    outline: none;
     font-weight: 400;
     line-height: 2.1rem;
     letter-spacing: 0em;
     text-align: left;
-    color: ${({ theme }) => theme.colors.secondary1};
+    color: ${({ theme }) => theme.colors.secondary3};
 
     &:focus {
       border-bottom: 1px solid ${({ theme }) => theme.colors.secondary3};
       outline: none;
-      color: ${({ theme }) => theme.colors.secondary1};
+      color: ${({ theme }) => theme.colors.secondary3};
       background-color: ${({ theme }) => theme.colors.primary7};
     }
   }
@@ -152,11 +148,6 @@ export const SubmitBtn = styled.button`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     margin: 0 auto;
     font-size: 1.5rem;
-    width: 86%;
-    position: fixed;
-    bottom: 2.7rem;
-    right: 0;
-    left: 0;
   }
 
   @media screen and (max-width: 400px) {
@@ -168,16 +159,4 @@ export const SubmitBtn = styled.button`
   }
 `;
 
-export const RememberMe = styled.span`
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  font-size: 1.4rem;
 
-  input {
-    margin-right: 1rem;
-    border: 0.5px solid ${({ theme }) => theme.colors.tertiary2};
-    accent-color: ${({ theme }) => theme.colors.tertiary2};
-    background-color: #000;
-  }
-`;

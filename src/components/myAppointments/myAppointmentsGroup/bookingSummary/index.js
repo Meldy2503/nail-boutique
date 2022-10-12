@@ -1,98 +1,120 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import {
   SummaryContainer,
-  Intro,
+  LocationContainer,
   Title,
   Service,
   Location,
   Manicure,
   Booking,
   SubTotal,
-  Technician,
   Day,
   Total,
-  Button,
+  NumberOfClients,
+  // Button,
 } from "./bookingSummaryStyle";
 
 import { VscLocation } from "react-icons/vsc";
-import { IoIosCheckmarkCircle } from "react-icons/io";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import avatar from "../../../../images/avatar1.png";
 
 function BookingSummary() {
+  const { summaryList, date, NumberOfExpectedclient, DaysToAppointmentDay } =
+    useContext(SummaryContext);
+  console.log({ summaryList });
+
+  const initialValue = 0;
+  let newSubtotal = summaryList.services;
+
+  const addSubtotal = newSubtotal.reduce(
+    (prevValue, currentValue) =>
+      prevValue + currentValue.price * NumberOfExpectedclient,
+    initialValue
+  );
+
+  const VAT = 0.075 * addSubtotal;
+  const addBookingTotal = VAT + addSubtotal;
+
   return (
-    <SummaryContainer>
+    <SummaryContainer data-aos="fade-up">
       <Title>
         <h2>Booking Summary</h2>
-        <p>Lorem Ipsum has been the industry's iudst standard dummy.</p>
+        <p>Please note that all prices are inclusive of the 7.5% VAT</p>
       </Title>
-
-      <div>
-        <Intro>
+      {summaryList.location && (
+        <LocationContainer>
           <Location>
             <div>
               <span>
                 <VscLocation />
               </span>
               <p>
-                The Nail Boutique - Ikoyi 7 - 12 Rumens Cls Road, Lagos,
-                Nigeria.
+                {summaryList.location.heading +
+                  " " +
+                  summaryList.location.address}
               </p>
             </div>
           </Location>
-        </Intro>
-
+        </LocationContainer>
+      )}
+      {summaryList.services && (
         <Service>
-          <Manicure>
-            <div>
-              <h6>BASIC MANICURE:</h6>
-              <p> N5,000.00</p>
-            </div>
-            <div>
-              <h6>HAIR RELAXING:</h6>
-              <p> N8,000.00</p>
-            </div>
-          </Manicure>
+          {summaryList.services.map((s) => {
+            return (
+              <Manicure key={s.id}>
+                <div>
+                  <h6>{s.product}:</h6>
+                  <p> ₦{s.price.toLocaleString()}</p>
+                </div>
+              </Manicure>
+            );
+          })}
+          {summaryList.numberOfClients && (
+            <NumberOfClients>
+              <div>
+                <h6>NUMBER OF CLIENTS:</h6>
+                <p>{NumberOfExpectedclient}</p>
+              </div>
+            </NumberOfClients>
+          )}
           <SubTotal>
             <div>
               <h6>SUB TOTAL:</h6>
-              <p> N5,000.00</p>
+              <p>₦{addSubtotal.toLocaleString()}</p>
             </div>
             <div>
-              <h6>VAT</h6>
-              <p>N750.00</p>
+              <h6>VAT:</h6>
+              <p>₦{VAT.toLocaleString()}</p>
             </div>
           </SubTotal>
         </Service>
-        <Booking>
-          <Technician>
-            <p> Technician Selected</p>
-            <div>
-              <IoIosCheckmarkCircle className="icon" />
-              <img src={avatar} alt="avatar" />
-
-              <span className="name">
-                <h6> Ademide Ruth </h6>
-                <p> Hair Stylist - 26Yrs</p>
-              </span>
-            </div>
-          </Technician>
+      )}
+      <Booking>
+        {summaryList.schedule && (
           <Day>
             <AiOutlineClockCircle className="icon" />
-
             <h6>
-              Thu, 6th Feb., 2022 - 09:00AM - <em>In 21 days</em>
+              {date.toDateString()} - {summaryList.schedule.time} -
+              <em>
+                In {DaysToAppointmentDay}&nbsp;
+                {DaysToAppointmentDay > 1 ? "days" : "day"}
+              </em>
             </h6>
           </Day>
-        </Booking>
-      </div>
+        )}
+      </Booking>
 
       <Total>
         <div>
           <h6>BOOKING TOTAL:</h6>
-          <p> N5,750.00</p>
+          <p>
+            ₦
+            {addBookingTotal.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </p>
         </div>
-        <Button to="/confirm">CONFIRM</Button>
       </Total>
     </SummaryContainer>
   );

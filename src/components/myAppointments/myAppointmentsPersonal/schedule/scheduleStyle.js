@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
-export const CalendarContainer = styled.div``;
+export const CalendarContainer = styled.div`
+  margin: 0 auto;
+`;
 
 export const ScheduleContainer = styled.div`
   margin: 0 auto;
@@ -14,7 +15,7 @@ export const Dots = styled.div`
   width: 70%;
   flex-wrap: wrap;
   margin-top: 1rem;
-  font-size: 1.6rem;
+  font-size: 1.45rem;
 
   @media (max-width: 400px) {
     flex-direction: column;
@@ -25,9 +26,8 @@ export const Dots = styled.div`
     align-items: center;
 
     span {
-      height: 1rem;
-      width: 1rem;
-      background-color: red;
+      height: 0.7rem;
+      width: 0.7rem;
       margin-right: 1rem;
       border-radius: 50%;
     }
@@ -54,7 +54,7 @@ export const Time = styled.div`
     }
 
     @media (max-width: 400px) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
 `;
@@ -75,6 +75,37 @@ export const SelectAvailableTime = styled.span`
   flex-wrap: wrap;
 `;
 
-export const Waitlist = styled(Link)`
-  color: ${({ theme }) => theme.colors.tertiary2};
+export const Waitlist = styled.div`
+  margin-bottom: 3rem;
+
+  .link {
+    color: ${({ theme }) => theme.colors.tertiary2};
+  }
+`;
+
+export const Day = styled.div`
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  padding-bottom: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: right;
+
+  .icon {
+    font-size: 2.2rem;
+    color: #878787;
+    margin-right: 1.2rem;
+  }
+
+  h6 {
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
+  }
+
+  p {
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+  }
 `;

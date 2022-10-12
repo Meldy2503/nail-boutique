@@ -32,7 +32,6 @@ export const Popup = styled.div`
   }
 
   & > div {
-    /* width: 25rem; */
     display: flex;
     align-items: center;
     flex-direction: column;

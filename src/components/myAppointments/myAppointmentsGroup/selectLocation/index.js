@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import locationData from "./selectLocationData";
-import Map from "../../../../images/map.png";
 import { MdChevronLeft } from "react-icons/md";
 import {
   Content,
@@ -19,15 +19,19 @@ import {
   HeadingStyle,
   Back,
 } from "../../../../reuseableComponents/headingStyle";
-import CheckBox from "../../../../reuseableComponents/Checkbox";
+import RadioButton from "../../../../reuseableComponents/RadioButton";
 
 function SelectLocation() {
+  const { updateList } = useContext(SummaryContext);
+  const handleGroupLocation = (location) => {
+    updateList({ location });
+  };
   return (
     <ContentContainer>
       <Sidebar />
       <RightContent>
         <Location>
-          <HeadingStyle mPdTop="0">
+          <HeadingStyle mPdTop="0" data-aos="zoom-in">
             <h2>Select Location</h2>
             <Back to="/my-appointments">
               <MdChevronLeft />
@@ -37,11 +41,22 @@ function SelectLocation() {
 
           {locationData.map((data) => (
             <Content key={data.id}>
-              <LocationText>
-                <h4>{data.heading}</h4>
-                <p>{data.address}</p>
-              </LocationText>
-              <CheckBox value={data.checkboxValue} name="location" />
+              <RadioButton
+                checkHeight="1.5rem"
+                checkWidth="0.8rem"
+                width="3rem"
+                height="3rem"
+                onChange={() => handleGroupLocation(data)}
+                label={
+                  <LocationText>
+                    <h4>{data.heading}</h4>
+                    <p>{data.address}</p>
+                  </LocationText>
+                }
+                flexDirection="row"
+                value={data}
+                name="location"
+              />
             </Content>
           ))}
           <ButtonContainer>
@@ -51,8 +66,13 @@ function SelectLocation() {
           </ButtonContainer>
         </Location>
 
-        <MapImg>
-          <img src={Map} alt="location" />
+        <MapImg data-aos="fade-up">
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=18tNhSgJZKpyLpEvZ7myyMEFLlqfj0xfw&ehbc=2E312F"
+            width="100%"
+            height="100%"
+            title="googleMap"
+          ></iframe>
         </MapImg>
       </RightContent>
     </ContentContainer>

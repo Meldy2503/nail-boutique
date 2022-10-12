@@ -12,7 +12,7 @@ function Sidebar() {
   };
   return (
     <LeftContent>
-      <StyledUl>
+      <StyledUl data-aos="fade-up">
         <li>
           <NavLink
             className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
@@ -38,14 +38,6 @@ function Sidebar() {
             to="/notifications"
           >
             Notifications
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            className={({ isActive }) => `navLink ${isActive ? " active" : ""}`}
-            to="/logout"
-          >
-            Logout
           </NavLink>
         </li>
       </StyledUl>

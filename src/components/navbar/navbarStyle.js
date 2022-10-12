@@ -5,35 +5,14 @@ import { Link } from "react-router-dom";
 
 export const NavContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.primary2};
-  height: 9rem;
+  height: 7rem;
   width: 100%;
   z-index: 3000;
   position: fixed;
   top: 0;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    height: 7rem;
-  }
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     height: 6rem;
-  }
-`;
-
-export const NavBarBorderBottom  = styled.div`
-  height: 2.5rem;
-  width: 100%;
-  position: fixed;
-  background: #000;
-  top: 9rem;
-
-  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    height: 2rem;
-    top: 6rem;
-  }
-  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    height: 1.5rem;
-    top: 6rem;
   }
 `;
 
@@ -57,7 +36,6 @@ export const StyledNav = styled.nav`
   justify-content: space-between;
   position: relative;
   z-index: 2500;
-  padding: 1.1rem 0 1.2rem 0;
 
   @media screen and (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
     padding: 1rem 0;
@@ -72,15 +50,41 @@ export const StyledNav = styled.nav`
       display: flex;
       flex-direction: column;
       background-color: ${({ theme }) => theme.colors.primary1};
-      opacity: 0.96;
+      opacity: 0.9;
       position: absolute;
       top: 6rem;
       right: -10%;
-      width: 60%;
+      width: 35rem;
       height: 100vh;
       z-index: 3000;
-      overflow: auto;
+      overflow: scroll;
       padding-top: 2rem;
+
+      animation: slideIn 1s ease-in;
+
+      @keyframes slideIn {
+        0% {
+          transform: translateX(500px);
+          opacity: 0;
+        }
+
+        65% {
+          transform: translateX(1px);
+          opacity: 1;
+        }
+        70% {
+          transform: translateX(-1px);
+        }
+        75% {
+          transform: translateX(1px);
+        }
+        90% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
 
       @media screen and (max-width: 500px) {
         width: 80%;

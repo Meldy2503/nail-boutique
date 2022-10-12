@@ -19,14 +19,14 @@ function Notification() {
       <Sidebar />
       <RightContent display="block">
         <NotificationContainer>
-          <HeadingStyle height="8rem" PdBottom="0" mPdTop="4rem">
+          <HeadingStyle data-aos="zoom-in">
             <h2>Notifications</h2>
             <Back to="/location">
               <MdChevronLeft />
               Go back
             </Back>
           </HeadingStyle>
-          <NotificationContents>
+          <NotificationContents data-aos="fade-up">
             {alertData.map((items) => (
               <Item key={items.id}>
                 <div>

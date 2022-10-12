@@ -5,6 +5,10 @@ export const ConfirmBookingContainer = styled.div`
   hr {
     color: ${({ theme }) => theme.colors.primary3};
   }
+
+  .checkbox {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Location = styled.div`
@@ -12,29 +16,40 @@ export const Location = styled.div`
   background-color: ${({ theme }) => theme.colors.primary3};
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  width: 80%;
+  width: 100%;
 
-  @media (max-width: 1355px) {
-    width: 100%;
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    display: none;
   }
 
-  span {
+  div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
 
-    @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-      padding: 1rem;
+    span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 1.5rem;
+    }
+    .pin {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
     }
   }
-  .pin {
-    font-size: 3rem;
-    width: 10%;
-  }
+`;
 
-  p {
-    width: 87%;
+export const MobileSummary = styled.div`
+  display: none;
+
+  @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
+    display: flex;
+    width: 100%;
   }
 `;
 

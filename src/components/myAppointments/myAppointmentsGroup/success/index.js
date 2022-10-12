@@ -7,18 +7,17 @@ import tick from "../../../../images/tick2.png";
 function Success() {
   return (
     <ContentContainer>
-      <SuccessContainer>
+      <SuccessContainer data-aos="zoom-in">
         <Popup>
           <div>
             <img src={tick} alt="tick" />
             <h3>Success!</h3>
             <p>
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled
+              See you soon!! <br /> Thanks for booking with us. We've sent an
+              email confirmation to you using your provided email address.
             </p>
-            <ButtonS fs="1.3rem" width="65%" to="/my-appointments">
-              GO BACK HOME
+            <ButtonS fs="1.3rem" width="65%" to="/">
+              OK
             </ButtonS>
           </div>
         </Popup>

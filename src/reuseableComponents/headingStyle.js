@@ -12,13 +12,11 @@ export const HeadingStyle = styled.div`
   top: 0;
   height: ${({ height }) => height || "fit-content"};
 
-  @media (max-width: ${({ theme }) => theme.mediaQuery.tablet}) {
-    padding-top: 0;
-  }
-
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    padding-top: ${({ mPdTop }) => mPdTop || "7.5rem"};
+    padding-top: ${({ mPdTop }) => mPdTop || "3.5rem"};
     padding-bottom: 1rem;
+    padding-right: ${({ mPdRi }) => mPdRi || "0"};
+    padding-left: ${({ mPdLe }) => mPdLe || "0"};
   }
 
   h2 {

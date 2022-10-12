@@ -11,6 +11,7 @@ export const ServiceType = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  cursor: pointer;
 
   div {
     width: 85%;
@@ -69,18 +70,20 @@ export const InputContainer = styled.div`
   padding: 0.7rem 2rem 0 0.5rem;
   cursor: pointer;
   user-select: none;
+  margin-left: 1.5rem;
 
-  label {
-    margin-left: 1.5rem;
+  div {
+    cursor: pointer;
     h5 {
       font-size: 1.5rem;
       font-weight: 600;
-      margin-bottom: 0.1rem;
+      margin: 0 0 0 0.8rem;
     }
 
     p {
       font-size: 1.2rem;
       font-weight: 400;
+      margin: 0 0 0.1rem 0.8rem;
     }
   }
 `;

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SummaryContext } from "../../../../summaryContext";
 import {
   ContentContainer,
   RightContent,
@@ -26,14 +27,28 @@ import {
   Back,
 } from "../../../../reuseableComponents/headingStyle";
 import CheckBox from "../../../../reuseableComponents/Checkbox";
+import { v4 as uuidv4 } from "uuid";
 
 function SelectServices() {
+  const { removeServiceFromList, addServiceToList } =
+    useContext(SummaryContext);
+
   const [onClick, setOnClick] = React.useState({});
-  const handleClick = (index) => () => {
+  const handleToggle = (id) => () => {
     setOnClick((state) => ({
       ...state,
-      [index]: !state[index],
+      [id]: !state[id],
     }));
+  };
+
+  const handleClick = (checkboxState, service) => {
+    console.log({ service });
+    if (checkboxState) {
+      addServiceToList(service);
+    } else {
+      removeServiceFromList(service);
+    }
+    console.log({ checkboxState });
   };
 
   return (
@@ -41,51 +56,70 @@ function SelectServices() {
       <Sidebar />
       <RightContent>
         <RightContentCol1>
-          <HeadingStyle>
+          <HeadingStyle data-aos="zoom-in">
             <h2>Select Services</h2>
             <Back to="/my-appointments/personal-booking/select-location">
               <MdChevronLeft />
               Go back
             </Back>
           </HeadingStyle>
-          <ServiceContainer>
-            {serviceData.map((items, index) => {
+          <ServiceContainer data-aos="fade-up">
+            {serviceData.map((items, id = uuidv4()) => {
               return (
-                <Services key={items.id}>
+                <Services key={id}>
                   <ServiceType>
-                    <div>
+                    <div onClick={handleToggle(id)}>
                       <h3>{items.title}</h3>
                       <p>{items.text}</p>
                     </div>
-                    <span onClick={handleClick(index)}>
-                      {onClick[index] ? <FaAngleRight /> : <FaAngleDown />}
+                    <span onClick={handleToggle(id)}>
+                      {onClick[id] ? <FaAngleRight /> : <FaAngleDown />}
                     </span>
                   </ServiceType>
-
-                  {onClick[index] && (
+                  {onClick[id] && (
                     <FormContainer>
                       <InputContainer>
-                        <CheckBox value={items.value1} name={items.name} />
-                        <label htmlFor={items.value1}>
-                          <h5>{items.labelA}</h5>
-                          <p>{items.labelB}</p>
-                        </label>
+                        <CheckBox
+                          onChange={(checkboxState) =>
+                            handleClick(checkboxState, items.options[0])
+                          }
+                          value={items.options}
+                          label={
+                            <div>
+                              <h5>{items.options[0].product}</h5>
+                              <p>{`${items.options[0].time} mins - ₦${items.options[0].price}`}</p>
+                            </div>
+                          }
+                        />
                       </InputContainer>
-
                       <InputContainer>
-                        <CheckBox value={items.value2} name={items.name} />
-                        <label htmlFor={items.value2}>
-                          <h5>{items.labelA}</h5>
-                          <p>{items.labelB}</p>
-                        </label>
+                        <CheckBox
+                          onChange={(checkboxState) =>
+                            handleClick(checkboxState, items.options[1])
+                          }
+                          value={items.options}
+                          name="services"
+                          label={
+                            <div>
+                              <h5>{items.options[1].product}</h5>
+                              <p>{`${items.options[1].time} mins - ₦${items.options[1].price}`}</p>
+                            </div>
+                          }
+                        />
                       </InputContainer>
-
                       <InputContainer>
-                        <CheckBox value={items.value3} name={items.name} />
-                        <label htmlFor={items.value3}>
-                          <h5>{items.labelA}</h5>
-                          <p>{items.labelB}</p>
-                        </label>
+                        <CheckBox
+                          onChange={(checkboxState) =>
+                            handleClick(checkboxState, items.options[2])
+                          }
+                          value={items.options}
+                          label={
+                            <div>
+                              <h5>{items.options[2].product}</h5>
+                              <p>{`${items.options[2].time} mins - ₦${items.options[2].price}`}</p>
+                            </div>
+                          }
+                        />
                       </InputContainer>
                     </FormContainer>
                   )}
@@ -94,7 +128,7 @@ function SelectServices() {
             })}
           </ServiceContainer>
           <ButtonContainer paddingm="0.5rem 0">
-            <Button to="/my-appointments/personal-booking/select-servicestwo">
+            <Button to="/my-appointments/personal-booking/select-technician">
               CONTINUE
             </Button>
           </ButtonContainer>

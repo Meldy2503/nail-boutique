@@ -7,10 +7,7 @@ export const MapImg = styled.div`
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
     width: 100%;
     margin: 0 auto;
-    height: 50%;
-  }
-  @media (max-width: 300px) {
-    height: 45%;
+    height: 70%;
   }
 
   img {
@@ -36,37 +33,35 @@ export const RightContent = styled.div`
   }
 `;
 export const Location = styled.div`
-  margin: 4rem 2rem 2rem 3rem;
+  margin: 4rem 2rem 4rem 3rem;
   width: 72%;
   height: 90%;
+  overflow: auto;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    margin: 1rem auto 3rem auto;
+    margin: 2rem auto 5rem auto;
     width: 90%;
-  }
-
-  @media (max-width: 600px) {
-    margin: 1rem auto;
+    height: 50%;
+    overflow: auto;
   }
 `;
 
 export const Content = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border: 1px solid ${({ theme }) => theme.colors.secondary6};
   border-radius: 1rem;
   margin-bottom: 2rem;
   padding: 2rem 3rem;
+  cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.mediaQuery.mobile}) {
-    padding: 1rem;
     margin-bottom: 1rem;
+    padding: 1rem;
   }
 `;
 
 export const LocationText = styled.div`
+  width: 90%;
+  cursor: pointer;
   h4 {
     font-size: 2rem;
 
