@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# The Nail Salon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+Nail Boutique is a front-end web application that allows users to browse and book nail care services online. The application is built using React.js and includes features such as service catalog, search, appointment booking, and user authentication.
 
-## Available Scripts
+## Tools used in achieving this application
+The following tools and technologies were used to build the Nail Boutique application:
+- React.js
+- Material-UI
+- react-router-dom
+- Axios
+- Styled-Components
 
-In the project directory, you can run:
+## How I achieved this
+- The application was built by following best practices and guidelines for React.js development. 
+- The codebase was organized into modular and reusable components, with a focus on clean and maintainable code. 
+- The application was also designed to be responsive, accessible, and user-friendly.
 
-### `npm start`
+## How the app works
+- The Nail Boutique application allows users to browse nail care services by category, search for services, and book appointments for their preferred services and service providers. 
+- Users can also create an account and login to access their user profile and appointment history
+- However, the application is not connected to any back-end, so features such as confirmation emails and reminders, cancellation and rescheduling of appointments, and payment processing are not functional.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Why I built the project this way
+- The project was built this way to achieve a balance between functionality, maintainability, and user experience. 
+- The choice of tools and technologies was made based on their suitability for building a modern and responsive web application. 
+- The codebase was structured to promote code reuse and maintainability, with a focus on scalability and performance.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## If I had more time I would change this
+- If I had more time, I would integrate the application with a back-end platform such as Firebase to enable features such as user authentication, appointment management, confirmation emails and reminders, cancellation and rescheduling of appointments, and payment processing. 
+- I would also improve the application's user interface and add more features such as user reviews and ratings, service recommendations, and social media integration. 
+- Additionally, I would improve the application's performance by optimizing page load times and reducing the number of HTTP requests.
