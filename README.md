@@ -1,6 +1,9 @@
 
 # The Nail Boutique
 
+![Nail Boutique](nail-boutique.png)
+
+
 ## Introduction
 Nail Boutique is a front-end web application built with React.js that allows users to browse and book nail care services online. This README provides detailed instructions on how to install the application locally and get it up and running on your machine.
 
